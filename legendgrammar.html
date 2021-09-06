@@ -129,9 +129,7 @@
 
 
 
-
-
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Bootstrap Example</title>
@@ -148,18 +146,31 @@
     height: 100%;
   }
   </style>
+  
+  <style>
+  body{  background-color: gray ; border: 10 px; 
+  
+
+  
+  }
+  
+  
+  
+  
+  </style>
 </head>
 <body>
 
 <div class="container mt-3">
-<h2>Activate Carousel with JavaScript</h2>
-<div id="myCarousel" class="carousel slide">
+
+<h2>Carousel</h2>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->
   <ul class="carousel-indicators">
-    <li class="item1 active"></li>
-    <li class="item2"></li>
-    <li class="item3"></li>
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
   </ul>
   
   <!-- The slideshow -->
@@ -176,41 +187,69 @@
   </div>
   
   <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#myCarousel">
+  <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </a>
-  <a class="carousel-control-next" href="#myCarousel">
+  <a class="carousel-control-next" href="#myCarousel" data-slide="next">
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-3">
+  <h2>Collapsible Methods</h2>
+  <p>The toggle method toggles the collapsible content.</p>
+  <p>The show method shows the collapsible content.</p>
+  <p>The hide method hides the collapsible content.</p>
+  <button type="button" class="btn btn-primary">Toggle</button>
+  <button type="button" class="btn btn-success">Show</button>
+  <button type="button" class="btn btn-warning">Hide</button> 
+    
+  <div class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
 </div>
 
 <script>
 $(document).ready(function(){
-  // Activate Carousel
-  $("#myCarousel").carousel();
-    
-  // Enable Carousel Indicators
-  $(".item1").click(function(){
-    $("#myCarousel").carousel(0);
+  $(".btn-primary").click(function(){
+    $(".collapse").collapse('toggle');
   });
-  $(".item2").click(function(){
-    $("#myCarousel").carousel(1);
+  $(".btn-success").click(function(){
+    $(".collapse").collapse('show');
   });
-  $(".item3").click(function(){
-    $("#myCarousel").carousel(2);
-  });
-    
-  // Enable Carousel Controls
-  $(".carousel-control-prev").click(function(){
-    $("#myCarousel").carousel("prev");
-  });
-  $(".carousel-control-next").click(function(){
-    $("#myCarousel").carousel("next");
+  $(".btn-warning").click(function(){
+    $(".collapse").collapse('hide');
   });
 });
 </script>
 
+</body>
+</html>
 
 
 
