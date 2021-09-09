@@ -9,14 +9,14 @@
 
 /* Set height of body and the document to 100% */
 body, html {
-  height: 10%;
+  height: 60%;
   margin: 0;
   font-family: Arial;
 }
 
 /* Style tab links */
 .tablink {
-  background-color: #555;
+  background-color: red ;
   color: white;
   float: left;
   border: none;
@@ -28,7 +28,7 @@ body, html {
 }
 
 .tablink:hover {
-  background-color: #777;
+  background-color: gray;
 }
 
 /* Style the tab content (and add height:100% for full page content) */
@@ -39,7 +39,7 @@ body, html {
   height: 100%;
 }
 
-#Home {background-color: red;}
+#Home {background-color:gray ;}
 #News {background-color: green;}
 #Contact {background-color: blue;}
 #About {background-color: orange;}
@@ -54,7 +54,7 @@ body, html {
 
 <div id="Home" class="tabcontent">
   <h3>Home</h3>
-  <p>Home is where the heart is..</p>
+  <p>We live in a competitive world.  To gain sustainable competitive edge  in the global competitive market we have focused on our core  competences based on cloud based value delivery & value proposition. Technology is the building block to business success. Fintech, IT governance & security, people skill, business analytics & data science are the key to sustainable development. Legend Group believes in leveraging all aspects of customization to the needs of the valued clients. Customer satisfaction is our first priority. Our mission is to deliver IT service & IS security , IT education, Software development , English learning & Business training in both off- line & on-line platform   to equip our  generation with future skills-set & mind-set not only to survive but also to thrive in the data-driven society.</p>
 </div>
 
 <div id="News" class="tabcontent">
@@ -229,8 +229,6 @@ span.psw {
 
 
 
-<p class="round1" style="background-color:red; color:white; font-size:30">E-learning Platform</p>
-
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
 <div id="id01" class="modal">
@@ -291,21 +289,21 @@ window.onclick = function(event) {
 <head>
 <style>
 #myHeader {
-  background-color:BlueViolet;
+  background-color:Blue;
   color: yellow ;
   padding: 20px
   text-align: left;
 } 
 .banner{ color:red;
 }
-.menu{ background-color:BlueViolet;
+.menu{ background-color:gray ;
 }
 .rightbar{backgound-color:BlueViolet;
 }
 .footer{ background-color:rd;
 padding:2px;
 }
- a[target]{ background-color:BlueViolet;
+ a[target]{ background-color:gray ;
 }
 
 p {outline-color:red;}
@@ -318,7 +316,7 @@ p.dotted {outline-style: dotted;}
 
 
 
-<a class="round1" style="background-color:red; color:white; font-size:30" href="https://www.legendbdgroup.com"> Visit: Legend BD Group Website</a>
+<a class="round1" style="background-color:black; color:white; font-size:30" href="https://www.legendbdgroup.com"> Visit: Legend BD Group Website</a>
 
 </body>
 </html>
@@ -379,9 +377,9 @@ p.dotted {outline-style: dotted;}
 </head>
 <body style="font-family:Verdana;color:#aaaaaa;">
 
-<div style="background-color:gray;padding:20px;text-align:center;">
-  <h1 class="dotted" style="color:white" >WELCOME TO E-LEARNING PLAFORM </h1>
-  <p class="round1" style="background-color:BlueViolet; color:white; font-size:30px;">Legend English Academy </p>
+<div style="background-color:gray;padding:10px;text-align:center;">
+  <h3 class="dotted" style="color:white" >WELCOME TO E-LEARNING PLAFORM </h3>
+  
 </div>
 
 <div style="overflow:auto">
@@ -395,80 +393,157 @@ p.dotted {outline-style: dotted;}
   <div class="main">
   
     
-	<iframe  src="https://www.youtube.com/embed/4NXX1cGIbXE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-	<iframe src="https://www.youtube.com/embed/Ap5Ar5_Ljts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-  </div>
-
-  <div class="right">
-    <h2 class="dotted" style="background-color:gray">Legend BD Group</h2>
-    <p class="dotted" style="background-color:gray">Legend BD Group consists of two sister concerns</p>
-  </div>
-</div>
-
-<div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;"> </div>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<html lang="en">
+	
+	
+<html>
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-,row{
-padding;10px;
-border: 2px solid red;
+* {
+  box-sizing: border-box;
 }
-p.dotted {border-style: dotted;}
+
+body {
+  margin: 2px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content .header {
+  background: red;
+  padding: 16px;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  background-color: #ccc;
+  height: 250px;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
+}
 </style>
 </head>
-
-
 <body>
 
-<div class="jumbotron text-center">
-  <h1 style="background-color:blue; color:yellow; font-family:italic"> Are you interested to know more?<b><strong></h1>
-  <p style="background-color:BlueViolet; color:yellow;"> Our Resources<br>Legend English Academy Virtual Library</p>
-  <iframe  src="https://docs.google.com/presentation/d/1Q3-G3c6jNeYvWXKOX7OVP3Jt51lO3GQH9fN6H3rxeKU/edit?fbclid=IwAR04xuYwiL00GHSag7HYhtl1Uz9QycRDcequho-WzjrNn0qkGrhrN7bCh6k#slide=id.p" width="400" height="250" align="left" >Legend English Academy Virtual Library  </iframe>
+<div class="navbar">
   
-
-  
-</div>
-  
-      
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Mega Menu</h2>
+      </div>   
+      <div class="row">
+        <div class="column">
+          <h3>English Grammar & Vocabulary</h3>
+          <a href="https://www.legendbdgroup.com">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <div class="column">
+          <h3>English Model Question</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <div class="column">
+          <h3>Virtual Library</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
     </div>
-  </div>
+  </div> 
 </div>
 
-
-
-      
+<div style="padding:16px">
+  <h3>Responsive Mega Menu (Full-width dropdown in navbar)</h3>
+  
+  
+</div>
 
 </body>
 </html>
-
-
-
-
-
 
 
 
