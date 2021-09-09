@@ -1,24 +1,277 @@
 <!DOCTYPE html>
 
+
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-#myHeader {
-  background-color: blue;
-  color: yellow ;
-  padding: 40px;
-  text-align: left;
-} 
+* {box-sizing: border-box}
 
+/* Set height of body and the document to 100% */
+body, html {
+  height: 10%;
+  margin: 0;
+  font-family: Arial;
+}
 
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
 
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: red;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
 </style>
-
 </head>
 <body>
 
-<h1 style="font-style:italic" id="myHeader">Legend Bd Group</h1>
-<a style="font-style:italic" href="https://www.legendbdgroup.com"> Visit: Legend BD Group Website</a>
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+<p class="round1" style="background-color:red; color:white; font-size:30">E-learning Platform</p>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
 </body>
 </html>
@@ -27,6 +280,48 @@
 
 
 
+
+
+
+
+
+
+<html>
+
+<head>
+<style>
+#myHeader {
+  background-color:BlueViolet;
+  color: yellow ;
+  padding: 20px
+  text-align: left;
+} 
+.banner{ color:red;
+}
+.menu{ background-color:BlueViolet;
+}
+.rightbar{backgound-color:BlueViolet;
+}
+.footer{ background-color:rd;
+padding:2px;
+}
+ a[target]{ background-color:BlueViolet;
+}
+
+p {outline-color:red;}
+
+p.dotted {outline-style: dotted;}
+</style>
+
+</head>
+<body>
+
+
+
+<a class="round1" style="background-color:red; color:white; font-size:30" href="https://www.legendbdgroup.com"> Visit: Legend BD Group Website</a>
+
+</body>
+</html>
 
 
 
@@ -50,22 +345,24 @@
   margin-top: 7px;
   display: block;
   width: 100%;
-  color: black;
+  color: white;
 }
 
 .main {
   float: left;
   width: 60%;
   padding: 0 20px;
+  color:white;
 }
 
 .right {
-  background-color: #e5e5e5;
+  background-color: Blue;
   float: left;
   width: 20%;
-  padding: 15px;
+  padding: 20px;
   margin-top: 7px;
   text-align: center;
+  color:white;
 }
 
 @media only screen and (max-width: 620px) {
@@ -73,37 +370,38 @@
   .menu, .main, .right {
     width: 100%;
   }
-}
+
+
+p.dotted {outline-style: dotted;}
 </style>
-
-
 
 
 </head>
 <body style="font-family:Verdana;color:#aaaaaa;">
 
-<div style="background-color:blue;padding:15px;text-align:center;">
-  <h1 style="font-style:italic;"  style="background-color:blue; color:yellow">WELCOME TO E-LEARNING PLAFORM </h1>
+<div style="background-color:gray;padding:20px;text-align:center;">
+  <h1 class="dotted" style="color:white" >WELCOME TO E-LEARNING PLAFORM </h1>
+  <p class="round1" style="background-color:BlueViolet; color:white; font-size:30px;">Legend English Academy </p>
 </div>
 
 <div style="overflow:auto">
   <div class="menu">
-    <a style="background-color:blue; color:yellow " href="https://www.youtube.com/channel/UCi2ErMluZR9YIkcKVdxolrg/videos">Legend English Academy Youtube Channel</a>
-    <a style="background-color:blue; color:yellow" href="https://www.facebook.com/amitacharjeesoftwaredeveloper">Legend English Academy Facebook Page</a>
-    <a style="background-color:blue; color:yellow " href="https://www.youtube.com/channel/UCJLihB_KmRVlcxhP_G9IBnQ?app=desktop">Business Software & Technology Youtube Channel</a>
-    <a style="background-color:blue; color:yellow " href="https://www.facebook.com/amitacharjee2020">Business Software & Technology Facebook Page</a>
+    <a class="dotted" style="background-color:gray; " href="https://www.youtube.com/channel/UCi2ErMluZR9YIkcKVdxolrg/videos">Legend English Academy Youtube Channel</a>
+    <a class="dotted" style="background-color:gray; " href="https://www.facebook.com/amitacharjeesoftwaredeveloper">Legend English Academy Facebook Page</a>
+    <a class="dotted" style="background-color:gray; " href="https://www.youtube.com/channel/UCJLihB_KmRVlcxhP_G9IBnQ?app=desktop">Business Software & Technology Youtube Channel</a>
+    <a class="dotted" style="background-color:gray; " href="https://www.facebook.com/amitacharjee2020">Business Software & Technology Facebook Page</a>
   </div>
 
   <div class="main">
-    <h2 style="font-style:italic" style="color:black" > <strong><b> Amit Kumar Acharjee<b><strong> </h2>
-    <p style="background-color:BlueViolet; color:white;" >MBA, BSc Computer Science( Enrolled)<br> CEO & Software Developer</p>
+  
+    
 	<iframe  src="https://www.youtube.com/embed/4NXX1cGIbXE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-	<iframe  src="https://www.youtube.com/embed/Ap5Ar5_Ljts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+	<iframe src="https://www.youtube.com/embed/Ap5Ar5_Ljts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
   </div>
 
   <div class="right">
-    <h2 style="background-color:blue">Legend BD Group</h2>
-    <p style="background-color:blue">Legend BD Group consists of two sister concerns</p>
+    <h2 class="dotted" style="background-color:gray">Legend BD Group</h2>
+    <p class="dotted" style="background-color:gray">Legend BD Group consists of two sister concerns</p>
   </div>
 </div>
 
@@ -114,81 +412,13 @@
 
 
 
-<head>
-  <title>Bootstrap Example</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
-<style> 
-</head>
 
 
-<style>
-h2 {
-  text-shadow: 2px 2px;
-  color:white;
- 
-}
-
-</style>
 
 
-<body>
-
-<div class="container">
-  <h2 style="background-color:BlueViolet; color:yellow;"> Improve your English skill. Pay as you go.Please sign up first! </h2>
- 
-
-<h2 style="background-color:blue; color:yellow">Join us in E-learning Platform</h2>
 
 
-<form action="/action_page.php">
-  
-  <label for="uid">User ID</label><br>
-  <input type="text" id="uid"><br><br>
-  <label for="pword">Password</label><br>
-  <input type=text id="pword"></input><br>
-  <input type="submit" value="Submit">
-</form>
 
-
-<div class="dropdown">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="text-shadow:2px 2px" style=" background-color: black">
-    E-Learning Platform <strong>
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="https:www.legendbdgroup.com">Grammar</a>
-    <a class="dropdown-item" href="https:www.legendbdgroup.com">Vocabulary</a>
-    <a class="dropdown-item" href="https:www.legendbdgroup.com">Writing</a>
-    <a class="dropdown-item" href="https:www.legendbdgroup.com">Model Question Bank</a>
-	<a class="dropdown-item" href=""https:www.legendbdgroup.com>E-Model Test</a>
-     <a class="dropdown-item" href="https:www.legendbdgroup.com">E-TestPaper</a>
-  </div>
-</div>
-
-
- 
-
-<html>
-<body>
-
-<h2>Sign up</h2>
-
-
-<form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname"><br>
-  <label for="mname"> Mobile No</label><br>
-  <input type="number" id="mname"><br>
-  <label for="uid">User ID</label><br>
-  <input type="text" id="uid"><br><br>
-  <input type="submit" value="Submit">
-</form>
 
 
 
@@ -202,39 +432,35 @@ h2 {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   
-
+<style>
+,row{
+padding;10px;
+border: 2px solid red;
+}
+p.dotted {border-style: dotted;}
+</style>
 </head>
+
+
 <body>
 
 <div class="jumbotron text-center">
   <h1 style="background-color:blue; color:yellow; font-family:italic"> Are you interested to know more?<b><strong></h1>
   <p style="background-color:BlueViolet; color:yellow;"> Our Resources<br>Legend English Academy Virtual Library</p>
-  <iframe  src="https://docs.google.com/presentation/d/1Q3-G3c6jNeYvWXKOX7OVP3Jt51lO3GQH9fN6H3rxeKU/edit?fbclid=IwAR04xuYwiL00GHSag7HYhtl1Uz9QycRDcequho-WzjrNn0qkGrhrN7bCh6k#slide=id.p">Legend English Academy Virtual Library</iframe> <br>
-  <iframe  src="https://docs.google.com/presentation/d/1Q3-G3c6jNeYvWXKOX7OVP3Jt51lO3GQH9fN6H3rxeKU/edit?fbclid=IwAR04xuYwiL00GHSag7HYhtl1Uz9QycRDcequho-WzjrNn0qkGrhrN7bCh6k#slide=id.p">Legend English Academy Virtual Library</iframe>
+  <iframe  src="https://docs.google.com/presentation/d/1Q3-G3c6jNeYvWXKOX7OVP3Jt51lO3GQH9fN6H3rxeKU/edit?fbclid=IwAR04xuYwiL00GHSag7HYhtl1Uz9QycRDcequho-WzjrNn0qkGrhrN7bCh6k#slide=id.p" width="400" height="250" align="left" >Legend English Academy Virtual Library  </iframe>
+  
+
   
 </div>
   
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>About Us</h3>
-      <p style="background-color:BlueViolet; color:yellow;">Legend English Academy is a sister concern of Legend BD Group</p>
-      
-    </div>
-    <div class="col-sm-4">
-      <h3>Address</h3>
-	   <p style="background-color:BlueViolet; color:yellow;">Legend English Academy is a sister concern of Legend BD Group</p>
-      
-      
-    </div>
-    <div class="col-sm-4">
-      <h3>Contact</h3>  
-       <p style="background-color:BlueViolet; color:yellow;">Legend English Academy is a sister concern of Legend BD Group</p>
-      
       
     </div>
   </div>
 </div>
+
+
+
+      
 
 </body>
 </html>
