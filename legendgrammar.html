@@ -110,12 +110,6 @@ document.getElementById("defaultOpen").click();
 
 
 
-
-
-
-
-
-<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -125,11 +119,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
 /* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
-  padding: 12px 20px;
+  padding: 16px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+  border: 1px solid red;
+  box-sizing: content-box;
 }
 
 /* Set a style for all buttons */
@@ -138,7 +132,7 @@ button {
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
-  border: none;
+  border: 1px solid red;;
   cursor: pointer;
   width: 100%;
 }
@@ -344,7 +338,7 @@ p.dotted {outline-style: dotted;}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 * {
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 
 .menu {
@@ -355,7 +349,7 @@ p.dotted {outline-style: dotted;}
 
 .menu a {
   background-color: #e5e5e5;
-  padding: 8px;
+  padding: 10px;
   margin-top: 7px;
   display: block;
   width: 100%;
@@ -373,8 +367,8 @@ p.dotted {outline-style: dotted;}
   background-color: Blue;
   float: left;
   width: 20%;
-  padding: 20px;
-  margin-top: 7px;
+  padding: 30px;
+  margin-top: 10px;
   text-align: center;
   color:white;
 }
@@ -400,10 +394,10 @@ p.dotted {outline-style: dotted;}
 
 <div style="overflow:auto">
   <div class="menu">
-    <a class="dotted" style="background-color:gray; " href="https://www.youtube.com/channel/UCi2ErMluZR9YIkcKVdxolrg/videos">Legend English Academy Youtube Channel</a>
-    <a class="dotted" style="background-color:gray; " href="https://www.facebook.com/amitacharjeesoftwaredeveloper">Legend English Academy Facebook Page</a>
-    <a class="dotted" style="background-color:gray; " href="https://www.youtube.com/channel/UCJLihB_KmRVlcxhP_G9IBnQ?app=desktop">Business Software & Technology Youtube Channel</a>
-    <a class="dotted" style="background-color:gray; " href="https://www.facebook.com/amitacharjee2020">Business Software & Technology Facebook Page</a>
+    <a class="dotted" style="background-color:white; color:Darkblue; " href="https://www.youtube.com/channel/UCi2ErMluZR9YIkcKVdxolrg/videos">Legend English Academy Youtube Channel <strong> <b></a>
+    <a class="dotted" style="background-color:white; " href="https://www.facebook.com/amitacharjeesoftwaredeveloper">Legend English Academy Facebook Page</a>
+    <a class="dotted" style="background-color: white; " href="https://www.youtube.com/channel/UCJLihB_KmRVlcxhP_G9IBnQ?app=desktop">Business Software & Technology Youtube Channel</a>
+    <a class="dotted" style="background-color: white; " href="https://www.facebook.com/amitacharjee2020">Business Software & Technology Facebook Page</a>
   </div>
 
   <div class="main">
@@ -489,7 +483,7 @@ body {
 
 .column a {
   float: none;
-  color: black;
+  color: red;
   padding: 16px;
   text-decoration: none;
   display: block;
@@ -526,26 +520,37 @@ body {
     </button>
     <div class="dropdown-content">
       <div class="header">
-        <h2>Mega Menu</h2>
+        <h2>Our Online Resources</h2>
       </div>   
       <div class="row">
         <div class="column">
           <h3>English for School</h3>
-          <a href="file:///C:/Users/User/Desktop/Legend%20E-Grammar/SSC.html#reference%20books">English 1st Paper</a>
-          <a href="#">English 2nd Paper</a>
-          <a href="#">Online Test</a>
+          <a href="file:///C:/Users/User/Desktop/Legend%20E-Grammar/SSC%20English1st%20Paper.html">English 1st Paper</a>
+          <a href="file:///C:/Users/User/Desktop/Legend%20E-Grammar/SSC%20English%202nd%20Paper.html">English 2nd Paper</a>
+          <a href="file:///C:/Users/User/Desktop/Legend%20E-Grammar/SSC%20Model%20Question%20Bank.html">Model Question Bank</a>
+		  <a href="#">SSC E-Test Paper</a>
+		  <a href="#">Online Weekly Test</a>
+		  <a href="#">Online Exam</a>
+		  <a href="#">Online Grammar Test</a>
+		  <a href="#">Online Vocabulary Test</a>
         </div>
         <div class="column">
           <h3>English for Collge</h3>
           <a href="#">English 1st Paper</a>
           <a href="#">English 2nd Paper</a>
           <a href="#">Online Test</a>
+		  <a href="#">HSC Model Question Bank</a>
+		  <a href="#">HSC Model Question Bank</a>
+		  <a href="#">HSC Model Question Bank</a>
         </div>
         <div class="column">
           <h3>Model Question  Bank</h3>
           <a href="https://docs.google.com/presentation/d/1Q3-G3c6jNeYvWXKOX7OVP3Jt51lO3GQH9fN6H3rxeKU/edit?fbclid=IwAR34scIJRrSWhxtNZTXc-aEP5-ezcgU2DDH4I_PbjkYwRe8ZeM8NeGtT2A8#slide=id.ge213c3f462_1_6">Legend E-Library</a>
           <a href="#">SSC Model Question BanK</a>
           <a href="#">HSC Model Question Bank</a>
+		  <a href="#">HSC Model Question Bank</a>
+		  <a href="#">HSC Model Question Bank</a>
+		  <a href="#">HSC Model Question Bank</a>
         </div>
       </div>
     </div>
@@ -713,16 +718,16 @@ input[type=text]:focus, input[type=password]:focus {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 div.scrollmenu {
-  background-color: red;
+  background-color: white;
   overflow: auto;
   white-space: nowrap;
 }
 
 div.scrollmenu a {
   display: inline-block;
-  color: white;
+  color: red;
   text-align: center;
-  padding: 14px;
+  padding: 18px;
   text-decoration: none;
 }
 
@@ -735,6 +740,8 @@ div.scrollmenu a:hover {
 
 <div class="scrollmenu">
   <a href="#about.html">Grammar</a>
+  <a href="#">Vocabulary</a>
+  <a href="#">Model Question Bank</a>
   <a href="#exercise">Exercise</a>
   <a href="#quiz test">Quiz Test</a>
   <a href="#reference books">Reference Books</a>
@@ -764,6 +771,29 @@ div.scrollmenu a:hover {
     </div>
   </div>
 </div>
+
+
+</body>
+</html>
+
+<!Doctype.html>
+<html>
+<head>
+
+<style>
+
+h1{
+
+text-shadow:4px 4px;
+ text-decoration: underline;
+ text-decoration-color: red;
+
+}
+
+</style>
+
+</head>
+
 
 <body>
 
