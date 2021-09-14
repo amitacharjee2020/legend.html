@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+
+<style>
+p {
+  border: 2px solid black;
+  outline: #4CAF50 solid 10px;
+  margin: auto;  
+  padding: 20px;
+  text-align: center;
+}
+<style>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 60%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: red ;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: gray;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color:gray ;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>We live in a competitive world.  To gain sustainable competitive edge  in the global competitive market we have focused on our core  competences based on cloud based value delivery & value proposition. Technology is the building block to business success. Fintech, IT governance & security, people skill, business analytics & data science are the key to sustainable development. Legend Group believes in leveraging all aspects of customization to the needs of the valued clients. Customer satisfaction is our first priority. Our mission is to deliver IT service & IS security , IT education, Software development , English learning & Business training in both off- line & on-line platform   to equip our  generation with future skills-set & mind-set not only to survive but also to thrive in the data-driven society.</p>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
+
+
+
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 16px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid red;
+  box-sizing: content-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px solid red;;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+
+
+
+</head>
+<body>
+
+
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register please</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<html>
+
+<head>
+<style>
+#myHeader {
+  background-color:Blue;
+  color: yellow ;
+  padding: 20px
+  text-align: left;
+} 
+.banner{ color:red;
+}
+.menu{ background-color:gray ;
+}
+.rightbar{backgound-color:BlueViolet;
+}
+.footer{ background-color:rd;
+padding:2px;
+}
+ a[target]{ background-color:gray ;
+}
+
+p {outline-color:red;}
+
+p.dotted {outline-style: dotted;}
+</style>
+
+</head>
+<body>
+
+
+
+<a class="round1" style="background-color:black; color:white; font-size:30" href="https://www.legendbdgroup.com"> Visit: Legend BD Group Website</a>
+
+</body>
+</html>
+
+
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: content-box;
+}
+
+.menu {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.menu a {
+  background-color: #e5e5e5;
+  padding: 10px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: white;
+}
+
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  color:white;
+}
+
+.right {
+  background-color: Blue;
+  float: left;
+  width: 20%;
+  padding: 30px;
+  margin-top: 10px;
+  text-align: center;
+  color:white;
+}
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+
+
+p.dotted {outline-style: dotted;}
+</style>
+
+
+</head>
+<body style="font-family:Verdana;color:#aaaaaa;">
+
+<div style="background-color:gray;padding:10px;text-align:center;">
+  <h3 class="dotted" style="color:black; background-color:red" >WELCOME TO E-LEARNING PLAFORM </h3>
+  
+</div>
+
+<div style="overflow:auto">
+  <div class="menu">
+    <a class="dotted" style="background-color:white; color:Darkblue; " href="https://www.youtube.com/channel/UCi2ErMluZR9YIkcKVdxolrg/videos">Legend English Academy Youtube Channel <strong> <b></a>
+    <a class="dotted" style="background-color:white; " href="https://www.facebook.com/amitacharjeesoftwaredeveloper">Legend English Academy Facebook Page</a>
+    <a class="dotted" style="background-color: white; " href="https://www.youtube.com/channel/UCJLihB_KmRVlcxhP_G9IBnQ?app=desktop">Business Software & Technology Youtube Channel</a>
+    <a class="dotted" style="background-color: white; " href="https://www.facebook.com/amitacharjee2020">Business Software & Technology Facebook Page</a>
+  </div>
+
+  <div class="main">
+  
+    
+	
+	
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 2px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content .header {
+  background: red;
+  padding: 16px;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  background-color: #ccc;
+  height: 250px;
+}
+
+.column a {
+  float: none;
+  color: red;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Our Online Resources</h2>
+      </div>   
+      <div class="row">
+        <div class="column">
+          <h3>English for School</h3>
+          <a href="file:///C:/Users/User/Desktop/Legend%20E-Grammar/SSC%20English1st%20Paper.html">English 1st Paper</a>
+          <a href="file:///C:/Users/User/Desktop/Legend%20E-Grammar/SSC%20English%202nd%20Paper.html">English 2nd Paper</a>
+          <a href="file:///C:/Users/User/Desktop/Legend%20E-Grammar/SSC%20Model%20Question%20Bank.html">Model Question Bank</a>
+		  <a href="#">SSC E-Test Paper</a>
+		  <a href="#">Online Weekly Test</a>
+		  <a href="#">Online Exam</a>
+		  <a href="#">Online Grammar Test</a>
+		  <a href="#">Online Vocabulary Test</a>
+        </div>
+        <div class="column">
+          <h3>English for Collge</h3>
+          <a href="#">English 1st Paper</a>
+          <a href="file:///C:/Users/User/Desktop/Legend%20E-Grammar/HSC%20English%202nd%20Paper.html">English 2nd Paper</a>
+          <a href="#">Online Test</a>
+		  <a href="#">HSC Model Question Bank</a>
+		  <a href="#">HSC Model Question Bank</a>
+		  <a href="#">HSC Model Question Bank</a>
+        </div>
+        <div class="column">
+          <h3>Model Question  Bank</h3>
+          <a href="https://docs.google.com/presentation/d/1Q3-G3c6jNeYvWXKOX7OVP3Jt51lO3GQH9fN6H3rxeKU/edit?fbclid=IwAR34scIJRrSWhxtNZTXc-aEP5-ezcgU2DDH4I_PbjkYwRe8ZeM8NeGtT2A8#slide=id.ge213c3f462_1_6">Legend E-Library</a>
+          <a href="#">SSC Model Question BanK</a>
+          <a href="#">HSC Model Question Bank</a>
+		  <a href="#">HSC Model Question Bank</a>
+		  <a href="#">HSC Model Question Bank</a>
+		  <a href="#">HSC Model Question Bank</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
+<div style="padding:16px">
+  <h3>Responsive Mega Menu (Full-width dropdown in navbar)</h3>
+  
+  
+</div>
+
+
+<img src="legend.gif" >
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div{
+    	width: auto px;
+    	height: auto px;
+    	background: linear-gradient( to top right, blue 70%,  white 30%);
+		 
+    }
+</style>
+</head>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 60%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("img_nature.jpg");
+
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<div class="bg-img">
+  <form action="/action_page.php" class="container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Mobile No</b></label>
+    <input type="text" placeholder="Enter Mobile No" name="mobile no" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+  </form>
+</div>
+
+
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<h2 style="color:black; background-color:red ">Legend E-Learning Platform</h2>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+div.scrollmenu {
+  background-color: white;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: red;
+  text-align: center;
+  padding: 18px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: red;
+}
+</style>
+</head>
+<body>
+
+<div class="scrollmenu">
+  <a href="#about.html">Grammar</a>
+  <a href="#">Vocabulary</a>
+  <a href="#">Model Question Bank</a>
+  <a href="#exercise">Exercise</a>
+  <a href="#quiz test">Quiz Test</a>
+  <a href="#reference books">Reference Books</a>
+  <a href="#video tutorial">Video Tutorial</a>
+  <div class="dropdown-menu" >
+      <a class="dropdown-item" href="#">Virtual Library</a>
+      <a class="dropdown-item" href="#">Link 2</a>
+      <a class="dropdown-item" href="#">Link 3</a>
+    </div>
+
+
+</div>
+
+<div class="container">
+  <h2 style="color:black; background-color:red">Dropdowns</h2>
+  <p>The .dropdown-divider class is used to separate links inside the dropdown menu with a thin</p>
+  <div class="dropdown">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Link 1</a>
+      <a class="dropdown-item" href="#">Link 2</a>
+      <a class="dropdown-item" href="#">Link 3</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Another link</a>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+<!Doctype.html>
+<html>
+<head>
+
+<style>
+
+h1{
+
+text-shadow:4px 4px;
+ text-decoration: underline;
+ text-decoration-color: red;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<h1> Legend BD Group</h1>
+
+</body
+
+
+</html>
