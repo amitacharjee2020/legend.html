@@ -160,8 +160,8 @@ margin:4px;
 <div class="post test">
 <h1 style="background-color: blue" > Legend English Academy</h1>
 <h2 style="background-color: white ">E-learning Platform</h2>
-<h3 style="background-color: white "> HSC English 2nd Paper</h3>
-<h4 style="background-color: blue; float: center; ">Article </h4>
+<h3 style="background-color: white "> Grammar</h3>
+
 
 
 </div>
@@ -169,30 +169,6 @@ margin:4px;
 
 
 </bpdy>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -243,7 +219,7 @@ body, html {
   height: 100%;
 }
 
-#Home {background-color: red;}
+#Parts of Speech {background-color: red;}
 #News {background-color: green;}
 #Contact {background-color: blue;}
 #About {background-color: orange;}
@@ -251,13 +227,13 @@ body, html {
 </head>
 <body>
 
-<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('Parts of Speech', this, 'red')">Parts of Speech</button>
 <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
 <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
 <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
 
-<div id="Home" class="tabcontent">
-  <h3>Home</h3>
+<div id="Parts of Speech" class="tabcontent">
+  <h3>Parts of Speech</h3>
   <p>5. Write a letter to your younger brother advising him about the bad effects of wasting time.
 20, Monipur,
 Dhaka.
@@ -331,71 +307,6 @@ document.getElementById("defaultOpen").click();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-
-<button onclick="openFullscreen();">Video Tutorial on Articles</button>
-
-
-<video width="100%" controls id="myvideo">
-  <source src="rain.mp4" type="video/mp4">
-  <source src="rain.ogg" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
-
-
-<script>
-var elem = document.getElementById("myvideo");
-function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) { /* Safari */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE11 */
-    elem.msRequestFullscreen();
-  }
-}
-</script>
-
-
-
-</body>
-</html>
 
 
 
