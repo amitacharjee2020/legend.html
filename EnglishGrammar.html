@@ -1,11 +1,6 @@
 
 
 
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,6 +17,7 @@ font-sixe: 10px;
 float:center;
 
 text-align:center;
+font-family:Monospace;
 
 
 }
@@ -40,7 +36,7 @@ color:yellow;
 
 
 body{
-background-image: linear-gradient( to right, white 95% ,  blue 5% );
+background-image: linear-gradient(  to right, blue 5%,   white 10% );
 
 }
 .h1{ 
@@ -58,6 +54,7 @@ text-align:center;
  color: black;
  font-sixe: 16px;
  float: center;
+ font-family:Fantasy;
 
 }
 
@@ -144,6 +141,7 @@ margin:4px;
   height: 100px;
   overflow: scroll;
   border: 1px solid #ccc;
+  font-family:Fantasy;
 }
 .center {
   padding: 70px 0;
@@ -151,16 +149,146 @@ margin:4px;
   text-align: center;
 }
 
+
+h2 {
+border-bottom: 5px solid red;
+
+
+}
+
 </style>
+
+
+<style>
+
+div.scrollmenu{
+
+background-color:blue;
+color:white;
+display:inline-block;
+
+}
+ div.a {
+ position:relative;
+ display: none
+ padding: 12 px;
+ border: 2px solid red;
+ text-decoration: none;
+ 
+
+ }
+
+
+div.a:hover{
+
+background-color:blue;
+color:white;
+
+}
+
+
+
+</style>
+
+
+<style>
+.flex-container {
+  display: flex;
+  background-color: #f1f1f1;
+  font-family:Monospace; 
+}
+
+.flex-container > div {
+  background-color: DodgerBlue;
+  color: white;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  float:left;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+a:link {
+  color: green;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: red;
+}
+
+/* selected link */
+a:active {
+  color: yellow;
+} 
+</style>
+
+
 </head>
 
 <body>
 
 
 <div class="post test">
-<h1 style="background-color: blue" > Legend English Academy</h1>
-<h2 style="background-color: white ">E-learning Platform</h2>
-<h3 style="background-color: white "> Grammar</h3>
+<h1 style="background-color: blue; color: white; font-family: cursive; " > Legend English Academy</h1>
+<h2 style="background-color: white; font-family:  fantasy; ">E-learning Platform</h2>
+<h3 style="background-color: white; font-family: fantasy;"> English Grammar</h3>
 
 
 
@@ -168,10 +296,32 @@ margin:4px;
 <div class=" container">
 
 
-</bpdy>
+
+
+<div class="scrollmenu" >
+
+<a class="active"  href="https://www.legendbdgroup.com">Home</a>
+<div  class="active"></div>
+<a  href="https://www.legendbdgroup.com">News</a>
+<div  class="active">News</div>
+<a  href="#News">News</a>
 
 
 
+
+</div>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div> 
+  <div>4</div>
+</div>
+
+
+</body>
+
+</html>
 
 
 
@@ -185,125 +335,91 @@ margin:4px;
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {box-sizing: border-box}
+body {
+  font-family: 'Lato', sans-serif;
+}
 
-/* Set height of body and the document to 100% */
-body, html {
+.overlay {
   height: 100%;
-  margin: 0;
-  font-family: Arial;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  float:left;
 }
 
-/* Style tab links */
-.tablink {
-  background-color: #555;
-  color: white;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 25%;
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
 }
 
-.tablink:hover {
-  background-color: #777;
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
 
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: white;
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
 }
 
-#Parts of Speech {background-color: red;}
-#News {background-color: green;}
-#Contact {background-color: blue;}
-#About {background-color: orange;}
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
 </style>
 </head>
 <body>
 
-<button class="tablink" onclick="openPage('Parts of Speech', this, 'red')">Parts of Speech</button>
-<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
-
-<div id="Parts of Speech" class="tabcontent">
-  <h3>Parts of Speech</h3>
-  <p>5. Write a letter to your younger brother advising him about the bad effects of wasting time.
-20, Monipur,
-Dhaka.
-14 June 2013
-Dear Shorno,
-At first, take my heartiest love. Yesterday I received your a letter from mother and heard that you are wasting your valuable time in playing games, chatting in Facebook and mixing with some wicked boys. Let me tell you about the bad effects or wasting valuable time.
-You know that time and time wait for none . Again, youth is the seed time of time. The success in life totally depends on the proper use of youth that means student life. If you waste your time in this way, you will not be able to succeed in life. Besides, your concept about reality is very low. Life is not a bed of roses. You will have to struggle very hard to maintain yourself and your family. Without ensuring the proper use of time, it is impossible for everyone to be successful in life. All the great men of the world became successful only by using their time properly. You must keep it in mind that time once is gone, is gone forever. I believe you will understand it by now and make the proper use of your valuable time in study.
-No more today. Convey my best regards to mom and love to the youngers.
-</p>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
 </div>
 
-<div id="News" class="tabcontent">
-  <h3>News</h3>
-  <p>Some news this fine day!</p> 
-</div>
-
-<div id="Contact" class="tabcontent">
-  <h3>Contact</h3>
-  <p>Get in touch, or swing by for a cup of coffee.</p>
-</div>
-
-<div id="About" class="tabcontent">
-  <h3>About</h3>
-  <p>I was very unhappy and full of grief to read the letter of your class teacher who informed that you have started moving in the company of bad boys. Your class teacher has made a very strong complaint against you and this is really shocking news as it was not expected of you.
+<h2>Fullscreen Overlay Nav Example</h2>
 
 
-It is very shocking to know that you have started bunking classes to see movies and have also started smoking. If this tendency continues, the day may not be very far when you will start gambling, consuming alcohol and taking drugs.
-
-
-You must know that a man is known by the company he keeps. If you continue moving in bad company, you will spoil your life and also bring bad name to your school and family. As we are not a rich family, we cannot afford to waste even a single rupee. Moreover, Father has very high hopes for you.
-
-
-I, therefore, advise you to shun bad company immediately and devote time to studies sincerely and whole-heartedly. I hope that you will not give me a chance to receive the same complaintagainst you.
-
-
-Thanking you.
-
-
-Yours Sincerely,
-
-
-(The Sender's Signature)
-
-The Sender's Name
-
-Enc :
-</p>
-</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
 <script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
 }
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
 </script>
-   
+     
 </body>
-</html> 
+</html>
 
 
 
@@ -320,33 +436,3 @@ document.getElementById("defaultOpen").click();
 
 
 
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: red;
-   color: white;
-   text-align: center;
-}
-</style>
-</head>
-<body>
-
-<h2>Legend BD Group</h2>
-
-
-<div class="footer">
-  <p>Footer</p>
-</div>
-
-</body>
-</html> 
