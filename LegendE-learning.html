@@ -3,13 +3,15 @@
 
 <html>
 <head>
-
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!--Get your own code at fontawesome.com-->
 <style>
+
 p {
   border: 2px solid black;
-  outline: #4CAF50 solid 10px;
+  outline:  solid green 10px;
   margin: auto;  
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   font-family:Cursive;
 }
@@ -23,7 +25,7 @@ p {
 
 /* Set height of body and the document to 100% */
 body, html {
-  height: 60%;
+  height: 40%;
   margin: 0;
   font-family: Cursive;
 }
@@ -36,8 +38,8 @@ body, html {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
+  padding: 12px 14px;
+  font-size: 16px;
   width: 25%;
 }
 
@@ -60,7 +62,9 @@ body, html {
 </style>
 </head>
 <body>
-
+<i class="fas fa-cloud"></i>
+<p>Styled Font Awesome icons (size and color):</p>
+<i class="fas fa-cloud" style="font-size:24px;"></i>
 <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
 <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
 <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
@@ -308,17 +312,17 @@ window.onclick = function(event) {
 } 
 .banner{ color:red;
 }
-.menu{ background-color:gray ;
+.menu{ background-color:green ;
 }
-.rightbar{backgound-color:BlueViolet;
+.rightbar{backgound-color: green;
 }
 .footer{ background-color:rd;
 padding:2px;
 }
- a[target]{ background-color:gray ;
+ a[target]{ background-color:green ;
 }
 
-p {outline-color:red;}
+p {outline-color:blue;}
 
 p.dotted {outline-style: dotted;}
 </style>
@@ -351,7 +355,7 @@ p.dotted {outline-style: dotted;}
 }
 
 .menu a {
-  background-color: #e5e5e5;
+  background-color: white;
   padding: 10px;
   margin-top: 7px;
   display: block;
@@ -424,7 +428,7 @@ body {
 
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: white;
   font-family: cursive;
 }
 
@@ -605,7 +609,7 @@ a:active {
 div{
     	width: auto px;
     	height: auto px;
-    	background: linear-gradient( to top right, black, gray,  white );
+    	background: linear-gradient( to bottom right,  green 90%, blue );
 		 
     }
 </style>
@@ -704,7 +708,7 @@ input[type=text]:focus, input[type=password]:focus {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .collapsible {
-  background-color: #777;
+  background-color: blue;
   color: white;
   cursor: pointer;
   padding: 18px;
@@ -738,7 +742,7 @@ input[type=text]:focus, input[type=password]:focus {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 div.scrollmenu {
-  background-color: white;
+  background-color: red;
   overflow: auto;
   white-space: nowrap;
   font-family: cursive;
@@ -753,7 +757,7 @@ div.scrollmenu a {
 }
 
 div.scrollmenu a:hover {
-  background-color: red;
+  background-color: blue;
 }
 </style>
 </head>
@@ -777,7 +781,7 @@ div.scrollmenu a:hover {
 </div>
 
 <div class="container">
-  <h2 style="color:black; background-color:red">Dropdowns</h2>
+  <h2 style="color:black; background-color:blue">Dropdowns</h2>
   <p>The .dropdown-divider class is used to separate links inside the dropdown menu with a thin</p>
   <div class="dropdown">
     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
