@@ -1,420 +1,168 @@
+
+
+
 <!DOCTYPE html>
-
-
-<html>
-<head>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<!--Get your own code at fontawesome.com-->
-<style>
-
-p {
-  border: 2px solid black;
-  outline:  solid green 10px;
-  margin: auto;  
-  padding: 10px;
-  text-align: center;
-  font-family:Cursive;
-}
-<style>
-
-
-
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-* {box-sizing: border-box}
-
-/* Set height of body and the document to 100% */
-body, html {
-  height: 40%;
-  margin: 0;
-  font-family: Cursive;
-}
-
-/* Style tab links */
-.tablink {
-  background-color: gray ;
-  color: white;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 12px 14px;
-  font-size: 16px;
-  width: 25%;
-}
-
-.tablink:hover {
-  background-color: gray;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: white;
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
-}
-
-#Home {background-color:gray ;}
-#News {background-color: gray;}
-#Contact {background-color: gray;}
-#About {background-color: gray;}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
 </style>
-</head>
-<body>
-<i class="fas fa-cloud"></i>
-<p>Styled Font Awesome icons (size and color):</p>
-<i class="fas fa-cloud" style="font-size:24px;"></i>
-<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
-
-<div id="Home" class="tabcontent">
-  <h3>Home</h3>
-  <p>We live in a competitive world.  To gain sustainable competitive edge  in the global competitive market we have focused on our core  competences based on cloud based value delivery & value proposition. Technology is the building block to business success. Fintech, IT governance & security, people skill, business analytics & data science are the key to sustainable development. Legend Group believes in leveraging all aspects of customization to the needs of the valued clients. Customer satisfaction is our first priority. Our mission is to deliver IT service & IS security , IT education, Software development , English learning & Business training in both off- line & on-line platform   to equip our  generation with future skills-set & mind-set not only to survive but also to thrive in the data-driven society.</p>
-</div>
-
-<div id="News" class="tabcontent">
-  <h3>News</h3>
-  <p>Some news this fine day!</p> 
-</div>
-
-<div id="Contact" class="tabcontent">
-  <h3>Contact</h3>
-  <p>Get in touch, or swing by for a cup of coffee.</p>
-</div>
-
-<div id="About" class="tabcontent">
-  <h3>About</h3>
-  <p>Who we are and what we do.</p>
-</div>
-
-<script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-   
-</body>
-</html> 
-
-
-
-
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 16px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid red;
-  box-sizing: content-box;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: 1px solid red;;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-}
-</style>
-
-
-
-</head>
 <body>
 
-
-
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register please</button>
-
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-<html>
-
-<head>
-<style>
-#myHeader {
-  background-color:Blue;
-  color: yellow ;
-  padding: 20px
-  text-align: left;
-  font-family: cursive;
-} 
-.banner{ color:red;
-}
-.menu{ background-color:green ;
-}
-.rightbar{backgound-color: green;
-}
-.footer{ background-color:rd;
-padding:2px;
-}
- a[target]{ background-color:green ;
-}
-
-p {outline-color:blue;}
-
-p.dotted {outline-style: dotted;}
-</style>
-
-</head>
-<body>
-
-
-
-<a class="round1" style="background-color:black; color:white; font-size:30" href="https://www.legendbdgroup.com"> Visit: Legend BD Group Website</a>
-
-</body>
-</html>
-
-
-
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-* {
-  box-sizing: content-box;
-  font-family: cursive;
-}
-
-.menu {
-  float: left;
-  width: 20%;
-  text-align: center;
-}
-
-.menu a {
-  background-color: white;
-  padding: 10px;
-  margin-top: 7px;
-  display: block;
-  width: 100%;
-  color: white;
-}
-
-.main {
-  float: left;
-  width: 60%;
-  padding: 0 20px;
-  color:white;
-}
-
-.right {
-  background-color: Blue;
-  float: left;
-  width: 20%;
-  padding: 30px;
-  margin-top: 10px;
-  text-align: center;
-  color:white;
-}
-
-@media only screen and (max-width: 620px) {
-  /* For mobile phones: */
-  .menu, .main, .right {
-    width: 100%;
-  }
-
-
-p.dotted {outline-style: dotted;}
-
-</style>
-
-
-</head>
-<body style="font-family:Verdana;color:#aaaaaa;">
-
-<div style="background-color:gray;padding:10px;text-align:center;">
-  <h3 class="dotted" style="color:black; background-color:red" >WELCOME TO E-LEARNING PLAFORM </h3>
-  
-</div>
-
-<div style="overflow:auto">
-  <div class="menu">
-    <a class="dotted" style="background-color:blue;" style="visited; color: red;" href="https://www.youtube.com/channel/UCi2ErMluZR9YIkcKVdxolrg/videos">Legend English Academy Youtube Channel <strong> <b></a>
-    <a class="dotted" style="background-color:blue " href="https://www.facebook.com/amitacharjeesoftwaredeveloper">Legend English Academy Facebook Page</a>
-    <a class="dotted" style="background-color: blue " href="https://www.youtube.com/channel/UCJLihB_KmRVlcxhP_G9IBnQ?app=desktop">Business Software & Technology Youtube Channel</a>
-    <a class="dotted" style="background-color: blue " href="https://www.facebook.com/amitacharjee2020">Business Software & Technology Facebook Page</a>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a>
   </div>
 
-  <div class="main">
-  
-    
-	
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">START PAGE</h1>
+  <p class="w3-xlarge">Template by w3.css</p>
+  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Lorem Ipsum</h1>
+      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>Lorem Ipsum</h1>
+      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+ <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+	<!DOCTYPE html>
+<html>
+<head>
+<title>Font Awesome Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!--Get your own code at fontawesome.com-->
+</head>
+<body>
+
+<h1>Font Awesome icon library</h1>
+
+<p>Some Font Awesome icons:</p>
+<i class="fas fa-cloud"></i>
+<i class="fas fa-heart"></i>
+<i class="fas fa-car"></i>
+<i class="fas fa-file"></i>
+<i class="fas fa-bars"></i>
+
+<p>Styled Font Awesome icons (size and color):</p>
+<i class="fas fa-cloud" style="font-size:24px;"></i>
+<i class="fas fa-cloud" style="font-size:36px;"></i>
+<i class="fas fa-cloud" style="font-size:48px;color:red;"></i>
+<i class="fas fa-cloud" style="font-size:60px;color:lightblue;"></i>
+
+</body>
+</html>
+
 	
 <html>
 <head>
+<style>
+p {
+  border: 2px solid black;
+  outline: #4CAF50 solid 10px;
+  margin: auto;  
+  padding: 20px;
+  text-align: center;
+}
+</style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 * {
@@ -433,7 +181,7 @@ body {
 }
 
 .navbar a {
-  float: left;
+  float: center;
   font-size: 16px;
   color: white;
   text-align: center;
@@ -442,7 +190,7 @@ body {
 }
 
 .dropdown {
-  float: left;
+  float: right;
   overflow: hidden;
 }
 
@@ -450,7 +198,7 @@ body {
   font-size: 16px;  
   border: none;
   outline: none;
-  color: white;
+  color: blue;
   padding: 14px 16px;
   background-color: inherit;
   font: inherit;
@@ -462,9 +210,9 @@ body {
 }
 
 .dropdown-content {
-  display: none;
+  display: inline;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: green;
   width: 100%;
   left: 0;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -472,13 +220,13 @@ body {
 }
 
 .dropdown-content .header {
-  background: red;
+  background: green;
   padding: 16px;
-  color: blue;
+  color: green;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: inline-block;
 }
 
 /* Create three equal columns that floats next to each other */
@@ -486,13 +234,13 @@ body {
   float: left;
   width: 33.33%;
   padding: 10px;
-  background-color: #ccc;
+  background-color: green;
   height: 250px;
 }
 
 .column a {
-  float: none;
-  color: red;
+  float: left;
+  color: white;
   padding: 16px;
   text-decoration: none;
   display: block;
@@ -500,7 +248,7 @@ body {
 }
 
 .column a:hover {
-  background-color: blue;
+  background-color: green;
 }
 
 /* Clear floats after the columns */
@@ -508,29 +256,30 @@ body {
   content: "";
   display: table;
   clear: both;
+  float:center;
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column {
-    width: 100%;
-    height: auto;
+    width: 200px;
+    height: 200 px;
   }
 }
 a:link {
-  background-color: white;
+  background-color: green;
 }
 
 a:visited {
-  background-color: white;
+  background-color: green;
 }
 
 a:hover {
-  background-color: white;
+  background-color: green;
 }
 
 a:active {
-  background-color: white;
+  background-color: green;
 } 
 </style>
 </head>
@@ -548,7 +297,7 @@ a:active {
       </div>   
       <div class="row">
         <div class="column">
-          <h3>English for School</h3>
+          <h3 style="color:red">English for School</h3>
           <a href="file:///C:/Users/User/Desktop/Legend%20E-Grammar/SSC%20English1st%20Paper.html">English 1st Paper</a>
           <a href="file:///C:/Users/User/Desktop/Legend%20E-Grammar/SSC%20English%202nd%20Paper.html">English 2nd Paper</a>
           <a href="file:///C:/Users/User/Desktop/Legend%20E-Grammar/SSC%20Model%20Question%20Bank%20.html">SSC Model Question Bank</a>
@@ -559,7 +308,7 @@ a:active {
 		  <a href="#">Online Vocabulary Test</a>
         </div>
         <div class="column">
-          <h3>English for Collge</h3>
+          <h3 style="color:red" >English for Collge</h3>
           <a href="file:///C:/Users/User/Desktop/Legend%20E-Grammar/HSC%20English%201st%20Paper.html">English 1st Paper</a>
           <a href="file:///C:/Users/User/Desktop/Legend%20E-Grammar/HSC%20English%202nd%20Paper.html">English 2nd Paper</a>
           <a href="#">Online Test</a>
@@ -568,7 +317,7 @@ a:active {
 		  <a href="#">HSC Model Question Bank</a>
         </div>
         <div class="column">
-          <h3>Model Question  Bank</h3>
+          <h3 style="color:red">Model Question  Bank</h3>
           <a href="https://docs.google.com/presentation/d/1Q3-G3c6jNeYvWXKOX7OVP3Jt51lO3GQH9fN6H3rxeKU/edit?fbclid=IwAR34scIJRrSWhxtNZTXc-aEP5-ezcgU2DDH4I_PbjkYwRe8ZeM8NeGtT2A8#slide=id.ge213c3f462_1_6">Legend E-Library</a>
           <a href="#">SSC Model Question BanK</a>
           <a href="#">HSC Model Question Bank</a>
@@ -582,7 +331,7 @@ a:active {
 </div>
 
 <div style="padding:16px">
-  <h3>Responsive Mega Menu (Full-width dropdown in navbar)</h3>
+
   
   
 </div>
@@ -607,9 +356,9 @@ a:active {
 <head>
 <style>
 div{
-    	width: auto px;
-    	height: auto px;
-    	background: linear-gradient( to bottom right,  green 90%, blue );
+    	width: auto;
+    	height: auto;
+    	background: linear-gradient( to bottom right,  green 90%,  red );
 		 
     }
 </style>
@@ -646,7 +395,7 @@ body, html {
   margin: 20px;
   max-width: 300px;
   padding: 16px;
-  background-color: white;
+  background-color: green;
 }
 
 /* Full-width input fields */
@@ -655,18 +404,18 @@ input[type=text], input[type=password] {
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
-  background: #f1f1f1;
+  background: blue;
 }
 
 input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
+  background-color: blue;
   outline: none;
 }
 
 /* Set a style for the submit button */
 .btn {
-  background-color: #04AA6D;
-  color: white;
+  background-color: blue;
+  color: blue;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
@@ -714,9 +463,10 @@ input[type=text]:focus, input[type=password]:focus {
   padding: 18px;
   width: 100%;
   border: none;
-  text-align: left;
+  text-align: right;
   outline: none;
   font-size: 15px;
+  float:left;
 }
 
 .active, .collapsible:hover {
@@ -726,7 +476,7 @@ input[type=text]:focus, input[type=password]:focus {
 .content {
   padding: 0 18px;
   display: none;
-  overflow: hidden;
+  overflow: visible;
   background-color: #f1f1f1;
 }
 </style>
@@ -780,22 +530,7 @@ div.scrollmenu a:hover {
 
 </div>
 
-<div class="container">
-  <h2 style="color:black; background-color:blue">Dropdowns</h2>
-  <p>The .dropdown-divider class is used to separate links inside the dropdown menu with a thin</p>
-  <div class="dropdown">
-    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-      Dropdown button
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Link 1</a>
-      <a class="dropdown-item" href="#">Link 2</a>
-      <a class="dropdown-item" href="#">Link 3</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Another link</a>
-    </div>
-  </div>
-</div>
+
 
 
 </body>
@@ -824,7 +559,246 @@ text-shadow:4px 4px;
 
 <a  href="https://www.legendbdgroup.com; font-size: 40 px;">Legend BD Group </a>
 
+
 </body
 
 
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: cursive; }
+body {font-size:16px;}
+.w3-half img{margin-bottom:-2px;margin-bottom:6px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-bottom w3-large w3-padding" style="z-index:3;width:150px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-bottomleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-30"><b>Company<br>Name</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Showcase</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a> 
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Designers</a> 
+    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Company Name</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Interior Design</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Showcase.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="/w3images/kitchenconcrete.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+      <img src="/w3images/livingroom.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+      <img src="/w3images/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
+    </div>
+
+    <div class="w3-half">
+      <img src="/w3images/atrium.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+      <img src="/w3images/bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
+      <img src="/w3images/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:50px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Services.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
+    <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+  </div>
+  
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Designers.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>The best team in the world.</p>
+    <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    <p><b>Our designers are thoughtfully chosen</b>:</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>John Doe</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>Jane Doe</h3>
+          <p class="w3-opacity">Designer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team3.jpg" alt="Mike" style="width:10%">
+        <div class="w3-container">
+          <h3>Mike Ross</h3>
+          <p class="w3-opacity">Architect</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Packages / Pricing Tables -->
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Packages.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+        <li class="w3-padding-16">Floorplanning</li>
+        <li class="w3-padding-16">10 hours support</li>
+        <li class="w3-padding-16">Photography</li>
+        <li class="w3-padding-16">20% furniture discount</li>
+        <li class="w3-padding-16">Good deals</li>
+        <li class="w3-padding-16">
+          <h2>$ 199</h2>
+          <span class="w3-opacity">per room</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+        
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-red w3-xlarge w3-padding-32">Pro</li>
+        <li class="w3-padding-16">Floorplanning</li>
+        <li class="w3-padding-16">50 hours support</li>
+        <li class="w3-padding-16">Photography</li>
+        <li class="w3-padding-16">50% furniture discount</li>
+        <li class="w3-padding-16">GREAT deals</li>
+        <li class="w3-padding-16">
+          <h2>$ 249</h2>
+          <span class="w3-opacity">per room</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-red w3-padding-large w3-hover-black">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+    </form>  
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
 </html>
