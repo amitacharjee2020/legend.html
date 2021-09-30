@@ -1,19 +1,108 @@
 
 
-
-
-
-
-
 <!DOCTYPE html>
+<html  lang=""en>
 
 
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/192c7c4cfe.js" crossorigin="anonymous"></script>
 
-<html>
-<head>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+.icon-bar {
+  width: 100px;
+  background-color: #555;
+  float:left;
+ 
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 5px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+  float:left;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+h1 {
+  border: 2px solid black;
+  outline: #4CAF50 solid 10px;
+  margin: auto;  
+  padding: 5px;
+  text-align: center;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  float: right;
+  display:relative;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  display:absolute;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+</style>
+<body>
+<div  class="header">
+
+<p style="font-family: fantacy,  cusrsive; font-size:26px;" >LEGEND ENGLISH ACADEMY <br> A sister concern of Legend BD group</P>
+
+<div class="icon-bar">
+  <a class="active" href="#"><i class="fa fa-search "></i></a> 
+  <a href="#"><i class="fa fa-fw fa-envelope "></i></a> 
+ 
+</div>
+
+
+
+<div class="navbar">
+  
+  <a href="#home"> <i class="fa fa-fw fa-about-us"></i> About Us</a>
+ 
+  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+   
+</div>
+
+</body>
+</html> 
+
+<head>
+<style>
+
 div.a {
   outline-style: solid;
   outline-width: thick;  
@@ -151,18 +240,32 @@ a:hover {
 a:active {
   background-color: green;
 } 
+<style>
+.header {
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+   Margin:20px;
+}
+</style>
 </style>
 </head>
 <body>
 
 
-
-<h1 class="a"> Online Resources   </h1>
-
+</div>
+<h1 class="a"  style="" font-size: 8px>  E-Learning Platform </h1>
+ 
+<h2  style="float:center;" >Legend English Academy</h2>
+<i class="fas fa-thumbs-down fa-3x"></i>
 <div class="navbar">
   
   <div class="dropdown">
-    <button class="dropbtn">Paid Online supplementary English Courses for School & College<br> Please click on it to join us! 
+    <button class="dropbtn">Paid  English Courses <br>for School & College Students 
     
 	
     </button>
@@ -210,7 +313,8 @@ a:active {
    
 </div>
 
-
+<iframe src= "https://www.youtube.com/watch?v=US1HGchzC3A" style="border:2px solid red;"  >YouTube Lecture</iframe>
+<
 
 </body>
 </html>
@@ -219,9 +323,12 @@ a:active {
 
 
 
-<!DOCTYPE html>
-<html>
+
+
+
+
 <head>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 * {
@@ -236,10 +343,11 @@ body {
   overflow: hidden;
   background-color: #333;
   font-family: Arial, Helvetica, sans-serif;
+  float:right;
 }
 
 .navbar a {
-  float: left;
+  float: right;
   font-size: 16px;
   color: white;
   text-align: center;
@@ -328,8 +436,10 @@ body {
 <body>
 
 <div class="navbar">
-  <a href="#home">About Us</a>
-  <a href="#news">Our Programs</a>
+  <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+  
+  <a href="#Our Programs">Our Programs </a>
+  
   <div class="dropdown">
     <button class="dropbtn">Free Online Resources 
       <i class="fa fa-caret-down"></i>
@@ -379,30 +489,12 @@ body {
 
 
 
-<base href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/">
-<div id="slider">
-<figure>
-<img src="austin-fireworks.jpg" alt>
-<img src="images/legend.gif" alt>
-</figure>
-</div>
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
 <html>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -436,7 +528,7 @@ button {
   opacity: 0.9;
 }
 
-button:hover {
+button:overlay {
   opacity:1;
 }
 
@@ -449,7 +541,7 @@ button:hover {
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn {
   float: left;
-  width: 50%;
+  width: 100%;
 }
 
 /* Add padding to container elements */
@@ -464,11 +556,11 @@ button:hover {
   z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
+  width: 50%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: #474e5d;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 /* Modal Content/Box */
@@ -517,7 +609,6 @@ hr {
 </style>
 <body>
 
-<h2>Please click the sign up button!</h2>
 
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
 
@@ -563,24 +654,13 @@ window.onclick = function(event) {
 }
 </script>
 
+
+
 </body>
 </html>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -598,20 +678,20 @@ body {
   position: relative;
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px 0 30px 0;
+  padding: 8px 0 10px 0;
 } 
 
 /* style inputs and link buttons */
 input,
 .btn {
   width: 100%;
-  padding: 12px;
+  padding: 16px;
   border: none;
   border-radius: 4px;
   margin: 5px 0;
   opacity: 0.85;
   display: inline-block;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 20px;
   text-decoration: none; /* remove underline from anchors */
 }
@@ -712,7 +792,28 @@ input[type=submit]:hover {
     text-align: center;
   }
 }
+[class^="icon"] {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 15px;
+  margin-right: 20px;
+  fill: #fff;
+}
+<style>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+   Margin:20px;
+}
 </style>
+</style>
+
 </head>
 <body>
 
@@ -750,258 +851,50 @@ input[type=submit]:hover {
     </div>
   </form>
 </div>
+<div>
 
-<div class="bottom-container">
-  <div class="row">
-    <div class="col">
-      <a href="#" style="color:white" class="btn">Sign up</a>
-    </div>
-    <div class="col">
-      <a href="#" style="color:white" class="btn">Forgot password?</a>
-    </div>
-  </div>
+<h3> Home</h3>
+
+
+
+
+
+<h3> About Us</h3>
+
+
+
+<h3> Our Programs</h3>
+
+<i class="fas fa-graduation-cap fa-5x"></i>
+Legend English Academy offers <br> both offline & online Englisg courses to make you fit for the next level.
+
+
+<h3>Login</h3>
 </div>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #f1f1f1;
-  padding: 20px;
-  font-family: Arial;
-}
-
-/* Center website */
-.main {
-  max-width: 1000px;
-  margin: auto;
-}
-
-h1 {
-  font-size: 50px;
-  word-break: break-all;
-}
-
-.row {
-  margin: 10px -16px;
-}
-
-/* Add padding BETWEEN each column */
-.row,
-.row > .column {
-  padding: 8px;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  display: none; /* Hide all elements by default */
-}
-
-/* Clear floats after rows */ 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Content */
-.content {
-  background-color: white;
-  padding: 10px;
-}
-
-/* The "show" class is added to the filtered elements */
-.show {
-  display: block;
-}
-
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: white;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #ddd;
-}
-
-.btn.active {
-  background-color: #666;
-  color: white;
-}
-</style>
-</head>
-<body>
-
-<!-- MAIN (Center website) -->
-<div class="main">
-
-<h1>Digital Library</h1>
-<hr>
-
-<h2>Reference Books</h2>
-
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('Grammar')"> Grammar & Structure</button>
-  <button class="btn" onclick="filterSelection('Vocabulary')"> Vocabulary</button>
-  <button class="btn" onclick="filterSelection('Phonetics & Phonology')"> Phonetics & Phonology</button>
-</div>
-
-<!-- Portfolio Gallery Grid -->
-<div class="row">
-  <div class="column nature">
-    <div class="content">
-      <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
-      <h4>Grammar & Structure</h4>
-      <p>In English grammar, sentence structure is the arrangement of words, phrases, and clauses in a sentence. ... In traditional grammar, the four basic types of sentence structures are the simple sentence, the compound sentence, the complex sentence, and the compound-complex sentence.</p>
-    </div>
-  </div>
-  <div class="column nature">
-    <div class="content">
-    <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
-      <h4>Vocabulary</h4>
-      <p>A vocabulary is a set of familiar words within a person's language. A vocabulary, usually developed with age, serves as a useful and fundamental tool for communication and acquiring knowledge. Acquiring an extensive vocabulary is one of the largest challenges in learning a second language.</p>
-    </div>
-  </div>
-  <div class="column nature">
-    <div class="content">
-    <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
-      <h4>Phonetics & Phonology</h4>
-      <p>Phonetics is a branch of linguistics that comprises the study of the sounds of human speech. It is concerned with the physical properties of speech sounds or signs (phones): their physiological production, acoustic properties, auditory perception, and neurophysiological status. Phonology, on the other hand, is concerned with the abstract, grammatical characterization of systems of sounds or signs.</p>
-    </div>
-  </div>
+ 
+ <div class="footer">
+ <p style="font-family: fantacy,  cusrsive; text-align:right;">Business Software & Technology Ltd <br> Another sister concern of Legend BD Group.</p>
+ 
   
-  <div class="column cars">
-    <div class="content">
-      <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
-      <h4>Retro</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column cars">
-    <div class="content">
-    <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
-      <h4>Fast</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column cars">
-    <div class="content">
-    <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
-      <h4>Classic</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-
-  <div class="column people">
-    <div class="content">
-      <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
-      <h4>Girl</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column people">
-    <div class="content">
-    <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
-      <h4>Man</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column people">
-    <div class="content">
-    <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
-      <h4>Woman</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-<!-- END GRID -->
 </div>
-
-<!-- END MAIN -->
-</div>
-
-<script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
-
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
