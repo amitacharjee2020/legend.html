@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +14,7 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
-  
+  document.getElementById("demo").innerHTML = "Hello JavaScript";
   <style>
   
   .header {
@@ -39,19 +41,335 @@ footer {
 
   
   
-  .container{
+  .container mt-3{
   
   text-align: center;
-  padding: 2px;
-  margin:26px;
-  background-color: DodgerBlue;
-  color: white;
-  
+  padding: 40px;
+  margin:40px;
+  display:inline-block;
+  background-color: white;
+  color:blue;
   
   }
   
   
+
+  .collapsible{
   
+ 
+  cursor:ponter;
+  padding:18px;
+  width:100%;
+  border:none;
+  text-align:center;
+  outline:none;
+  font-size:15px;
+  }
+
+.active, .collapsible:hover{
+
+background-color:Dogerblue;
+}
+
+.content{
+display:none;
+over-flow:hidden;
+
+}
+  
+  
+
+  
+  
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the navigation links */
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+  
+  
+  
+  
+  
+  
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+  
+  
+  
+  
+  
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  body{
+
+margin:2px;
+border:2px;
+outline:2px;
+}
+ 
+  body {
+    position: relative;
+  }
+
+  .affix {
+    top: 20px;
+    z-index: 9999 !important;
+  }
+  div.col-sm-9 div {
+    height: 250px;
+    font-size: 28px;
+  }
+  #section1 {color: #fff; background-color: #1E88E5;}
+  #section2 {color: #fff; background-color: #673ab7;}
+  #section3 {color: #fff; background-color: #ff9800;}
+  #section41 {color: #fff; background-color: #00bcd4;}
+  #section42 {color: #fff; background-color: #009688;}
+  
+  @media screen and (max-width: 810px) {
+    #section1, #section2, #section3, #section41, #section42  {
+      margin-left: 150px;
+    }
+  }
+  
+  .success{
+  background-color:red;
+  }
+  .info{
+  
+   background-color:blue;
+  
+  }
+  
+   .collapsible{
+  
+ 
+  cursor:ponter;
+  padding:18px;
+  width:100%;
+  border:none;
+  text-align:center;
+  outline:none;
+  font-size:15px;
+  }
+
+.active, .collapsible:hover{
+
+background-color:Dogerblue;
+}
+
+.content{
+display:none;
+over-flow:hidden;
+
+}
+.p{
+
+background color: white;
+color:black;
+font-size:14px;
+outline: 2px red;
+border: 2px red;
+padding: 8 px;
+
+}
+  
+  
+  
+ .grid-container {
+  display: grid;
+  grid-template: 150px / auto auto auto;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+} 
+  
+ 
   
   </style>
 </head>
@@ -63,7 +381,7 @@ footer {
   <h3  class="header">Legend English Academy</h3>
   
   <p style="font-size:14px;">A sister concern of Legend BD Group</p>
-  <h3 class="header">HSC English 2nd Paper</h3>
+  <h3 class="header">HSC Model Question Bank</h3>
   
   <i class="bi bi-facebook"></i>
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -82,33 +400,250 @@ footer {
 
 
 
-
-
-
-
-<div>
-
-<div class="container mt-3">
-  <h2>Click here!</h2>
-  <p>You can feel free to choose your course</p>
   
+  
+  
+
+<div class="container-fluid" >
+<div class="jumbotron">
+  <h2>Writing</h2>
+  <p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Application</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body"><span>APPLICATION SUGESTION SSC EXAM-2021</span>
+		<button> 
+		
+		
+	</div>
+	
+	
+
+	
+	
+
+<button  type="button"  class="collapsible"> 1.	Application for increasing library facilities in the school.<br>    
+ <p>2.	 Application for setting up a library  in the school.<br>                                                                              
+3.	Application for setting up an English Language Club in the school<br>  
+4.	Application for financial help from the poor fund<br> 
+5.	Application  for full free studentship <br>                                                                                          
+6.	Application  for opening a common room<br> 
+7.	Application for relief goods for the flood/cyclone-affected people<br> 
+8.	Application for providing multimedia facilities in the school. <br>   
+9.	Application  for setting up a computer club in our school.<br> 
+10.	Application for leave of absence<br> 
+11.	  Application for leave in advance.<br> 
+12.	Application for setting up a canteen in your school<br> 
+13.	 Application for arranging a study tour<br> 
+14.	 Application for permission to visit a place of historical interest<br> 
+15.	 Application for remission of delay fine<br> 
+16.	 Application for the  construction of a bridge/road.<br> 
+17.	Application to the Headmaster of your school praying for TC. <br>      
+18.	 Application to the Headmaster for Testimonial <br> 
+19.	 Application to the Head teacher praying for a seat in the school hostel.<br> 
+20.	Application for a half -holiday<br> 
+21.	Application for increasing library facilities in the school. <br>                                                                              
+22.	 Application to the Headmaster for changing school hours or for morning school.</p>
+
+
+
  
+                                                            
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script
+
+
+
+
+
+<div class="grid-container" >
+
+<button  type="button"  class="collapsible"> 1.	Application for increasing library facilities in the school</button>
+
+ <div>                                             
+<P>Date: 
+The Headmaster
+
+
+Ideal School 
+Matijheel, Dhaka
+Subject: Prayer for increasing library facilities in the school.
+Sir,
+With due respect , we, the students of your school, have the honour to lay before you the fact that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are satisfactory. There is no frigate like a book. Books are the best companion in a man’s life. We have a library in our school.  But it is a matter of sorrow that there are not sufficient facilities in our library for lack of which we have been suffering terribly for a pretty long time.  We are badly in need of reference books, English dailies, English story books, renowned magazines & periodicals, ten desks & two fans in our library to ease our reading environment. 
+In the circumstances stated above, we fervently pray & hope that your honour would be so kind as to increase the facilities of the library in the school. & oblige there-by.
+We remain
+Sir
+Your most obedient pupils
+Class-IX
+ Ideal School </P> 
+ 
+</div>
+</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+
+
+
+
+
+<button  type="button"  class="collapsible">2.	Application for setting up a library  in the school </button>
+ <div class="jumbotron">                                                                        
+<P>Date: 
+The Headmaster
+Ideal School 	
+Matijheel, Dhaka
+Subject: Prayer for setting up a library  in the school.
+Sir,
+With due respect , we, the students of your school, have the honour to lay before you the fact that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are satisfactory. There is no frigate like a book. Books are the best companion in a man’s life.  But it is a matter of sorrow that there is no library in our school for lack of which we have been suffering terribly for a pretty long time.  We are badly in need of a library in our school to enrich our domain of knowledge. 
+In the circumstances stated above, we fervently pray & hope that your honour would be so kind as to sanction a library in the school at your earliest convenience & oblige there-by.
+We remain
+Sir
+Your most obedient pupils
+Class-IX
+ Ideal School  </P> 
+
+ 
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+
+
+
+
+
+<button  type="button"  class="collapsible"> 3.	Application for setting up an English Language Club in the school</button>
+
+  <div class="jumbotron" >                                                                        
+<p> Date: 
+The Headmaster
+Ideal School 	
+Matijheel, Dhaka
+Subject: Prayer for setting up an English language club  in the school.
+Sir,
+With due respect , we, the students of your school, have the honour to lay before you the fact that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are satisfactory. As you know, English is an international language. It is a lingua franca.  We cannot do a single day in this competitive world without knowing it .   But it is a matter of sorrow that there is no English language club  in our school for lack of which we have been lagging behind.  We are badly in need of  in our school to enrich our domain of knowledge. 
+In the circumstances stated above, we fervently pray & hope that your honour would be so kind as to sanction an English language club in the school at your earliest convenience & oblige there-by.
+We remain
+Sir
+Your most obedient pupils
+Class-IX
+ Ideal School </P>
   
-  <div class="dropup">
-    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-      Dropup button
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Link 1</a></li>
-      <li><a class="dropdown-item" href="#">Link 2</a></li>
-      <li><a class="dropdown-item" href="#">Link 3</a></li>
-    </ul>
-  </div>
-</div>
+ </div>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+
+
+
+
+<button  type="button"  class="collapsible"> 4.Application for financial help from the poor fund </button>
+
+< div class="jumbotron" >
+
+ <P><Date: 	
+The Headmaster
+Ideal School & College
+Matijheel, Dhaka
+Subject: Prayer for financial help from the poor fund
+Sir,
+With due respect & humble submission, I beg to state that my father is a petty non-government employee. He is the only earning member of our family which consists of six members. I have also a school going sister. It is very difficult for my father to bear my educational expenses with his small income. In fact, he can hardly afford to meet the necessary expenses of our day to day life. If I am not granted financial help in the form of stipend from the poor fund, I shall have no other alternative than to discontinue my studies. 
+In the circumstances stated above, I fervently pray & hope that your honour would be so good as to grant me financial help from the poor fund  to continue my studies & oblige there-by.
+I remain
+Sir,
+Your most obedient pupil
+Radin Ahmed
+Class: ---, Section: ---
+Roll: ----- </P>
 
 </div>
 
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
 
 
@@ -116,34 +651,86 @@ footer {
 
 
 
+<button  type="button"  class="collapsible"> 5.	Application  for full free studentship</button>
 
-<div  class="modal-body"|>
-
-<form>
-<div class="form-group">
-<label for="uname" ><b> username</b></label>
-<input type="text" placeholder="enter username"  name="uname" required>
-
-<label  for="pwd"><b>Password</b></label>
-
-<input type="password" placeholder="Enter Password" name="psw" required>
-
-<button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-</div>
-<div class="modal" style="background-color:white">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>
-
-</div>
+                                                                                       
+Date: 
+The Headmaster
+Ideal School & College
+Matijheel, Dhaka
+Subject: Prayer for full free studentship
+Sir,
+With due respect & humble submission, I beg to state that my father is a petty non-government employee. He is the only earning member of our family which consists of six members. I have also a school going sister. It is very difficult for my father to bear my educational expenses with his small income. In fact, he can hardly afford to meet the necessary expenses of our day to day life. If I am not granted financial help in the form of full free studentship, I shall have no other alternative than to discontinue my studies. 
+In the circumstances stated above, I fervently pray & hope that your honour would be so good as to grant me full free studentship to continue my studies & oblige there-by.
+I remain
+Sir,
+Your most obedient pupil
+Radin Ahmed
+Class: ---, Section: ---
+Roll: -----
 
 
 
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+	
+
+
+
+
+button  type="button"  class="collapsible">6.	Application  for opening a common room </button>
+
+<P>Date: 
+The Headmaster
+Ideal School & College
+Matijheel, Dhaka
+Subject: Prayer for opening a common room
+Sir,
+With due respect & humble submission, we, the students of your school, beg to state that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are outstanding. But it is a matter of sorrow that there is no common room in our school.   As a result, the students of our school loiter here & there during leisure period & spend their leisure time in idle gossiping. We need to utilize our time effectively to become worthy citizens of the country.  So, we are badly in need of a common room in our school.
+In the circumstances stated above, we fervently pray & hope that your honour would be so good as to sanction us a common room in our school  & oblige there-by.
+We remain
+Sir,
+Your most obedient pupils
+ Ideal School & college</P>
+
+
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+	
 
 
 
@@ -151,60 +738,1447 @@ footer {
 
 
 
+<button  type="button"  class="collapsible">7.Write an application for relief goods for the flood/cyclone-affected people. </button>
+
+	
+
+ <P>30 August 2018
+The Deputy Commissioner
+Munshiganj
+Subject: Request for relief for the flood/cyclone affected people.
+Sir,
+On behalf of the people of Birtara Union, we beg most respectfully to invite your kind attention to the distress of the people of our area caused by the recent flood/cyclone which  has broken all the records of the past. Never before did water level rise so high nor was the duration so long. Normal activities have been stopped for a pretty long time. Thousands of people have become homeless, foodless and clothless. The miseries of the affected people know no bounds. Crops have been greatly damaged.  Herds of cattle have been washed away. The total estimated loss stands at TK. 50 crore. Thousands of people have taken their shelter on rooftops, boats and embankments. They are now living under the open sky .
+Moreover, cholera and other water-borne diseases have broken out in an epidemic form for want of pure drinking water. It has already taken away some valuable lives. So if immediate relief materials and a medical team are not sent for the flood stricken people of this area, the situation may go from bad to worse at any time.
+In the circumstances stated above, I, therefore fervently pray and hope that you would be kind enough to send adequate relief materials and a medical team to our flood/cyclone affected area to save the lives of the ill-fated people. For any timely measure, we will remain ever grateful to you.
+Thanking you,
+Sincerely yours
+ The people of Birtara </P>
 
 
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+	
 
 
 
-
-
-
-
-
-
-
-<!-- Carousel -->
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-  <!-- Indicators/dots -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-  </div>
+<button  type="button" class="collapsible">8. Application for providing multimedia facilities in the school. </button>
+                                                                       
   
-  <!-- The slideshow/carousel -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="pic.jpg"   style="width:50%">
-    </div>
-    <div class="carousel-item">
-      <img src="pic5.jpg"   style="width:50%">
-    </div>
-    <div class="carousel-item">
-      <img src="pic2.jpg"   style="width:50%">
-    </div>
-	<div class="carousel-item">
-      <img src="pic3.jpg"   style="width:50%">
-    </div>
-	<div class="carousel-item">
-      <img src="pic4.jpg"   style="width:50%">
-    </div>
-  </div>
-  
-  <!-- Left and right controls/icons -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
+<P>Date: 	
+The Headmaster
+Ideal School 
+Matijheel, Dhaka
+Subject: Prayer for providing multimedia facilities in the school.
+Sir,
+With due respect & humble submission, we, the students of your school, have the honour to lay before you the fact that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are outstanding. Today’s age is an age of science & technology. ICT has become a buzzword in this virtual world. We have a computer lab in our school.  But it is a matter of sorrow that there are not sufficient multimedia facilities  in our computer lab as well as in our classrooms for lack of which we have been suffering terribly for a pretty long time.  We are badly in need of ten desktop computers, five lap top computers, three projectors, ten micro-phones & twenty digital sound boxes to provide multimedia facilities in the  class rooms as well as in the computer lab  of our school.
+In the circumstances stated above, we fervently pray & hope that your honour would be so good as to provide multimedia facilities in the  class rooms as well as in the computer lab  of our school  & oblige there-by.
+We remain
+Sir
+Your most obedient pupils
+Class-IX
+ Ideal School </P>
+
+
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+	
+<button  type="button" class="collapsible">9.Application  for setting up a computer club in our school. </button>
+
+
+<P>Date: 
+The Headmaster
+Ideal School 
+Matijheel, Dhaka
+Subject: Prayer for setting up a computer club in our school.
+Sir,
+With due respect & humble submission, we, the students of your school, have the honour to lay before you the fact that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are outstanding. Today’s age is an age of science & technology. ICT has become a buzzword in this virtual world.  But it is a matter of sorrow that there is no computer club in our school. We can increase our knowledge of Information & communication technology through this computer club.
+In the circumstances stated above, we fervently pray & hope that your honour would be so good as to set up a computer club in our school at your earliest convenience & oblige there-by.
+We remain
+Sir
+Your most obedient pupils
+Class-IX
+ Ideal School </P>
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+
+
+
+<button  type="button" class="collapsible">10.Application for leave of absence </button>
+
+
+<P>Date: 24-03-2018
+The Headmaster
+Ideal School 
+Matijheel, Dhaka	
+Subject: Prayer for three days’ leave of absence.
+Sir,
+With due respect & humble submission, I beg to state that I could not attend school for three days from 20-03-2018 to 22-03-2018 owing to my illness. I was attacked with fever accompanied with a bad headache. It is to be noted that I have been regular in my classes since I was admitted into your school. 
+In the circumstances stated above, I fervently pray & hope that your honour would be so good as to grant me  leave of absence for those days & oblige there-by.
+I remain
+Sir,
+Your most obedient pupil
+Radin Ahmed
+Class: ---, Section: ---
+Roll: ----- </P>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+
+
+
+
+
+<button type="button" class="collapsible">11.Application for leave in advance.</button>
+
+
+<P>Date: 24-03-2018	
+The Headmaster	
+Ideal School 
+Matijheel, Dhaka
+Subject: Prayer for three days’ leave in advance.
+Sir,
+With due respect & humble submission, I beg to state that I shall not be able to attend school for three days from 20-03-2018 to 22-03-2018 because my sister’s marriage ceremony is going to be held on 20-03-2018. I am the only son of my parents & they want me to give my best support & cooperation to make the marriage ceremony a success.   It is to be noted that I have been regular in my classes since I was admitted into your school. 
+In the circumstances stated above, I fervently pray & hope that your honour would be so good as to grant me leave in advance for those days & oblige there-by.
+I remain
+Sir
+Your most obedient pupil
+Radin Ahmed
+Class: ---, Section: --- </P>
+
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+
+
+ < button type="button" class="collapsible">12.	Application for setting up a canteen in your school</button>
+
+<P>Date: 	
+The Headmaster
+Ideal School 
+Matijheel, Dhaka
+Subject: Prayer for setting up a canteen in our school.
+Sir,
+With due respect & humble submission, we, the students of your school, have the honour to lay before you the fact that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are outstanding. But it is a matter of sorrow that there is no canteen in our school for lack of which we have been suffering terribly for a pretty long time. Most of the students cannot bring their midday meals with them. As a result, they have to have the dirty, unhealthy food from the near-by hotels & restaurants.  Most often, the dirty, unhealthy food causes serious health hazards to the students of our school. So, we are badly in need of a canteen to ensure good health.  
+In the circumstances stated above, we fervently pray & hope that your honour would be so good as to set up a canteen & oblige there-by.
+We remain
+Sir
+Your most obedient pupils
+Class-IX
+ Ideal School </P>
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+
+
+
+<button>
+13.	Application for arranging a study tour
+Date: 
+The Headmaster
+Ideal School 
+Matijheel, Dhaka
+Subject: Prayer for arranging a study tour
+Sir,
+With due respect & humble submission, we, the students of your school, beg to state that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are outstanding. We are desirous of going on a study tour at the Sunderbans.  It is the largest mangrove forest in the world. A study tour is not only interesting but also educative. We can learn a lot from this study tour. It will enrich our knowledge & give us a practical idea of  bio-diversity & wild life in our country. 
+In the circumstances stated above, we fervently pray & hope that your honour would be so good as to arrange a study tour for us & oblige there-by.
+We remain
+Sir
+Your most obedient pupils
+ Ideal School 
+
+</button>
+
+
+
+
+
+
+<button>
+14.	Application for permission to visit a place of historical interest
+Date: 
+The Headmaster
+Ideal School 
+Matijheel, Dhaka
+Subject: Prayer for permission to visit a place of historical interest.
+Sir,
+With due respect & humble submission, we, the students of your school, beg to state that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are outstanding. This year we are desirous of going on a study tour at Sonargaon.  It is a place of historical interest. Once it was called the golden place of Bengal. A study tour is not only interesting but also educative. We can learn a lot from this study tour. It will enrich our knowledge & give us a practical idea of the history & cultural heritage of our country. 
+In the circumstances stated above, we fervently pray & hope that your honour would be so good as to give us permission to visit the place & oblige there-by.
+We remain
+Sir
+Your most obedient pupils
+ Ideal School 
+
+</button>
+
+
+
+
+
+
+
+<button>
+15.	Write an application for remission of delay fine.
+Date: 2-05-2020
+The Headmaster	
+Ideal School 
+Matijheel, Dhaka
+Subject: Prayer for remission of delay fine.
+Sir,
+With due respect & humble submission, I have the honour to lay before you the fact that I could not afford to pay my tuition fees for the last three months-February, March & April 2018 as my father had been away from home for the last three months. I have been fined for the dues of my  fees. My name has also been struck off the rolls for this reason.  My father has returned home from abroad.  Now I shall be able to pay my dues of the last  three months. It is to be noted that I have always been regular in payment of my tuition fees in your school.
+In the circumstances stated above, I fervently pray & hope that your honour would be so good as to remit me from  delay fine & pass on order to receive only the usual fees & oblige there-by.
+I remain
+Sir
+Your most obedient pupil
+Radin Ahmed
+Class: ---, Section: ---
+Roll No.--
+
+</button>
+
+
+
+
+
+<button>
+16.	Write an application for the  construction of a bridge/road.
+30 May, 2018
+The Deputy Commissioner
+Munshiganj
+Subject: Request for the  construction of a bridge/road.
+Sir,
+On behalf of the people of Birtara Union, we have the honour  to invite your kind attention to the distress of the people of our area due to the lack of a bridge/ road.  About thirty thousand people live in our village. They have to go up & down the near-by town every day for their daily necessaries. They have to use the by-pass/ the canal for their daily communication. The canal/road  runs through the heart of the village. So we are badly in need of a bridge over the canal/ a road for easier  & safer communication with the district town.    
+In the circumstances stated above, we fervently pray and hope that you would be kind enough to make necessary steps to construct a bridge over the canal/ a road for easier  & safer communication.
+Thanking you,
+Yours faithfully,
+ The people of Birtara
+
+</button>
+
+
+
+
+
+
+
+
+<button>
+17.	Write an application to the Headmaster of your school praying for TC.      
+Date: 
+The Headmaster
+Ideal School & College
+Matijheel, Dhaka
+Subject: Prayer for issuing TC.
+Sir,
+With due respect, I have the honour to lay before you the fact that my father is a government employee. Recently he has been transferred to Chandpur. Our family has already shifted there. I have to get admitted into a school there. For this purpose, I need a TC from you referring to my academic feat, performance, extracurricular activities & character during the period I had been in your school. It is to be noted that I have cleared off my tuition fees & other charges. 
+In the circumstances stated above, I fervently pray & hope that your honour would be so kind as to issue me TC & oblige there-by.
+I remain
+Sir,
+Your most obedient pupil
+Radin Ahmed
+Class: ---, Section: ---
+Roll: -----
+
+</button>
+
+
+
+
+
+<table>
+<tr>
+<th>18.	Write an application to the Headmaster for Testimonial</th> 
+<th>25 July, 2019
+The Headmaster.
+ Govt. Laboratory School.
+Dhaka </th>
+<th>Subject: Prayer for a testimonial.
+Sir.
+I have the honour to state that I had been a student of your school for the session 2017-18. I was a student of Arts group. I passed the S.S.C Examination in 2019 and obtained GPA 5. It may be noted that I had been  although a regular student. I participated in all cultural activities of the school. I also wrote articles in the school magazine. I was good at sports and won many prizes in different competitions. Now I desire to get myself admitted into college. So I need a testimonial, from you referring to my academic career character and co-curricular activities.
+In the circumstances stated above. I pray and hope that your honour would be kind enough to issue me a testimonial and oblige thereby.
+Yours obediently
+Sudipto Rahat
+Roll: 25
+Session: 2017-18</th>
+</tr>
+</table>
+
+
+
+
+
+
+
+<table>
+
+19.	Write an application to the Head teacher praying for a seat in the school hostel.
+Date: 
+The Head teacher	
+Ideal School
+Matijheel, Dhaka
+Subject: Prayer for a seat in the school hostel.
+Sir,
+With due respect & humble submission, I have the honour to lay before you the fact that my father who is a government employee has been transferred from Dhaka to Chittagong. Our family has already shifted there. I have put up in a mess near-by our school.  Our family is anxious of my safety. Besides, I am facing some other problems too due to my staying in the mess. So I am badly in need of a seat in the school hostel to continue my studies. Moreover, I have no other alternative than to seek your favour of granting me a seat in the school hostel. If I am not granted a seat in the school hostel,  I shall be compelled to discontinue my studies.
+In the circumstances stated above, I fervently pray & hope that your honour would be so good as to grant me a seat in the school hostel to continue my studies & oblige there-by.
+I remain
+Sir
+Your most obedient pupil
+Rakib Hasan
+Class: Ten
+Roll No- 02 Section-
+
+</table>
+
+
+
+
+<input type="button"  value="input button" >
+20.	Application for a half -holiday
+20 July,  2020
+The Headmaster,
+Ideal School
+Dhaka
+Subject: Prayer for a half holiday.
+Sir,
+we, the students of your school, have the honor to state that the final game of the inter-school football tournament is going to be played between our school and Rajarbag  High School today at 4 p.m. in our school play ground. We are much interested in watching the match and  would like to encourage our players. So we need a half- holiday after the 4th period.
+We, therefore, pray and hope that you would be kind enough to grant us a half-holiday after the fourth period and enable us to witness the game.
+We remain 
+Sir
+Yours obediently	
+The Students of Ideal School	
+
+</input>
+
+
+
+
+
+
+
+
+
+
+
+
+21.	Application for increasing library facilities in the school.                                                                              
+Date: 
+The Headmaster
+Ideal School 
+Matijheel, Dhaka
+Subject: Prayer for increasing library facilities in the school.
+Sir,
+With due respect , we, the students of your school, have the honour to lay before you the fact that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are satisfactory. There is no frigate like a book. Books are the best companion in a man’s life. We have a library in our school.  But it is a matter of sorrow that there are not sufficient facilities in our library for lack of which we have been suffering terribly for a pretty long time.  We are badly in need of reference books, English dailies, English story books, renowned magazines & periodicals, ten desks & two fans in our library to ease our reading environment. 
+In the circumstances stated above, we fervently pray & hope that your honour would be so kind as to increase the facilities of the library in the school. & oblige there-by.
+We remain
+Sir
+Your most obedient pupils
+Class-IX
+ Ideal School 
+
+
+
+
+
+
+
+22.	Write an application to the Headmaster for changing school hours or for morning school.
+
+
+Date: 
+The Headmaster                      
+Ideal School 
+Matijheel, Dhaka
+Subject: Prayer for holding morning school. 
+ 
+Sir, 
+ 
+We, the students of your school, beg most respectfully to state that the summer season has already set in and there is no rain for a long time. Due to excessive heat of the sun, it has become very difficult for us to continue our works in the class room at noon. Moreover, the students coming from a long distance face a lot of troubles in the glaring sun. So, it will surely be convenient to all of us if the classes are held in the morning. 
+ 
+We would therefore, feel much obliged if you are gracious enough to hold classes in the morning from tomorrow until there is an appreciable change in weather. 
+ 
+We remain
+Sir
+Your most obedient pupils
+Class-IX
+ Ideal School 
+
+
+
+
+
+
+
+
+COVER  LETTER
+
+
+Application for Re-Admission
+
+Date: 
+The Headmaster
+Ideal School 
+Matijheel, Dhaka
+Subject: application for re-admission.
+Sir,
+I have the honour to state that I am a student of class 7 of your school. I could not pay my tuition fees for three months from March to May in time because my father was away from Chittagong on official duties. So my name has been struck off the rolls for non-payment of my dues. Now, my father has come back home and I am in a position to pay my dues. It may be mentioned that I paid my dues regularly in all previous months.
+I, therefore, earnestly request you to re-admit me on receipt of the usual dues and oblige thereby.
+I remain,
+Sir,
+Yours most obedient pupil,
+Nazmul
+Class-7
+Roll-5.
+
+
+
+
+
+
+
+
+
+Date:
+The Managing Director/The Headmaster/The Principal/The Human Resource Manager
+Name of the institute/Name of School/College 
+Address
+Subject: An application for the post of ……………..
+ Dear Sir,
+In response to your advertisement published in The Daily Star dated ……………., 2018.  I have come to know that you are going to appoint. …………….at your kind disposal.  I would like to offer myself as a candidate for the same. My CV is attached here-with for your kind consideration.
+I shall be highly pleased if you would kindly call me for the interview & appoint me to the desired post and oblige there –by. 
+Thanking you, 
+Sincerely yours  
+(Signature )
+Name of the candidate
+
+
+
+
+
+
+
+
+	
 </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Letter</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">1.	Write a letter to your friend about the importance of computer education
+										Tikatali, Dhaka								                        24-04-2019
+	
+My dear X,
+How are you? I am fine. In your last letter you wanted to know about the importance of computer education. Now I am going to write about it.
+Computers have revolutionized the way we live and work. There is hardly any field in which computers do not play a very significant role.  Computer can be tailored to suit the requirements of the students. As a teaching tool, computers have infinite possibilities. With the use of visuals and audio, learning is a lot lovelier. Difficult subjects can be explained easily by employing modern audio-visual presentations.  Computer is used to access the internet, which is arguably the most extensive library in the world. Computers not only help the students, but they can also be of immense help to the teachers. Teachers can refer to the internet for additional information and reference on the topics to be taught. It can also help them in setting test papers, frame questions and provide project ideas.  Internet offers a wide variety of activities for teachers and widens their horizons. Computers and  internet can help the teachers and institutions in reaching more students. Computers are also a boon to students who are home-bound due to illness or disability. With the use of computers and internet, students can interact with students and institutions across the globe. Students can take up collaborative research and development worldwide. Students get to know of the advancement in their respective fields by interacting with fellow students worldwide. Computers are a great way of storing a significant amount of data without occupying large space. Using computers in schools can eliminate the use of paper. Teacher’s presentations, notes, and test papers can be stored and transferred to computers. Students can submit homework and assignments as soft copies. Data stored in electronic media is also more durable, and most memory devices are reusable. Computer is undoubtedly the best possible aid in education, and its effective use  can prove fruitful to both teachers and students alike.
+No more today. I hope you have understood the importance of computer. With best regards to you & your parents.
+Yours ever,
+Y
+
+
+
+
+
+
+2.	Write a letter to your friend describing the bad effects of smoking.                                                                                                                 
+								Tikatali, Dhaka								                           24-04-2019
+My dear Rafi,
+ I am sorry to learn that you have become addicted to smoking. It pains me. So I want to let you know about the bad effects of smoking.
+People who smoke cigarettes seem to have a higher risk of death from heart disease (and possibly stroke). Studies also show that smokers get more colds, flu, bronchitis, and pneumonia than non-smokers. And people with certain health conditions become sicker if they smoke. Smoking lessens the overall health of smokers. For every premature death caused each year by smoking, there are at least 20 smokers living with a serious smoking-related illness.  Smoke is composed primarily of carbon dioxide, water vapor, carbon monoxide, particulate matter, hydrocarbons and other organic chemicals, nitrogen oxides, trace minerals and several thousand other compounds. When a cigarette is burning, they create more than 7,000 chemicals. At least 69 of these chemicals are known to cause cancer (carcinogenic), and many are extremely poisonous. These cigarette ingredients include nicotine, tar, and carbon monoxide, as well as formaldehyde, ammonia, hydrogen cyanide, arsenic, and DDT. Smoke containing nicotine is inhaled into the lungs, and the nicotine reaches your brain in just six seconds. Nicotine in the bloodstream acts to make the smoker feel calm. As a cigarette is smoked, the amount of tar inhaled into the lungs increases, and the last puff contains more than twice as much tar as the first puff. Carbon monoxide makes it harder for red blood cells to carry oxygen throughout the body. Tar is a mixture of substances that together form a sticky mass in the lungs. Most of the chemicals inhaled in cigarette smoke stay in the lungs. The more we inhale, the better it feels—and the greater the damage to our lungs. I hope you have understood what I meant to say.
+No more today.  With best regards to your parents. 
+Yours ever,
+Mashuk 
+
+
+
+
+
+
+
+
+3.	Write a letter to your friend describing the importance of physical exercise.                                                                                                                 
+								Tikatali, Dhaka								             24-04-2019
+My dear Rafi,
+I am sorry to learn that now a days you are not doing physical exercise. So I want to let you know about the benefits of physical exercise.
+Exercise is defined as any movement that makes our muscles work and requires our body to burn calories. There are many types of physical activity such as swimming, running, jogging, walking and dancing, to name a few Regular exercise helps prevent or manage many health problems and concerns, including stroke, metabolic syndrome, high blood pressure, type 2 diabetes, depression,  anxiety, many types of cancer & arthritis .  It can also help improve cognitive function and helps lower the risk of death from all causes. Exercise delivers oxygen and nutrients to our tissues and helps our cardiovascular system work more efficiently.  Physical activity provides long-term health benefits for everyone. Physical activity, along with proper nutrition, is beneficial to people of all ages, Exercise is crucial to supporting a fast metabolism and burning more calories per day. It also helps you maintain your muscle mass and weight loss. Physical activity helps us build muscles and strong bones. It may also help prevent osteoporosis. Exercise plays a vital role in building and maintaining strong muscles and bones. Exercise helps build bone density when we're younger. Regular physical activity, regardless of whether it is aerobic or a combination of aerobic and resistance training, can help us sleep better and feel more energized during the day. Exercise offers incredible benefits that can improve nearly every aspect of your health Regular physical activity can increase the production of hormones that make us feel happier and help us sleep better.
+No more today.  With best regards to your parents. 
+Yours ever,
+Mashuk 
+
+
+
+
+
+4.	Write a letter to your friend  describing the climate change of Bangladesh
+																					                20,March,2018 
+                                                                                                                                   K.M.Das Lane , Dhaka-1203
+Dear Radin,
+ At the outset of my letter, I convey my best love to you. I hope you are keeping fine. In your last letter, you wanted to know about climate change of Bangladesh.  Now I am going to give a short description of it.
+
+Bangladesh is the most vulnerable country in the world to tropical cyclones and the sixth most-vulnerable nation to flooding.  Impact of Climate Change in Bangladesh is an extremely crucial issue and Bangladesh is one of the most vulnerable nations to the impacts of Global Climate Change in the coming decades. Bangladesh is watered by a total of 57 trans-boundary rivers coming down to it: 54 from neighbouring India and 3 from Myanmar, and situated at the bottom of the mighty GBM river system (comprising the Ganges, the Brahmaputra and the Meghna).Nearly a quarter of Bangladesh is less than seven feet above sea level. More than one thousand people are living per sq km with the national population increasing by 2 million people each year. Bangladesh could lose up to 15% of its land area under the sea water and around 30 million people living in the coastal areas of Bangladesh could become Refugees because of climate change impacts. It is estimated that rising sea levels alone will displace 18 million Bangladeshis within the next 40 years. Climate change will affect many sectors, including water resources, agriculture and food security, ecosystems and biodiversity, human health and coastal zones. Many environmental and developmental problems will be worsened by climate change. Predicted rainfall increases, particularly during the summer monsoon, could increase flood-prone areas in Bangladesh. It is predicted that climate change could have devastating impact on agriculture which is a key economic driver in Bangladesh, accounting for nearly 20 percent of the GDP and 65 percent of the labor force. Crop yields are predicted to fall by up to 30 per cent, creating a very high risk of hunger. 
+No more today. With best regards to your parents.
+Yours ever,
+Avoy
+
+
+
+
+
+
+
+5. Suppose, you have a pen friend in abroad. He / She wanted to know about your country. Now, write a letter  describing  the natural beauty of Bangladesh or about your country.
+
+Dear Alin,
+Thanks for your letter.   You have wanted to know about our country ( the natural beauties of Bangladesh). Bangladesh is a South Asian country with a tiny area and a big population. We got independence in 1971. Majority people are Muslims.  Hindus, Buddhists, Christians and some tribes live also in this country. We have our own culture and tradition. Bangladesh is enriched with natural beauty. The longest sea beach of Cox’s Bazar , the biggest mangrove forest of Sunderbans, eye catching tea gardens  of Sylhet,  the Buddhist ruins of Maynamati, Mohastangar of Bogra,  Shusong Durgapur of Birishiri etc are famous tourist places in our country. Bangladesh is blessed with huge inland open water resources. It has numerous river canals, beels, lakes, and vast areas of floodplains.  Kuakata, locally known as Sagar Kannya (Daughter of the Sea) is a rare scenic spot located on the southernmost tip of Bangladesh. It is impossible to describe a country in such a short letter. I am inviting you to pay a visit to my beloved country. Visiting our country  you must discover yourself as a part of nature and feel fresh for the boredom of life. So, welcome to our country,  my friend.
+
+No more today. Have a great day
+Yours ever,
+Sinthia
+
+
+
+
+
+
+
+
+
+
+6.Write a letter to your friend about your experience of the visit to a place of historical interest.
+										Tikatali, Dhaka								                        24-04-2019
+My dear X,
+I hope this letter will find you in sound health and vibrant spirits. Recently I have visited Paharpur, a place of historical interest. Now I am giving a short description of it.
+I along with some of my friends decided to visit Paharpur’ in Naogaon district of northern Bangladesh during our vacation. On the appointed day,  we reached  the Kamalapur Station. We boarded the 1st class compartment of the train.  After a pleasant journey, we reached our destination. We stayed Naogaon over night. Next morning we went to Paharpur by bus. 
+Paharpur is an important archaeological site situated in a village named ‘Paharpur’. Naogoan is mainly plain land but in the middle of it stood a hill covered with jungle. When the jungle was cleared and the hill excavated, there emerged a lofty ruin of an ancient temple. The temple is about 24 metre high from the surrounding level.  The Pala rulers were devout Buddhists and they founded a number of monasteries throughout their growing empire. The site houses the architectural remains of a vast Buddhist monastery, Somapura Mahavihara, covering 27 acres. It was an important intellectual centre for Buddhists , Jains  and Hindus alike. The 21 acre  complex has 177 cells, viharas, numerous stupas, temples and a number of other ancillary buildings. The outside walls with ornamental terracotta palques still display the influence of these three religions. It was designated as a UNESCO World Heritage Site in 1985. This visit gives us immense pleasure.  We returned Dhaka by  bus.  This pleasant experience will remain ever fresh in my mind.
+
+No more today. With best regards to your parents.
+
+Yours ever
+Y
+
+
+
+
+
+
+
+
+
+7. One of your friends has won the first prize in the essay competition. Now  write a letter congratulating him or her achievement.
+										Tikatali, Dhaka								                        24-04-2019
+My dear X,
+I hope this letter will find you in sound health and vibrant spirits.  It gives me immense pleasure to know that you won the first prize in the essay writing competition organized at your school . Hearty congratulations! I read all the details of the competition in the newspaper yesterday and I must say, yours is a splendid achievement. I know how strongly you felt about the issue, and how long you worked on developing your argument. You are a good example of how commitment and hard work pay off.  I am proud of you. You not only do wonders in academics, but in co-curricular activities also.  As many as 600 students from 300 schools participated in it   I am proud to have such a friend like you. You love writing; I know and I have seen the efforts you have taken to groom yourself as a writer. You read a lot. You try to remember a lot and I think these are some of your qualities which help you win competitions. I am sure, you will bloom as a prolific writer in the years to come. I wish you all luck for your future achievements. Congratulations once again!
+No more today. With best regards to you & your parents.
+Yours ever,
+Y
+
+
+
+
+
+
+
+
+
+
+
+
+8. Write a letter to your father and tell him about your progress in studies.
+		Tikatali, Dhaka
+		20-07-2019	
+My dear father
+I have received your letter recently. In your letter, you have wanted to know about my studies. Now I am writing to you about it.
+I am happy to tell you that I passed all my subjects in the half yearly exam. I got A+ in all the subjects except English in which I got B+ and that affected my result very badly. You would be satisfied to know that I have got fifth position in the half yearly exam.  I have achieved A. Although I could not get good marks in English, I am paying full attention to this subject. I study till late at night. I am trying my best to improve the position and make up all the deficiency in the weak subject. I have requested my English teacher to help me in the subject. Papa, do not worry because now I have started to work hard with a proper timetable. I give two hours daily to English and am trying to improve my vocabulary and  grammar which are very necessary to learn. I am taking help from my teacher and friends in this respect. My teachers have assured me that I shall get A+ in English in the annual examination. I need your and mother's prayer for my success. 
+No more today. With love to all members of the family.
+Your loving son
+X
+
+
+
+
+
+
+
+
+
+
+
+
+
+9.  write a letter to your friend telling him about your preparation for the examination.
+	20/04/20
+                                                                                                                 Bangla Motor, Dhaka
+Dear X,
+I am glad to receive your letter. In the letter you have wanted to know about my preparation for the coming examination. I am now writing about it. 
+You know that my SSC examination is knocking at the door. I have made a fair progress in my preparation.  I am trying my best to do well in all the subjects. You know that I am weak in mathematics. I am trying to make up my weakness with the help of our mathematics teacher. I have already completed my course entirely and now have been trying to revise them. So, nowadays I am a bit more confident because I have totally a clear understanding of the nature of the question papers in the exam. Besides, I have read the text books thoroughly and explored every nook and corner of them. Moreover, the complex questions are already memorized. Mathematics, English, General Science and Arabic are in my daily practice routine. I believe I can do well with any sorts of question. Now I am checking my weak –point. I am confident that I shall obtain GPA- 5 by the grace of God.
+No more today. Please write me about your preparation. Convey my regard to your parents and love to the youngers.
+Your loving friend
+
+
+
+
+
+
+
+
+
+
+
+
+10. Write a letter to your friend describing the picnic you have enjoyed.
+										Tikatali, Dhaka								                        24-04-2019
+My dear X,
+I hope this letter will find you in sound health and vibrant spirits. Recently I have joined a picnic at Paharpur, a place of historical interest. Now I am giving a short description of it.
+We , the students of our class,  desired to go on a picnic. Our head teacher selected Paharpur’ in Naogaon district of northern Bangladesh for our picnic spot. We were accompanied by our class teacher. We hired a bus. On the appointed day, we got into the bus from our school campus. Our bus started early in the morning.  After a pleasant journey, we reached our destination. We stayed Naogaon over night. Next morning we went to Paharpur. Paharpur is an important archaeological site situated in a village named ‘Paharpur’. It was designated as a UNESCO World Heritage Site in 1985.  On reaching the spot, we arranged our cooking. Some of our friends started cooking while some others arranged dance & music.  We finished our lunch at 2 pm. Then we took some rest. At 3 pm  we went to visit  the base of the shrine, more than 60 stone sculptures depicting  a variety of Hindu divinities.  We roamed about in & around the complex for long three hours at a time. we saw the terracotta artworks in the site which  have suffered from serious damage as a result of lack of proper maintenance, shortage of manpower, fund constraint and heavy rainfall. We gathered information about the history of the monastery and took it down in our diary. This visit gave me immense pleasure.  We returned Dhaka at mid night.. Though my visit came to an end, my imagination kept roaming about with my senses. It seemed to me that the time had passed away so swiftly.  This pleasant experience will remain ever fresh in my mind.
+No more today. With best regards to your parents.
+
+Yours ever
+Y
+
+
+
+
+
+
+
+
+
+
+
+
+11. Suppose, you have decided to visit Chittagong by train/plane/bus/launch. Write an e-mail to the railway/air bus/ launch booking master / clerk asking to reserve a seat for you.
+From: sinthia30sep@gmail.com
+To: bookingmaster@gmail.com
+Sent: Monday, 07 November, 2016
+Subject:  For reservation of a seat/ticket.
+Dear Sir,
+I would like to inform you that I will visit Chittagong on 15 December, 2019 by train/plane/bus/launch. I have to be there as soon as possible. I cannot come to buy the ticket as I am out of city and have no one who can buy it for me. I cannot wait because by the time I will be back, the seats would be all booked and I cannot take any chances. If there was an option then I would have booked it online. May I request you to reserve a first class seat for me from Dhaka to Chittagong on 15 December, 2019 at 11.00 am train/plane/bus/launch.
+Thanks with best regards
+Sincerely yours
+Sinthia.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12. Write a letter to your friend requesting him to spend the  winter vacation.
+                                                                                                                    K.M.Das Lane , Dhaka-1203
+									20  November,  2019 
+
+Dear Radin,
+ At the outset of my letter, I convey my best love to you. I hope you are keeping fine. Today the reason of my letter is to let know that I am going to spend the winter vacation in our village home next month.  So I would like to request you to spend the winter vacation with me. 
+ Ours is a big village.  It is on the bank of the mighty Meghna. The name of our village is Krishnopur. It is in the district of Chandpur.  The village being situated on the river bank is full of scenic beauty. We can enjoy the sun sinking down in the western horizon at sunset.  Apart from river beauty, there are vast greeneries all around. The corn fields, chirping of the birds, the blue sky on moon-lit night –everything seems to be a dreamy world.  On the appointed day, I with two of my cousins will set for our destination. First I will go to the Sadarghat  Inland Water Terminal for  our steamer to be bound for Chandpur. We will  manage to buy business class tickets. We will board the steamer in time.. During the river cruise,  we will  enjoy the scenic beauty of the river.  The murmuring sound of the waves will  thrill us a lot. From the Chandpur Launch Ghat, we will start for our village by CNG.  During my staying there, we will enjoy  much fun & merriment. I will go to the riverside with my cousins to watch the boats moving in the river Meghna. My uncle will take us to many places of historical & interesting places. In short, I will spend my winter vacation amid much fun & pleasure. If you join us, it will add much pleasure to my vacation. So once again I request you to join us.
+No more today.  With best regards to your parents. 
+Yours ever,
+Mashuk 
+
+
+
+
+
+
+13. Write a letter to your friend inviting him to join a picnic. 
+Dear Anik,
+At the outset of my letter , I convey my best love to you. I hope you are keeping fine. In your last letter, you wanted to know whether I would go on a picnic anywhere after my annual exam. Now I am going to let you know about it. You know Cox’s Bazar is the largest sea beach in the world. I am much impressed at the graphic description of the scenic beauty of  the Bay of Bengal. It is my long-cherished dream to go on a picnic at Cox’sBazar.  So, I have persuaded my parents to arrange a picnic at Cox’s Bazar after my annual exam. We have already fixed our date for our visit to Cox’s Bazar sea beach, the darling child of nature. We shall start for Cox’sBazar by bus very early in the morning from Dhaka on the appointed date. It is my pleasure to invite you to join us.   I shall be highly pleased If you join us.  We shall have a nice time together  at the sea beach  enjoying a swim in the  blue, salty water of the Bay of Bengal.
+No more today.   With best regards to your parents. 
+Yours ever,
+Mashuk 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14.	Write a letter to your friend how you have spent your winter vacation.
+                                                                                                                    K.M.Das Lane , Dhaka-1203
+									20 March,2018
+Dear Radin,
+ At the outset of my letter, I convey my best love to you. I hope you are keeping fine. In your last letter, you wanted to know how I spent the winter vacation.  Now I am going to give a short description of it.
+ During my winter vacation I went to my native village. Ours is a big village.  It is on the bank of the mighty Meghna. The name of our village is Krishnopur. It is in the district of Chandpur.  The village being situated on the river bank is full of scenic beauty. We can enjoy the sun sinking down in the western horizon at sunset.  Apart from river beauty, there are vast greeneries all around. The corn fields, chirping of the birds, the blue sky on moon-lit night –everything seems to be a dreamy world.  On the appointed day, we set for our destination. I accompanied by my father went to the Sadarghat  Inland Water Terminal. Our steamer was bound for Chandpur. We managed to buy a double cabin. We boarded the steamer  & it left for Chandpur on time. I enjoyed the scenic beauty of the river.  The murmuring sound of the waves thrilled me a lot. There was dense fog all around.  The steamer plied slowly in order to avoid collision with other vessels in the river. After four hours,  we reached the Chandpur Launch Ghat. My uncle received us from the ghat. From the Chandpur Launch Ghat, we started for our village by CNG.   On reaching home we took some rest. I have two cousins with whom I enjoyed & gossiped.  During my staying there, I made much fun & merriment. My grandma cooked nice, delicious cakes & paayes  for us. I also drank date juice there. In the village it was very cold. So they made fire with straw to warm us. I went to the riverside with my cousins to watch the boats moving in the river Meghna. My uncle took me to many places of historical & interesting places. In short, I spent my winter vacation amid much fun & pleasure.
+No more today.  With best regards to your parents. 
+Yours ever,
+Mashuk 
+
+
+
+
+
+15. Write a letter to your friend how you have spent your summer  vacation.
+                                                                                                                    K.M.Das Lane , Dhaka-1203
+									20 March,2018 
+Dear Radin,
+ At the outset of my letter, I convey my best love to you. I hope you are keeping fine. In your last letter, you wanted to know how I spent the summer vacation.  Now I am going to give a short description of it.
+ During my summer vacation I went to my native village. Ours is a big village.  It is on the bank of the mighty Meghna. The name of our village is Krishnopur. It is in the district of Chandpur.  The village being situated on the river bank is full of scenic beauty. We can enjoy the sun sinking down in the western horizon at sunset.  Apart from river beauty, there are vast greeneries all around. The corn fields, chirping of the birds, the blue sky on moon-lit night –everything seems to be a dreamy world.  On the appointed day, we set for our destination. I accompanied by my father went to the Sadarghat  Inland Water Terminal. Our steamer was bound for Chandpur. We managed to buy a double cabin. We boarded the steamer  & it left for Chandpur on time. I enjoyed the scenic beauty of the river.  The murmuring sound of the waves thrilled me a lot. There was dense fog all around.  The steamer plied slowly in order to avoid collision with other vessels in the river. After four hours,  we reached the Chandpur Launch Ghat. My uncle received us from the ghat. From the Chandpur Launch Ghat, we started for our village by CNG.   On reaching home we took some rest. I have two cousins with whom I enjoyed & gossiped.  During my staying there, I made much fun & merriment. My grandma cooked nice, delicious food  for us. In the village it was very hot. So the villagers sat under the banyan tree in the middle of the village. I also joined them & enjoyed the mind-blowing wind at noon. I went to the riverside with my cousins to watch the boats moving in the river Meghna. My uncle took me to many places of historical & interesting places. In short, I spent my summer vacation amid much fun & pleasure.
+No more today.  With best regards to your parents. 
+Yours ever,
+Mashuk 
+
+
+
+
+
+
+
+16.Write a letter to your friend describing your village                                                                                                                                                                 
+                                                                                                           K.M.Das Lane , Dhaka-1203
+                                                                                                          20 March,2020
+Dear Radin,
+ At the outset of my letter, I convey my best love to you. I hope you are keeping fine. In your last letter, you wanted to know about our village.  Now I am going to give a short description of it.
+Ours is a big village.  It is on the bank of the mighty Meghna. The name of our village is Krishnopur. It is in the district of Chandpur.  The village being situated on the river bank is full of scenic beauty. We can enjoy the sun sinking down in the western horizon at sunset.  Apart from river beauty, there are vast greeneries all around. The corn fields, chirping of the birds, the blue sky on moon-lit night –everything seems to be a dreamy world.  The land area of our village is 8 square kilometres. About 30 thousand people live in our village. Most of the people are Muslims. The rest other people are Hindus. Farming is the main occupation of the villagers. There are also people of other occupations. The village is both  educationally & culturally advanced. There are a boys’ high school, a girls’ high school, a college,  two primary schools & a madrasa in our village. There is also a private art & music school in our village. Besides, there are a bank, a post office, a sub-registrar office & a community clinic in our village. We have a large village market at the middle of the village under a big banyan tree. The daily market sits everyday & hats sit twice a week.  People buy their daily necessaries from the market. There is an easy communication system between our village & our district home town.  The village is neat & clean. I love my village most.
+No more today.  With best regards to your parents. 
+Yours ever,
+Mashuk 
+
+
+
+
+
+
+
+17. Write a request letter to librarian to borrow books
+Date…
+The Librarian
+Reference: The Headmaster 
+Idea School
+Motijheel, Dhaka-1000
+Sub: Letter to Librarian to issue books
+Dear Sir,
+My English teacher told me that our school’s library has the latest version of the required books for preparation. I went to the book store to buy those books but they were not available. Furthermore, my annual is coming near.  I  need “ A Practical English Grammar” by Thomson & Martinet as well as “ Oxford Practice Grammar “ by John Eastwood. I am aware of the fact that according to principles  the library authority  cannot issue more than one book at a time but I request you to kindly grant me permission to issue me  two books. 
+You can look into my history that I have frequently issued books from the library and have returned them in time. I assure that after the exam, I will return the books. 
+Best regards
+Anchol
+Roll No.   Class Six
+
+
+
+
+
+
+
+
+18. .Write a letter to your friend describing the Independence Day of Bangladesh
+                                                                                                                        Tikatali,Dhaka									                        24-04-2019
+My dear X,
+How are you? I hope you are fine. I am also fine. The reason of my letter is to let you know about the Independence Day of our country.
+16th December is the Independence Day of Bangladesh. We celebrate the day with due solemnity on this day every year. The Whole nation pays tribute to the martyrs who sacrificed their lives during the liberation period of our country. The Pakistani army launched a brutal crackdown on the innocent sleeping Bangalees in the night of 25th March, 1971. This brutal killing led the Bangalees to the war for independence.  On the Day of Independence the Honourable President &  the Honourable Prime Minister of our country give messages to the nation. The government & non-government buildings are illuminated with coloourful lights. Special prayers are offered in religious institutions. Special supplements are published in the leading newspapers of the country. 
+No more today. With best regards to your parents.
+Yours ever
+Y
+
+
+
+
+
+
+
+
+
+
+
+19.  Now write a letter to your friend telling him about your preparation for the examination.
+	20/04/20
+                                                                                                                 Bangla Motor, Dhaka
+Dear X,
+I am glad to receive your letter. In the letter you have wanted to know about my preparation for the coming examination. I am now writing about it. 
+You know that my SSC examination is knocking at the door. I have made a fair progress in my preparation.  I am trying my best to do well in all the subjects. You know that I am weak in mathematics. I am trying to make up my weakness with the help of our mathematics teacher. I have already completed my course entirely and now have been trying to revise them. So, nowadays I am a bit more confident because I have totally a clear understanding of the nature of the question papers in the exam. Besides, I have read the text books thoroughly and explored every nook and corner of them. Moreover, the complex questions are already memorized. Mathematics, English, General Science and Arabic are in my daily practice routine. I believe I can do well with any sorts of question. Now I am checking my weak –point. I am confident that I shall obtain GPA- 5 by the grace of God.
+No more today. Please write me about your preparation. Convey my regard to your parents and love to the youngers.
+Your loving friend,
+
+
+
+
+
+
+
+
+
+
+20. Suppose, You are Sinthia. The annual prize giving ceremony of your school was over. Your friend Alin has sent an e-mail to know about it. Now, send an e-mail describing the annual prize giving ceremony.
+From: sinthia30sep@gmail.com
+To: alin25dec@gmail.com
+Sent: Monday, 07 November, 2016
+Subject:  Prize Giving Ceremony.
+Dear Alin,
+I received your e-mail just now and happy to hear that you all are well. We are fine too. In your e-mail, you have wanted to know about the prize giving ceremony of our school. It was held yesterday. On that occasion, the school compound was decorated with colorful flags and festoons. A big stage was set up in front of the academic building. The Headmaster of the school  presided over the function. The chief guest was the Local MP. The TNO and the Upazilla Chairman were the special guests. The prize was given on different events such as acquiring good results in the examination, reciting poem, performing songs and games and so no. . You will be glad to hear that I received a prize for standing first in the annual exam. The chief guest distributed the prizes among the winners and delivered a short speech. Many invited guests delivered their valuable speech too. All the guests  enjoyed the ceremony very much. At 6 pm the principal concluded the function thanking all.
+No more today. Convey my regards to your parents and love to youngsters.
+Have a great day.
+Your loving friend
+Sinthia.
+
+
+
+   
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Paragraph</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">PARAGRAPH FOR HSC EXAM-2021<br>
+
+
+<button type="button" class="collapsible"> Paragraph</button> 
+		
+1.	Uses And Abuses of Facebook.<br>
+2.	Folk and modern music<br>
+3.	Eve-teasing.<br>
+4.	Sound relationship with juniors<br>.
+5.	Female Education.<br>
+6.	Early marriage.<br>
+7.	Folk music of Bangladesh.<br>
+8.	Climate change/Deforestation/Green house effects.<br>
+9.	Food adulteration.<br>
+10.	Human rights.<br>
+11.	Adolescence.<br>
+12.	Etiquette and manners.<br>
+13.	Child labour.<br>
+14.	Traffic jam.<br>
+15.	Uses and abuses of mobile phone<br>
+16.	Diaspora <br>  
+17.	Necessity of traffic education.<br>
+18.	Higher education at Bangladesh<br> 
+19.	International mother language day.<br>
+20.	Satellite TV channels<br>
+21.	 Book fair.<br>
+22.	Drug addiction.<br>
+23.	Scientific achievements and breakthrough.<br>
+24.	Craftworks.<br> 
+25.	Internet.<br>
+26.	Environment pollution.<br> 
+
+
+1.	A winter morning <br>
+2.	Deforestation<br>
+3.	Environment pollution<br>
+4.	A day labourer<br>
+5.	Price-hike<br>
+6.	A rainy day<br>
+7.	Food adulteration<br>
+8.	A street hawker<br>
+9.	Traffic jam<br>
+10.	Load-shedding<br>
+11.	A school library<br>
+12.	A book fair<br>
+13.	Road accident<br>
+14.	National flag<br>
+15.	Drug addiction<br>
+16.	Climate change/ Global warming<br>
+17.	Tree plantation<br>
+18.	May Day<br>
+19.	Independence Day
+20.	International Mother Language Day<br>
+21.	Pahela Boishakh<br>
+22.	A school magazine<br>
+23.	Life of a farmer<br>
+24.	A rainy day<br>
+25.	Early rising<br>
+26.	Uses & abuses of mobile phone<br>
+27.	A street beggar </p>
+ 
+ 
+ 
+ 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ <button type="button" class="collapsible"> Facebook: Its uses and abuses</button> 
+<p>Facebook is a social networking website intended to connect friends, family, and business associates. There are many social networking sites in the world, such as Twitter, Linkdin , Instagram etc. But it is the networking website by a long mile . It has more than 2 billion monthly active users. Facebook was founded in 2004 by Harvard student Mark Zuckerberg and originally called the face book. It began as a college networking website and was quickly successful on campus and expanded beyond Harvard into other schools. At that time, it was only available to schools, universities, organizations, and companies within English speaking countries. Later it was extended to include anyone and everyone.Face book users create a profile page that includes the following: Information, Status, Friends, and Friends in Other Networks, Photos, Notes, Groups, and The Wall. As a result, everyone within that network can view the profile. Users are able to search for friends and acquaintances by e-mail address, school, university, or just by typing in a name or location in search box. When people become friends, they are able to see all of each other’s profiles including contact information. A popular feature on Facebook is to share photographs uploaded from a phone, camera, or computer. A person can make a video call to anyone of his friend list. Now a days business has been largely dependent on Facebook for promotion and marketing. But, with the advantage of Facebook, now days cyber criminals are committing many crimes. Especially the students are getting addicted to facebook. For this creation, students are spending more time on their mobile phone more than ever before. They are becoming increasingly less attentive to their education and studies, and becoming more and more concerned about their fake social life. At the same time immature users are becoming more venerable to crimes and criminal activities. The overall privacy is a major concern at facebook now. The recent “Cambridge Analytica” shows us how facebook is practically selling our information to 3rd party companies for money and profit. After all it is just a bit too late to ask everyone to leave the facebook platform, because it has become a part and parcel in peoples daily life. But we can at least be just a bit careful about using it and probably care a bit less about it.</p>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+
+
+
+
+
+<button type="button" class="collapsible"> Folk Music and Modern Music </button>
+<p>Folk music and modern music together play an important part of our music with their particular differences such as origin, style, and listeners, besides their similarities. The first difference between them is the origin. While folk song is composed by general working class, each modern song is a product of an artist in personal. We can also realize that people are attracted to each kind of music by their own style. Folk music brings us to the world of peacefully beautiful countryside and benevolent people with the melodiously traditional music instruments. Modern music, on the other hand, mentions more various contents like the senses of human, happiness, sadness, or upset, for example, and even the social problems such as protecting environment, saving earth, singing the praise of peace etc. All these contents are very close to the real life, apart from some songs which are so called market- songs without meaning. As the modern music often has modern topics, the listeners of this kind of music are often the young. They feel the attraction of new music's active and sweet rhythm whenever they enjoy it. In contrast, the elders and the middle-aged like folk music than modern music as this type of music has influenced them since the very long time they were born. We can see that both modern music and folk music are important to our lives and they make this life more beautiful.</p>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+
+
+
+
+
+<button type="button" class="collapsible">Paragraph</button>
+
+<p>1.	A winter morning<br>
+
+Winter is the coldest season in our country. It is usually foggy. Everything looks hazy Sometimes the fog is so dense that nothing can be seen even at a little distance. Everything looks hazy. Nature looks gloomy.  The chirping of the birds is not heard. The animals cannot come out of their shelters due to dense fog. Dense fog causes disruption to the communication system. Dew drops fall at night. Sometimes cold waves blow. It causes much sufferings to the children, the sick people, the aged people and the poor class. People put on different kinds of warm clothes to protect themselves from cold. Little boys & girls wrap their hands & legs in cold spell. The old people and children shiver in cold. They gather straw and make fires at different places to warm themselves in the heat. Most people do not feel like leaving the bed early. Sometimes village people spend the winter morning by gossiping.  In towns, rich people read newspaper in balcony. They drink warm tea while reading newspaper & enjoy sunbath.  The scene of the winter morning vanishes as the day advances.  In winter the days are shorter and the nights are longer. A winter night is more painful than a winter morning. A winter morning brings pains & sufferings to the rootless poor people. In spite of the dark sides of a winter morning we always welcome it because it is rich with varieties of food such as date juice, fresh vegetables and some other things. Villagers make fire with straw to warm themselves. Various kinds of pithas are made in this season. In a winter morning pitha parban is held in towns where the town folk enjoy winter food. A winter morning is not an unmixed blessing. In a winter morning, people go through different experiences according to their economic background. Those who are poor cannot afford warm cloths and so they suffer from the bitter cold. But the rich people enjoy sleep or staying under warm blanket. In cities & towns, different groups of people go picnic in remote areas & enjoy the winter morning in a different way.  So, to the poor the sun-ray becomes more precious than gold. In fact, people of all walks of life enjoy a winter morning despite some natural hazards like cold spell, dense fog etc. Many pitha  festivals are held throughout the country in  winter as the people of our country are fest lovers traditionally. The winter season is always welcome to the people of our country irrespective of class distinction. </p>
+
+ 
+ 
+ 
+ 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+ 
+
+2.	Deforestation<br>
+Deforestation means cutting down trees in large numbers.  It is a process where a forest becomes a non-forest.  There is no denying the fact that deforestation has become a global concern in the present world. Forests are a rich resource of our planet earth. Therefore, it is important to protect our environment. Forests have a great floral diversity. There are large trees, creepers & climbers, grasses, shrubs & bushes that grow in forests. Forests are also habitats to many wild species. A large variety of animals, birds, reptiles and insects live in forests. Forests provide sustenance to many living beings including man. There are many  causes of deforestation. Bangladesh is the most densely populated country in the world. Its population is much more in proportion to its area. This huge number of population needs more shelter, agricultural land, fuel, furniture etc. For all these reasons, people cut down trees. Man depends on forests for food & livelihood. As farmers need more land for cultivation, they cut down trees to expand their agricultural land.  People also cut trees for habituation. They cut down trees for timber which is used as fuel, for  construction or to make furniture. Deforestation has very drastic effects on both humans and nature. Decreasing  the number of the trees leads to rising carbon-di-oxide and lack of oxygen in the atmosphere. Deforestation results in severe health hazards like  lung diseases,  bronchitis & other respiratory diseases  in humans and animals. All living beings need water. Loss of forest leads to ecological imbalance. Deforestation is one of the major factors leading to the greenhouse effect and desertification. Moreover, there are some greedy people who cut down trees in our forests to make money. The effects of deforestation are too many to describe. This destruction disturbs our ecological balance. Due to deforestation carbon-dioxide is increasing worldwide. As a result, the world is becoming warmer. The sea level is rising. On the other hand, new areas of the world are turning into deserts as a result of deforestation. The removal of trees causes serious damage to the soil. The temperature will rise and it will cause green house effect. The country will be unsuitable for living.  Ecological balance is also disturbed by deforestation. Many wild animals and birds, as well as beasts, lose their home. Global warming is an alarming consequence of deforestation. If we destroy trees at random, one day the country will turn into a great desert. There will be no rain and  our agricultural will face a great crisis As a result temperature of the atmosphere is increasing and ice of the polar region is melting very fast. For this, we have to face various devastating floods. Drought may occur due to deforestation. Our government should take immediate measures to prevent deforestation.</p>
+ 
+ 
+3.	Environment Pollution<br>
+
+The world is producing millions of tons of domestic rubbish and toxic industrial waste each year, and it is becoming increasingly difficult to find suitable locations to get rid of all the refuse. The disposal of various kinds of waste is seriously polluting the environment. Air is an important element of our environment and our air is polluted by smoke. Man makes fires to cook food, make bricks, melt tar for road construction and to do many other things. Fires create smoke and pollute the air. Railway  engines and powerhouses create smoke by burning coal and oil. Mills and factories also belch a lot of smoke. Buses, trucks and cars use petrol and diesel oil. These too emit smoke. All these kinds of smoke pollute the air. Water, another vital element of the environment, is also polluted in different ways. Man pollutes water by throwing waste into it. Farmers use chemical fertilizers and insecticides in their fields. When rain and floods wash away some of these chemicals, they get mixed with water in rivers, canals and ponds. Mills and factories also throw their poisonous chemicals and waste products into rivers and canals and thus pollute the water. Water vehicles also pollute rivers by dumping oil, food waste and human waste into them. Every year millions of people all over the world die unnecessarily as a result of pollution. These unfortunate and avoidable deaths are brought about  by four specific factors. Firstly, air pollution from factories, burning trash, and vehicle fumes cause pneumonia, bronchitis and other respiratory diseases. Then, water pollution from industrial discharge. the indiscriminate disposal of toxic chemicals, and the dumping of human waste into rivers and canals causes poisoning and water-borne diseases such as cholera and diarrhoea. The next factor is the noise pollution from vehicle horns and microphones that might cause aggression and damage hearing. And finally, odour pollution from dumped or untreated human waste causes serious discomfort to our sense of smell, and attracts disease-bearing creatures such as rats and flies. We should take  determined action to control these problems and clean up the environment to avert these unnecessary diseases.<br>
+ 
+ 
+4.	A day labourer<br>
+
+There is no single definition to describe a day labourer. But the word that comes to us about a day labourer is someone who works manually from early morning till  late evening on a daily basis. In short, a day labourer is he who does heavy manual labour in various fields. He belongs to the marginalized class. He belongs to ultra-poor group.  In most cases, he is unskilled or semi-skilled.  He does not enjoy due social status though he deserves it  and his labour is also  indispensible for the economic development of a country. A day labourer is a known face to all of us as he is required in our daily life. Naturally he is to be healthily, strong and stout  due to the nature of his job.  He lives with his family in a slum. He gets up early in the morning and goes out in search of work. He works hard from dawn to dusk for his employer and gets his wages at evening. He does different types of jobs such as carrying bricks, wood, stones, mud and digging ponds, constructing of roads, buildings etc. Sometimes he and his family pass a day without food if he cannot manage work. However, he is in great demand in harvesting season. . When he earns much money, he and his family can eat well. It is a happy day for them. If he does not find any work, he and his family have to go without food. So the life of a day labourer is very miserable. Sorrows and sufferings are his constant companions. He does not know what joy and happiness are. He earns his living by working hard. Most of the time he is ill- paid and ill- treated in every sphere of his life. In fact, the services of a day laborer plays an importance role in our national life. So we should think about his rights and show respect to them.<br>
+
+
+
+5.	Price Hike<br>
+
+Price rise is a great problem of the day. It is a common phenomenon not only in our country but also in the world. Today the prices of necessary things such as food items, cloths, education materials, medicine and many other necessary things are going up by leaps and bounds. Price rise is caused by several factors like hoarding, population explosion, low productivity, natural calamities, wars, backwardness of communication, evil motives of dishonest businessmen, smuggling, black marketing etc. If the price rise is caused by the short supply of commodities, it is temporary. But it is very difficult to control the price rise caused by inflation. However, the people of low income suffer greatly and pass their days in constant anxiety. They find it, difficult to make their both ends meet. price hike is a function of multifarious factors such as energy costs, declining dollar value, rising demand for bio-fuel, export restrictions on food grains, carrying cost, climate change, etc. Concerns over oil prices, energy security and climate change have prompted governments to encourage production and use of bio-fuel. The price rise has widened the gap between the export and import value in the food grain importing countries which has affected the terms of trade and foreign exchange reserve. The fiscal impact of this price hike leads to the reduction of taxes on food grain import and a rise in subsidies in the production of the same Price rise has terrible effects on man’s character. It leads people to the path of corruption and moral degradation. The situation is complex and there is no single solution to this problem. The government should perform more efficiently and has to take actions so that the market performs properly. Bangladesh imports a lion’s share of its import of rice from India at low cost. In Bangladesh, the main sources of calorie are rice and wheat. In spite of a rise in wheat and rice price, people still consume rice and wheat. Therefore, the food price rise affects the poor extensively. Food crisis is a national as well as an international problem.  To reduce the extent of the effect of the crisis, some short term and long term measures can be taken. The government should begin selling rice from its stock and import food grains right at this moment to keep the local market stable. The dependency on private food importers should be lessened to avoid the artificial volatility of the local markets. Increasing the adoption of hybrid rice, improving crop management practices and access to high quality seed are essential. Deepening fertilizer dealer network to improve timely access to fertilizer and focusing on high quality seed availability are also needed.. Laws should be enforced strictly to bring the prices of the essential commodities within the purchasing capacity of the common people.<br>
+ 
+
+
+A Rainy Day<br>
+
+ 
+
+7.	Food Adulteration<br>
+
+
+Food Adulteration refers to the process by which the quality or the nature of a given food is reduced through addition of adulterants or removal of vital substance. Unsafe levels of pesticides are present  in around half of the vegetables and more than a quarter of fruits sold in the capital’s markets, a recent survey has found. The survey report, read that nearly 40% of 82 samples of milk, milk products, fish, fruits and vegetables contained banned pesticides such as DDT, Aldrin, Chlordane and Heptachlor. The amounts of pesticide in these samples were found to be 3 to 20 times greater than the limits set by the European Union. Around 50% vegetables and 35% fruits were found to be contaminated with unsafe level of pesticides. Using a sensitive High-Performance Liquid Chromatography (HPLC) method developed by the Food Safety Lab, 66 samples were analysed for the presence of formaldehyde. Adulteration was thereby detected in samples of coriander, mango and fresh shrimps. The tests indicated that poultry feed in the country had also been contaminated, as samples of chicken and fish contained traces of antibiotics. High microbial populations were found in several samples of pasteurised milk, indicating poor processing procedures by the manufacturers. Samples of cucumber and street foods also showed high microbial populations, suggesting widespread contamination in the water supply. Adulterated food products are reportedly the cause behind thousands of people suffering from fatal diseases like cancer, kidney failure and heart problems. Better monitoring and supervision were mandatory for stopping food adulteration.<br>
+ 
+ 
+
+8.	A Street Hawker<br>
+
+
+A street hawker is a very common man in our society. Usually he moves from place to place to sell his goods. In fact, a street hawker is a very simple man. He is very poor and humble. He is a shabby man. He is a small trader. The capital of his business is very small. He lives from hand to mouth. Every morning he goes out to sell his goods carrying them either on his hand or in a cart or van. Throughout the day, he sells his goods shouting at the top of his voice to draw the attention of his customers. A the end of the day, he returns home with  the marginal profit gained from the sold goods. Again he goes out for the next day and returns home almost in the same way. Truly speaking, he leads his life in the vicious cycle of poverty. In fact, there is no liver lining in his life. He finds it very difficult to maintain his family. He can’t afford to meet the basic needs of life. Basically, he adopts a technique to sell his goods. He applies his skill to motivate or convince his customers especially women & children who are his first priority. It is true that the importance of a hawker goes unnoticed in our society. The fact is that he belongs to the marginalized class and his business is so petty that it is not included in the mainstream economy. Still he is part & parcel of our society. So we should have positive mindset for him.<br>
+ 
+ 
+
+
+9.	Traffic Jam<br>
+
+Traffic jam means a long line of vehicles that cannot move or that can move very slowly. It is a common affair in the big cities of our country. We’ve all experienced being stuck in a traffic jam, a stream of cars for miles ahead of us and behind us. Lack of co-ordination among government organizations and haphazard public transport system which includes lack of provision for pedestrians and poor maintenance and management of footways are the root cause of traffic jam. Rapid growth of population and the increasing number of vehicles are also the causes of traffic jam. Vehicles are much more than the roads can accommodate. The indiscriminate playing of rickshaw is another cause of it. Haphazard parking, more private vehicles, violation of traffic rules, faulty road construction, haphazard crossing, VIP movement, over population, rail crossing and fuel station are also the causes of traffic jam in the big cities city. Traffic jam causes untold sufferings to people. Sometimes it raises our tension. Transport and urban experts think the government should take pragmatic steps to ensure sufficient mass transport, restore discipline in the transport sector, reduce the use of private and small vehicles, replace the microbuses and minibuses with single-decker, double-decker and articulated buses and expand the capital city to significantly ease the traffic jam without spending huge money. The railways and waterways can also be used effectively to ease traffic pressure on roads and facilitate the commuters hassle-free transportation services. We have built over a half dozens of flyovers, but it is not a solution to the problem. It will not be possible to reduce traffic jam without increasing public transport and ensuring better traffic management. It is also necessary to implement all mass transit-related projects with high priority to improve traffic situation.<br>
+ 
+ 
+
+
+10.	Load shedding<br>
+
+The term ‘load shedding’ means the state of being no electricity due to demand supply gap of power for a certain period in a certain area. The energy infrastructure of Bangladesh is quite small, insufficient and poorly managed. Electricity is the major source of power for most of the economic activities of a country. In generating & distributing power, the failure to adequately manage the loads leads to load-shedding which causes severe disruption in the industrial production and other economic activities. Inefficient distribution system is a major hurdle in delivering power. It is estimated that the total transmission and distribution losses in Bangladesh amount to one-third of the total generation. The process of upgrading the grid technology to digital smart metering system is going on throughout the country to reduce system loss. It will reduce power cuts and provide stability to the power sector. Radio technology can be operated remotely to maintain multiple power flow lines with automated control & digital metering. Load shedding causes multiple hazards in our socio-economic life. During load shedding the whole area plunges into darkness. Houses, shops, mills, factories, hospitals & almost all infrastructures are paralyzed for the time being. Students cannot prepare their lessons. Doctors cannot operate upon emergency patients in hospitals. Mills & factories cannot run their machines. Farmers cannot operate their agricultural tools in corn fields. Everything comes to a stand-still due to load-shedding. So, pragmatic steps should be taken to reduce system loss & keep load shedding at a tolerable level. The old power plants should be replaced. Nuclear plant is the best solution to power crisis to  meet the growing demand of the consumers. Rooppur Nuclear Power Plant is an under construction nuclear power plant in our country. It is expected that power crisis is going to be solved in Bangladesh.<br>
+
+      
+	
+	
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Completing Story</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">Completing Story <br>
+	
+	
+	
+	
+ <div class="container mt-3">
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo"> 1.	A Little Learning Is A Dangerous Thing</button>
+  <div id="demo" class="collapse">
+   
+learned teacher began to teach him with all his might.  But he failed to teach him English except Once there lived a man in a village.  He was very fond of English. But he was very dull-headed. So,  he was searching for a learned teacher to teach him English well. One day he went to a learned teacher.  The three words-“Yes, No & Very good.”  With this little knowledge of English, the dull-headed man went back to his own village. He used these three words whenever he talked to anybody in his village. One night a thief broke into  the  house of a villager. The police was informed  of the matter. A police officer  went to the spot to enquire into the matter. The police officer  asked the villagers if they knew anything about the theft. They said that they did not know anything about the incident.   At last, the police officer asked the dull-headed man if he knew anything about the theft.  First the police officer said to him, “ Do you know anything about the theft?  I think you have done it.” The man immediately said, “Yes.”  The police officer again said to him,” Do you have any question if we take you under custody of the police?” The dull-headed man said, “No.”  Then the police officer said to him,” Then we will arrest you now.” The dull-headed proudly said, ”Very good.”  In these circumstances the dull-headed man was arrested & thrown into jail for his little learning of English. The man had to pay for his little knowledge of English.
+  </div>
+</div>
+
+
 
 <div class="container mt-3">
   
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">  2.Greed begets sin</button>
+  <div id="demo" class="collapse">
+ 
+Once there lived three friends. They were very greedy. One day they were going through a forest. In the forest, they saw a bag lying on the ground. They picked it up and found a lot of gold coins in it. They became overjoyed and decided to divide the gold coins equally among themselves. As they got tired & hungry  due to their long journey in the forest , they stopped at a place in the forest  & decided to search for food to satisfy their hunger. One of the friends went to the near-by market to fetch some food.  While he was seeking food, the other two friends plotted against him. They hit upon a plan to kill their first friend on his return from the market so that they could grab all the gold coins. On the other hand, while going to the market, the first friend thought to himself that the food should be poisoned so that he alone could grab the whole share of gold coins. So, he mixed poison with the food & returned to the forest with the poisoned food. But as soon as he returned to the spot, the other two friends killed him mercilessly. They felt free and sat together to eat the food without any doubt about its being poisoned. They started eating the poisoned food & within a short time, they were poisoned to death. As a consequence of their greed, the bag of gold coins remained lying on the ground but none of the friends was alive to claim the bag. Thus their greed resulted in sin and death.
+  </div>
+</div>
+
+
+
+
+<div class="container mt-3">
   
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo"> 3.	King Solomon / The wise judge story / The Real Mother Story / King Solomon and two mothers with a baby / Judgment of King Solomon / Two mothers and a child story / Two women and a baby 	</button>
+  <div id="demo" class="collapse">
+   
+One day King Solomon, the wise judge was in his court. At that time two women entered into the court with a baby. Both of the women claimed the baby of their own. They demanded fair judgment to king Solomon. The king puzzled for some time for what to do though he was reputed for his wisdom and fair judgment. He thought for a while. Suddenly, he ordered one of his men to cut the baby into two equal parts and give one part to each of the women. The king noticed one woman turned into pale hearing his discussion. She burst into tears and said,” Please my lord, don’t kill the baby. I don’t want my share. Allow the baby to live with her.” On the other hand, the other woman was silent. She promptly said, “Yes, my lord, please give the baby to me. I am its mother.” 
+The wise judge understood who the real mother was. A real mother never keeps silent at the time of any danger of her baby. He returned the baby to the first woman who was the real mother and sent the 2nd woman to the prison as punishment.   
+Moral of the story: Truth comes to the light at last. Nothing can hide the truth.
+
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="container mt-3">
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">  4.A thirsty crow</button>
+  <div id="demo" class="collapse">
+ 
+Once there was a crow. I was the summer season. On  a very hot summer day,  he was feeling very thirsty. He flew from one place to another  in search of water, but he could not find it anywhere. He was so sad and disappointed at not getting a single drop of water.At last, he found a pitcher  of water. He flew down to the pitcher and sat on its edge. He tried to dip his beak but to no effect. His beak could not reach such a low level of water. He even tried to overturn the pitcher but could not do so. It was too heavy for him to move.When he was just about to fly in despair, he thought of a plan. Suddenly his eyes fell upon some pebbles lying near the pitcher. He flew to them, picked up the pebbles one by one and dropped them into the pitcher Slowly and slowly the level of water rose and came up to the beak. The crow was overjoyed to see this. He dipped his beak, quenched his thirst and flew away.
+ Moral : Necessity is the mother of invention.
+  </div>
+</div>
+
+
+
+
+<div class="container mt-3">
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">5.	Abdul Qadir Jilani</button>
+  <div id="demo" class="collapse">
+    	
+
+Abdul Qadir Jilani was an eminent Islamic scholar born in 11th century in Persia. At the age of eighteen, he asked for  permission from his mother to travel to Baghdad to pursue his education. Baghdad then was the hub of political, commercial and cultural activity, and the center of  learning. On hearing this, his mother was more than happy to send her son off to follow the path of higher learning. It was for such a purpose that she had saved forty gold coins for her son. As she prepared supplies for his journey, she sewed the coins into the lining of his coat for safekeeping. Before Abdul Qadir joined the caravan of merchants to travel to Baghdad, her parting advice to her son was, “Whenever you speak, speak the truth.  In route to Baghdad the caravan was assaulted by a band of robbers. While searching, the robbers asked Abdul Qadir, “Do you have anything valuable?’ Abdul Qadir calmly replied, “Yes.” On hearing this, the robbers franticaly searched further but could not find anything. The robbers took Abdul Qadir to their leader and said, “This boy says he has valuables but I cannot find anything .” The leader of the robbers asked Abdul Qadir, “Are you hiding any valuables?”Again Abdul Qadir answered, “Yes.”The robber asked, “What are you hiding?”Abdul Qadir replied, “Forty gold coins.” Upon further searching, the robber discovered the coins hidden in the lining of Abdul Qadir’s coat. The robber was now curious to know more about this boy who was not afraid and insisted on speaking the truth. The robber asked, “What is your name and where do you come from?” He replied, “My name is Abdul Qadir and I come from the province of Jilan in Persia.” “Where are you going?” “I am going to Baghdad.” “What do you plan to do in Baghdad?”“I want to study with the greatest scholars to gain knowledge.” On hearing this, the leader of the robbers was stunned with remorse and embraced Abdul Qadir  asking for his forgiveness.  
+
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container mt-3">
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">6.	The Proud Crow</button>
+  <div id="demo" class="collapse">
+   
+Once a crow became very sad about thinking of his ugly colour. He always thought of becoming beautiful. But he could not find out any way to become beautiful. Once he got a chance. He found some feathers of a peacock in a jungle. So he did not miss the opportunity. He took the feathers one by one and stuck them in among his own feathers. Then he looked at him and became overcast with joy thinking him to be as beautiful as a cuckoo. He thought that he should no longer live with the crows. So, he made up his mind to live with peacocks. But peacocks understood easily that actually he was a crow in the appearance of a peacock. All peacocks gathered together and attacked him. They pulled out all the false feathers and drove him away. Finding no other way he returned to the crows. But the crows did not accept him. They also drove him away. The crows realized his fault. So, he apologized to all the crows. He also promised that he would never be ever ambitious or show any falsehood
+
+ </div>
+</div>
+
+
+
+
+
+
+<div class="container mt-3">
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">7.The Story Of Golden Goose</button>
+  <div id="demo" class="collapse">
+    Once upon a time there lived a poor farmer in a village. He had a goose. It used to lay a golden egg every day. The farmer used to sell them in the local market and within a short time he became quite solvent. ..............
+
+   
+  </div>
+</div>
+
+
+
+
+<div class="container mt-3">
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">10.Dividing the bread</button>
+  <div id="demo" class="collapse">
+    
+Once there lived two rats in a house. One day they stole a piece of bread from that house. The bread was so delicious that they began to quarrel between them as to how to divide it equally. At last they decided to go to a monkey for equal division of the bread. But the monkey was very greedy & clever. At first  it tore the piece of bread into two pieces  & put the two halves onto the scales of a balance. But it was found that one piece was larger than the other. So, it bit off a portion from the larger piece of bread to make it equal to the other smaller piece.  But this the smaller piece turned into the larger one & the larger piece turned into the smaller one. So he again did the same thing to make the two halves equal. But to their utter surprise, they found that both the halves became smaller & smaller gradually.  At one stage there was only one single small piece of bread left for the two rats.  This time both the rats came to their senses. They at once shouted at the greedy, clever monkey to stop its idiosyncrasy & demanded that they be given back the last piece of bread left.  But the greedy, clever monkey refused to give them back the last piece of bread left.  It claimed that it was its own piece as it toiled much to divide the bread equally.  Thus the two rats lost their piece of bread for ever due to their lack of reciprocal unity & faith on each other.
+t.
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="container mt-3">
+ 
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo"> 11.Robert Bruce</button>
+  <div id="demo" class="collapse">
+ 
+Once upon a time there was a king of Scotland named Robert the Bruce who was both brave and wise. The King of England was at war with him, and led a great army into Scotland to drive him out of the land and to make Scotland a part of England. Battle after battle,  he had fought with England. Six times Robert the Bruce had led his brave little army against his foes. Six times his men had been beaten, until finally they were driven into flight. At last the army of Scotland was entirely scattered, and the king was forced to hide in the woods and in lonely places among the mountains. One rainy day, Robert the Bruce lay in a cave, listening to the rainfall outside the cave . He was tired and felt sick at heart, ready to give up all hope. It seemed to him that there was no use for him trying to do anything more. As he was thinking, he noticed a spider over his head, getting ready to weave her web. He watched her as she worked slowly and with great care. Six times she tried to throw her thread from one edge of the cave wall to another. Six times her thread fell short. But the spider did not lose hope. With still more care, she made ready to try for the seventh time. Robert the Bruce almost forgot his own troubles as he watched.  Fascinated, she swung herself out upon the slender line. The thread was carried safely to the cave wall and fastened there. “Yes!” cried Bruce, “I, too, will try a seventh time!”  So he arose and called his men together. He told them of his plans, and sent them out with hopeful messages to cheer the discouraged people. Soon there was an army of brave men around him. A seventh battle was fought, and this time the King of England was forced to retreat back to his own country.
+ 
+  </div>
+</div>
+
+
+
+
+
+<div class="container mt-3">
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo"> 12.The town of Hamelin</button>
+  <div id="demo" class="collapse">
+   
+The town of Hamelin was once full of rats. They ate all the food, troubled sleeping babies, and made a lot of noise. The people had grown tired of the rats but were unable to do anything. Even the cats were not able to kill the rats  .One day, a queer fellow with piercing eyes, came to the  town. He was called the Pied Piper. He went to the Mayor and asked him, “What will you pay me if I free your town of every single rat?” The Mayor offered fifty pounds to the Pied Piper. Happy with the offer, the Pied Piper started playing his pipe. Hearing the shrill, keen note, every rat came out from its hole and started following him. The Pied Piper kept on playing his pipe and the rats followed him.  The Piper walked up to the harbour with millions of rats behind him and led them into the water and waited till every rat sank down into the river. Now the town was free of the little devils and the people were very happy.
+After all the rats were dead, the Pied Piper returned and asked the Mayor for his money. The Mayor said that he could only give him twenty pounds for such an easy job. Now the rats being  dead, the Mayor thought that there was nothing to worry about. But the Pied Piper wanted to teach him a lesson. This time he played a different tune. Hearing his music, the children came out of their houses. They started following the Piper, dancing and shouting. The elders watched in disbelief as the Pied Piper led the children far, far away. The Mayor sent his men to look for the Piper and bring the children back but none could find the lost children.
+quat.
+  </div>
+</div>
+
+
+
+
+<div class="container mt-3">
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">13. Who is to bell the cat</button>
+  <div id="demo" class="collapse">
+    
+Once the house of a rich man was infested with rats. The house became like the town of Hamelin. There were rats everywhere. They were doing a lot of mischief there. They enjoyed so much freedom that they started taking away foods, cutting cloths and making holes here and there. The member of the house could not take a sound sleep at all. Even sometimes, the mice became so aggressive that they started biting the babies.  The master of the house became very annoyed at this and lost his patience. At last he hit upon a plan. He bought a cat to kill the mice. The cat started killing the mice one by one. As a result, all the mice got frightened and could not move as before. In this situation, they sat in a conference to get rid of the cat. Many proposals were made but none of those were acceptable. At last a young mouse rose up and said, “I have a good plan. Let us tie a bell around the neck of the cat. When the cat  will come, we can be able to save ourselves by hearing the sound of the bell.” All the mice thanked him for his good plan. But an old mouse said, “Certainly the plan is good. But who will bell the cat? Hearing this all the mice remained silence. So, the conference ended in smoke and eventually they left the house to save their own lives.
+
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="container mt-3">
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">Simple collapsible</button>
+  <div id="demo" class="collapse">
+    
+  </div>
+</div
+
+
+
+
+14. The mother arouses in a real mother / The judgement of a wise judge
+Once upon a time, there lived two families in a village. The two families lived side by side. Two women of the families were not in good term with one another on different issues. By chance, they became pregnant and were about to bear children. At the eleventh hour of their bearing children, they were taken to the same houses. A nurse was there to look after the two childbearing mothers. At the time of delivery, the nurse allowed none in the house. The nurse found that one woman bore a baby boy but she became senseless just after the birth of the child. On the other hand, the other woman bore a dead baby boy and she was in a pensive mood for bearing a dead child. She at once hit upon a plan. She somehow managed the nurse and replaced her dead child by the alive of that woman. After a few minutes, the woman got her sense and cried out loudly seeing the dead child beside her. She could not believe that this dead child was hers. She became almost mad about what to do because she was very sure that there was something wrong. The nurse told a lie about the two children .Finding no other way, the woman went to the Quazi for Justice. The Quazi listened to the woman’s prayer. Then, he summoned the two women. He asked them to let him know the truth. Both the women claimed for the alive baby boy. At least, the Quazi hit upon a plan. He decided to solve the problem technically. He informed both the women that he would cut the baby into two equal pieces and give one piece to each of them. At this, the real mother of the baby burst into tears and said, “Your majesty, please, don’t kill my baby. Allow it to live and gave it to that woman so that I may feel that my baby is still alive with her. The false mother on the other hand kept silent  & did not utter even a single word. The Quazi handed the baby to its real mother & pretended & false mother of the child.							
+
+
+<div class="container mt-3">
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">   15.	The Happy Cobbler And The Banker</button>
+  <div id="demo" class="collapse">
+ 
+Once there lived a happy cobbler who passed his day working and singing from morning to night. A rich neighbour of his was a banker who one day came and said to him,” How much a year do you earn?” The cobbler replied, “I don’t know and I never think in that way as I live from hand to mouth.” The banker said, "I am very sorry for your poverty. You should try to change your fortune.” The cobbler laughed and said, "I am happy with what I can earn daily.” The next day the banker came again and said, “Look, my friend! I want to drive away your distress. Take these thousand pounds, keep it carefully and use it in time of need." The cobbler became very much surprised having the large amount. He had never seen so much money at a time in his life before. At first, he could not think where he should hide the money for safety. Then, he dug a hole in his hut and buried it. At night, a new thinking crossed over his mind, “someone might steal my money.” As a result, he could not sleep at all. Next few days, he could neither do any work nor sleep at night for the thinking of money. At last, he could realize that the money had snatched away his mental peace and happiness. So, one morning he went to the banker’s house and returned the money. From then, he could pass his days with singing and great happiness as before. 
+
+
+</div>
+
+</div>		
+
+
+<div class="container mt-3">
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">   16. Devotion of Bayazid Bostami</button>
+  <div id="demo" class="collapse">
+    One night the entire village was in deep sleep. The boy Bayazid was studying in his room.  His ailed mother was sleeping. Suddenly she woke up and asked Bayazid to bring a glass of water. He went to the kitchen to bring water. But the pitcher was completely empty. He looked for water everywhere in the house. But he found water nowhere. He was so much devoted to his mother and loved her very dearly. He felt great pity to his thirsty mother.  He decided to bring water outside of the house. But the nearby water hole was far away from the home. He took the pitcher and started walking to the water hole.  Reaching to the hole he filled the pitcher and returned home as early as possible. He poured water into a glass and went to his mother. But he saw his ailing mother sleeping again.  He thought for a while what to do. He thought awakening his mother may sour up her illness. So, he did not break his mother’s peaceful sleep and stood beside her bed with the glass of water in his hand.  The morning sun removed the darkness of the night. Bayazid’s mother woke up and found Bayazid standing at her side. At first she could not understand anything. But a moment later she remembered everything. The mother impressed with his son’s devotion to her and blessed him from the core of her heart. One day he became a great saint.
+  </div>
+</div>
+
+
+
+                                 
+
+
+<div class="container mt-3">
+ 
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">  17.Sheikh Saadi and His Dress</button>
+  <div id="demo" class="collapse">
+ 
+Sheikh Saadi was a great poet. He used to put on simple dress.  Once he took shelter in the house of a nobleman. The nobleman could not recognize him and treated him as an ordinary man. ..................  .
+ Sheikh Saadi was a great poet. He used to put on simple dress. Once the king of Iran invited him to his place. The palace of the king was too far away from his home. So, he started for the king’s palace a day ago. On the way, when it was about to dark, he took shelter in the house of a nobleman. The nobleman could not recognize him and treated him as an ordinary man. At that time he was simple in his dress. He did not disclose his real identity. The nobleman and his servants did not show much honour and hospitality to him for his ordinary dress. They entertained him with very poor food. 
+In the morning the poet left the rich man's house. He reached the king’s palace. The king showed much honour to him and gifted some beautiful dresses .A few days later, on his way back home he took shelter again in the same house. This time he was in gorgeous dress offered by the king. The nobleman received him very cordially and entertained him with rich and delicious food. Saadi began to put the food in his pocket. The house owner became surprised and asked the poet about his mysterious behaviour.   The poet replied that his dress deserved the food as he had been treated in very poor way from this house a few days ago. The nobleman could realize his fault and got ashamed for his mistreat. He also begged pardon to the poet.
+ 
+
+  </div>
+</div>
+
+
+
+
+<div class="container mt-3">
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">  18. The Selfish Giant and the School Children</button>
+  <div id="demo" class="collapse">
+ 
+Once there was a selfish giant who had a large and beautiful garden. The garden was full of soft green grass. Here and there all over the grass stood many colorful flowers like stars. Different types of birds chirping sitting on the branches of the garden. It was a nice playground for the wonderful innocent school children.
+After returning the school, the school children used to play in the garden and make the garden more beautiful. But one day, the giant saw the children playing. He was very selfish. He could not tolerate this beautiful sight and he drove the kids away from his garden.  At this the children was shocked and stopped playing there for the fear of the giant. But the immortal God could not bear this sort of atrocity. So, after this incident, green grass became fade; no flowers bloomed in the garden. It turned into a barren. The giant came to understand his selfishness and requested the children to play in his garden as before. The children came again. They started playing again and the garden got back its previous charming shade.
+
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container mt-3">
+ 
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">19. The  King Lear And His Three Daughters</button>
+  <div id="demo" class="collapse">
+    	
+
+Long ago there lived a mighty old king in England. His name was king Lear. He was tired of ruling and needed rest. He made up his mind to step down the throne and divide his kingdom. He had three daughters. Goneril, Regan and Cordelia. He decided tio divide his kingdom into three parts and give each to each of his daughters. But before giving it he wanted to know how much they loved him. At first Lear asked his eldest daughter,” How much do you love me?” Goneril answered,” Sir, I love you more than I can say.” King Lear was pleased and went to ask the same question to his second daughter Regan. She answered,” My love for you shall never change any time.” Lear became so much satisfied hearing the answer. Then it came the turn of Cordelia, his youngest daughter whom he loved most. Cordelia did not like flattering. She replied that she loved his as much as a daughter should love her father.King Lear became very much furious at her reply. He derived away her from his country and divided his kingdom between his two daughters.
+Cordelia took shelter in a forest. One day the Prince of France came hunting and saw her. He became very impressed at her beauty and married her.In the meantime, the king became the burden of the two daughters. They did not like the king as before. He felt great shocked understanding the falsehood of his two daughters. He became very sick. One day the two daughters drove him away of the kingdom. Cordelia came to know that and forwarded with French army to the kingdom and rescued his father. The King Understood the real love of his youngest beloved daughter.
+
+
+  </div>
+</div>
+
+
+
+
+<div class="container mt-3">
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">20. Unity is strength</button>
+  <div id="demo" class="collapse">
+    
+Once there was an old farmer in a certain village. He had three sons. They used to quarrel among themselves at that time. So, there was no peace in the house and this made the old man extremely anxious. The farmer advised them not to quarrel and keep united to lead a peaceful life. He also told them that breaking unity would lose their strength and abilities. But the sons did no pay any heed to their father rather they kept busy with quarreling. The days were passing and the farmer was growing older. He tried to bring them to their senses but failed. At last, he hit upon a plan.
+One day, he called for all of his sons to teach the value of unity. He ordered them to bring some sticks and a piece of rope. They brought the sticks and rope. The farmer tied the sticks with the rope altogether. He asked his eldest son to break the bundle. The son tried hard but he couldn’t break the bundle. Then it came to the turn of 2nd son. He tried heart and soul but couldn’t. The next tern was for his youngest son. The result was the same as the others. After that, the old man untied the bundle and handed over a single stick to each son. This time they all could break the stick very easily. The old farmer said his sons, “Look, my dear sons, this is the result of unity. This is the strength of unity. If you can be united, nobody will be able to harm you.”The three sons could understand their fault /mistake. They promised to be united and live in peace and harmony.
+ 
+  </div>
+
+</div> 
+
+
+
+
+
+<div class="container mt-3">
+ 
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">  21. What is play to one causes death to another</button>
+  <div id="demo" class="collapse">
+ 
+There was a pond full of frogs. Some of them often put their heads out of the water croaked loudly. One day some boys were playing by the side of the pond. When they heard the frogs croaking they began to throw stones as a part of their play. Even they got much pleasure from it. Being injured all the frogs at once went down into the water. But the boy did not leave the place. They remained unmoving. When the frogs raised their heads above the water level, the boys again started to throw the stones. Thus many frogs were hit hard and few were killed instantly. At last an old frog raised its head and said, “Oh boy! Please stop the cruel fun. Don’t throw stones to us.” “It’s just a play and we are enjoying it much,” said the boys, “Why should we stop it?”
+“What is sport to you is death to us. This is why, you should stop it,” answer the old frog. The boys were ashamed of this. They went the cruel and went away.
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="container mt-3">
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">22. The Poor Honest Wood Cutter and The Fairy -Completing story in short</button>
+  <div id="demo" class="collapse">
+    
+Once there lived a poor wood cutter. But he was honest. Every day he went out to cut wood in the forest. He earned his livelihood by selling wood in the market. One day while cutting wood beside a river, his axe slipped out of his hand and fell into water. He did not know how to swim and the axe was the only means of his daily earnings. He became very sad thinking how he would maintain his family. So, he sat beside the river and began to cry bitterly. Seeing this, the water-goddess took pity on him. She appeared before him and asked the reason of his crying. The wood-cutter told her of his misfortune. After hearing all, the water-goddess dived into water and brought a golden axe. Seeing the axe, the wood-cutter told that it was not his own. The water-goddess dived again and came out with a silver axe. The wood-cutter refused to take it as it was not his axe too. For the third time, the water-goddess went back into water and came back with his real iron-made axe with wooden handle. “That’s mine”, the wood-cutter cried out gaily. He became very delighted and thanked her. The water-goddess impressed most seeing the honesty of the poor wood-cutter and offered him all other two precious axes as reward. Thus honesty is rewarded Everywhere.
+
+
+  </div>
 </div>
 
 
@@ -215,12 +2189,713 @@ footer {
 
 
 
+
+23. The Scholar And The Boatman Story
+There was a poor boatman in a village. He was illiterate. He used to row boat from morning till evening only to meet his both ends. There was no meaning of knowledge to him. It was the month of Baishakh. A scholar got into his boat. He was enjoying his journey very much because the weather was very fine. It was almost dark. He was gossiping with the boatman.  “Did you have any knowledge about the creation of the universe?” the scholar asked the boatman. “No,” replied the boatman. The scholar got astonished and told him, “Without the knowledge of astronomy half of your life is spoiled The boatman was sad and thought of the uselessness of his life. He again asked the boatman, “Do you know about the history of human civilization? The reply of the boatman was the same as before. This time the scholar told the boatman that he had already spoilt three -fourths of his life and he could not come to any use to the society. The boatman kept silent and went on a rowing boat in a sad mood. Suddenly, the weather became gusty. The sky was overcast with clouds. There was darkness all around. There was also heavy showers with lightning. The boat was about to capsize. The scholar was trembling with fear, But the boatman was very quiet because he was used to this weather. He asked the scholar. “Sir, do you know how to swim?’ The scholar replied, crying, “No”. “Now the boatman said, Alas! Your life is totally spoilt. Pray to God for your safety.”
+
+
+
+
+
+
+24. Slow And Steady Wins The Race 
+A hare is a very speedy animal. It can run very fast. But a tortoise moves very slowly. It has a heavy shell on its back. Its legs are short. So, it can’t move as first as other animals. Once upon a time, a hare was very proud of his speed and cut a joke at a tortoise.One day she said to a tortoise, “I pity you for your speed.” “How can you walk with such a heavy shell on your back?” “You need not worry friend, hare,” said the tortoise. “If you like, I can run a race with you.” The hare sneered, “What do you want to run a race! Very well, I am ready. I accept your challenge.” At one, both of them started. In a moment the hare got ahead of the tortoise. The tortoise was moving very slowly with his heavy shell on his back.
+
+25. A fox without a tail
+
+Once there was a clever fox in a jungle. One day, when the fox was walking through a jungle, he fell into a trap. He could somehow get out of the trap, but he had to leave his tail behind. Without a tail, he looked strange and he felt sad. But the fox was very cunning and he hit upon a plan. He invited all the foxes to come to a meeting. When they had assembled together, the Fox proposed that they should all do away with their tails. He pointed out how inconvenient a tail was when they were pursued by their enemies Then the fox said, “My dear friends, I’ve invented a new thing, the tails of ours are useless. They look ugly and are always dirty. So, we should cut off our tails.”
+All the foxes listened to the cunning fox. One of the wise old foxes was also listening. He said, “My friend, your plan is very interesting but foolish. As you’ve lost your tail, you want us to cut off our tails. I do not think you would have recommended us to dispense with our chief ornament if you had not happened to lose it yourself.” The clever fox being ashamed fled away from the spot.
+
+
+	
+	
+      </div>
+    </div>
+  </div> 
+</div>
+    </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Dialogue</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">Dialogue <br>
+	
+	
+	
+	
+<div class="collaspsible" id="completing story-01" >
+<button  type="button"  class="collapsible"> </button>
+<p  style="color: deep black; text-alignment:center; back-ground-color:red ; outline: 4px; border: 2px solid black">1.	Dialogue Between Two Friends on Frequent Road Accidents
+Rahim: Hello, Kamal, why do you look gloomy?.<br>
+Kamal: Today I have seen the news of a tragic road accident.<br>
+Rahim: But the road accident is a daily affair in our country.<br>
+Kamal: Maybe. But this news has shocked me terribly.<br>
+Rahim: Of course. Every road accident is a tragic news in deed.<br>
+Kamal: It is reported that all the five members of  the ill-fated family died on the spot while    they were going to attend a wedding party.<br>
+Rahim: How did the accident take place?
+Kamal: While the car carrying five members was coming towards Dhaka, a loaded truck was going from opposite direction and collided with the car near Faridpur town.<br>
+Rahim: What a pity it is!
+Kamal: Can you tell me the reasons for frequent road accidents in our country?<br>
+Rahim: So far, I could know from newspapers and other electronic media, most of the accidents take place due to the reckless driving, non-compliance of traffic rules, unfit vehicles and poor infrastructure  of existing road system etc.<br>
+Kamal: Can you please tell me how we can control and reduce the number of road accidents?
+Rahim: Immediate steps should be taken to reduce traffic jam. The overall traffic   management should be digitalized. Central monitoring should be introduced to navigate the ongoing traffic system with the help of GPS. Besides, number plate can be digital with the help of RFID.<br>
+Kamal: That’s good. Who will do that?
+Rahim: Obviously it is the responsibility of the government to implement the existing law & introduce effective measures in the best possible way. <br>
+Kamal: No, it is not the responsibility of the government alone. Rather it is the responsibility of all concerned including the government to solve this problem.<br>
+Rahim: Yes, right you are. We should also create awareness among the general people as well the drivers to follow traffic rules.<br>
+Kamal: By implementing modern & sophisticated ICT based traffic  controlling system we can reduce traffic accidents in our country.<br>
+Rahim: Thanks for information.
+Kamal: Thank you too.</P>
+
+</div>
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+	
+	
+	
+	
+	
+	
+
+
+<div  classs="collapsible"
+
+<h3 >2.	Write a Dialogue about how to Eradicate Illiteracy </h3>
+
+<p  style=" border: 2px solid black;">Shafiq    : Hi Rafiq, how are you? <br>
+
+Rafiq    : I’m fine. And you?<br> 
+
+Shafiq   : I’m fine too. But I’m much tensed about the education system & mass illiteracy rate of our country.<br> 
+
+Rafiq  :  Without education no nation can develop. Education means self-enlightenment. It is the acquisition of knowledge, skill, ability, belief & habit.<br>
+ 
+Shafiq   : What should we do then?<br>
+
+Rafiq  : We should work hard  to educate the illiterate.<br>
+
+Shafiq : We also need to create people’s awareness so that they  send their
+children to school.<br>
+
+Rafiq  : Yes, of course. It’s the key factor. Our government has already taken some steps to remove illiteracy.<br>
+
+
+Shafiq : But there are some people in our society who are very poor. They are unwilling to send their children to school owing to poverty.<br>
+
+Rafiq :  Indeed! It’s quite so. To persuade the poor people to send their children to school the government has also started ‘Food for Education’ programme.<br>
+
+Shafiq : Yes, it is an epoch-making step.<br>
+
+Rafiq  : But the govt. alone can not solve the problem. Every educated person including students must come forward to educate the illiterate.
+
+Shafiq : Of course. To make the programme a success we must co-operate each other.<br>
+
+Rafiq  : If we are sincere in our words and deeds, nothing is impossible.<br>
+
+Shafiq : That’s right. Thank you.<br>
+
+Rafiq  : Ok. See you again </P>
+
+</div>
+
+
+
+
+
+3.	A dialogue between two friends about merits & demerits of using mobile phone. 
+
+
+
+
+
+4.	A dialogue between two friends about merits & demerits of using face book . 
+
+
+
+
+
+
+05. Write a dialogue between you & your friend about the importance of tree plantation
+Myself : Good morning. How are you?
+Zahid : I am fine. Where are you going now?
+Myself : I’m going to Osmani Milanaytan to attend a seminar on the importance of tree 	plantation.
+Zahid : Would you please tell me about the importance of tree plantation?
+Myself: Trees are of a great importance to us. We cannot think of our existence without 	trees. They are a great source of life & living on earth.
+Zahid: But have you marked that many people are cutting trees at random? What might 	be its consequence?
+Myself : If  trees are cut down indiscriminately, the country will one day turn into a 	desert. The temperature will rise and cause greenhouse effect.
+Zahid  : What should we do to save our environment from pollution?
+Myself: We should plant more trees. But there are many people who are not aware of 	the importance of tree plantation.
+Zahid: Right you are. In order to make people aware of the importance of trees, 	tree plantation programme should be expanded.
+
+Myself: Is it enough? We have to take eco-friendly measures to boost tree plantation program.
+Zahid: I don’t understand. What do you mean to say by eco-friendly measures?
+Myself: I mean to say that we have to reduce pollution by organic food plantation & by the least use of chemical fertilizer. 
+Zahid : I agree with you, my friend. Thank you for your discussion.
+Myself	 : You are most welcome.
+
+
+
+
+
+
+
+
+
+
+
+
+06	A Dialogue between two friends about the preparation for half yearly examination
+Sujon: Hello Hasib, how are you?
+Hasib: I am fine, and what about you?
+ Sujon: I am not so good. I am worried about my exam.
+Hasib: It is very common. You are serious about it, so you are worried.
+ Sujon: Don't philosophize, please. I am really afraid as I have no good preparation for English. 	In a short time it is very difficult for me to make a success in English.
+Hasib: I think your English learning method is not so good. You should learn some basic rules of 	English if you want to do well in English.
+ Sujon: You are right. Besides, I should improve my writing skill to do well in English.
+ Hasib: It is okay. You will do better if you read English regularly.
+ Sujon: Thank you for your encouragement. To speak the truth, I am afraid as I couldn't secure 	more than 50% marks in English in the last examination.
+ Hasib: No matter. You are a good student. I hope you would be able to make up for the loss.
+Sujon: Now tell me about your preparation.
+Hasib: I paid equal attention to all the subjects. So, I am not worried about any particular 	subject. Now I am revising all the subjects.
+Sujon: Very well. You are always studious and laborious. You did not waste your time. You 	have also made a good preparation.
+Hasib: Do not mention it. But it is true that I read regularly and emphasize on all subjects equally.
+ Sujon: Excellent! Hope you will do better in the examination. Thank you.
+ Hasib: You are most welcome. Hope you will also do better.
+
+
+
+
+
+
+
+
+07.	Write a Dialogue between you and your friend about good effects/benefits of morning walk.
+
+Mabrur : Hi Masrur, it is already 8 a.m. and you are just brushing your teeth. What’s the matter? 
+	
+Masrur: No matter, friend. Today I could not rise early. 
+
+Mabrur : It matters, friend. I think you are  a late riser. I never saw you walking in the morning. 
+
+Masrur: Not exactly that, Mabrur. Frankly speaking I do try but fail. 
+
+Mabrur : I’m sorry for you, boy. You are deprived of the benefits of morning walk. 
+
+Masrur: Morning walk! I’ve always been interested in  walking  in the open air at morning. Could you tell me more about it? 
+
+Mabrur : With pleasure, Masrur. Morning walk gives us invaluable benefits but costs us nothing. It makes you feel fresh and lively all the day. You can breathe in pure oxygen which keeps your respiration OK. It is also the best kind of exercise. 
+
+Masrur: All are true but why are you forgetting about the serene natural beauty of morning what attracts me most. 
+
+Mabrur : Oh, no Masrur. Actually I like to say there are few people who find nature enjoyable. 
+
+Masrur:  The rising sun in the east horizon, bird chirping in trees and cool gentle blowing breeze seem to be the best gifts of God. What do you think? 
+
+Mabrur : Ah! You are talking as if you were a poet. I do agree, brother. 
+
+
+
+
+
+
+
+	
+8. write a dialogue between you & your friend about the importance of physical exercise
+
+Rakib: Hello, Rajib, good morning. How are you?
+Myself: I am fine and you?
+Rakib: I am not so fine. 	
+Myself: What’s wrong with you? 
+Rakib: I always feel weak. I am rather unwell.
+Myself: Have you got any disease?
+Rakib: Not that. In fact, I can’t go on well with any work. I feel feeble & clumsy.
+Myself: I think you do not take physical exercise.
+Rakib: You are right. Actually I do not find any time in doing so.
+Myself: But you must know the importance of taking physical exercise.
+Rakib: Yes. Do you think I should take regular physical exercise?
+Myself: Obviously. Taking physical exercise makes a man fit for work. It circulates blood. Human body is like a machine. So, all the parts of the body should be kept active by taking regular physical exercise.
+Rakib: Would you please tell me about some more importance of taking physical exercise?
+Myself: Sure. Health is wealth. Regular physical exercise removes the weakness of the body. It makes mind cheerful. Physical exercise is essential for keeping in good health.
+Rakib: Thank you for your good advice.	
+Myself: Welcome. See you. Take care.	
+	
+
+
+
+
+
+
+
+
+9. Write a Dialogue between two friends about the bad effects of smoking.
+
+Ershad : Hi Liton, Let’s go to playground.
+
+Liton: Yes, I’m also waiting for you.
+
+Ershad : What about you? You aren’t going to school for a few days.
+
+Liton: Just wait. Let me buy a cigarette from that shop.
+
+Ershad : What! Cigarette! Oh, yes. I’ve heard you have become a chain smoker nowadays.
+
+Liton: No brother. Not just so. I smoke now and then.
+
+Ershad: Why do you smoke, Liton? Don’t you know smoking is harmful for health?
+
+Liton: Oh, you don’t know. When you smoke, you look smart and full of personality. Smoking also removes tiredness.
+
+Ershad : But there are many bad effects of smoking. Don’t you know that? Smoking is like taking poison!
+
+Liton: What bad effect! Many a man is smoking everyday here and there.
+
+Ershad : But it may cause you serious diseases like cancer, heart attack, bronchitis etc. It also damages your lung and causes lung cancer.
+
+Liton: That’s are heard, friend but nobody dies from smoking.
+
+Ershad : What! Nobody dies! According to World Health Organization (WHO) 5 million people die every year from tobacco related illness. That is about one person is dying in every 6 second. Smokers are likely to die at least 10 years earlier than the non-smokers.
+
+Liton: Really! In true sense, I never thought so much. Moreover I never knew such a dangerous effect of smoking. I just started to smoke out of curiosity.
+
+Ershad : And this curiosity is spoiling your character and gradually leading you to death.
+
+Liton: Sure, Ershad. I promise I’ll give up smoking from this very day. You have saved me from a great danger.
+
+Ershad : And never indulge such a bad habit
+
+
+
+
+
+10. A dialogue between two friends on the advantages and disadvantages of village life and  city life.
+Nasir: Hello, Sagir. How’re you?
+Myself  : I am very well and you?
+Nasir: I’m also well. I came to know that you can’t adjust to city life. But why? 
+Myself: Yes, I have  got bored in city life.
+Nasir	: What are the things of city life that you don’t like?
+Myself: Life in city seems to me very artificial. It’s full of din and bustle. 	People lead a very 	busy life in polluted environment. They wake up from sleep in the morning hearing 	the sound of vehicles, machines and factories.
+Nasir: Right you are. But there are many modern facilities you can have in city 	life. In cities   	there are many good educational institutions, hospitals and clinics. There are also 	many    	recreational places in  the city.          
+Myself: That’s true. But to me life in the village is far better than that in the city. Village life is  	quite natural and the people in the village lead a very simple life. They wake up from  	sleep in the morning hearing the melodious songs of birds.  
+Nasir: But village life is not free from disadvantages. Disease, hunger, malnutrition and 	poverty are common in the life of the villagers.     
+Myself: Actually both the lives have their advantages and disadvantages. A balanced 	development  can remove the gap between two types of life.
+Nasir: If we debate on the topic our discussion will never end. 
+Myself: It is true. It is a great concept. 	
+Nasir:  Exactly so. I agree with you. 
+Myself  : Thank you for your discussion.
+Nasir:  You are most welcome.
+Myself:  You are also welcome.
+	
+
+
+
+
+
+
+11. A dialogue between myself & Anik about importance of reading newspaper
+
+
+Myself: Hi, Anik! How are you?
+Anik: I am fine. And you?
+Myself: I am fine too. Where are you going hastily?
+Anik: I am going to buy a newspaper from the stall. The newsboy didn’t come to deliver 	newspaper today.
+Myself:: Is there any special news today?
+Anik: Not for any special news in deed.  It’s my hobby to read newspaper.
+Myself: Do you read any newspaper regularly?
+Anik: Yes, of course. 
+Myself: It’s nice. I also read newspaper daily. Do you think  reading  newspaper regularly is 	essential? 
+Anik: Certainly. In fact, it’s the storehouse of knowledge.
+Myself: What can you learn from it?
+Anik: We can learn about trade & commerce, politics, games & sports etc from it.
+Myself: I don’t miss to read the pages that are written especially for the students.
+Anik: I also read such types of pages minutely. I think that such pages help us take good 	preparation for the exam.
+Myself: You are right. Actually everyone should read newspapers daily. 
+Anik: A man who does not read newspaper is like a frog in a narrow well.
+Myself: You are right . Thanks a lot.
+Anik: Welcome.
+
+
+
+
+
+
+
+19. Dialogue about borrowing books
+20. Dialogue b about setting up a computer club
+
+21. Dialogue about the bad effects of copying in the exam 
+
+ 22. Dialogue about the bad effects of deforestation 
+
+23. Dailogue about the proper use of time
+
+	
+      </div>
+	  
+	 
+    </div>
+  </div> 
+</div>
+    </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="container mt-3">
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo"> 12. Dialogue Between yourself  and your friend on your Aim in Life</button>
+  <div id="demo" class="collapse">
+   
+Myself: Good morning, Monir! How are you? <br>
+Monir: Good morning. Thanks. I am nice and you?
+Myself: I am also fine. I am very glad about your brilliant result in the SSC Examination. Would you tell me about your aim in life?<br>
+Monir: I have already made up my mind to study law. I’ll join politics after completing my   studies. I wish to serve my countrymen by driving away restless politics.<br>
+Myself: All these are true. But it is really a difficult task.
+Monir: You’re right. But don’t forget that nothing is impossible for me. A patriotic leader can stamp out all kinds of corruption and injustice froth society. Please, bless for’ me.<br>
+Myself: I am very glad about this. I am sure that we will be able to eradicate evil politics from the country.<br>
+Monir: What’s your aim in life?<br>
+Myself:  I want to be a doctor.<br>
+Monir: Why have you chosen this profession? <br>
+Myself: Oh sure. I give you an example. Most of the people in our country are very poor. They cannot afford the expenses of treatment. As a result, many of them die only for want of proper and timely treatment.<br>
+Monir: In that case, how can you help them?
+Myself: I want to offer treatment to poor people free of cost. And I dream that if I can earn more money, I will set up a charitable dispensary for the poor.<br>
+Monir: That’s a very good idea. But you know, getting admitted into medical colleges has become so tough nowadays. What’s your plan regarding that?<br>
+Myself: I know that academic excellence is very much important for getting admitted to a medical college. So, I am trying my best to achieve that success.<br>
+Monir: I appreciate your aim and your heartiest effort to make your dream true. I wish you all the best.<br>
+Myself: Thank you very much.<br>
+Monir: You’re most welcome.<br>
+Myself  : It’s wonderful!<br>
+Monir : Yes, it’s essential for human resource and development.<br>
+Myself  : Yours is also an excellent idea.<br>
+Monir : Thank you.<br>
+Myself  : You are most welcome.<br>
+
+Monir: Thanks- a lot. See you again. No more today. Good-bye!<br>
+Myself: You are most welcome. Good-bye!<br>
+
+
+
+
+  </div>
+</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="container mt-3">
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">13. Write a dialogue between you and your friend on your future plan/choice of career.</button>
+  <div id="demo" class="collapse">
+    
+Raju: Good morning Raj, how are you?<br>
+Raj : Good morning .Raju, I’m fine.<br>
+Raju: Friend I’d like to ask you about your future plan.<br>
+Raju: of course. I wish to be a  Software engineer in my future life.<br>
+ Raju: That’s a royal ambition.I wish your dream will come to lightone day.<br>
+Raj	: You also know that I always emphasize algebra, geometry and details of 
+      Computer.<br>
+Raju: Certainly one has to be good at mathematics and algebra if one likes to be a 
+      software engineer. I will keep higher math compulsory when I will be in 
+       class ix.<br>
+Raj	: My parents also hope to see me as a soft ware engineer<br>
+Raju: Is it way to serve the nation?<br>
+Raj	: I think so, because a soft ware engineer is related to the mass people in many 
+       cases. Moreover, I hope to establish a software farm where I will recruit young 
+        programmers. We will then earn foreign currency by exporting software products.<br>
+Raju: I wish you all the best, thank you<br>
+Raj	: Thank you friend for your inspiration.<br>
+
+
+
+  </div>
+</div>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="container mt-3">
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo"> 14. Write a dialogue between you & your friend about the importance of learning English</button>
+  <div id="demo" class="collapse">
+   
+
+Rakib: Hello, Rajib, good morning. How are you?
+Myself:  Good morning. I am fine and you?
+Rajib:  I am also fine. But I am a little bit confused about the importance of learning English. Would you please share your ideas with me about it?
+Myself: Why not? We all know English is an international language. It is also a global language.
+Rajib:  But it is not our first language. So, is it very essential for us to learn English other than mother tongue?
+Myself: Obviously. English is not only an international language  but also an official & semi-official language in more than 60 countries of the world. It is the language of science & technology.
+Rakib: OK, I understand. Please tell me about the importance of English in other fields like job, education, professional life & so on.
+Myself: Sure. In the job market especially in multi-national companies as well as international organizations a candidate without sufficient working knowledge of English is not desirable.  Besides, in overseas education, a prospective student needs band score 7 or more in IELTS  for admission into undergraduate & post-graduate levels in prestigious institutions. In short, we can not do a single day without English in this competitive world.
+Rakib: Very nice. You have opened my eyes. We really need English to cope with the present world.
+Myself: I agree with you on this point. So, let’s focus on English to build up career.
+Rakib: Thank you for your good advice. I must emphasize the importance of learning English.
+Myself: That’s good. See you. Take care. 
+
+
+
+nsequat.
+  </div>
+</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="container mt-3">
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">15. A dialogue between your friend & you about computer</button>
+  <div id="demo" class="collapse">
+    
+                                                                
+Sumon: Hi, Sumit. How are you?<br>
+Myself : Thank you. I am fine and what about you?<br>
+
+Sumon: I am also fine too. Now tell about your introducing class on computer today.<br>
+Myself :  I have learnt many things about computer and its usefulness from the class. <br>
+
+Sumon:: What things have you learnt? Can you tell me about it?<br>
+Myself : Sure. I have learnt about the usefulness of computer, mainly how a modern computer 	performs  complicated work within the shortest possible time.<br> 
+
+Sumon:: Can you tell me the usefulness of it?<br>
+Myself : Sure. Nowadays it has become very essential everywhere. In fact, modern life cannot be 	imagined without the uses of computer <br> 
+
+Sumon: Do you think it can calculate faster than a trained mathematician?<br> 
+Myself : Of course. It can do calculation faster than a human being. It also helps us to store data 	process and recall them in time of need. In fact, life is very easy with computer.<br> 
+
+Sumon: What other things can a computer do besides calculations?<br>
+Myself : It can run business through internet, play chess, compose music, and many other things. 	It is also being used in educational institutions, banks, offices, railway stations, 	medical profession, space centers and everywhere else.<br> 
+
+Sumon: You really have known much about the importance of computer. Do you have any 	intention to acquire computer knowledge?<br>
+Myself : Yes, I must acquire computer knowledge as it has become part and parcel of our 	modern life. <br>
+
+Sumon: I agree with you. So far as I know it is a wonder of modern science.<br>
+Myself: No doubt. Now a days it is becoming more sophisticated day by day.<br>
+Sumon: I have heard that computer technology is being used in space , navigation , war, etc. Is it 	true?<br>
+Myself: Obviously. You are right.  I am now very interested in computer.<br>
+Sumon: Then keep trying. Thank you very much. Take care<br>
+Myself : You are most welcome.  Bye. 
+
+  </div>
+</div>
+
+	
+	
+	
+	
+	
+	
+
+	
+	
+	<div class="container mt-3">
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">16. Write a dialogue about how to improve skill in English</button>
+  <div id="demo" class="collapse">
+    
+
+
+John: Hello James. You always obtain highest marks in English. What is the secret of your success?
+James: No secret, John. I always practice English. I also like to speak English whenever I have scope.
+John: Would you please tell me how I can improve my English?
+James: Sure John. For this, you have to learn some words every day to make your vocabulary strong. You should note words and necessary phrases in a note book with their meanings.
+John: What else?
+James: You should read English newspaper and listen to TV news in English daily and note the difficult words, terms, phrases and sentences in the note book.
+John: Yes, very important. Carry on, please.
+James: Whenever you have the opportunity, you should speak in English with your friends, family members or others. You should also practice free hand writing everyday on different familiar or common topics of our daily life.
+John: Any other suggestion?
+James: Nowadays, as learning aid, CD and Video tutorials are also available in the market. You can try them if you wish. And you must have patience. In this way you will improve your skill in English day by day.
+John: OK James. I think your suggestions will be of great use to me to have command over English. Thank you so much.
+James: You are always welcome.
+
+
+
+  </div>
+</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="container mt-3">
+
+ 
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">17. Dialogue  about the importance of education in the development sector of Bangladesh</button>
+  <div id="demo" class="collapse">
+   
+
+Sumon: Hi, Sumit. How are you?<br>
+Myself : Thank you. I am fine and what about you?<br>
+
+Sumon: I am also fine . Now tell me about your introducing class on computer today.<br>
+Myself :  I have learnt many things about computer and its usefulness from the class.<br> 
+
+Sumon:: What things have you learnt? Can you tell me about it?<br>
+Myself : Sure. I have learnt about the usefulness of computer, mainly how a modern computer 	performs  complicated work within the shortest possible time.<br> 
+
+Sumon:: Can you tell me the usefulness of it?
+Myself : Sure. Nowadays it has become very essential everywhere. In fact, modern life cannot be 	imagined without the uses of computer<br>  
+
+Sumon: Do you think it can calculate faster than a trained mathematician? 
+Myself : Of course. It can do calculation faster than a human being. It also helps us to store data, 	process data and recall them in time of need. In fact, life is very easy with computer. <br>
+
+Sumon: What other things can a computer do besides calculations?
+Myself : It can run business through internet, play chess, compose music, and many other things. It is also being used in educational institutions, banks, offices, railway stations, 	medical profession, space centers and everywhere else.<br> 
+
+Sumon: You really have known much about the importance of computer. Do you have any intention to acquire computer knowledge?<br>
+Myself : Yes, I must acquire computer knowledge as it has become part and parcel of our modern life.<br> 
+
+Sumon: I agree with you. So far as I know it is a wonder of modern science.<br>
+Myself: No doubt. Now a days it is becoming more sophisticated day by day.<br>
+Sumon: I have heard that computer technology is being used in space , navigation , war, etc. Is it 	true?<br>
+Myself: Obviously. You are right.  I am now very interested in computer.<br>
+Sumon: Then keep trying. Thank you very much. Take care<br>
+Myself : You are most welcome.  Bye. 
+
+
+
+  </div>
+</div>
+
+	
+
+	
+	<div class="container mt-3">
+	
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">18. Write a dialogue between a doctor and a patient whose name is Sudipto</button>
+  <div id="demo" class="collapse">
+   
+Patient: Good morning,  Sir. <br>
+Doctor : Good morning , Please sit down . What is your name ?<br>
+Patient: Thank you . My name is Sudipto.<br>
+Doctor : How old are you ?<br>
+Patient : I’m sixteen years old.<br> 
+
+Doctor : What ‘s your problem ?<br>
+Patient : I’ve been suffering from fever for  the last five days . I also feel severe  pain all over my body.<br> 
+Doctor : What about your taste and appetite?<br>
+Patient: I fell everything bitter and I don’t feel like taking food.<br>
+Doctor: Have you seen any other doctor?<br>
+Patient: No, Sir. First time to you.<br> 
+Doctor : Please lie down on the bed and unbutton your shirt . I have to check your chest.<br>
+Patient: Yes , doctor .<br>
+Doctor :  There is nothing to worry about . You have been suffering from viral fever.<br>
+Patient: Do I need any medicin
+Doctor :  Yes , here is the prescription . Take these medicines for a week . You ‘ll be all right in a week.<br>
+Patient : Thank you, doctor .<br>
+Doctor :  Don’t mention it .  
+  </div>
+</div>
+		
+	
+	
+	
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+<script>
+const d = new Date("2021");
+document.getElementById("demo").innerHTML = d;
+</script>
+
+
+<script>
+const d = new Date();
+document.getElementById("demo").innerHTML = d;
+</script>
+
+
+
+
+
+<script>
+document.getElementById("demo").innerHTML =
+new Date("2015-03-25T12:00:00-06:00");
+</script>
 
 
 
 <footer>
-  
-  
   
   
   <i class="bi bi-chat-text"></i>
@@ -236,6 +2911,23 @@ footer {
   <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
   <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm1.757-.437a.5.5 0 0 1 .68.194.934.934 0 0 0 .813.493c.339 0 .645-.19.813-.493a.5.5 0 1 1 .874.486A1.934 1.934 0 0 1 10.25 7.75c-.73 0-1.356-.412-1.687-1.007a.5.5 0 0 1 .194-.68z"/>
 </svg>
+
+
+
+<div class="container" style="background-color:white;">
+
+<a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Topup</a>
+
+
+
+
+
+
+
+
+
+
+
   
 </footer>
 

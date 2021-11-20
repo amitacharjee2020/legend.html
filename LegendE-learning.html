@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
@@ -14,63 +15,67 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
-  
-  
-  <
+ 
+<link rel="stylesheet" href="css/style.css" />
+
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#box1").fadeIn();
+    $("#box2").fadeIn("slow");
+    $("#box3").fadeIn(3000);
+  });
+});
+</script>
+
+
   <style>
- .header {
-  padding: 2px;
-  text-align: right;
-  background: White;
-  color: Blue;
-  font-size: 30px;
+
+
+.header{
+background-color:white;
+color:white;
+padding:8px;
+border:2px solid blue;
+margin:10px;
+
 }
-
-
-
-
+    
 
 footer {
-  text-align: center;
-  padding: 4px;
-  background-color: DodgerBlue;
-  color: white;
-  margin:4px;
+  text-align: none;
+  
+  background-color:white;
+  color: black;
+  margin:1px;
+  font-family:monospace;
+  padding:2px;
+border:4px solid blue;
 }
-
-
-
-
-
-
 
 
 
 
    
   div {
-  margin: 70px;
+  margin: 30px;
   border: 1px solid #4CAF50;
 }
- img {
-  max-width: 100%;
-  height: auto;
-  float:center;
-} 
+ 
 
 
 
 
-
-
-
-
-
-
-
-* {
-  box-sizing: border-box;
-}
 
 /* Style inputs */
 input[type=text], select, textarea {
@@ -97,7 +102,7 @@ input[type=submit]:hover {
 
 /* Style the container/contact section */
 .container {
-  border-radius: 5px;
+  border-radius: 2px;
   background-color: #f2f2f2;
   padding: 10px;
 }
@@ -127,34 +132,595 @@ input[type=submit]:hover {
 
 
 
-.center{ background-color:DodgerBlue;
 
-color:white;
-padding:5px;
+
+  .collapsible{
+  
+  background-color:white;
+  color:blue;
+  cursor:ponter;
+  padding:18px;
+  width:100%;
+  border:none;
+  text-align:center;
+  outline:none;
+  font-size:15px;
+  }
+
+.active, .collapsible:hover{
+
+background-color:Dogerblue;
+}
+
+.content{
+display:none;
+over-flow:hidden;
+padding:2px;
+border:4px solid blue;
 
 }
+
+
+
+
+#demo{
+display:inline-block;
+margin:2px;
+border:2px solid blue;
+outline:2px ;
+padding:8px;
+
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+#blink {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2d38be;
+            transition: 0.5s;
+        }
+		
+		
+		
+		
+	body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}	
+		
+		
+  body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
   </style>
 </head>
 <body>
-<div class="header">
-  <h3>Legend English Academy</h3>
-  <p style="font-size:14px;">A sister concern of Legend BD Group</p>
-  
-  <i class="bi bi-facebook"></i>
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+
+<div class="header" >
+<div class="contact-icon">
+<img src="legendlogo.png" height="50px" width="50px" >
+<h3 style="color:blue">Legend English Academy</h3>
+  <p style="font-size:14px; color:blue">A sister concern of Legend BD Group</p>
+<a href="https://www.facebook.com/amitacharjeesoftwaredeveloper"><i class="bi bi-facebook"></i>Legend English Academy </a>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
   <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
 </svg>
-  <i class="bi bi-messenger"></i>
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
+<a href="https://www.messenger.com/t/100056059214721/"><i class="bi bi-messenger"></i> bstbd2020@gmail.com</a
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
   <path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76zm5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z"/>
-  <i class="bi bi-instagram"></i>
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-</svg>
-</svg>
+  
+  
+  <div class="jumbotron" style="boder:2px solid blue; margin: 2px solid blue; padding: 16px; background-color:DodgerBlue"  >
+ <div class="topbar" style="boder:2px solid blue"> 
+<h3 id="blink" style="text-align:center; color:white"> Legend E-learning </h3>
+    <script type="text/javascript">
+        var blink = document.getElementById('blink');
+        setInterval(function() {
+            blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+        }, 1500);
+    </script
+</div>
+
+
+<iframe src="https://online.fliphtml5.com/uzdbb/dmah/?fbclid=IwAR2EUQKJk4pNlgDCrRwbDruyRQrpjOff1NqI3aIIZffsmAO7JbsZoaEz9vg#p=1"></iframe>
+<iframe src="https://online.fliphtml5.com/uzdbb/wsix/?fbclid=IwAR1M2jzbVELaKSpOGQEKdJzMeOPI7w4a3EBBChZgufV0LAsjJmyoI0p4AFI#p=1"></iframe>
+<iframe src="https://online.fliphtml5.com/uzdbb/urlj/?fbclid=IwAR3WflcdHLBOH60NPhMe3PQEMbytSuOwXHWYlYsIq-y7HS21UheVVv5HWBc#p=1"></iframe>
+</div>
+
+
+
+
+ <div class="mt-2 p-5  text-white rounded" >
+<div class="jumbotron"style=" padding: 2px; border:2px solid blue; outline:1px; margin:1px solid blue; font-family: cursive; color:blue; font-size: 15px">
+ 
+
+<ul class="nav nav-tabs" >
+<li class="active"><a data-toggle="tab"href="#home"  >Who we are</a></li>
+<li><a data-toggle="tab" href="#menu1"  >Our Resources</a></li>
+<li><a data-toggle="tab" href="#menu2"   >Our Mission & Vision</a></li>
+
+<li><a data-toggle="tab" href="#menu4"   >Our Services</a></li>
+<li><a data-toggle="tab" href="#menu5"   >Contact</a></li>
+</ul>
+  
+  <div class="tab-content" >
+   
+  <div id="home" class="tab-pane fade in active" >
+  <h3 >Who we are</h3>
+  <p style="font-size:14px">We live in a competitive world. To gain sustainable competitive edge in the global competitive market we have focused on our core competences based on cloud based value delivery & value proposition. Technology is the building block to business success. Fintech, IT governance & security, people skill, business analytics & data science are the key to sustainable development.</p>
+ 
+  </div>
+  
+  <div id="menu1" class="tab-pane fade ">
+  <h3 >Our Rsources</h3>
+  <h3> Legend English Academy Facebook Page</h3>
+  <img   src="mumtahenapic/facebooklogo.jpg"  width="200" height="200">
+  <p><a href="https://www.facebook.com/amitacharjeesoftwaredeveloper">Get started</a></p>
+  <h3>YouTube Channel</h3>
+  <img   src="mumtahenapic/pic5.jpg"  width="200" height="200">
+  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20English%202nd%20Paper.html">Get started</a></p>
+  <h3>HTML Library</h3>
+  <img   src="mumtahenapic/pic5.jpg"  width="200" height="200">
+  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20Model%20Question%20Bank%20.html">Get started</a></p>
+  <h3>Digital Library</h3>
+  <img   src="mumtahenapic/pic5.jpg"  width="200" height="200">
+  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20English%201st%20Paper.html">Get started</a></p>
+  <h3>HSC English 2nd Paper</h3>
+  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20English%202nd%20Paper.html">Get started</a></p>
+  <h3>HSC English 2nd Paper</h3>
+  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20Model%20Question%20Bank.html">Get started</a></p>
+  </div>
+  <div id="menu2" class="tab-pane fade">
+ 
+   <h3>Our Mission & Vision</h3>
+ <p> WE are active</p>
+  
+  </div>
+
+  <div id="menu4" class="tab-pane fade">
+  <h3>Our Srvices</h3>
+ <h3>SSC English 1st Paper</h3>
+  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20English1st%20Paper.html">Get started</a></p>
+  <h3>SSC English 2nd Paper</h3>
+  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20English%202nd%20Paper.html">Get started</a></p>
+  <h3>SSC English Model Question Bank</h3>
+  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20Model%20Question%20Bank%20.html">Get started</a></p>
+  <h3>HSC English 1st Paper</h3>
+  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20English%201st%20Paper.html">Get started</a></p>
+  <h3>HSC English 2nd Paper</h3>
+  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20English%202nd%20Paper.html">Get started</a></p>
+  <h3>HSC English 2nd Paper</h3>
+  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20Model%20Question%20Bank.html">Get started</a></p>
+  </div>
+  
+  <div id="menu5" class="tab-pane fade">
+  <h3 >Contact</h3>
+  
+ <p>Amit Kumar Acharjee<br> CEO & founder<br>Mob No. 01712878767</p>
+	
+	
+  </div></p>
+  
+  </div>
+
+  </div>
+ 
+</div>
+
+</div>
+
+ </div>
+ 
+
+
+
+
+
+
+ <div  class="mt-2 p-5 bg-primary text-white rounded" class="w3-half" >
+
+<button type="button" class="collapsible" >Message from the CEO</button>
+<div class="collapsible"   >
+<p style="font-size:16px; color:black; font-family: "Brush Script MT", cursive">Ours is an age of globalization & information technology. There is no denying the fact that the world is getting smaller & we are coming closer to each other. People across the globe are living in a global village. Bangladesh, being a small South-Asian country, is also a stakeholder of the global change & progress. Ours is an age of globalization & information technology. There is no denying the fact that the world is getting smaller & we are coming closer to each other. People across the globe are living in a global village. Bangladesh, being a small South Asian country, is also a stakeholder of the global change & progress.</p>
+</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="mt-2 p-5 bg-primary text-white rounded" class="w3-half" >
+
+<button type="button" class="collapsible" >Photo Gallery</button>
+<div class="collapsible" >
+<div class="row">
+  <div class="column">
+    <img src="mumtahenapic/mumta.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="mumtahenapic/mumta1.jpg" style="width: 100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="mumtahenapic/mumta2.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="mumtahenapic/mumta3.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+   <div class="column">
+    <img src="mumtahenapic/mumta4.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 5</div>
+      <img src="mumtahenapic/mumta.jpg" style="width:100%">
+	 
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 5</div>
+      <img src="mumtahenapic/mumta1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 5</div>
+      <img src="mumtahenapic/mumta2.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 5</div>
+      <img src="mumtahenapic/mumta3.jpg" style="width:100%">
+    </div>
+	<div class="mySlides">
+      <div class="numbertext">4 / 5</div>
+      <img src="mumtahenapic/mumta4.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="mumtahenapic/mumta.jpg" style="width:100%" onclick="currentSlide(1)" >
+	   
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mumtahenapic/mumta1.jpg" style="width:100%" onclick="currentSlide(2)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mumtahenapic/mumta2.jpg" style="width:100%" onclick="currentSlide(3)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mumtahenapic/mumta3.jpg" style="width:100%" onclick="currentSlide(4)" >
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="mumtahenapic/mumta4.jpg" style="width:100%" onclick="currentSlide(5)" >
+    </div
+  </div>
+</div>
+</div>
+
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+
+
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+
 </div>
 
 
@@ -167,15 +733,95 @@ padding:5px;
 
 
 
+<div class="mt-2 p-5  text-white rounded" class="w3-half" style="background-color:white" >
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<div class="banner" style="background-color:DodgerBlue">
+
+</div>
+</div>
+<div class="menu">
+<ul>
+<p> Our Programs</p>
+<li><p>Data Science is aaaaaaaaaaaaa</p><a href="#"> know More</a></li>
+
+
+<li><p>Statistical tools are aaaaaaaaaaaaaaa</p><a href="#">Know More </a></li>
+
+</ul>
+</div>
+
+
+</div>
+	
+
+
+
+<div class="mt-2 p-5  text-white rounded" style="color: blue; font-family: cursive; font-size:15px">
+<h4 style="color: blue; font-family: cursive; font-size:15px"> Profile of the Founder</h4>
+
+<p style="color: blue; font-family: cursive; font-size:15px">Mr. Amit Kumar Acharjee, MBA, LLB , ACCA ( Part-qualified) ,   CEO & Software Developer,  LEGEND BD GROUP has been associated with multi-faceted socio-economic activities & is currently dedicated to data science,  data analytics, software development & artificial intelligence with machine learning to equip our future generation with future skills-set through providing state-of-the art technological service & training. LEGEND BD GROUP  is a promising business group consisting of six sister concerns with BUSINESS SOFTWARE & TECHNOLOGY. COMPUTER LODGE & LEGEND IT TRAINING being the most more focused software & hardware talent hubs with most innovative & multi-dimensional approaches to change & commitment. Mr. Acharjee has been relentlessly in his pursuit of ‘do something innovative’ motto & sincerely dedicated to transform your business.   Recently he has completed his training on different IT & Programming languages such as Artificial Intelligence with Machine Learning, Applied Data Science, PHP Zend, Java, etc as well as pursuing BSc in Computer Science.<x><y></P> 
+</p>
+
+
+</div>
 
 
 
 
-<div class="container mt-2">
+
+
+
+
+
+<div class="w3-half" class="container" style="padding:5px; outline:4px;  border:2px solod blue" >
+
+<div class="jumbotron">
+<h5  class="center">Are you interested to join us? <b><strong> </h5>
+<div class="dropdown">
+
+<button  type="button" class="btn btn-primary dropdown toggle" data-bs-toggle="dropdown" >Check the package
+</button>
+<ul  class="dropdown-menu">
+<li><a class="dropdown-item" href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/package.html"> Check the package</a></li>
+<li><a class="dropdown-item" href="#"> Check the package</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<div class="bg-img">
+  <form action="/action_page.php" class="container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+<div class="w3-half" class="container" style="padding:2px; border:4px solid blue">
   
   <div class="mt-2 p-5 bg-primary text-white rounded">
     <h1> Legend English Academy</h1> 
-    <p>LEGEND ENGLISH ACADEMY is an ideal institute for learners interested in developing their life skills in peer-to-peer communication. We have a mission to develop both soft & life skills through effective & long term strategy of modern & sophisticated learning through one to one interactive communication</p> 
+    <p style="font-family:cursive; color:white;">LEGEND ENGLISH ACADEMY is an ideal institute for learners interested in developing their life skills in peer-to-peer communication. We have a mission to develop both soft & life skills through effective & long term strategy of modern & sophisticated learning through one to one interactive communication.<br>We live in a competitive world. To gain sustainable competitive edge in the global competitive market we have focused on our core competences based on cloud based value delivery & value proposition. Technology is the building block to business success. Fintech, IT governance & security, people skill, business analytics & data science are the key to sustainable development. Legend Group believes in leveraging all aspects of customization to the needs of the valued clients. Customer satisfaction is our first priority. </p> 
+	<hr style="width:100%"  style="height:450px"  >
   </div>
 </div>
   <div class="dropdown">
@@ -194,7 +840,6 @@ padding:5px;
   </div>
 </div>
 <div>
-<h4  class="center">Are you interested to join us? <b><strong> </h4>
 
 
 
@@ -203,29 +848,11 @@ padding:5px;
 
 
 
-<div  class="container"|>
 
-<form>
-<div class="form-group">
-<label for="uname" ><b> username</b></label>
-<input type="text" placeholder="enter username"  name="uname" required>
 
-<label  for="pwd"><b>Password</b></label>
 
-<input type="password" placeholder="Enter Password" name="psw" required>
 
-<button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-</div>
-<div class="container" style="background-color:white">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>
 
-</div>
 
 
 
@@ -234,270 +861,41 @@ padding:5px;
 
 
 
+<div class="jumbotron"> 
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3 style="color:blue;" >Youtube Channel</h3>
-      <p> In this age of  globalization  ,  free trade  & global economy, we are virtually connected through cross-border relationship where English as the second as well as an international language plays a prominent role in building social ties between nations, races, & individuals  irrespective of caste, creed & religion. Legend English Academy is always pledge-bound to ensure total quality of teaching & training  the learners in the fullest sense of the term.</p>
-	  <img   src="pic.jpg"  width="200" height="340">
-	  
-      <p><a href="https://www.youtube.com/channel/UCi2ErMluZR9YIkcKVdxolrg/about" >To know more, click on it.:</a></p>
-	  
-	  
-	  
-	  
-    </div>
-    <div class="col-sm-4">
-      <h3 style="color:blue;"> Facebook Page</h3>
-      <p>LEGEND ENGLISH ACADEMY is an ideal institute for learners interested in developing their life skills in peer-to-peer communication. We have a mission to develop both soft & life skills through effective & long term strategy of modern & sophisticated learning through one to one interactive communication.</p>
-      
-	  <img   src="pic.jpg"  width="200" height="340">
-	  <p><a  href="https://www.facebook.com/amitacharjeesoftwaredeveloper" >To know more, click on it:</a></p>
-	  
-    </div>
-    <div class="col-sm-4">
-      <h3 style="color:blue;">Virtual HTML-5 Library</h3>
-      <p>We are  dedicated to provide all sorts of online library facilities to our learners .</p>
-      
-	  <img   src="pic5.jpg"  width="300" height="340">
-	  <p> <a href="https://fliphtml5.com">Yo know more, click on it</a></P>
-	  
-    </div>
-	<div class="col-sm-4">
-      <h3 style="color:blue;">Virtual Library</h3>
-      <p>We are  dedicated to provide all sorts of online library facilities to our learners </p>
-     
-	  <img   src="pic3.jpg"  width="300" height="340">
-	   <p><a href="https://docs.google.com/presentation/d/1Q3-G3c6jNeYvWXKOX7OVP3Jt51lO3GQH9fN6H3rxeKU/edit?fbclid=IwAR1GXw96lXnFpw6AeH89PY6DN6KvIRHPAL71FTwckXTgpoafYVEhXOvsdqc#slide=id.p" >To know more, click on it.:</a></p
-    </div>
-  </div>
-</div>
+<h5>Address<h5>
+  <p>Legend English Academy <br>Pallabi, Mirpur , </p>
+  <p>Company profile <br>
+    About Us<br>
+   Our Concerns<br>
+   Programs<br>
+   <br>FAQ
+    Resources</p>
+<a  href="https://www.legendbdgroup.com"  style="color:white">Visit our website:Legend BD Group </a>	
 
 
-
-
-
-
-
-
-
-
-
-
-
-<div class="container">
-  <h2 class="center">Our Company Profile</h2>
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">What we are</a></li>
-    <li><a data-toggle="tab" href="#menu1">Our Mission</a></li>
-    <li><a data-toggle="tab" href="#menu2">Our Programs</a></li>
-   
-  </ul>
-
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-      <h3>HOME</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div id="menu1" class="tab-pane fade">
-      <h3>Menu 1</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div id="menu2" class="tab-pane fade">
-      <h3>Menu 2</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-    </div>
-    
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="container mt-3">
-  <h3 class="center">Photo Gallery</h3>
-  <p>Legend English Academy</p>
-</div>
-
-
-<!-- Carousel -->
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-  <!-- Indicators/dots -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-  </div>
-  
-  <!-- The slideshow/carousel -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="pic.jpg"   style="width:50%">
-    </div>
-    <div class="carousel-item">
-      <img src="pic5.jpg"   style="width:50%">
-	  <p>  Mumta Hena Mim</P>
-    </div>
-    <div class="carousel-item">
-      <img src="pic2.jpg"   style="width:50%">
-    </div>
-	<div class="carousel-item">
-      <img src="pic3.jpg"   style="width:50%">
-    </div>
-	<div class="carousel-item">
-      <img src="pic4.jpg"   style="width:50%">
-    </div>
-  </div>
-  
-  <!-- Left and right controls/icons -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-  
-   
-  
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="container">
-  <div style="text-align:center">
-    <h2 style="background-color:Dodgerblue;color:white;">Contact Us</h2>
-    <p>Amit Kumar Acharjee<br> CEO & founder<br>Mob No. 01712878767</p>
+<a href="#" data-toggle="popover" title="Popover header" data-content="Some content inside the popover">Topup</a>
 	
 	
-  </div>
-  <div class="row">
-    <div class="column">
-      <img src="/w3images/map.jpg" style="width:100%">
-    </div>
-    <div class="column">
-      <form action="/action_page.php">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-        <label for="country">Country</label>
-        <select id="country" name="country">
-          <option value="bangladesh">Bangladesh</option>
-          <option value="india">India</option>
-          <option value="usa">USA</option>
-		   <label for="mobnumber">Mobile Number</label>
-        <input type="text" id="mobnumber" name="Mobile Number" placeholder="Enter your mobile number">
-        </select>
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-        <input type="submit" value="Submit">
-      </form>
-    </div>
-  </div>
+<i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>	
+	
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<footer class"center">
-  
-  
-  
-  <i class="bi bi-chat-text"></i>
-	
-	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-text" viewBox="0 0 16 16">
-  <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
-  <path d="M4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zM4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8zm0 2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
-</svg>
-	
-	<i class="bi bi-emoji-wink"></i>
-	
-	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-wink" viewBox="0 0 16 16">
-  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-  <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm1.757-.437a.5.5 0 0 1 .68.194.934.934 0 0 0 .813.493c.339 0 .645-.19.813-.493a.5.5 0 1 1 .874.486A1.934 1.934 0 0 1 10.25 7.75c-.73 0-1.356-.412-1.687-1.007a.5.5 0 0 1 .194-.68z"/>
-</svg>
-  
-</footer>
-
-
 
 
 </body>
 </html>
+
+
+
+
+
+
+
+
 
