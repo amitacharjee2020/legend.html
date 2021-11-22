@@ -401,18 +401,99 @@ img.hover-shadow {
 
 
 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+
+
+
 
 
   </style>
 </head>
 <body>
 
+<div class="w3-twothird">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="main">
+  <button><h2 style=" font-family:cursive;color: blue; font-size:18px">Legend E-Magazine</h2></button><br>
+  <span style="font-size:18px; font-family:cursive;color: blue; cursor:pointer" onclick="openNav()">&#9776; Get Started</span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   	
+</div>
+
 <div class="header" >
+
 <div class="contact-icon">
 <img src="legendlogo.png" height="50px" width="50px" >
-<a   href="https://www.legendbdgroup.com"><h3 style="color:blue">Legend English Academy</h3></a>
+<a   href="https://www.legendbdgroup.com"><h3 style="color:blue; font-family:cursive; font-size:18px">Legend English Academy</h3></a>
  <a href="https://www.legendbdgroup.com"> <p style="font-size:14px; color:blue">A sister concern of Legend BD Group</p></a>
-<a href="https://www.facebook.com/amitacharjeesoftwaredeveloper"><i class="bi bi-facebook"></i>Legend English Academy </a>
+<button><a href="https://www.facebook.com/amitacharjeesoftwaredeveloper"><i class="bi bi-facebook"></i><id="blink" style="text-align:center; color:red"> Trusted E-learning Platform </a></button>
+
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
   <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
 </svg>
@@ -423,26 +504,37 @@ img.hover-shadow {
   
   <div class="jumbotron" style="boder:2px solid blue; margin: 2px solid blue; padding: 16px; background-color:DodgerBlue"  >
  <div class="topbar" style="boder:2px solid blue"> 
-<h3 id="blink" style="text-align:center; color:white"> Legend E-learning </h3>
+<h2 id="blink" style="text-align:center; color:white"> Legend E-learning </h2>
     <script type="text/javascript">
         var blink = document.getElementById('blink');
         setInterval(function() {
             blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
         }, 1500);
     </script
-</div>
 
-
-<iframe src="https://online.fliphtml5.com/uzdbb/dmah/?fbclid=IwAR2EUQKJk4pNlgDCrRwbDruyRQrpjOff1NqI3aIIZffsmAO7JbsZoaEz9vg#p=1"></iframe>
-<iframe src="https://online.fliphtml5.com/uzdbb/wsix/?fbclid=IwAR1M2jzbVELaKSpOGQEKdJzMeOPI7w4a3EBBChZgufV0LAsjJmyoI0p4AFI#p=1"></iframe>
-<iframe src="https://online.fliphtml5.com/uzdbb/urlj/?fbclid=IwAR3WflcdHLBOH60NPhMe3PQEMbytSuOwXHWYlYsIq-y7HS21UheVVv5HWBc#p=1"></iframe>
 </div>
 
 
 
 
- <div class="mt-2 p-5  text-white rounded" >
-<div class="jumbotron"style=" padding: 2px; border:2px solid blue; outline:1px; margin:1px solid blue; font-family: cursive; color:blue; font-size: 15px">
+
+
+</div>
+
+
+<div>
+
+<button><iframe src="https://online.fliphtml5.com/uzdbb/dmah/?fbclid=IwAR2EUQKJk4pNlgDCrRwbDruyRQrpjOff1NqI3aIIZffsmAO7JbsZoaEz9vg#p=1"></iframe></button>
+<button><iframe src="https://online.fliphtml5.com/uzdbb/wsix/?fbclid=IwAR1M2jzbVELaKSpOGQEKdJzMeOPI7w4a3EBBChZgufV0LAsjJmyoI0p4AFI#p=1"></iframe></button>
+<button><iframe src="https://online.fliphtml5.com/uzdbb/wsix/?fbclid=IwAR1M2jzbVELaKSpOGQEKdJzMeOPI7w4a3EBBChZgufV0LAsjJmyoI0p4AFI#p=1"></iframe></button>
+
+</div>
+
+
+
+
+ <div class="mt-2 p-5  text-white rounded" style="font-family:cursive">
+<div class="jumbotron"style=" padding: 2px; border:2px solid blue; outline:1px; margin:1px solid blue; font-family: cursive; color:blue; font-size: 18px">
  
 
 <ul class="nav nav-tabs" >
@@ -456,9 +548,9 @@ img.hover-shadow {
   
   <div class="tab-content" >
    
-  <div id="home" class="tab-pane fade in active" >
+  <div id="home" class="tab-pane fade in active" style="font-family:cursive" >
   <h3 >Who we are</h3>
-  <p style="font-size:14px">We live in a competitive world. To gain sustainable competitive edge in the global competitive market we have focused on our core competences based on cloud based value delivery & value proposition. Technology is the building block to business success. Fintech, IT governance & security, people skill, business analytics & data science are the key to sustainable development.</p>
+  <p style="font-size:18px">We live in a competitive world. To gain sustainable competitive edge in the global competitive market we have focused on our core competences based on cloud based value delivery & value proposition. Technology is the building block to business success. Fintech, IT governance & security, people skill, business analytics & data science are the key to sustainable development.</p>
  
   </div>
   
@@ -469,45 +561,45 @@ img.hover-shadow {
   <p><a href="https://www.facebook.com/amitacharjeesoftwaredeveloper">Get started</a></p>
   <h3>YouTube Channel</h3>
   <img   src="mumtahenapic/pic5.jpg"  width="200" height="200">
-  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20English%202nd%20Paper.html">Get started</a></p>
+  <p style="font-size:18px">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20English%202nd%20Paper.html">Get started</a></p>
   <h3>HTML Library</h3>
   <img   src="mumtahenapic/pic5.jpg"  width="200" height="200">
-  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20Model%20Question%20Bank%20.html">Get started</a></p>
+  <p style="font-size:18px">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20Model%20Question%20Bank%20.html">Get started</a></p>
   <h3>Digital Library</h3>
   <img   src="mumtahenapic/pic5.jpg"  width="200" height="200">
-  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20English%201st%20Paper.html">Get started</a></p>
+  <p style="font-size:18px">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20English%201st%20Paper.html">Get started</a></p>
   <h3>HSC English 2nd Paper</h3>
-  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20English%202nd%20Paper.html">Get started</a></p>
+  <p style="font-size:18px">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20English%202nd%20Paper.html">Get started</a></p>
   <h3>HSC English 2nd Paper</h3>
-  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20Model%20Question%20Bank.html">Get started</a></p>
+  <p style="font-size:18px">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20Model%20Question%20Bank.html">Get started</a></p>
   </div>
   <div id="menu2" class="tab-pane fade">
  
    <h3>Our Mission & Vision</h3>
- <p> WE are active</p>
+ <p style="font-size:18px"> WE are active</p>
   
   </div>
 
   <div id="menu4" class="tab-pane fade">
   <h3>Our Srvices</h3>
  <h3>SSC English 1st Paper</h3>
-  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20English1st%20Paper.html">Get started</a></p>
+  <p style="font-size:18px" >aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20English1st%20Paper.html">Get started</a></p>
   <h3>SSC English 2nd Paper</h3>
   <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20English%202nd%20Paper.html">Get started</a></p>
   <h3>SSC English Model Question Bank</h3>
-  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20Model%20Question%20Bank%20.html">Get started</a></p>
+  <p style="font-size:18px">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20Model%20Question%20Bank%20.html">Get started</a></p>
   <h3>HSC English 1st Paper</h3>
-  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20English%201st%20Paper.html">Get started</a></p>
+  <p style="font-size:18px">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20English%201st%20Paper.html">Get started</a></p>
   <h3>HSC English 2nd Paper</h3>
-  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20English%202nd%20Paper.html">Get started</a></p>
+  <p style="font-size:18px">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20English%202nd%20Paper.html">Get started</a></p>
   <h3>HSC English 2nd Paper</h3>
-  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20Model%20Question%20Bank.html">Get started</a></p>
+  <p style="font-size:18px" >aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<a href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20Model%20Question%20Bank.html">Get started</a></p>
   </div>
   
   <div id="menu5" class="tab-pane fade">
   <h3 >Contact</h3>
   
- <p>Amit Kumar Acharjee<br> CEO & founder<br>Mob No. 01712878767</p>
+ <p style="font-size:18px">Amit Kumar Acharjee<br> CEO & founder<br>Mob No. 01712878767</p>
 	
 	
   </div></p>
@@ -530,9 +622,9 @@ img.hover-shadow {
 
  <div  class="mt-2 p-5 bg-primary text-white rounded" class="w3-half" >
 
-<button type="button" class="collapsible" >Message from the CEO</button>
+<button type="button" class="collapsible" style="font-size:18px; color:blue"  >Message from the CEO</button>
 <div class="collapsible"   >
-<p style="font-size:16px; color:black; font-family: "Brush Script MT", cursive">Ours is an age of globalization & information technology. There is no denying the fact that the world is getting smaller & we are coming closer to each other. People across the globe are living in a global village. Bangladesh, being a small South-Asian country, is also a stakeholder of the global change & progress. Ours is an age of globalization & information technology. There is no denying the fact that the world is getting smaller & we are coming closer to each other. People across the globe are living in a global village. Bangladesh, being a small South Asian country, is also a stakeholder of the global change & progress.</p>
+<p style="font-size:18px; color:blue; font-family: cursive">Ours is an age of globalization & information technology. There is no denying the fact that the world is getting smaller & we are coming closer to each other. People across the globe are living in a global village. Bangladesh, being a small South-Asian country, is also a stakeholder of the global change & progress. Ours is an age of globalization & information technology. There is no denying the fact that the world is getting smaller & we are coming closer to each other. People across the globe are living in a global village. Bangladesh, being a small South Asian country, is also a stakeholder of the global change & progress.</p>
 </div>
 <script>
 var coll = document.getElementsByClassName("collapsible");
@@ -566,7 +658,7 @@ for (i = 0; i < coll.length; i++) {
 
 <div class="mt-2 p-5 bg-primary text-white rounded" class="w3-half" >
 
-<button type="button" class="collapsible" >Photo Gallery</button>
+<button type="button" class="collapsible" style="font-size:18px">Photo Gallery</button>
 <div class="collapsible" >
 <div class="row">
   <div class="column">
@@ -598,31 +690,31 @@ for (i = 0; i < coll.length; i++) {
     <div class="mySlides">
       <div class="numbertext">1 / 6</div>
       <img src="mumtahenapic/mumta.jpg" style="width:100%">
-	  <p>aaaaaaaaaaaaaa</p>
+	  <p style="font-size:18px" >aaaaaaaaaaaaaa</p>
 	 
     </div>
 
     <div class="mySlides">
       <div class="numbertext">2 / 6</div>
       <img src="mumtahenapic/mumta1.jpg" style="width:100%">
-	   <p>aaaaaaaaaaaaaa</p>
+	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
     </div>
 
     <div class="mySlides">
       <div class="numbertext">3 / 6</div>
       <img src="mumtahenapic/mumta2.jpg" style="width:100%">
-	   <p>aaaaaaaaaaaaaa</p>
+	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
     </div>
     
     <div class="mySlides">
       <div class="numbertext">4 / 6</div>
       <img src="mumtahenapic/mumta3.jpg" style="width:100%">
-	   <p>aaaaaaaaaaaaaa</p>
+	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
     </div>
 	<div class="mySlides">
       <div class="numbertext">4 / 6</div>
       <img src="mumtahenapic/mumta4.jpg" style="width:100%">
-	   <p>aaaaaaaaaaaaaa</p>
+	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
     </div>
     
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -733,18 +825,18 @@ function showSlides(n) {
 
 
 <div class="mt-2 p-5  text-white rounded" class="w3-half" style="background-color:white" >
-<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<p style="font-size:18px">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
 <div class="banner" style="background-color:DodgerBlue">
 
 </div>
 </div>
 <div class="menu">
 <ul>
-<p> Our Programs</p>
-<li><p>Data Science is aaaaaaaaaaaaa</p><a href="#"> know More</a></li>
+<p style="font-size:18px" > Our free online resources</p>
+<button><li><p>Grammar is aaaaaaaaaaaaa</p><a href="#"> know More</a></li></button>
 
 
-<li><p>Statistical tools are aaaaaaaaaaaaaaa</p><a href="#">Know More </a></li>
+<button><li><p>Statistical tools are aaaaaaaaaaaaaaa</p><a href="#">Know More </a></li></button>
 
 </ul>
 </div>
@@ -755,8 +847,8 @@ function showSlides(n) {
 	
 <div class="mt-2 p-5 bg-primary text-white rounded" style="color: blue; font-family: cursive; font-size:15px">
 
-<h4 style="color:white; font-family: cursive; font-size:16px"> Profile of the Founder</h4>
-<p style="color:white; font-family: cursive; font-size:15px">Mr. Amit Kumar Acharjee, MBA, LLB , ACCA ( Part-qualified) ,   CEO & Software Developer,  LEGEND BD GROUP has been associated with multi-faceted socio-economic activities & is currently dedicated to data science,  data analytics, software development & artificial intelligence with machine learning to equip our future generation with future skills-set through providing state-of-the art technological service & training. LEGEND BD GROUP  is a promising business group consisting of six sister concerns with BUSINESS SOFTWARE & TECHNOLOGY. COMPUTER LODGE & LEGEND IT TRAINING being the most more focused software & hardware talent hubs with most innovative & multi-dimensional approaches to change & commitment. Mr. Acharjee has been relentlessly in his pursuit of ‘do something innovative’ motto & sincerely dedicated to transform your business.   Recently he has completed his training on different IT & Programming languages such as Artificial Intelligence with Machine Learning, Applied Data Science, PHP Zend, Java, etc as well as pursuing BSc in Computer Science.<x><y></P> 
+<h4 style="color:yellow; font-family: cursive; font-size:18px"> <h3>Profile of the Founder</h3>
+<p style="color:white; font-family: cursive; font-size:16px">Mr. Amit Kumar Acharjee, MBA, LLB , ACCA ( Part-qualified) ,   CEO & Software Developer,  LEGEND BD GROUP has been associated with multi-faceted socio-economic activities & is currently dedicated to data science,  data analytics, software development & artificial intelligence with machine learning to equip our future generation with future skills-set through providing state-of-the art technological service & training. LEGEND BD GROUP  is a promising business group consisting of six sister concerns with BUSINESS SOFTWARE & TECHNOLOGY. COMPUTER LODGE & LEGEND IT TRAINING being the most more focused software & hardware talent hubs with most innovative & multi-dimensional approaches to change & commitment. Mr. Acharjee has been relentlessly in his pursuit of ‘do something innovative’ motto & sincerely dedicated to transform your business.   Recently he has completed his training on different IT & Programming languages such as Artificial Intelligence with Machine Learning, Applied Data Science, PHP Zend, Java, etc as well as pursuing BSc in Computer Science.<x><y></P> 
 </p>
 
 
@@ -799,7 +891,7 @@ for (i = 0; i < coll.length; i++) {
 <div class="w3-half" class="container" style="padding:5px; outline:4px;  border:2px solod blue" >
 
 <div class="jumbotron">
-<h5  class="center">Are you interested to join us? <b><strong> </h5>
+<h5  class="center" style="font-size:18px">Are you interested to join us? <b><strong> </h5>
 <div class="dropdown">
 
 <button  type="button" class="btn btn-primary dropdown toggle" data-bs-toggle="dropdown" >Check the package
@@ -818,7 +910,7 @@ for (i = 0; i < coll.length; i++) {
 
 
 
-<div class="bg-img">
+<div class="bg-img" style="font-size:18px" >
   <form action="/action_page.php" class="container">
     <h1>Login</h1>
 
@@ -842,22 +934,22 @@ for (i = 0; i < coll.length; i++) {
 <div class="w3-half" class="container" style="padding:2px; border:4px solid blue">
   
   <div class="mt-2 p-5 bg-primary text-white rounded">
-    <h1> Legend English Academy</h1> 
-    <p style="font-family:cursive; color:white;">LEGEND ENGLISH ACADEMY is an ideal institute for learners interested in developing their life skills in peer-to-peer communication. We have a mission to develop both soft & life skills through effective & long term strategy of modern & sophisticated learning through one to one interactive communication.<br>We live in a competitive world. To gain sustainable competitive edge in the global competitive market we have focused on our core competences based on cloud based value delivery & value proposition. Technology is the building block to business success. Fintech, IT governance & security, people skill, business analytics & data science are the key to sustainable development. Legend Group believes in leveraging all aspects of customization to the needs of the valued clients. Customer satisfaction is our first priority. </p> 
+    <h3> Legend English Academy</h3> 
+    <p style="font-family:cursive; color:white; font-size:16px">LEGEND ENGLISH ACADEMY is an ideal institute for learners interested in developing their life skills in peer-to-peer communication. We have a mission to develop both soft & life skills through effective & long term strategy of modern & sophisticated learning through one to one interactive communication.<br>We live in a competitive world. To gain sustainable competitive edge in the global competitive market we have focused on our core competences based on cloud based value delivery & value proposition. Technology is the building block to business success. Fintech, IT governance & security, people skill, business analytics & data science are the key to sustainable development. Legend Group believes in leveraging all aspects of customization to the needs of the valued clients. Customer satisfaction is our first priority. </p> 
 	<hr style="width:100%"  style="height:450px"  >
   </div>
 </div>
   <div class="dropdown">
-    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-     Our online resources
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" style="font-size:18px" >
+     Our paid online resources
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20English1st%20Paper.html">SSC English 1st Paper</a></li>
-      <li><a class="dropdown-item" href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20English%202nd%20Paper.html">SSC English 2nd Paper</a></li>
-      <li><a class="dropdown-item" href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20Model%20Question%20Bank%20.html">SSC Model Question Bank</a></li>
-	  <li>  <a class="dropdown-item"  href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20English%201st%20Paper.html">HSC English 1st Paper</a></li>
-	  <li>  <a class="dropdown-item"  href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20English%202nd%20Paper.html">HSC English 2nd Paper</a></li>
-	  <li>  <a class="dropdown-item"  href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20Model%20Question%20Bank.html">HSC Model Question Bank</a></li>
+      <button><li><a class="dropdown-item" href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20English1st%20Paper.html">SSC English 1st Paper</a></li></button>
+      <button><li><a class="dropdown-item" href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20English%202nd%20Paper.html">SSC English 2nd Paper</a></li></button>
+      <button><li><a class="dropdown-item" href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/SSC%20Model%20Question%20Bank%20.html">SSC Model Question Bank</a></li></button>
+	  <button><li>  <a class="dropdown-item"  href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20English%201st%20Paper.html">HSC English 1st Paper</a></li></button>
+	  <button><li>  <a class="dropdown-item"  href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20English%202nd%20Paper.html">HSC English 2nd Paper</a></li></button>
+	  <button><li>  <a class="dropdown-item"  href="file:///C:/Users/User/Desktop/Legend%20E-learning%20Portal/HSC%20Model%20Question%20Bank.html">HSC Model Question Bank</a></li></button>
 	  
     </ul>
   </div>
@@ -878,26 +970,19 @@ for (i = 0; i < coll.length; i++) {
 
 
 
+<div class="jumbotron" style="font-size:18px; color:white; font-family:cursive; background-color:DodgerBlue"> 
+
+<h3><span>Address</span><h3>
+  <p style="font-size:18px" ><span>Legend English Academy </span><br><span>Pallabi, Mirpur</span> </p>
+  <p style="font-size:18px" ><span>Company profile</span> <br>
+    <span>About Us</span><br>
+  <span> Our Concerns</span><br>
+   <span>Programs</span><br>
+   <span> Resources</span></p>
+<a  href="https://www.legendbdgroup.com"  style="color:white; font-family: cursive; font-size:16px">Visit our website:Legend BD Group </a><br>	
 
 
-
-
-
-
-<div class="jumbotron"> 
-
-<h5>Address<h5>
-  <p>Legend English Academy <br>Pallabi, Mirpur , </p>
-  <p>Company profile <br>
-    About Us<br>
-   Our Concerns<br>
-   Programs<br>
-   <br>FAQ
-    Resources</p>
-<a  href="https://www.legendbdgroup.com"  style="color:white">Visit our website:Legend BD Group </a>	
-
-
-<a href="#" data-toggle="popover" title="Popover header" data-content="Some content inside the popover">Topup</a>
+<a href="#" data-toggle="popover" title="Popover header" data-content="Some content inside the popover"><span>Topup</span></a> <br>
 	
 	
 <i class="fa fa-facebook-official w3-hover-opacity"></i>
