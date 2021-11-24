@@ -1,145 +1,640 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size:16px;}
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-.w3-half img:hover{opacity:1}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+
+
+
+
+#panel, #flip {
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #555;
+  color: white;
+  border: solid 1px #666;
+  border-radius: 3px;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  .container{
+  
+  text-align: center;
+  padding: 2px;
+ 
+  background-color: DodgerBlue;
+  color: white;
+  
+  
+  }
+  
+  
+  .jumbotron{
+  
+  background-color: white;
+  color:white;
+  padding:4px;
+  
+  
+  }
+  
+  
+  
+
+  
+.box{
+
+
+background-color: DodgerBlue;
+padding:15px;
+marging:auto;
+width:40%;}
+
+.box h5{
+
+background-color: white;
+padding:10px;
+color:black;
+
+}
+
+.about-us{
+background-color: blue;
+padding:5px;
+margin-botttom:0;
+
+
+}
+.about-box{
+inline-height:24px;
+display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+
+
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+
+
+
+
+
+
 </style>
 <body>
 
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
-  <div class="w3-container">
-    <h3 class="w3-padding-64"><b>Legend English Academy<br>SSC English 1st Paper</b></h3>
-  </div>
-  <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Seen Part</a> 
-    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a> 
-    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Designers</a> 
-   
-    
-  </div>
-</nav>
 
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
-  <span>SSC English 1st Paper</span>
-</header>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Navbar -->
+<div class="w3-top">
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
+<div id="flip">Welcome</div>
+<div id="panel">
+<h3>Legend English Academy</h3>
+<p>A sister concern of Legend BD Group</p>
+ </div>
 
-  <!-- Header -->
-  <div class="w3-container" style="margin-top:80px" id="showcase">
-    <h1 class="w3-jumbo"><b>English 1st paper</b></h1>
-    <h1 class="w3-xxxlarge w3-text-red"><b>Seen Part</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-  </div>
-  
- 
 
-  <!-- Services -->
-  <div class="w3-container" id="services" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Services.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-	<button  class="openbtn">Services</button>
-	<div class="openbtn">
-    <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
-    <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-	</div>
-  </div>
-  
-  <!-- Designers -->
-  <div class="w3-container" id="designers" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Designers.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>The best team in the world.</p>
-    <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-    <p><b>Our designers are thoughtfully chosen</b>:</p>
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Seen Passage</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Unseen Passage</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Fill in the Gaps</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Writing Part</a>
   </div>
 
-  <!-- The Team -->
-  <div class="w3-row-padding w3-grayscale">
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="/w3images/team2.jpg" alt="John" style="width:100%">
-        <div class="w3-container">
-          <h3>John Doe</h3>
-          <p class="w3-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
-        <div class="w3-container">
-          <h3>Jane Doe</h3>
-          <p class="w3-opacity">Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
-        <div class="w3-container">
-          <h3>Mike Ross</h3>
-          <p class="w3-opacity">Architect</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
   </div>
-
-  
-
-<!-- End page content -->
 </div>
 
-<!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+
+
+<h2 id="blink" style="text-align:center; color:white"> Legend E-learning </h2>
+    <script type="text/javascript">
+        var blink = document.getElementById('blink');
+        setInterval(function() {
+            blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+        }, 1500);
+    </script
+	
+	
+  
+  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">SSC English 1st Paper<br>Get Started</button>
+</header>
+
+  </div>
+</div>
+
 
 <script>
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
 }
 </script>
+
+
+
+
+
+
+
+
+
+
+
+<div class="w3-container">
+
+  <h2>Suggestion</h2>
+  
+  
+  <div class="alert alert-success alert-dismissible">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+ <h2>Application</h2>
+1.	Application for increasing library facilities in the school.<br>    
+2.	 Application for setting up a library  in the school.<br>                                                                              
+3.	Application for setting up an English Language Club in the school<br>  
+4.	Application for financial help from the poor fund<br> 
+5.	Application  for full free studentship <br>                                                                                          
+6.	Application  for opening a common room<br> 
+7.	Application for relief goods for the flood/cyclone-affected people<br> 
+8.	Application for providing multimedia facilities in the school. <br>   
+9.	Application  for setting up a computer club in our school.<br> 
+10.	Application for leave of absence<br> 
+11.	  Application for leave in advance.<br> 
+12.	Application for setting up a canteen in your school<br> 
+13.	 Application for arranging a study tour<br> 
+14.	 Application for permission to visit a place of historical interest<br> 
+15.	 Application for remission of delay fine<br> 
+16.	 Application for the  construction of a bridge/road.<br> 
+17.	Application to the Headmaster of your school praying for TC. <br>      
+18.	 Application to the Headmaster for Testimonial <br> 
+19.	 Application to the Head teacher praying for a seat in the school hostel.<br> 
+20.	Application for a half -holiday<br> 
+21.	Application for increasing library facilities in the school. <br>                                                                              
+22.	 Application to the Headmaster for changing school hours or for morning school.
+  </div>
+  
+  </div>
+  
+  
+  <div class="alert alert-info alert-dismissible">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+	<h2>Paragraph</h2>
+ 1.A winter morning <br>
+2.	Deforestation<br>
+3.	Environment pollution<br>
+4.	A day labourer<br>
+5.	Price-hike<br>
+6.	A rainy day<br>
+7.	Food adulteration<br>
+8.	A street hawker<br>
+9.	Traffic jam<br>
+10.	Load-shedding<br>
+11.	A school library<br>
+12.	A book fair<br>
+13.	Road accident<br>
+14.	National flag<br>
+15.	Drug addiction<br>
+16.	Climate change/ Global warming<br>
+17.	Tree plantation<br>
+18.	May Day<br>
+19.	Independence Day
+20.	International Mother Language Day<br>
+21.	Pahela Boishakh<br>
+22.	A school magazine<br>
+23.	Life of a farmer<br>
+24.	A rainy day<br>
+25.	Early rising<br>
+26.	Uses & abuses of mobile phone<br>
+27.	A street beggar <br>
+ 
+ 
+  </div>
+  <div class="alert alert-warning alert-dismissible">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    1.	A Little Learning Is A Dangerous Thing
+  </div>
+  <div class="alert alert-danger alert-dismissible">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+  </div>
+  <div class="alert alert-primary alert-dismissible">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    <strong>Primary!</strong> Indicates an important action.
+  </div>
+  <div class="alert alert-secondary alert-dismissible">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    <strong>Secondary!</strong> Indicates a slightly less important action.
+  </div>
+  <div class="alert alert-dark alert-dismissible">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    <strong>Dark!</strong> Dark grey alert.
+  </div>
+  <div class="alert alert-light alert-dismissible">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    <strong>Light!</strong> Light grey alert.
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w3-twothird">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="main">
+  <button><h2 style=" font-family:cursive;color: blue; font-size:18px">Legend E-Magazine</h2></button><br>
+  <span style="font-size:18px; font-family:cursive;color: blue; cursor:pointer" onclick="openNav()">&#9776; Get Started</span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   	
+</div>
+
+
+
+
+
+
+
+
+
+<button type="button" class="collapsible" style="background-color:DodgerBlue">*Model Question-01</button>
+<div class="content">
+<p>Model Exam -01<br>
+English 1st paper<br>
+Class-Nine/Ten<br>
+Full Marks-100<br>    Time: 3 hours<br>
+                                         (The figures in the margin indicate full marks)<br>	
+Part A: (50 Marks)<br>
+Read the passage & answer the following questions.<br>  
+  May Day or International Workers Day is observed on May 1 all over the world today to commemorate the historical struggle and sacrifices of the working people to establish an eight-hour workday. It is a public holiday in almost all the countries of the world. Since the Industrial Revolution(1) in the 18th and 19th centuries in Europe and the US, the workers in mills and factories had been working a long shift, fourteen or even more hours a day. On May 1st in 1886, inspired by the trade unions(2), half of the workers at the  Mc Cormic Harvester Company in Chicago went on strike demanding an eight-hour workday. Two days later, a workers’ rally was held near the Mc Cormic Harvester Company and about 6000 workers had joined it. The rally was addressed by the labour leaders. They urged the workers to stand together, to go on with their struggle and not to give in to their bosses. Just at this moment some strikebreakers started leaving the meeting place. The strikers went down the street to bring them back. Suddenly about 200 policemen attacked them with clubs and revolvers. One striker was killed instantly, five or six others were seriously wounded and many of them were badly injured. The events of May 1, 1886 is a reminder that workers will continue to be exploited until they stand up and speak out to gain better working conditions, better pay and better lives
+
+</p>
+<form class="w3-half w3-card-4">
+  <h2>choose the correct passive voice.</h2>
+  <h3>1. We eat rice</h3>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="correct" checked>
+  <label>Rice is eaten by us</label></p>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="incorrect">
+  <label> Rice eaten by us</label></p>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="" disabled>
+  <label>Don't know (Disabled)</label></p>
+  
+  
+   <h3>2.They play football</h3>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="correct" checked>
+  <label>Rice is eaten by us</label></p>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="incorrect">
+  <label> Rice eaten by us</label></p>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="" disabled>
+  <label>Don't know (Disabled)</label></p>
+  <p>2. Answer the answer to the following questions:<br>
+(a) What do the events of May Day remind us?<br>	
+(b) how did the people in factories work during the Industrial Revolution?<br>
+( c) What does the Industrial Workers Day commemorate ?<br>
+(d) What lesson do you get from the events of 1st May 1886?<br>
+(e) What is the effect of the events of 1st May 1886 in the service sector worldwide?<br>
+(3) Fill in the gaps with suitable words.<br>
+
+3. Read the following text and fill in each gap with a suitable word based on the information of the text.<br>                                                                                                                                                   1x 5=  05
+
+Traditional childhood pastimes of climbing trees and playing conkers are in decline,
+according to survey by the RSPB (Royal Society for the Protection of Birds).
+ It’s a charitable organisation registered in England and Wales. 
+ The survey shows that people under 34 recall far fewer such childhood outdoor experiences than their counterparts over 55, according to a survey by RSPB.
+ People were asked which of 12 outdoor experiences they could remember during their childhood. 
+ The answer included making dens, daisy chains, climbing trees, playing conkers and feeding birds.
+ Four out of five boys climbed trees and the same number of girls made daisy chains. 
+ But the survey showed the numbers declining among the newer generations.
+ Some 15% more of those aged over 55 had these outdoor experiences in their childhood,
+ compared with those between 15-34 years old. Some 92% of the public agreed that 
+ experiences of nature were still important to children, and 82% agreed that schools should play a role in providing them to all children.
+ The survey has highlighted the positive impact of contact with nature on a child's education, health, wellbeing and social skills.
+ At the same time, there has been a decline in these opportunities, with negative consequences for children, 
+ families and society - a condition now known as nature deficit disorder. Mike Clarke, chief executive of the RSPB, 
+ will meet parliament members on Tuesday to urge the government to join other organisations in providing children with first-hand experiences
+ of the natural environment. … "We believe this guidance should include the many positive impacts to children of having
+ contact with nature and learning outside the classroom." <br>
+ 
+ Traditional childhood (a)---------- of climbing trees and playing conkers are in decline,
+ according to survey by the RSPB (Royal Society for the Protection of Birds).
+ It’s a (b) -----------organisation registered in England and Wales.
+ The survey shows that people under 34 recall far fewer such childhood outdoor 
+ (c) ------------- than their counterparts over 55, according to a survey by RSPB. 
+ People were asked which of 12 outdoor experiences they could remember during their(d)-----------. 
+ The answer included making dens, daisy chains, climbing trees, playing conkers and feeding birds. 
+ Four out of five boys climbed trees and the same number of girls made (e)---------- chains.
+ But the survey showed the numbers declining among the newer generations <br>
+
+
+4. Read the following passage carefully and answer the questions 4& 5. <br>                                  1x5=  05
+Charles Babbage was an English Mathematician. 
+He was a mechanical engineer who is best known for originating the concept of computer.
+ He was born on 26 December 1791 in London. He entered Trinity College in October 1810. 
+ He was transferred to Peterhouse, Cambridge. He was the top mathematician there.
+ He received an honours degree without an examination in 1814.He was elected fellow of Royal Society in 1816.
+ From 1828 to 1839 Babbage was Lucasian Professor  of Mathematics at Cambridge University.
+ Babbage is famous for inventing the first mechanical computer in 1822 that eventually led to today’s coputer. 
+ He died at his home in London on 18 October 1871.<br>
+
+
+
+
+
+</p>
+  
+</form>
+
+</div>
+
+
+
+
+
+
+<button type="button" class="collapsible" style="background-color:DodgerBlue">*Model Question-02 </button>
+<div class="content">
+
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+
+<form class="w3-half w3-card-4">
+
+  <h2>choose the correct passive voice.</h2>
+  <h3>1. We eat rice</h3>
+  
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="correct" checked>
+  <label>Rice is eaten by us</label></p>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="incorrect">
+  <label> Rice eaten by us</label></p>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="" disabled>
+  <label>Don't know (Disabled)</label></p>
+  
+  
+   <h3>2.They play football</h3>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="correct" checked>
+  <label>Rice is eaten by us</label></p>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="incorrect">
+  <label> Rice eaten by us</label></p>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="" disabled>
+  <label>Don't know (Disabled)</label></p>
+  
+</form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
