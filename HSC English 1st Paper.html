@@ -1,35 +1,284 @@
-<!DOCTYPE html>
-<html>
-<head>
 
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+
+
+
+.header{
+color:white;
+padding:8px;
+border:2px solid blue;
+margin:10px;
+background-color:DodgerBlue;
+}
+    
+
+ 
+
+footer {
+  text-align: none;
   
+  margin:1px;
+  font-family:monospace;
+  padding:2px;
+border:4px solid blue;
+}
+
+
+
+
+
+
+
+div.scrollmenu {
+ 
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+
+
+
+.collapsible {
   
-  
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="./base.css" />
-  
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  
-  <style>
-  
-  body{background-image: url(mumtahenapic/mumta.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position:right top;
-  }
-  </style>
-</head>
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  background-color:white;
+}
+
+.active, .collapsible:hover {
+   background-color:white;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+ 
+}
+
+
+
+
+
+
+
+</style>
 <body>
 
-<div class="header">
 
-<h3> Legend E-learning</h3>
+<div class="header" >
+
+<div class="contact-icon">
+<img src="legendlogo.png" height="50px" width="50px" >
+<a   href="https://www.legendbdgroup.com"><h3 style="color:white; font-family:cursive; font-size:18px">Legend English Academy</h3></a>
+ <a href="https://www.legendbdgroup.com"> <p style="font-size:14px; color:white">A sister concern of Legend BD Group</p></a>
+
+  <div class="jumbotron" style="boder:2px solid blue; margin: 2px solid blue; padding: 16px;"  >
+ <div class="topbar" style="boder:2px solid blue"> 
+<h2 id="blink" style="text-align:center; color:white"> Legend E-learning </h2>
+    <script type="text/javascript">
+        var blink = document.getElementById('blink');
+        setInterval(function() {
+            blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+        }, 1500);
+    </script
+
+</div>
+
+</div>
+
+
+
+
+
+
+	
+<script>
+
+let firstName = prompt ("Enter your first name");
+let lastNane = prompt ("Enter your last name");
+let passWord = prompt ("Enter your password" );
+let mobileNumber = prompt ("Enter your mobile number");
+let verificationCode = prompt ("Enter the verification code");
+
+ alert('Hello ${firstName} ${lastName} ${passWord} ${mobileNumber}');
+
+
+
+</script>	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w3-half" >
+
+<button type="button" class="collapsible" ><h3 class="w3-round" style="font-family:cursive">Check Writing Suggestion</h3></button>
+<div class="content">
+
+<ul><button><h3>Application</h3></button><br>
+<li><a   href="#">1.Application for increasing library facilities in the school.</a></li><br>    
+<li><a>2.Application for setting up a library  in the school.</a></li><br>                                                                              
+<li>.Application for setting up an English Language Club in the school.</li><br>  
+4.	Application for financial help from the poor fund<br> 
+5.	Application  for full free studentship <br>                                                                                          
+6.	Application  for opening a common room<br> 
+7.	Application for relief goods for the flood/cyclone-affected people<br> 
+8.	Application for providing multimedia facilities in the school. <br>   
+9.	Application  for setting up a computer club in our school.<br> 
+10.	Application for leave of absence<br> 
+11.	  Application for leave in advance.<br> 
+12.	Application for setting up a canteen in your school<br> 
+13.	 Application for arranging a study tour<br> 
+14.	 Application for permission to visit a place of historical interest<br> 
+15.	 Application for remission of delay fine<br> 
+16.	 Application for the  construction of a bridge/road.<br> 
+17.	Application to the Headmaster of your school praying for TC. <br>      
+18.	 Application to the Headmaster for Testimonial <br> 
+19.	 Application to the Head teacher praying for a seat in the school hostel.<br> 
+20.	Application for a half -holiday<br> 
+21.	Application for increasing library facilities in the school. <br>                                                                              
+22.	 Application to the Headmaster for changing school hours or for morning school.</ul>
+ 
+
+<button><h3>Paragraph</h3></button>
+<ul>1.A winter morning <br>
+2.	Deforestation<br>
+3.	Environment pollution<br>zz
+4.	A day labourer<br>
+5.	Price-hike<br>
+6.	A rainy day<br>
+7.	Food adulteration<br>
+8.	A street hawker<br>
+9.	Traffic jam<br>
+10.	Load-shedding<br>
+11.	A school library<br>
+12.	A book fair<br>
+13.	Road accident<br>
+14.	National flag<br>
+15.	Drug addiction<br>
+16.	Climate change/ Global warming<br>
+17.	Tree plantation<br>
+18.	May Day<br>
+19.	Independence Day
+20.	International Mother Language Day<br>
+21.	Pahela Boishakh<br>
+22.	A school magazine<br>
+23.	Life of a farmer<br>
+24.	A rainy day<br>
+25.	Early rising<br>
+26.	Uses & abuses of mobile phone<br>
+27.	A street beggar</ul>
+ 
+ 
+  </div>
+ 
+</div>
+
+
+
+
+
+
+
+
+
+<div class="w3-twothird">
+
+<div class="scrollmenu">
+  <a href="https://www.legendbdgroup.com">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+ 
+</div>
 
 </div>
 
@@ -41,119 +290,144 @@
 
 
 
-<div class="container">
-<div class="banner">
-<h3>Legend English Academy</h3>
-<p> A sister concern of Legend Bd Group</p>
-</div>
-</div>
+
+<duv class="jumbotron">
+
+<button type="button" class="collapsible" >*Model Question-01</button>
+<div class="content">
+<p>Model Exam -01<br>
+English 1st paper<br>
+Class-Nine/Ten<br>
+Full Marks-100<br>    Time: 3 hours<br>
+                                         (The figures in the margin indicate full marks)<br>	
+Part A: (50 Marks)<br>
+Read the passage & answer the following questions.<br>  
+  May Day or International Workers Day is observed on May 1 all over the world today to commemorate the historical struggle and sacrifices of the working people to establish an eight-hour workday. It is a public holiday in almost all the countries of the world. Since the Industrial Revolution(1) in the 18th and 19th centuries in Europe and the US, the workers in mills and factories had been working a long shift, fourteen or even more hours a day. On May 1st in 1886, inspired by the trade unions(2), half of the workers at the  Mc Cormic Harvester Company in Chicago went on strike demanding an eight-hour workday. Two days later, a workers’ rally was held near the Mc Cormic Harvester Company and about 6000 workers had joined it. The rally was addressed by the labour leaders. They urged the workers to stand together, to go on with their struggle and not to give in to their bosses. Just at this moment some strikebreakers started leaving the meeting place. The strikers went down the street to bring them back. Suddenly about 200 policemen attacked them with clubs and revolvers. One striker was killed instantly, five or six others were seriously wounded and many of them were badly injured. The events of May 1, 1886 is a reminder that workers will continue to be exploited until they stand up and speak out to gain better working conditions, better pay and better lives
+
+</p>
+<form class="w3-half w3-card-4">
+  <h2>choose the correct passive voice.</h2>
+  <h3>1. We eat rice</h3>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="correct" checked>
+  <label>Rice is eaten by us</label></p>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="incorrect">
+  <label> Rice eaten by us</label></p>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="" disabled>
+  <label>Don't know (Disabled)</label></p>
+  
+  
+   <h3>2.They play football</h3>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="correct" checked>
+  <label>Rice is eaten by us</label></p>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="incorrect">
+  <label> Rice eaten by us</label></p>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="" disabled>
+  <label>Don't know (Disabled)</label></p>
+  <p>2. Answer the answer to the following questions:<br>
+(a) What do the events of May Day remind us?<br>	
+(b) how did the people in factories work during the Industrial Revolution?<br>
+( c) What does the Industrial Workers Day commemorate ?<br>
+(d) What lesson do you get from the events of 1st May 1886?<br>
+(e) What is the effect of the events of 1st May 1886 in the service sector worldwide?<br>
+(3) Fill in the gaps with suitable words.<br>
+
+3. Read the following text and fill in each gap with a suitable word based on the information of the text.<br>                                                                                                                                                   1x 5=  05
+
+Traditional childhood pastimes of climbing trees and playing conkers are in decline,
+according to survey by the RSPB (Royal Society for the Protection of Birds).
+ It’s a charitable organisation registered in England and Wales. 
+ The survey shows that people under 34 recall far fewer such childhood outdoor experiences than their counterparts over 55, according to a survey by RSPB.
+ People were asked which of 12 outdoor experiences they could remember during their childhood. 
+ The answer included making dens, daisy chains, climbing trees, playing conkers and feeding birds.
+ Four out of five boys climbed trees and the same number of girls made daisy chains. 
+ But the survey showed the numbers declining among the newer generations.
+ Some 15% more of those aged over 55 had these outdoor experiences in their childhood,
+ compared with those between 15-34 years old. Some 92% of the public agreed that 
+ experiences of nature were still important to children, and 82% agreed that schools should play a role in providing them to all children.
+ The survey has highlighted the positive impact of contact with nature on a child's education, health, wellbeing and social skills.
+ At the same time, there has been a decline in these opportunities, with negative consequences for children, 
+ families and society - a condition now known as nature deficit disorder. Mike Clarke, chief executive of the RSPB, 
+ will meet parliament members on Tuesday to urge the government to join other organisations in providing children with first-hand experiences
+ of the natural environment. … "We believe this guidance should include the many positive impacts to children of having
+ contact with nature and learning outside the classroom." <br>
+ 
+ Traditional childhood (a)---------- of climbing trees and playing conkers are in decline,
+ according to survey by the RSPB (Royal Society for the Protection of Birds).
+ It’s a (b) -----------organisation registered in England and Wales.
+ The survey shows that people under 34 recall far fewer such childhood outdoor 
+ (c) ------------- than their counterparts over 55, according to a survey by RSPB. 
+ People were asked which of 12 outdoor experiences they could remember during their(d)-----------. 
+ The answer included making dens, daisy chains, climbing trees, playing conkers and feeding birds. 
+ Four out of five boys climbed trees and the same number of girls made (e)---------- chains.
+ But the survey showed the numbers declining among the newer generations <br>
 
 
+4. Read the following passage carefully and answer the questions 4& 5. <br>                                  1x5=  05
+Charles Babbage was an English Mathematician. 
+He was a mechanical engineer who is best known for originating the concept of computer.
+ He was born on 26 December 1791 in London. He entered Trinity College in October 1810. 
+ He was transferred to Peterhouse, Cambridge. He was the top mathematician there.
+ He received an honours degree without an examination in 1814.He was elected fellow of Royal Society in 1816.
+ From 1828 to 1839 Babbage was Lucasian Professor  of Mathematics at Cambridge University.
+ Babbage is famous for inventing the first mechanical computer in 1822 that eventually led to today’s coputer. 
+ He died at his home in London on 18 October 1871.<br>
 
 
-
-
-
-<div class="container-fluid" style="background-color:White">
-<div class="menu" >
-<ul>
-<li>
-<button type="button" class="collapsible" style="color:Blue">  Profile of the Founder </button>
-
-<div class="collapsible"   >
-
-<p style="font-family:cursive; color:black; font-size:15px; box-sizing: border-box; text-align:center; font-family: "Brush Script MT", cursive"> Mr. Amit Kumar Acharjee, MBA, LLB , ACCA ( Part-qualified) ,   CEO & Software Developer,  LEGEND BD GROUP has been associated with multi-faceted socio-economic activities & is currently dedicated to data science,  data analytics, software development & artificial intelligence with machine learning to equip our future generation with future skills-set through providing state-of-the art technological service & training. LEGEND BD GROUP  is a promising business group consisting of six sister concerns with BUSINESS SOFTWARE & TECHNOLOGY. COMPUTER LODGE & LEGEND IT TRAINING being the most more focused software & hardware talent hubs with most innovative & multi-dimensional approaches to change & commitment. Mr. Acharjee has been relentlessly in his pursuit of ‘do something innovative’ motto & sincerely dedicated to transform your business.   Recently he has completed his training on different IT & Programming languages such as Artificial Intelligence with Machine Learning, Applied Data Science, PHP Zend, Java, etc as well as pursuing 4 years Diploma Engineering in Computer Science ( DTI), BSc in Computer Science ( IUBH-Germany) & Micro-Masters in Data Science ( MIT XPro).<x><y></P> 
-
-
-</div>
-
-</li>
-<li>
-<button type="button" class="collapsible" >Message from the CEO</button>
-
-<div class="collapsible"   >
-<p style="font-size:16px; color:black; font-family: "Brush Script MT", cursive">Ours is an age of globalization & information technology. There is no denying the fact that the world is getting smaller & we are coming closer to each other. People across the globe are living in a global village. Bangladesh, being a small South-Asian country, is also a stakeholder of the global change & progress. Ours is an age of globalization & information technology. There is no denying the fact that the world is getting smaller & we are coming closer to each other. People across the globe are living in a global village. Bangladesh, being a small South Asian country, is also a stakeholder of the global change & progress.</p>
-</div>
-
-</li>
-<li>
-<button type="button" class="collapsible" style="color:Blue">  Profile of the Founder </button>
-
-<div class="collapsible"   >
-
-<p style="font-family:cursive; color:black; font-size:15px; box-sizing: border-box; text-align:center; font-family: "Brush Script MT", cursive"> Mr. Amit Kumar Acharjee, MBA, LLB , ACCA ( Part-qualified) ,   CEO & Software Developer,  LEGEND BD GROUP has been associated with multi-faceted socio-economic activities & is currently dedicated to data science,  data analytics, software development & artificial intelligence with machine learning to equip our future generation with future skills-set through providing state-of-the art technological service & training. LEGEND BD GROUP  is a promising business group consisting of six sister concerns with BUSINESS SOFTWARE & TECHNOLOGY. COMPUTER LODGE & LEGEND IT TRAINING being the most more focused software & hardware talent hubs with most innovative & multi-dimensional approaches to change & commitment. Mr. Acharjee has been relentlessly in his pursuit of ‘do something innovative’ motto & sincerely dedicated to transform your business.   Recently he has completed his training on different IT & Programming languages such as Artificial Intelligence with Machine Learning, Applied Data Science, PHP Zend, Java, etc as well as pursuing 4 years Diploma Engineering in Computer Science ( DTI), BSc in Computer Science ( IUBH-Germany) & Micro-Masters in Data Science ( MIT XPro).<x><y></P> 
-
-
-</div>
-
-</li>
-<li>
-<button type="button" class="collapsible" >Message from the CEO</button>
-
-<div class="collapsible"   >
-<p style="font-size:16px; color:black; font-family: "Brush Script MT", cursive">Ours is an age of globalization & information technology. There is no denying the fact that the world is getting smaller & we are coming closer to each other. People across the globe are living in a global village. Bangladesh, being a small South-Asian country, is also a stakeholder of the global change & progress. Ours is an age of globalization & information technology. There is no denying the fact that the world is getting smaller & we are coming closer to each other. People across the globe are living in a global village. Bangladesh, being a small South Asian country, is also a stakeholder of the global change & progress.</p>
-</div>
-
-</li>
-<li>
-<button type="button" class="collapsible" style="color:Blue">  Profile of the Founder </button>
-
-<div class="collapsible"   >
-
-<p style="font-family:cursive; color:black; font-size:15px; box-sizing: border-box; text-align:center; font-family: "Brush Script MT", cursive"> Mr. Amit Kumar Acharjee, MBA, LLB , ACCA ( Part-qualified) ,   CEO & Software Developer,  LEGEND BD GROUP has been associated with multi-faceted socio-economic activities & is currently dedicated to data science,  data analytics, software development & artificial intelligence with machine learning to equip our future generation with future skills-set through providing state-of-the art technological service & training. LEGEND BD GROUP  is a promising business group consisting of six sister concerns with BUSINESS SOFTWARE & TECHNOLOGY. COMPUTER LODGE & LEGEND IT TRAINING being the most more focused software & hardware talent hubs with most innovative & multi-dimensional approaches to change & commitment. Mr. Acharjee has been relentlessly in his pursuit of ‘do something innovative’ motto & sincerely dedicated to transform your business.   Recently he has completed his training on different IT & Programming languages such as Artificial Intelligence with Machine Learning, Applied Data Science, PHP Zend, Java, etc as well as pursuing 4 years Diploma Engineering in Computer Science ( DTI), BSc in Computer Science ( IUBH-Germany) & Micro-Masters in Data Science ( MIT XPro).<x><y></P> 
-
-
-</div>
-
-</li>
-<li>
-<button type="button" class="collapsible" >Message from the CEO</button>
-
-<div class="collapsible"   >
-<p style="font-size:16px; color:black; font-family: "Brush Script MT", cursive">Ours is an age of globalization & information technology. There is no denying the fact that the world is getting smaller & we are coming closer to each other. People across the globe are living in a global village. Bangladesh, being a small South-Asian country, is also a stakeholder of the global change & progress. Ours is an age of globalization & information technology. There is no denying the fact that the world is getting smaller & we are coming closer to each other. People across the globe are living in a global village. Bangladesh, being a small South Asian country, is also a stakeholder of the global change & progress.</p>
-</div>
-
-</li>
-<li>
-<button type="button" class="collapsible" style="color:Blue">  Profile of the Founder </button>
-
-<div class="collapsible"   >
-
-<p style="font-family:cursive; color:black; font-size:15px; box-sizing: border-box; text-align:center; font-family: "Brush Script MT", cursive"> Mr. Amit Kumar Acharjee, MBA, LLB , ACCA ( Part-qualified) ,   CEO & Software Developer,  LEGEND BD GROUP has been associated with multi-faceted socio-economic activities & is currently dedicated to data science,  data analytics, software development & artificial intelligence with machine learning to equip our future generation with future skills-set through providing state-of-the art technological service & training. LEGEND BD GROUP  is a promising business group consisting of six sister concerns with BUSINESS SOFTWARE & TECHNOLOGY. COMPUTER LODGE & LEGEND IT TRAINING being the most more focused software & hardware talent hubs with most innovative & multi-dimensional approaches to change & commitment. Mr. Acharjee has been relentlessly in his pursuit of ‘do something innovative’ motto & sincerely dedicated to transform your business.   Recently he has completed his training on different IT & Programming languages such as Artificial Intelligence with Machine Learning, Applied Data Science, PHP Zend, Java, etc as well as pursuing 4 years Diploma Engineering in Computer Science ( DTI), BSc in Computer Science ( IUBH-Germany) & Micro-Masters in Data Science ( MIT XPro).<x><y></P> 
-
-
-</div>
-
-</li>
-<li>
-<button type="button" class="collapsible" >Message from the CEO</button>
-
-<div class="collapsible"   >
-<p style="font-size:16px; color:black; font-family: "Brush Script MT", cursive">Ours is an age of globalization & information technology. There is no denying the fact that the world is getting smaller & we are coming closer to each other. People across the globe are living in a global village. Bangladesh, being a small South-Asian country, is also a stakeholder of the global change & progress. Ours is an age of globalization & information technology. There is no denying the fact that the world is getting smaller & we are coming closer to each other. People across the globe are living in a global village. Bangladesh, being a small South Asian country, is also a stakeholder of the global change & progress.</p>
-</div>
-
-</li>
-<li>
-<button type="button" class="collapsible" style="color:Blue">  Profile of the Founder </button>
-
-<div class="collapsible"   >
-
-<p style="font-family:cursive; color:black; font-size:15px; box-sizing: border-box; text-align:center; font-family: "Brush Script MT", cursive"> Mr. Amit Kumar Acharjee, MBA, LLB , ACCA ( Part-qualified) ,   CEO & Software Developer,  LEGEND BD GROUP has been associated with multi-faceted socio-economic activities & is currently dedicated to data science,  data analytics, software development & artificial intelligence with machine learning to equip our future generation with future skills-set through providing state-of-the art technological service & training. LEGEND BD GROUP  is a promising business group consisting of six sister concerns with BUSINESS SOFTWARE & TECHNOLOGY. COMPUTER LODGE & LEGEND IT TRAINING being the most more focused software & hardware talent hubs with most innovative & multi-dimensional approaches to change & commitment. Mr. Acharjee has been relentlessly in his pursuit of ‘do something innovative’ motto & sincerely dedicated to transform your business.   Recently he has completed his training on different IT & Programming languages such as Artificial Intelligence with Machine Learning, Applied Data Science, PHP Zend, Java, etc as well as pursuing 4 years Diploma Engineering in Computer Science ( DTI), BSc in Computer Science ( IUBH-Germany) & Micro-Masters in Data Science ( MIT XPro).<x><y></P> 
-
+</p>
+  
+</form>
 
 </div>
 
-</li>
-<li>
-<button type="button" class="collapsible" >Message from the CEO</button>
 
-<div class="collapsible"   >
-<p style="font-size:16px; color:black; font-family: "Brush Script MT", cursive">Ours is an age of globalization & information technology. There is no denying the fact that the world is getting smaller & we are coming closer to each other. People across the globe are living in a global village. Bangladesh, being a small South-Asian country, is also a stakeholder of the global change & progress. Ours is an age of globalization & information technology. There is no denying the fact that the world is getting smaller & we are coming closer to each other. People across the globe are living in a global village. Bangladesh, being a small South Asian country, is also a stakeholder of the global change & progress.</p>
+
+
+
+
+<button type="button" class="collapsible" >*Model Question-02 </button>
+<div class="content">
+
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+
+<form class="w3-half w3-card-4">
+
+  <h2>choose the correct passive voice.</h2>
+  <h3>1. We eat rice</h3>
+  
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="correct" checked>
+  <label>Rice is eaten by us</label></p>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="incorrect">
+  <label> Rice eaten by us</label></p>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="" disabled>
+  <label>Don't know (Disabled)</label></p>
+  
+  
+   <h3>2.They play football</h3>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="correct" checked>
+  <label>Rice is eaten by us</label></p>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="incorrect">
+  <label> Rice eaten by us</label></p>
+  <p>
+  <input class="w3-radio" type="radio" name="passive voice" value="" disabled>
+  <label>Don't know (Disabled)</label></p>
+  
+</form>
+
 </div>
 
-</li>
 
-</ul>
+</div>
 
 
 
@@ -178,9 +452,60 @@ for (i = 0; i < coll.length; i++) {
 </script>
 
 
+
+
+
+
+<div class="container mt-3">
+  <h2>Flex</h2>
+  <p>To create a flexbox container and transform direct children into flex items, use the d-flex class:</p>
+  <div class="d-flex p-3 bg-secondary text-white">  
+    <div class="p-2 bg-info"><img src="mumtahenapic/amit.jpg" height="450px"></div>
+	 <div class="p-2 bg-info">He was a mechanical engineer who is best known for originating the concept of computer.
+ He was born on 26 December 1791 in London. He entered Trinity College in October 1810. 
+ He was transferred to Peterhouse, Cambridge. He was the top mathematician there.
+ He received an honours degree without an examination in 1814.He was elected fellow of Royal Society in 1816.
+ From 1828 to 1839 Babbage was Lucasian Professor  of Mathematics at Cambridge University.
+ Babbage is famous for inventing the first mechanical computer in 1822 that eventually led to today’s coputer. 
+ He died at his home in London on 18 October 1871</div>
+    
+    
+  </div>
 </div>
+
+
+
+
+
+<div class="jumbotron">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
 </div>
 
+<div id="main">
+  <button><h2 style=" font-family:cursive;color: blue; font-size:18px">Legend E-Magazine</h2></button><br>
+  <span style="font-size:18px; font-family:cursive;color: blue; cursor:pointer" onclick="openNav()">&#9776; Get Started</span>
+  
+</div>
+
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   	
 
 
 
@@ -193,20 +518,19 @@ for (i = 0; i < coll.length; i++) {
 
 
 
+<div class="footer">
 
+<h3><span>Address</span><h3>
+  <p style="font-size:18px" ><span>Legend English Academy </span><br><span>Pallabi, Mirpur</span> </p>
+  <p style="font-size:18px" ><span>Company profile</span> <br>
+    <span>About Us</span><br>
+  <span> Our Concerns</span><br>
+   <span>Programs</span><br>
+   <span> Resources</span></p>	
 
+<a href="#" data-toggle="popover" title="Popover header" data-content="Some content inside the popover"><span>Topup</span></a> <br>
 
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 
 
@@ -220,3 +544,22 @@ for (i = 0; i < coll.length; i++) {
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
