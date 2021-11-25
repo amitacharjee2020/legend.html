@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 <style>
 
 
@@ -403,123 +405,6 @@ He was a mechanical engineer who is best known for originating the concept of co
 
 
 
-
-
-<div class="w3-cards p-5 bg-primary text-white rounded" class="w3-half" >
-
-<button type="button" class="collapsible" style="font-size:18px">Photo Gallery</button>
-<div class="collapsible" >
-<div class="row">
-  <div class="column">
-    <img src="mumtahenapic/mumta.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-  </div>
-  <div class="column">
-    <img src="mumtahenapic/mumta1.jpg" style="width: 100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-  </div>
-  <div class="column">
-    <img src="mumtahenapic/mumta2.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-  </div>
-  <div class="column">
-    <img src="mumtahenapic/mumta3.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-  </div>
-   <div class="column">
-    <img src="mumtahenapic/mumta4.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
-	
-  </div>
-   <div class="column">
-    
-	 <img src="mumtahenapic/mumta5.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
-  </div>
-</div>
-
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
-
-    <div class="mySlides">
-      <div class="numbertext">1 / 6</div>
-      <img src="mumtahenapic/mumta.jpg" style="width:100%">
-	  <p style="font-size:18px" >aaaaaaaaaaaaaa</p>
-	 
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">2 / 6</div>
-      <img src="mumtahenapic/mumta1.jpg" style="width:100%">
-	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">3 / 6</div>
-      <img src="mumtahenapic/mumta2.jpg" style="width:100%">
-	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
-    </div>
-    
-    <div class="mySlides">
-      <div class="numbertext">4 / 6</div>
-      <img src="mumtahenapic/mumta3.jpg" style="width:100%">
-	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
-    </div>
-	<div class="mySlides">
-      <div class="numbertext">4 / 6</div>
-      <img src="mumtahenapic/mumta4.jpg" style="width:100%">
-	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
-    </div>
-    
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>
-
-     <div class="w3-cards">
-    <div class="column">
-      <img class="demo cursor" src="mumtahenapic/pic.jpg" style="width:100%" onclick="currentSlide(1)" >
-	   
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="mumtahenapic/pic1.jpg" style="width:100%" onclick="currentSlide(2)" >
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="mumtahenapic/pic2.jpg" style="width:100%" onclick="currentSlide(3)" >
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="mumtahenapic/pic3.jpg" style="width:100%" onclick="currentSlide(4)" >
-    </div>
-	<div class="column">
-      <img class="demo cursor" src="mumtahenapic/pic4.jpg" style="width:100%" onclick="currentSlide(5)" >
-    </div
-	<div class="column">
-      <img class="demo cursor" src="mumtahenapic/pic5.jpg" style="width:100%" onclick="currentSlide(6)" >
-    </div
-  </div>
-</div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script>
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -542,71 +427,22 @@ for (i = 0; i < coll.length; i++) {
 
 
 
-
-
-
-
-
-
-<script>
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
-}
-
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
-</script>
+<div class="container mt-3">
+  <h2>Flex</h2>
+  <p>To create a flexbox container and transform direct children into flex items, use the d-flex class:</p>
+  <div class="d-flex p-3 bg-secondary text-white">  
+    <div class="p-2 bg-info"><img src="mumtahenapic/amit.jpg" height="450px"></div>
+	 <div class="p-2 bg-info">He was a mechanical engineer who is best known for originating the concept of computer.
+ He was born on 26 December 1791 in London. He entered Trinity College in October 1810. 
+ He was transferred to Peterhouse, Cambridge. He was the top mathematician there.
+ He received an honours degree without an examination in 1814.He was elected fellow of Royal Society in 1816.
+ From 1828 to 1839 Babbage was Lucasian Professor  of Mathematics at Cambridge University.
+ Babbage is famous for inventing the first mechanical computer in 1822 that eventually led to today’s coputer. 
+ He died at his home in London on 18 October 1871</div>
     
-
+    
+  </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -627,6 +463,8 @@ function showSlides(n) {
   
 </div>
 
+</div>
+
 <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
@@ -639,7 +477,6 @@ function closeNav() {
 }
 </script>
    	
-</div>
 
 
 
@@ -665,7 +502,8 @@ function closeNav() {
 
 
 
-<div class="footer" class="jumbotron">
+
+<div class="footer">
 
 <h3><span>Address</span><h3>
   <p style="font-size:18px" ><span>Legend English Academy </span><br><span>Pallabi, Mirpur</span> </p>
