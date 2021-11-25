@@ -10,106 +10,48 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-.fa-anchor,.fa-coffee {font-size:200px}
 
 
 
-
-#panel, #flip {
-  padding: 5px;
-  font-size: 18px;
-  text-align: center;
-  background-color: #555;
-  color: white;
-  border: solid 1px #666;
-  border-radius: 3px;
+.header{
+color:white;
+padding:8px;
+border:2px solid blue;
+margin:10px;
+background-color:DodgerBlue;
 }
+    
 
-#panel {
-  padding: 50px;
-  display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  .container{
-  
-  text-align: center;
-  padding: 2px;
  
-  background-color: DodgerBlue;
+
+footer {
+  text-align: none;
+  
+  margin:1px;
+  font-family:monospace;
+  padding:2px;
+border:4px solid blue;
+}
+
+
+
+
+
+
+
+div.scrollmenu {
+ 
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
   color: white;
-  
-  
-  }
-  
-  
-  .jumbotron{
-  
-  background-color: white;
-  color:white;
-  padding:4px;
-  
-  
-  }
-  
-  
-  
-
-  
-.box{
-
-
-background-color: DodgerBlue;
-padding:15px;
-marging:auto;
-width:40%;}
-
-.box h5{
-
-background-color: white;
-padding:10px;
-color:black;
-
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
 }
-
-.about-us{
-background-color: blue;
-padding:5px;
-margin-botttom:0;
-
-
-}
-.about-box{
-inline-height:24px;
-display:none;
-}
-
-
-
-
-
-
-
-
 
 
 
@@ -121,7 +63,7 @@ display:none;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color:white;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -166,8 +108,8 @@ display:none;
 
 
 .collapsible {
-  background-color: #777;
-  color: white;
+  
+  color: black;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -175,17 +117,18 @@ display:none;
   text-align: left;
   outline: none;
   font-size: 15px;
+  background-color:white;
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
+   background-color:blue;
 }
 
 .content {
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  background-color: #f1f1f1;
+ 
 }
 
 
@@ -198,40 +141,15 @@ display:none;
 <body>
 
 
+<div class="header" >
 
+<div class="contact-icon">
+<img src="legendlogo.png" height="50px" width="50px" >
+<a   href="https://www.legendbdgroup.com"><h3 style="color:white; font-family:cursive; font-size:18px">Legend English Academy</h3></a>
+ <a href="https://www.legendbdgroup.com"> <p style="font-size:14px; color:white">A sister concern of Legend BD Group</p></a>
 
-<!-- Navbar -->
-<div class="w3-top">
-
-<div id="flip">Welcome</div>
-<div id="panel">
-<h3>Legend English Academy</h3>
-<p>A sister concern of Legend BD Group</p>
- </div>
-
-
-  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Seen Passage</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Unseen Passage</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Fill in the Gaps</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Writing Part</a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
-
-
+  <div class="jumbotron" style="boder:2px solid blue; margin: 2px solid blue; padding: 16px;"  >
+ <div class="topbar" style="boder:2px solid blue"> 
 <h2 id="blink" style="text-align:center; color:white"> Legend E-learning </h2>
     <script type="text/javascript">
         var blink = document.getElementById('blink');
@@ -239,49 +157,25 @@ display:none;
             blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
         }, 1500);
     </script
-	
-	
-  
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">SSC English 1st Paper<br>Get Started</button>
-</header>
 
-  </div>
+</div>
+
 </div>
 
 
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
 
 
 
 
+<div class="w3-half" >
 
+<button type="button" class="collapsible" ><h3 class="w3-round" style="font-family:cursive">Check Writing Suggestion</h3></button>
+<div class="content">
 
-
-
-
-
-
-<div class="w3-container">
-
-  <h2>Suggestion</h2>
-  
-  
-  <div class="alert alert-success alert-dismissible">
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
- <h2>Application</h2>
-1.	Application for increasing library facilities in the school.<br>    
-2.	 Application for setting up a library  in the school.<br>                                                                              
-3.	Application for setting up an English Language Club in the school<br>  
+<ul><button><h3>Application</h3></button><br>
+<li><a   href="#">1.Application for increasing library facilities in the school.</a></li><br>    
+<li><a>2.Application for setting up a library  in the school.</a></li><br>                                                                              
+<li>.Application for setting up an English Language Club in the school.</li><br>  
 4.	Application for financial help from the poor fund<br> 
 5.	Application  for full free studentship <br>                                                                                          
 6.	Application  for opening a common room<br> 
@@ -300,16 +194,11 @@ function myFunction() {
 19.	 Application to the Head teacher praying for a seat in the school hostel.<br> 
 20.	Application for a half -holiday<br> 
 21.	Application for increasing library facilities in the school. <br>                                                                              
-22.	 Application to the Headmaster for changing school hours or for morning school.
-  </div>
-  
-  </div>
-  
-  
-  <div class="alert alert-info alert-dismissible">
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-	<h2>Paragraph</h2>
- 1.A winter morning <br>
+22.	 Application to the Headmaster for changing school hours or for morning school.</ul>
+ 
+
+<button><h3>Paragraph</h3></button>
+<ul>1.A winter morning <br>
 2.	Deforestation<br>
 3.	Environment pollution<br>
 4.	A day labourer<br>
@@ -335,46 +224,12 @@ function myFunction() {
 24.	A rainy day<br>
 25.	Early rising<br>
 26.	Uses & abuses of mobile phone<br>
-27.	A street beggar <br>
+27.	A street beggar</ul>
  
  
   </div>
-  <div class="alert alert-warning alert-dismissible">
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    1.	A Little Learning Is A Dangerous Thing
-  </div>
-  <div class="alert alert-danger alert-dismissible">
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
-  </div>
-  <div class="alert alert-primary alert-dismissible">
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    <strong>Primary!</strong> Indicates an important action.
-  </div>
-  <div class="alert alert-secondary alert-dismissible">
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    <strong>Secondary!</strong> Indicates a slightly less important action.
-  </div>
-  <div class="alert alert-dark alert-dismissible">
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    <strong>Dark!</strong> Dark grey alert.
-  </div>
-  <div class="alert alert-light alert-dismissible">
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    <strong>Light!</strong> Light grey alert.
-  </div>
+ 
 </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -385,31 +240,15 @@ function myFunction() {
 
 
 <div class="w3-twothird">
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+
+<div class="scrollmenu">
+  <a href="https://www.legendbdgroup.com">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+ 
 </div>
 
-<div id="main">
-  <button><h2 style=" font-family:cursive;color: blue; font-size:18px">Legend E-Magazine</h2></button><br>
-  <span style="font-size:18px; font-family:cursive;color: blue; cursor:pointer" onclick="openNav()">&#9776; Get Started</span>
-</div>
-
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-</script>
-   	
 </div>
 
 
@@ -420,7 +259,10 @@ function closeNav() {
 
 
 
-<button type="button" class="collapsible" style="background-color:DodgerBlue">*Model Question-01</button>
+
+<duv class="jumbotron">
+
+<button type="button" class="collapsible" >*Model Question-01</button>
 <div class="content">
 <p>Model Exam -01<br>
 English 1st paper<br>
@@ -506,9 +348,6 @@ He was a mechanical engineer who is best known for originating the concept of co
  He died at his home in London on 18 October 1871.<br>
 
 
-
-
-
 </p>
   
 </form>
@@ -520,7 +359,7 @@ He was a mechanical engineer who is best known for originating the concept of co
 
 
 
-<button type="button" class="collapsible" style="background-color:DodgerBlue">*Model Question-02 </button>
+<button type="button" class="collapsible" >*Model Question-02 </button>
 <div class="content">
 
 <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
@@ -557,13 +396,7 @@ He was a mechanical engineer who is best known for originating the concept of co
 </div>
 
 
-
-
-
-
-
-
-
+</div>
 
 
 <script>
@@ -590,6 +423,57 @@ for (i = 0; i < coll.length; i++) {
 
 
 
+
+<div class="jumbotron">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="main">
+  <button><h2 style=" font-family:cursive;color: blue; font-size:18px">Legend E-Magazine</h2></button><br>
+  <span style="font-size:18px; font-family:cursive;color: blue; cursor:pointer" onclick="openNav()">&#9776; Get Started</span>
+  
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   	
+</div>
+
+
+
+
+
+
+
+<div class="footer" class="jumbotron">
+
+<h3><span>Address</span><h3>
+  <p style="font-size:18px" ><span>Legend English Academy </span><br><span>Pallabi, Mirpur</span> </p>
+  <p style="font-size:18px" ><span>Company profile</span> <br>
+    <span>About Us</span><br>
+  <span> Our Concerns</span><br>
+   <span>Programs</span><br>
+   <span> Resources</span></p>	
+
+<a href="#" data-toggle="popover" title="Popover header" data-content="Some content inside the popover"><span>Topup</span></a> <br>
+
+</div>
+
+
 </body>
 </html>
 
@@ -611,30 +495,3 @@ for (i = 0; i < coll.length; i++) {
 
 
 
-
-
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
