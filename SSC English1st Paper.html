@@ -121,7 +121,7 @@ div.scrollmenu a {
 }
 
 .active, .collapsible:hover {
-   background-color:blue;
+   background-color:white;
 }
 
 .content {
@@ -200,7 +200,7 @@ div.scrollmenu a {
 <button><h3>Paragraph</h3></button>
 <ul>1.A winter morning <br>
 2.	Deforestation<br>
-3.	Environment pollution<br>
+3.	Environment pollution<br>zz
 4.	A day labourer<br>
 5.	Price-hike<br>
 6.	A rainy day<br>
@@ -399,6 +399,127 @@ He was a mechanical engineer who is best known for originating the concept of co
 </div>
 
 
+
+
+
+
+
+
+<div class="w3-cards p-5 bg-primary text-white rounded" class="w3-half" >
+
+<button type="button" class="collapsible" style="font-size:18px">Photo Gallery</button>
+<div class="collapsible" >
+<div class="row">
+  <div class="column">
+    <img src="mumtahenapic/mumta.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="mumtahenapic/mumta1.jpg" style="width: 100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="mumtahenapic/mumta2.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="mumtahenapic/mumta3.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+   <div class="column">
+    <img src="mumtahenapic/mumta4.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+	
+  </div>
+   <div class="column">
+    
+	 <img src="mumtahenapic/mumta5.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="mumtahenapic/mumta.jpg" style="width:100%">
+	  <p style="font-size:18px" >aaaaaaaaaaaaaa</p>
+	 
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="mumtahenapic/mumta1.jpg" style="width:100%">
+	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="mumtahenapic/mumta2.jpg" style="width:100%">
+	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="mumtahenapic/mumta3.jpg" style="width:100%">
+	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
+    </div>
+	<div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="mumtahenapic/mumta4.jpg" style="width:100%">
+	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+     <div class="w3-cards">
+    <div class="column">
+      <img class="demo cursor" src="mumtahenapic/pic.jpg" style="width:100%" onclick="currentSlide(1)" >
+	   
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mumtahenapic/pic1.jpg" style="width:100%" onclick="currentSlide(2)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mumtahenapic/pic2.jpg" style="width:100%" onclick="currentSlide(3)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mumtahenapic/pic3.jpg" style="width:100%" onclick="currentSlide(4)" >
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="mumtahenapic/pic4.jpg" style="width:100%" onclick="currentSlide(5)" >
+    </div
+	<div class="column">
+      <img class="demo cursor" src="mumtahenapic/pic5.jpg" style="width:100%" onclick="currentSlide(6)" >
+    </div
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -415,6 +536,73 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -459,6 +647,24 @@ function closeNav() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="footer" class="jumbotron">
 
 <h3><span>Address</span><h3>
@@ -472,6 +678,44 @@ function closeNav() {
 <a href="#" data-toggle="popover" title="Popover header" data-content="Some content inside the popover"><span>Topup</span></a> <br>
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </body>
