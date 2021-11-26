@@ -41,6 +41,44 @@ border:4px solid blue;
 
 
 
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 div.scrollmenu {
  
   overflow: auto;
@@ -109,9 +147,10 @@ div.scrollmenu a {
 
 
 
+
 .collapsible {
   
-  color: black;
+  color: blue;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -134,6 +173,98 @@ div.scrollmenu a {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #1abc9c;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
 
 
 
@@ -169,84 +300,13 @@ div.scrollmenu a {
 
 
 
-<div class="w3-half" >
-
-<button type="button" class="collapsible" ><h3 class="w3-round" style="font-family:cursive">Check Writing Suggestion</h3></button>
-<div class="content">
-
-<ul><button><h3>Application</h3></button><br>
-<li><a   href="#">1.Application for increasing library facilities in the school.</a></li><br>    
-<li><a>2.Application for setting up a library  in the school.</a></li><br>                                                                              
-<li>.Application for setting up an English Language Club in the school.</li><br>  
-4.	Application for financial help from the poor fund<br> 
-5.	Application  for full free studentship <br>                                                                                          
-6.	Application  for opening a common room<br> 
-7.	Application for relief goods for the flood/cyclone-affected people<br> 
-8.	Application for providing multimedia facilities in the school. <br>   
-9.	Application  for setting up a computer club in our school.<br> 
-10.	Application for leave of absence<br> 
-11.	  Application for leave in advance.<br> 
-12.	Application for setting up a canteen in your school<br> 
-13.	 Application for arranging a study tour<br> 
-14.	 Application for permission to visit a place of historical interest<br> 
-15.	 Application for remission of delay fine<br> 
-16.	 Application for the  construction of a bridge/road.<br> 
-17.	Application to the Headmaster of your school praying for TC. <br>      
-18.	 Application to the Headmaster for Testimonial <br> 
-19.	 Application to the Head teacher praying for a seat in the school hostel.<br> 
-20.	Application for a half -holiday<br> 
-21.	Application for increasing library facilities in the school. <br>                                                                              
-22.	 Application to the Headmaster for changing school hours or for morning school.</ul>
- 
-
-<button><h3>Paragraph</h3></button>
-<ul>1.A winter morning <br>
-2.	Deforestation<br>
-3.	Environment pollution<br>zz
-4.	A day labourer<br>
-5.	Price-hike<br>
-6.	A rainy day<br>
-7.	Food adulteration<br>
-8.	A street hawker<br>
-9.	Traffic jam<br>
-10.	Load-shedding<br>
-11.	A school library<br>
-12.	A book fair<br>
-13.	Road accident<br>
-14.	National flag<br>
-15.	Drug addiction<br>
-16.	Climate change/ Global warming<br>
-17.	Tree plantation<br>
-18.	May Day<br>
-19.	Independence Day
-20.	International Mother Language Day<br>
-21.	Pahela Boishakh<br>
-22.	A school magazine<br>
-23.	Life of a farmer<br>
-24.	A rainy day<br>
-25.	Early rising<br>
-26.	Uses & abuses of mobile phone<br>
-27.	A street beggar</ul>
- 
- 
-  </div>
- 
-</div>
-
-
-
-
-
-
-
-
 
 <div class="w3-twothird">
 
 <div class="scrollmenu">
   <a href="https://www.legendbdgroup.com">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
+  <a href="https://docs.google.com/document/d/1YjCTEYHNknnWPbYWCwnlV-IYoyEJ76Xk/edit?usp=sharing&ouid=110355798582485477883&rtpof=true&sd=true">Model Question Open Access</a>
+  <a href="https://drive.google.com/drive/folders/1ocCH2oZ50878vX0yM558iqpxWBRZCi8i">Model Questions</a>
   <a href="#about">About</a>
  
 </div>
@@ -260,9 +320,147 @@ div.scrollmenu a {
 
 
 
+<div class="w3-half">
+
+<button class="collapsible">Paragraph</button>
+<div class="content">
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
 
 
-<duv class="jumbotron">
+<button class="collapsible">Application</button>
+<div class="content">
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+
+<button class="collapsible">Commpleting Story</button>
+<div class="content">
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+<button class="collapsible">Letter/Email</button>
+<div class="content">
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+</div>
+
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w3-card-4">
+
+<div class="w3-twothird">
+  <h2>Flex</h2>
+  <p>To create a flexbox container and transform direct children into flex items, use the d-flex class:</p>
+  <div class="d-flex p-3 bg-secondary text-white">  
+    <div class="p-2 bg-info"><img src="mumtahenapic/amit.jpg" height="450px"></div>
+	 <div class="p-2 bg-info">He was a mechanical engineer who is best known for originating the concept of computer.
+ He was born on 26 December 1791 in London. He entered Trinity College in October 1810. 
+ He was transferred to Peterhouse, Cambridge. He was the top mathematician there.
+ He received an honours degree without an examination in 1814.He was elected fellow of Royal Society in 1816.
+ From 1828 to 1839 Babbage was Lucasian Professor  of Mathematics at Cambridge University.
+ Babbage is famous for inventing the first mechanical computer in 1822 that eventually led to today’s coputer. 
+ He died at his home in London on 18 October 1871</div>
+    
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="w3-card-4">
 
 <button type="button" class="collapsible" >*Model Question-01</button>
 <div class="content">
@@ -427,28 +625,108 @@ for (i = 0; i < coll.length; i++) {
 
 
 
-<div class="container mt-3">
-  <h2>Flex</h2>
-  <p>To create a flexbox container and transform direct children into flex items, use the d-flex class:</p>
-  <div class="d-flex p-3 bg-secondary text-white">  
-    <div class="p-2 bg-info"><img src="mumtahenapic/amit.jpg" height="450px"></div>
-	 <div class="p-2 bg-info">He was a mechanical engineer who is best known for originating the concept of computer.
- He was born on 26 December 1791 in London. He entered Trinity College in October 1810. 
- He was transferred to Peterhouse, Cambridge. He was the top mathematician there.
- He received an honours degree without an examination in 1814.He was elected fellow of Royal Society in 1816.
- From 1828 to 1839 Babbage was Lucasian Professor  of Mathematics at Cambridge University.
- Babbage is famous for inventing the first mechanical computer in 1822 that eventually led to today’s coputer. 
- He died at his home in London on 18 October 1871</div>
-    
-    
-  </div>
+
+
+
+
+
+<button onclick="openFullscreen();">Open Video in Fullscreen Mode</button>
+
+
+<video width="100%" controls id="myvideo">
+  <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Famitacharjeesoftwaredeveloper%2Fposts%2F3491899104252600&show_text=true&width=500" width="500" height="458" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" type="video/mp4"    ></iframe>
+  <iframe  src="https://www.youtube.com/watch?v=pK-cY4XbSLM"  type="video/mp4"    ></iframe>
+  
+</video>
+
+
+<script>
+var elem = document.getElementById("myvideo");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<div class="month">      
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>
+      August<br>
+      <span style="font-size:18px">2021</span>
+    </li>
+  </ul>
 </div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">  
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li><span class="active">10</span></li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>
+</ul>
+
+
+
 
 
 
 
 
 <div class="jumbotron">
+
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#">About</a>
@@ -489,6 +767,62 @@ function closeNav() {
 
 
 
+
+
+
+
+
+
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+
+
+<div w3-include-html="content.html"></div> 
+
+<script>
+includeHTML();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="footer">
 
 <h3><span>Address</span><h3>
@@ -506,53 +840,8 @@ function closeNav() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
 
 
 
