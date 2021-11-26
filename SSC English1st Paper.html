@@ -43,7 +43,7 @@ border:4px solid blue;
 
 
 .accordion {
-  background-color: #eee;
+  background-color:white;
   color: #444;
   cursor: pointer;
   padding: 18px;
@@ -169,6 +169,7 @@ div.scrollmenu a {
   padding: 0 18px;
   display: none;
   overflow: hidden;
+  color:blue;
  
 }
 
@@ -283,7 +284,7 @@ body {font-family: Verdana, sans-serif;}
 
   <div class="jumbotron" style="boder:2px solid blue; margin: 2px solid blue; padding: 16px;"  >
  <div class="topbar" style="boder:2px solid blue"> 
-<h2 id="blink" style="text-align:center; color:white"> Legend E-learning </h2>
+<h3 id="blink" style="text-align:center; color:white"> Legend E-learning </h3>
     <script type="text/javascript">
         var blink = document.getElementById('blink');
         setInterval(function() {
@@ -296,6 +297,31 @@ body {font-family: Verdana, sans-serif;}
 </div>
 
 
+
+
+
+<button onclick="openFullscreen();">Open Video in Fullscreen Mode</button>
+
+
+<video width="100%" controls id="myvideo">
+  <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Famitacharjeesoftwaredeveloper%2Fposts%2F3491899104252600&show_text=true&width=500" width="500" height="458" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" type="video/mp4"    ></iframe>
+  <iframe  src="https://www.youtube.com/watch?v=pK-cY4XbSLM"  type="video/mp4"    ></iframe>
+  
+</video>
+
+
+<script>
+var elem = document.getElementById("myvideo");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+</script>
 
 
 
@@ -318,22 +344,168 @@ body {font-family: Verdana, sans-serif;}
 
 
 
+<div class="month">      
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>
+      August<br>
+      <span style="font-size:18px">2021</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">  
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li><span class="active">10</span></li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>
+</ul>
 
 
-<div class="w3-half">
 
-<button class="collapsible">Paragraph</button>
+
+
+<div class="w3-twothird">
+  <h2>Flex</h2>
+  <p>To create a flexbox container and transform direct children into flex items, use the d-flex class:</p>
+  <div class="d-flex p-3 bg-secondary text-white">  
+    <div class="p-2 bg-info"><img src="mumtahenapic/amit.jpg" height="450px"></div>
+	 <div class="p-2 bg-info">He was a mechanical engineer who is best known for originating the concept of computer.
+ He was born on 26 December 1791 in London. He entered Trinity College in October 1810. 
+ He was transferred to Peterhouse, Cambridge. He was the top mathematician there.
+ He received an honours degree without an examination in 1814.He was elected fellow of Royal Society in 1816.
+ From 1828 to 1839 Babbage was Lucasian Professor  of Mathematics at Cambridge University.
+ Babbage is famous for inventing the first mechanical computer in 1822 that eventually led to today’s coputer. 
+ He died at his home in London on 18 October 1871</div>
+    
+    
+  </div>
+
+
+
+
+
+
+
+<div class="container mt-3">
+
+<button class="collapsible">Writing Section with suggestion</button>
 <div class="content">
 
-<button class="accordion">Section 1</button>
+<button class="accordion"> Paragraog with Suggestion</button>
 <div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<button class="collapsible">Paragraph List</button>
+<div class="content">
+<button class="accordion">1.A winter Morning</button>
+<div class="panel">
+ <p> Winter is the coldest season in our country.
+ It is usually foggy. Everything looks hazy Sometimes the fog is so dense that nothing can be seen even at a little distance. Everything looks hazy. Nature looks gloomy.
+ The chirping of the birds is not heard. 
+ The animals cannot come out of their shelters due to dense fog.
+ Dense fog causes disruption to the communication system.
+ Dew drops fall at night. Sometimes cold waves blow.
+ It causes much sufferings to the children, the sick people, the aged people and the poor class.
+<br> People put on different kinds of warm clothes to protect themselves from cold. 
+Little boys & girls wrap their hands & legs in cold spell. 
+The old people and children shiver in cold. 
+They gather straw and make fires at different places to warm themselves in the heat.
+ Most people do not feel like leaving the bed early.
+ Sometimes village people spend the winter morning by gossiping.  In towns, rich people read newspaper in balcony. They drink warm tea while reading newspaper & enjoy sunbath.  The scene of the winter morning vanishes as the day advances.  In winter the days are shorter and the nights are longer. A winter night is more painful than a winter morning. A winter morning brings pains & sufferings to the rootless poor people. In spite of the dark sides of a winter morning we always welcome it because it is rich with varieties of food such as date juice, fresh vegetables and some other things. Villagers make fire with straw to warm themselves. Various kinds of pithas are made in this season. In a winter morning pitha parban is held in towns where the town folk enjoy winter food. A winter morning is not an unmixed blessing. In a winter morning, people go through different experiences according to their economic background. Those who are poor cannot afford warm cloths and so they suffer from the bitter cold. But the rich people enjoy sleep or staying under warm blanket. In cities & towns, different groups of people go picnic in remote areas & enjoy the winter morning in a different way.  So, to the poor the sun-ray becomes more precious than gold. In fact, people of all walks of life enjoy a winter morning despite some natural hazards like cold spell, dense fog etc. Many pitha  festivals are held throughout the country in  winter as the people of our country are fest lovers traditionally. The winter season is always welcome to the people of our country irrespective of class distinction. 
+
+
+ </p>
+</div>
+<button class="accordion">2.Deforestation</button>
+<div class="panel">
+<p>Deforestation means cutting down trees in large numbers.  It is a process where a forest becomes a non-forest.  There is no denying the fact that deforestation has become a global concern in the present world. Forests are a rich resource of our planet earth. Therefore, it is important to protect our environment. Forests have a great floral diversity. There are large trees, creepers & climbers, grasses, shrubs & bushes that grow in forests. Forests are also habitats to many wild species. A large variety of animals, birds, reptiles and insects live in forests. Forests provide sustenance to many living beings including man. There are many  causes of deforestation. Bangladesh is the most densely populated country in the world. Its population is much more in proportion to its area. This huge number of population needs more shelter, agricultural land, fuel, furniture etc. For all these reasons, people cut down trees. Man depends on forests for food & livelihood. As farmers need more land for cultivation, they cut down trees to expand their agricultural land.  People also cut trees for habituation. They cut down trees for timber which is used as fuel, for  construction or to make furniture. Deforestation has very drastic effects on both humans and nature. Decreasing  the number of the trees leads to rising carbon-di-oxide and lack of oxygen in the atmosphere. Deforestation results in severe health hazards like  lung diseases,  bronchitis & other respiratory diseases  in humans and animals. All living beings need water. Loss of forest leads to ecological imbalance. Deforestation is one of the major factors leading to the greenhouse effect and desertification. Moreover, there are some greedy people who cut down trees in our forests to make money. The effects of deforestation are too many to describe. This destruction disturbs our ecological balance. Due to deforestation carbon-dioxide is increasing worldwide. As a result, the world is becoming warmer. The sea level is rising. On the other hand, new areas of the world are turning into deserts as a result of deforestation. The removal of trees causes serious damage to the soil. The temperature will rise and it will cause green house effect. The country will be unsuitable for living.  Ecological balance is also disturbed by deforestation. Many wild animals and birds, as well as beasts, lose their home. Global warming is an alarming consequence of deforestation. If we destroy trees at random, one day the country will turn into a great desert. There will be no rain and  our agricultural will face a great crisis As a result temperature of the atmosphere is increasing and ice of the polar region is melting very fast. For this, we have to face various devastating floods. Drought may occur due to deforestation. Our government should take immediate measures to prevent deforestation.
+</p>
+</div>
+<button class="accordion">3.Environment pollution</button>
+<div class="panel">
+<p>The world is producing millions of tons of domestic rubbish and toxic industrial waste each year, and it is becoming increasingly difficult to find suitable locations to get rid of all the refuse. The disposal of various kinds of waste is seriously polluting the environment. Air is an important element of our environment and our air is polluted by smoke. Man makes fires to cook food, make bricks, melt tar for road construction and to do many other things. Fires create smoke and pollute the air. Railway  engines and powerhouses create smoke by burning coal and oil. Mills and factories also belch a lot of smoke. Buses, trucks and cars use petrol and diesel oil. These too emit smoke. All these kinds of smoke pollute the air. Water, another vital element of the environment, is also polluted in different ways. Man pollutes water by throwing waste into it. Farmers use chemical fertilizers and insecticides in their fields. When rain and floods wash away some of these chemicals, they get mixed with water in rivers, canals and ponds. Mills and factories also throw their poisonous chemicals and waste products into rivers and canals and thus pollute the water. Water vehicles also pollute rivers by dumping oil, food waste and human waste into them. Every year millions of people all over the world die unnecessarily as a result of pollution. These unfortunate and avoidable deaths are brought about  by four specific factors. Firstly, air pollution from factories, burning trash, and vehicle fumes cause pneumonia, bronchitis and other respiratory diseases. Then, water pollution from industrial discharge. the indiscriminate disposal of toxic chemicals, and the dumping of human waste into rivers and canals causes poisoning and water-borne diseases such as cholera and diarrhoea. The next factor is the noise pollution from vehicle horns and microphones that might cause aggression and damage hearing. And finally, odour pollution from dumped or untreated human waste causes serious discomfort to our sense of smell, and attracts disease-bearing creatures such as rats and flies. We should take  determined action to control these problems and clean up the environment to avert these unnecessary diseases.
+ 
+</p>
+</div>
+<button class="accordion">4.A day labourer</button>
+<div class="panel">
+<p>There is no single definition to describe a day labourer. But the word that comes to us about a day labourer is someone who works manually from early morning till  late evening on a daily basis. In short, a day labourer is he who does heavy manual labour in various fields. He belongs to the marginalized class. He belongs to ultra-poor group.  In most cases, he is unskilled or semi-skilled.  He does not enjoy due social status though he deserves it  and his labour is also  indispensible for the economic development of a country. A day labourer is a known face to all of us as he is required in our daily life. Naturally he is to be healthily, strong and stout  due to the nature of his job.  He lives with his family in a slum. He gets up early in the morning and goes out in search of work. He works hard from dawn to dusk for his employer and gets his wages at evening. He does different types of jobs such as carrying bricks, wood, stones, mud and digging ponds, constructing of roads, buildings etc. Sometimes he and his family pass a day without food if he cannot manage work. However, he is in great demand in harvesting season. . When he earns much money, he and his family can eat well. It is a happy day for them. If he does not find any work, he and his family have to go without food. So the life of a day labourer is very miserable. Sorrows and sufferings are his constant companions. He does not know what joy and happiness are. He earns his living by working hard. Most of the time he is ill- paid and ill- treated in every sphere of his life. In fact, the services of a day laborer plays an importance role in our national life. So we should think about his rights and show respect to them.
+
+</p>
+</div>
+<button class="accordion">5.Price-hike</button>
+<div class="panel">
+<p>Price rise is a great problem of the day. It is a common phenomenon not only in our country but also in the world. Today the prices of necessary things such as food items, cloths, education materials, medicine and many other necessary things are going up by leaps and bounds. Price rise is caused by several factors like hoarding, population explosion, low productivity, natural calamities, wars, backwardness of communication, evil motives of dishonest businessmen, smuggling, black marketing etc. If the price rise is caused by the short supply of commodities, it is temporary. But it is very difficult to control the price rise caused by inflation. However, the people of low income suffer greatly and pass their days in constant anxiety. They find it, difficult to make their both ends meet. price hike is a function of multifarious factors such as energy costs, declining dollar value, rising demand for bio-fuel, export restrictions on food grains, carrying cost, climate change, etc. Concerns over oil prices, energy security and climate change have prompted governments to encourage production and use of bio-fuel. The price rise has widened the gap between the export and import value in the food grain importing countries which has affected the terms of trade and foreign exchange reserve. The fiscal impact of this price hike leads to the reduction of taxes on food grain import and a rise in subsidies in the production of the same Price rise has terrible effects on man’s character. It leads people to the path of corruption and moral degradation. The situation is complex and there is no single solution to this problem. The government should perform more efficiently and has to take actions so that the market performs properly. Bangladesh imports a lion’s share of its import of rice from India at low cost. In Bangladesh, the main sources of calorie are rice and wheat. In spite of a rise in wheat and rice price, people still consume rice and wheat. Therefore, the food price rise affects the poor extensively. Food crisis is a national as well as an international problem.  To reduce the extent of the effect of the crisis, some short term and long term measures can be taken. The government should begin selling rice from its stock and import food grains right at this moment to keep the local market stable. The dependency on private food importers should be lessened to avoid the artificial volatility of the local markets. Increasing the adoption of hybrid rice, improving crop management practices and access to high quality seed are essential. Deepening fertilizer dealer network to improve timely access to fertilizer and focusing on high quality seed availability are also needed.. Laws should be enforced strictly to bring the prices of the essential commodities within the purchasing capacity of the common people.</p>
+<div>
+<button class="accordion">6.A rainy day</button>
+<div class="panel">
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
 </div>
 
-<button class="accordion">Section 2</button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+7.	Food adulteration</br>
+8.	A street hawker</br>
+9.	Traffic jam</br>
+10.	Load-shedding
+11.	A school library</br>
+12.	A book fair</br>
+13.	Road accident</br>
+14.	National flag</br>
+15.	Drug addiction</br>
+16.	Climate change/ Global warming</br>
+17.	Tree plantation</br>
+18.	May Day</br>
+19.	Independence Day</br>
+20.	International Mother Language Day</br>
+21.	Pahela Boishakh</br>
+22.	A school magazine</br>
+23.	Life of a farmer</br>
+24.	A rainy day</br>
+25.	Early rising</br>
+26.	Uses & abuses of mobile phone</br>
+27.	A street beggar
+</p>
 </div>
+
+<button class="accordion">A winter Morning</button>
+<div class="panel">
+ 
 
 <button class="accordion">Section 3</button>
 <div class="panel">
@@ -435,24 +607,6 @@ for (i = 0; i < acc.length; i++) {
 
 
 
-<div class="w3-card-4">
-
-<div class="w3-twothird">
-  <h2>Flex</h2>
-  <p>To create a flexbox container and transform direct children into flex items, use the d-flex class:</p>
-  <div class="d-flex p-3 bg-secondary text-white">  
-    <div class="p-2 bg-info"><img src="mumtahenapic/amit.jpg" height="450px"></div>
-	 <div class="p-2 bg-info">He was a mechanical engineer who is best known for originating the concept of computer.
- He was born on 26 December 1791 in London. He entered Trinity College in October 1810. 
- He was transferred to Peterhouse, Cambridge. He was the top mathematician there.
- He received an honours degree without an examination in 1814.He was elected fellow of Royal Society in 1816.
- From 1828 to 1839 Babbage was Lucasian Professor  of Mathematics at Cambridge University.
- Babbage is famous for inventing the first mechanical computer in 1822 that eventually led to today’s coputer. 
- He died at his home in London on 18 October 1871</div>
-    
-    
-  </div>
-</div>
 
 
 
@@ -460,7 +614,7 @@ for (i = 0; i < acc.length; i++) {
 
 
 
-<div class="w3-card-4">
+<div class="jumbotron">
 
 <button type="button" class="collapsible" >*Model Question-01</button>
 <div class="content">
@@ -630,93 +784,6 @@ for (i = 0; i < coll.length; i++) {
 
 
 
-<button onclick="openFullscreen();">Open Video in Fullscreen Mode</button>
-
-
-<video width="100%" controls id="myvideo">
-  <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Famitacharjeesoftwaredeveloper%2Fposts%2F3491899104252600&show_text=true&width=500" width="500" height="458" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" type="video/mp4"    ></iframe>
-  <iframe  src="https://www.youtube.com/watch?v=pK-cY4XbSLM"  type="video/mp4"    ></iframe>
-  
-</video>
-
-
-<script>
-var elem = document.getElementById("myvideo");
-function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) { /* Safari */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE11 */
-    elem.msRequestFullscreen();
-  }
-}
-</script>
-
-
-
-
-
-
-
-
-
-
-
-<div class="month">      
-  <ul>
-    <li class="prev">&#10094;</li>
-    <li class="next">&#10095;</li>
-    <li>
-      August<br>
-      <span style="font-size:18px">2021</span>
-    </li>
-  </ul>
-</div>
-
-<ul class="weekdays">
-  <li>Mo</li>
-  <li>Tu</li>
-  <li>We</li>
-  <li>Th</li>
-  <li>Fr</li>
-  <li>Sa</li>
-  <li>Su</li>
-</ul>
-
-<ul class="days">  
-  <li>1</li>
-  <li>2</li>
-  <li>3</li>
-  <li>4</li>
-  <li>5</li>
-  <li>6</li>
-  <li>7</li>
-  <li>8</li>
-  <li>9</li>
-  <li><span class="active">10</span></li>
-  <li>11</li>
-  <li>12</li>
-  <li>13</li>
-  <li>14</li>
-  <li>15</li>
-  <li>16</li>
-  <li>17</li>
-  <li>18</li>
-  <li>19</li>
-  <li>20</li>
-  <li>21</li>
-  <li>22</li>
-  <li>23</li>
-  <li>24</li>
-  <li>25</li>
-  <li>26</li>
-  <li>27</li>
-  <li>28</li>
-  <li>29</li>
-  <li>30</li>
-  <li>31</li>
-</ul>
 
 
 
