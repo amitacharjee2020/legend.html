@@ -44,7 +44,7 @@ border:4px solid blue;
 
 .accordion {
   background-color:white;
-  color: #444;
+  color: blue;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -56,24 +56,15 @@ border:4px solid blue;
 }
 
 .active, .accordion:hover {
-  background-color: #ccc; 
+  background-color:DodgerBlue; 
 }
 
 .panel {
   padding: 0 18px;
   display: none;
-  background-color: white;
+  background-color:black;
   overflow: hidden;
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -145,9 +136,6 @@ div.scrollmenu a {
 
 
 
-
-
-
 .collapsible {
   
   color: blue;
@@ -162,109 +150,16 @@ div.scrollmenu a {
 }
 
 .active, .collapsible:hover {
-   background-color:white;
+   background-color:DodgerBlue;
 }
 
 .content {
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  color:blue;
+  color:white;
+  background-color:black;
  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-* {box-sizing: border-box;}
-ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
-
-.month {
-  padding: 70px 25px;
-  width: 100%;
-  background: #1abc9c;
-  text-align: center;
-}
-
-.month ul {
-  margin: 0;
-  padding: 0;
-}
-
-.month ul li {
-  color: white;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.month .prev {
-  float: left;
-  padding-top: 10px;
-}
-
-.month .next {
-  float: right;
-  padding-top: 10px;
-}
-
-.weekdays {
-  margin: 0;
-  padding: 10px 0;
-  background-color: #ddd;
-}
-
-.weekdays li {
-  display: inline-block;
-  width: 13.6%;
-  color: #666;
-  text-align: center;
-}
-
-.days {
-  padding: 10px 0;
-  background: #eee;
-  margin: 0;
-}
-
-.days li {
-  list-style-type: none;
-  display: inline-block;
-  width: 13.6%;
-  text-align: center;
-  margin-bottom: 5px;
-  font-size:12px;
-  color: #777;
-}
-
-.days li .active {
-  padding: 5px;
-  background: #1abc9c;
-  color: white !important
-}
-
-/* Add media queries for smaller screens */
-@media screen and (max-width:720px) {
-  .weekdays li, .days li {width: 13.1%;}
-}
-
-@media screen and (max-width: 420px) {
-  .weekdays li, .days li {width: 12.5%;}
-  .days li .active {padding: 2px;}
-}
-
-@media screen and (max-width: 290px) {
-  .weekdays li, .days li {width: 12.2%;}
 }
 
 
@@ -273,6 +168,45 @@ body {font-family: Verdana, sans-serif;}
 
 </style>
 <body>
+
+
+<div class="topnav">
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="main">
+  <button><h2 style=" font-family:cursive;color: blue; font-size:18px">Legend E-Magazine</h2></button><br>
+  <span style="font-size:18px; font-family:cursive;color: blue; cursor:pointer" onclick="openNav()">&#9776; Get Started</span>
+  
+</div>
+
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   	
+
+
+
+
+
+
+
 
 
 <div class="header" >
@@ -300,34 +234,8 @@ body {font-family: Verdana, sans-serif;}
 
 
 
-<button onclick="openFullscreen();">Open Video in Fullscreen Mode</button>
 
-
-<video width="100%" controls id="myvideo">
-  <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Famitacharjeesoftwaredeveloper%2Fposts%2F3491899104252600&show_text=true&width=500" width="500" height="458" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" type="video/mp4"    ></iframe>
-  <iframe  src="https://www.youtube.com/watch?v=pK-cY4XbSLM"  type="video/mp4"    ></iframe>
-  
-</video>
-
-
-<script>
-var elem = document.getElementById("myvideo");
-function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) { /* Safari */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE11 */
-    elem.msRequestFullscreen();
-  }
-}
-</script>
-
-
-
-
-
-<div class="w3-twothird">
+<div class="w3-container">
 
 <div class="scrollmenu">
   <a href="https://www.legendbdgroup.com">Home</a>
@@ -344,80 +252,6 @@ function openFullscreen() {
 
 
 
-<div class="month">      
-  <ul>
-    <li class="prev">&#10094;</li>
-    <li class="next">&#10095;</li>
-    <li>
-      August<br>
-      <span style="font-size:18px">2021</span>
-    </li>
-  </ul>
-</div>
-
-<ul class="weekdays">
-  <li>Mo</li>
-  <li>Tu</li>
-  <li>We</li>
-  <li>Th</li>
-  <li>Fr</li>
-  <li>Sa</li>
-  <li>Su</li>
-</ul>
-
-<ul class="days">  
-  <li>1</li>
-  <li>2</li>
-  <li>3</li>
-  <li>4</li>
-  <li>5</li>
-  <li>6</li>
-  <li>7</li>
-  <li>8</li>
-  <li>9</li>
-  <li><span class="active">10</span></li>
-  <li>11</li>
-  <li>12</li>
-  <li>13</li>
-  <li>14</li>
-  <li>15</li>
-  <li>16</li>
-  <li>17</li>
-  <li>18</li>
-  <li>19</li>
-  <li>20</li>
-  <li>21</li>
-  <li>22</li>
-  <li>23</li>
-  <li>24</li>
-  <li>25</li>
-  <li>26</li>
-  <li>27</li>
-  <li>28</li>
-  <li>29</li>
-  <li>30</li>
-  <li>31</li>
-</ul>
-
-
-
-
-
-<div class="w3-twothird">
-  <h2>Flex</h2>
-  <p>To create a flexbox container and transform direct children into flex items, use the d-flex class:</p>
-  <div class="d-flex p-3 bg-secondary text-white">  
-    <div class="p-2 bg-info"><img src="mumtahenapic/amit.jpg" height="450px"></div>
-	 <div class="p-2 bg-info">He was a mechanical engineer who is best known for originating the concept of computer.
- He was born on 26 December 1791 in London. He entered Trinity College in October 1810. 
- He was transferred to Peterhouse, Cambridge. He was the top mathematician there.
- He received an honours degree without an examination in 1814.He was elected fellow of Royal Society in 1816.
- From 1828 to 1839 Babbage was Lucasian Professor  of Mathematics at Cambridge University.
- Babbage is famous for inventing the first mechanical computer in 1822 that eventually led to today’s coputer. 
- He died at his home in London on 18 October 1871</div>
-    
-    
-  </div>
 
 
 
@@ -425,15 +259,16 @@ function openFullscreen() {
 
 
 
-<div class="container mt-3">
+
+
+
+
+<div class="w3-card-4">
 
 <button class="collapsible">Writing Section with suggestion</button>
 <div class="content">
 
-<button class="accordion"> Paragraog with Suggestion</button>
-<div class="panel">
-<button class="collapsible">Paragraph List</button>
-<div class="content">
+
 <button class="accordion">1.A winter Morning</button>
 <div class="panel">
  <p> Winter is the coldest season in our country.
@@ -478,17 +313,227 @@ They gather straw and make fires at different places to warm themselves in the h
 <div class="panel">
 <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
 </div>
+<button class="accordion">7.Food adulteration</button>
+<div class="panel">
+<p>Food Adulteration refers to the process by which the quality or the nature of a given food is reduced through addition of adulterants or removal of vital substance. Unsafe levels of pesticides are present  in around half of the vegetables and more than a quarter of fruits sold in the capital’s markets, a recent survey has found. The survey report, read that nearly 40% of 82 samples of milk, milk products, fish, fruits and vegetables contained banned pesticides such as DDT, Aldrin, Chlordane and Heptachlor. The amounts of pesticide in these samples were found to be 3 to 20 times greater than the limits set by the European Union. Around 50% vegetables and 35% fruits were found to be contaminated with unsafe level of pesticides. Using a sensitive High-Performance Liquid Chromatography (HPLC) method developed by the Food Safety Lab, 66 samples were analysed for the presence of formaldehyde. Adulteration was thereby detected in samples of coriander, mango and fresh shrimps. The tests indicated that poultry feed in the country had also been contaminated, as samples of chicken and fish contained traces of antibiotics. High microbial populations were found in several samples of pasteurised milk, indicating poor processing procedures by the manufacturers. Samples of cucumber and street foods also showed high microbial populations, suggesting widespread contamination in the water supply. Adulterated food products are reportedly the cause behind thousands of people suffering from fatal diseases like cancer, kidney failure and heart problems. Better monitoring and supervision were mandatory for stopping food adulteration.</p>
+</div>
+<button class="accordion">8.A street hawker</button>
+<div class="panel">
+<p>A street hawker is a very common man in our society. Usually he moves from place to place to sell his goods. In fact, a street hawker is a very simple man. He is very poor and humble. He is a shabby man. He is a small trader. The capital of his business is very small. He lives from hand to mouth. Every morning he goes out to sell his goods carrying them either on his hand or in a cart or van. Throughout the day, he sells his goods shouting at the top of his voice to draw the attention of his customers. A the end of the day, he returns home with  the marginal profit gained from the sold goods. Again he goes out for the next day and returns home almost in the same way. Truly speaking, he leads his life in the vicious cycle of poverty. In fact, there is no liver lining in his life. He finds it very difficult to maintain his family. He can’t afford to meet the basic needs of life. Basically, he adopts a technique to sell his goods. He applies his skill to motivate or convince his customers especially women & children who are his first priority. It is true that the importance of a hawker goes unnoticed in our society. The fact is that he belongs to the marginalized class and his business is so petty that it is not included in the mainstream economy. Still he is part & parcel of our society. So we should have positive mindset for him</p>
+</div>
+<button class="accordion">9.Traffic jam</button>
+<div class="panel">
+<p>Traffic jam means a long line of vehicles that cannot move or that can move very slowly. It is a common affair in the big cities of our country. We’ve all experienced being stuck in a traffic jam, a stream of cars for miles ahead of us and behind us. Lack of co-ordination among government organizations and haphazard public transport system which includes lack of provision for pedestrians and poor maintenance and management of footways are the root cause of traffic jam. Rapid growth of population and the increasing number of vehicles are also the causes of traffic jam. Vehicles are much more than the roads can accommodate. The indiscriminate playing of rickshaw is another cause of it. Haphazard parking, more private vehicles, violation of traffic rules, faulty road construction, haphazard crossing, VIP movement, over population, rail crossing and fuel station are also the causes of traffic jam in the big cities city. Traffic jam causes untold sufferings to people. Sometimes it raises our tension. Transport and urban experts think the government should take pragmatic steps to ensure sufficient mass transport, restore discipline in the transport sector, reduce the use of private and small vehicles, replace the microbuses and minibuses with single-decker, double-decker and articulated buses and expand the capital city to significantly ease the traffic jam without spending huge money. The railways and waterways can also be used effectively to ease traffic pressure on roads and facilitate the commuters hassle-free transportation services. We have built over a half dozens of flyovers, but it is not a solution to the problem. It will not be possible to reduce traffic jam without increasing public transport and ensuring better traffic management. It is also necessary to implement all mass transit-related projects with high priority to improve traffic situation.</p>
+</div>
+<button class="accordion">10.Load-shedding</button>
+<div class="panel">
+<p>The term ‘load shedding’ means the state of being no electricity due to demand supply gap of power for a certain period in a certain area. The energy infrastructure of Bangladesh is quite small, insufficient and poorly managed. Electricity is the major source of power for most of the economic activities of a country. In generating & distributing power, the failure to adequately manage the loads leads to load-shedding which causes severe disruption in the industrial production and other economic activities. Inefficient distribution system is a major hurdle in delivering power. It is estimated that the total transmission and distribution losses in Bangladesh amount to one-third of the total generation. The process of upgrading the grid technology to digital smart metering system is going on throughout the country to reduce system loss. It will reduce power cuts and provide stability to the power sector. Radio technology can be operated remotely to maintain multiple power flow lines with automated control & digital metering. Load shedding causes multiple hazards in our socio-economic life. During load shedding the whole area plunges into darkness. Houses, shops, mills, factories, hospitals & almost all infrastructures are paralyzed for the time being. Students cannot prepare their lessons. Doctors cannot operate upon emergency patients in hospitals. Mills & factories cannot run their machines. Farmers cannot operate their agricultural tools in corn fields. Everything comes to a stand-still due to load-shedding. So, pragmatic steps should be taken to reduce system loss & keep load shedding at a tolerable level. The old power plants should be replaced. Nuclear plant is the best solution to power crisis to  meet the growing demand of the consumers. Rooppur Nuclear Power Plant is an under construction nuclear power plant in our country. It is expected that power crisis is going to be solved in Bangladesh.</p>
+</div>
+<button class="accordion">11.A school library</button>
+<div class="panel">
+<p>aaaaaaaaaaaaaaaaaaaaaa</p>
+</div>
+<button class="accordion">12.A book fair</button>
+<div class="panel">
+<p>A book fair is a book-oriented fair which is held in our country on the occasions of Martyrs’ Day, Victory Day & Independence Day. In fact, a book fair is considered to be an occasion of great festivity to the book-lovers. Bangla Academy is the largest organizer of a book fair in our country. A month-long book fair is held on the premises of Bangla Academy highlighting the significance of Bangla, Bengali culture & literature especially focusing on 21st February. This is why, through-out the month of February, Ekushe Boi Mela is held each year. The leading publishers of the country set up stalls to sell and display their recent publications as well as the old ones. Various kinds of novels, poetry, science fictions etc are available in a book fair. A festive look prevails all around. The renowned artists, poets & intellectuals gather there & take part in the seminars & cultural programs. This year I have got an opportunity to visit the book fair held on the Bangla Academy premises where the book- lovers thronged to browse the latest editions & collections of various books published by different publishers of the country. I was accompanied by my father who bought me two novels, a comic book, a travel book and some other science fictions. I got excited to have all these books. It is a memorable day in my life. The day brought me very close to the authors and poets of the country. Last but not the least, the book fair brought much pleasure for me
+ 
+</p>
+</div>
+<button class="accordion">13.Road accident</button>
+<div class="panel">
+<p>A road accident is the most vulnerable, unexpected incident in human life. It is a regular phenomenon in the highways and cities of our country. Every year it kills hundreds of lives. In Bangladesh, every day we find the news of road accidents in our daily newspapers and on television screen . It really makes us very shocked. Last month I saw a tragic road accident. It occurred in Mirpur Road near the Kolabagan Bus Stand. When I was standing on the road and waiting for the bus, I saw a little boy trying to cross the busy road. While crossing the road, the ill-fated boy was run over by a speedy truck When he was taken to the hospital, the doctor declared him dead. I cannot forget the tragic accident. A number of factors are responsible for road accidents in our country. First of all, the roads and streets of our country are narrow. These streets are not straight as there are frequent turnings at short distances. Reckless driving often causes road accidents. Besides, drivers are careless about the traffic rules and regulations. They recklessly drive their vehicles. Most of the drivers are not well- trained and in addition , they have not any adequate knowledge of the traffic system. Last but not the least, the pedestrians are also responsible for street accidents. They cross roads here and there. To save the pedestrians, drivers sometimes lose control and consequently accidents occur. Moreover, the condition of all vehicles is not up to the mark. So, plying of these defective vehicles is another factor of street accident. However, road accidents cause irreparable loss and injure. The effect of a road accident is too pathetic to describe. People lose their near and dear ones forever. The injured people due to accidents become a burden to the family. To control road accident, the defective vehicles should not be allowed to ply on the roads. Reckless driving should also be severely dealt with. Streets and roads should be expanded. Not only that, proper planning is needed at the time of constructing roads. Modern and scientific traffic system should be introduced in towns and cities. Last of all, the driving license should be issued after proper training and test. If all these steps can be taken properly, it will help to minimize road accidents. Above all, the people should be made aware of the bad consequences of road accident to control it to a great extent.</p>
+</div>
+<button class="accordion">14.National flag</button>
+<div class="panel">
+<p>aaaaaaaaaaaaaaaaaaaaaa</p>
+</div>
+<button class="accordion">15.Drug addiction</button>
+<div class="panel">
+<p>Drug addiction means a strong desire for a drug which the addict cannot resist. Narcotics like Opium, Heroin, Marijuana, Hashish, LSD and Cocaine are used by the addict. When the person takes them, he gets excited and loses control over himself. Drug addiction has become a worldwide problem, especially in teenagers. Many young people become dependent on different types substances and stimulating medicines that comes hand-in-hand with narcotic effect.
+Drug addiction is basically a brain disease that changes the functioning of brain. There is an uncontrollable desire to consume drugs, as a result of which addicted people engage in compulsive behavior to take drugs. The addicts find it impossible to control the intake of drugs, as a result of which they fail to fulfill day-to-day responsibilities in efficient manner. Drug addiction is also referred as drug dependency, as the addict develops dependency for particular substance.
+The most common signs and symptoms of drug addiction are – obsession with a particular substance, loss of control over the usage of drugs, abandoning the activities which you used to enjoy, etc. Drug addiction may have long term impact on life and one may develop severe symptoms such as – fatigue, trembling, depression, anxiety, headache, insomnia, chills and sweating, paranoia, behavior changes, dilated pupils, poor coordination problems, nausea etc.
+Though there is no scientific evidence on how exactly drugs work in brain, it can be successfully treated to help people stop abusing drugs. There are many treatments that help people counteract the disruptive effects of drug addiction and regain complete control over life. Behavioral therapy is the best way to ensure success in most of the drug addicts. The treatment approaches are tailored to meet the drug abuse pattern of patients. It is not uncommon for an individual to relapse and start drug abuse again. In such case, an alternate treatment is required to regain control and recover completely.
+</p>
+</div>
+<button class="accordion">16.Climate change/ Global warming</button>
+<div class="panel">
+<p>In recent years, there have been many alarming reports that the world‘s climate is undergoing a significant change. All these reports provide strong evidence that world temperatures are increasing day by day. This increase in global warming is caused by increased amounts of carbon dioxide  around the earth. Most climatologists believe that the greenhouse effect is the likely cause of this global warming. It is the gradual warming of the air surrounding the earth as a result of heat being trapped by environmental pollution. This is exemplified by the destruction and burning down of tropical rain forests, by traffic that clogs up city streets, by the rapid growth of industry, the use of chlorofluorocarbons (CFCs) in packaging and manufacturing commercial products, the use of detergents such as washing powder and washing-up liquid and so on. The oceans are also said to be affected both because of human waste and because of pollution caused by industrial waste products, oil seeping from damaged supertankers and from other maritime disasters. However, the main culprits for global warming are carbon dioxide gas, produced by the burning of fossil fuels and forests, and pollutants such as methane and chlorofluorocarbons. Climatologists predict that  midway through the next century, temperatures may have risen by as much as 4°C. This could catastrophically reduce mankind‘s ability to grow food, destroy or severely damage wildlife and wilderness, raise sea levels and thereby flood coastal areas and farmland. The alarming news about Bangladesh is that as a result of the rise of the sea level, the lower southern part of the country may one day go under water.</p>
+</div>
 
-7.	Food adulteration</br>
-8.	A street hawker</br>
-9.	Traffic jam</br>
-10.	Load-shedding
-11.	A school library</br>
-12.	A book fair</br>
-13.	Road accident</br>
-14.	National flag</br>
-15.	Drug addiction</br>
-16.	Climate change/ Global warming</br>
+17.	Tree plantation</br>
+18.	May Day</br>
+19.	Independence Day</br>
+20.	International Mother Language Day</br>
+21.	Pahela Boishakh</br>
+22.	A school magazine</br>
+23.	Life of a farmer</br>
+24.	A rainy day</br>
+25.	Early rising</br>
+26.	Uses & abuses of mobile phone</br>
+27.	A street beggar
+</p>
+</div>
+
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<button class="collapsible">Application</button>
+<div class="content">
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+
+
+<button class="accordion">1.A winter Morning</button>
+<div class="panel">
+ <p> Winter is the coldest season in our country.
+ It is usually foggy. Everything looks hazy Sometimes the fog is so dense that nothing can be seen even at a little distance. Everything looks hazy. Nature looks gloomy.
+ The chirping of the birds is not heard. 
+ The animals cannot come out of their shelters due to dense fog.
+ Dense fog causes disruption to the communication system.
+ Dew drops fall at night. Sometimes cold waves blow.
+ It causes much sufferings to the children, the sick people, the aged people and the poor class.
+<br> People put on different kinds of warm clothes to protect themselves from cold. 
+Little boys & girls wrap their hands & legs in cold spell. 
+The old people and children shiver in cold. 
+They gather straw and make fires at different places to warm themselves in the heat.
+ Most people do not feel like leaving the bed early.
+ Sometimes village people spend the winter morning by gossiping.  In towns, rich people read newspaper in balcony. They drink warm tea while reading newspaper & enjoy sunbath.  The scene of the winter morning vanishes as the day advances.  In winter the days are shorter and the nights are longer. A winter night is more painful than a winter morning. A winter morning brings pains & sufferings to the rootless poor people. In spite of the dark sides of a winter morning we always welcome it because it is rich with varieties of food such as date juice, fresh vegetables and some other things. Villagers make fire with straw to warm themselves. Various kinds of pithas are made in this season. In a winter morning pitha parban is held in towns where the town folk enjoy winter food. A winter morning is not an unmixed blessing. In a winter morning, people go through different experiences according to their economic background. Those who are poor cannot afford warm cloths and so they suffer from the bitter cold. But the rich people enjoy sleep or staying under warm blanket. In cities & towns, different groups of people go picnic in remote areas & enjoy the winter morning in a different way.  So, to the poor the sun-ray becomes more precious than gold. In fact, people of all walks of life enjoy a winter morning despite some natural hazards like cold spell, dense fog etc. Many pitha  festivals are held throughout the country in  winter as the people of our country are fest lovers traditionally. The winter season is always welcome to the people of our country irrespective of class distinction. 
+
+
+ </p>
+</div>
+<button class="accordion">2.Deforestation</button>
+<div class="panel">
+<p>Deforestation means cutting down trees in large numbers.  It is a process where a forest becomes a non-forest.  There is no denying the fact that deforestation has become a global concern in the present world. Forests are a rich resource of our planet earth. Therefore, it is important to protect our environment. Forests have a great floral diversity. There are large trees, creepers & climbers, grasses, shrubs & bushes that grow in forests. Forests are also habitats to many wild species. A large variety of animals, birds, reptiles and insects live in forests. Forests provide sustenance to many living beings including man. There are many  causes of deforestation. Bangladesh is the most densely populated country in the world. Its population is much more in proportion to its area. This huge number of population needs more shelter, agricultural land, fuel, furniture etc. For all these reasons, people cut down trees. Man depends on forests for food & livelihood. As farmers need more land for cultivation, they cut down trees to expand their agricultural land.  People also cut trees for habituation. They cut down trees for timber which is used as fuel, for  construction or to make furniture. Deforestation has very drastic effects on both humans and nature. Decreasing  the number of the trees leads to rising carbon-di-oxide and lack of oxygen in the atmosphere. Deforestation results in severe health hazards like  lung diseases,  bronchitis & other respiratory diseases  in humans and animals. All living beings need water. Loss of forest leads to ecological imbalance. Deforestation is one of the major factors leading to the greenhouse effect and desertification. Moreover, there are some greedy people who cut down trees in our forests to make money. The effects of deforestation are too many to describe. This destruction disturbs our ecological balance. Due to deforestation carbon-dioxide is increasing worldwide. As a result, the world is becoming warmer. The sea level is rising. On the other hand, new areas of the world are turning into deserts as a result of deforestation. The removal of trees causes serious damage to the soil. The temperature will rise and it will cause green house effect. The country will be unsuitable for living.  Ecological balance is also disturbed by deforestation. Many wild animals and birds, as well as beasts, lose their home. Global warming is an alarming consequence of deforestation. If we destroy trees at random, one day the country will turn into a great desert. There will be no rain and  our agricultural will face a great crisis As a result temperature of the atmosphere is increasing and ice of the polar region is melting very fast. For this, we have to face various devastating floods. Drought may occur due to deforestation. Our government should take immediate measures to prevent deforestation.
+</p>
+</div>
+<button class="accordion">3.Environment pollution</button>
+<div class="panel">
+<p>The world is producing millions of tons of domestic rubbish and toxic industrial waste each year, and it is becoming increasingly difficult to find suitable locations to get rid of all the refuse. The disposal of various kinds of waste is seriously polluting the environment. Air is an important element of our environment and our air is polluted by smoke. Man makes fires to cook food, make bricks, melt tar for road construction and to do many other things. Fires create smoke and pollute the air. Railway  engines and powerhouses create smoke by burning coal and oil. Mills and factories also belch a lot of smoke. Buses, trucks and cars use petrol and diesel oil. These too emit smoke. All these kinds of smoke pollute the air. Water, another vital element of the environment, is also polluted in different ways. Man pollutes water by throwing waste into it. Farmers use chemical fertilizers and insecticides in their fields. When rain and floods wash away some of these chemicals, they get mixed with water in rivers, canals and ponds. Mills and factories also throw their poisonous chemicals and waste products into rivers and canals and thus pollute the water. Water vehicles also pollute rivers by dumping oil, food waste and human waste into them. Every year millions of people all over the world die unnecessarily as a result of pollution. These unfortunate and avoidable deaths are brought about  by four specific factors. Firstly, air pollution from factories, burning trash, and vehicle fumes cause pneumonia, bronchitis and other respiratory diseases. Then, water pollution from industrial discharge. the indiscriminate disposal of toxic chemicals, and the dumping of human waste into rivers and canals causes poisoning and water-borne diseases such as cholera and diarrhoea. The next factor is the noise pollution from vehicle horns and microphones that might cause aggression and damage hearing. And finally, odour pollution from dumped or untreated human waste causes serious discomfort to our sense of smell, and attracts disease-bearing creatures such as rats and flies. We should take  determined action to control these problems and clean up the environment to avert these unnecessary diseases.
+ 
+</p>
+</div>
+<button class="accordion">4.A day labourer</button>
+<div class="panel">
+<p>There is no single definition to describe a day labourer. But the word that comes to us about a day labourer is someone who works manually from early morning till  late evening on a daily basis. In short, a day labourer is he who does heavy manual labour in various fields. He belongs to the marginalized class. He belongs to ultra-poor group.  In most cases, he is unskilled or semi-skilled.  He does not enjoy due social status though he deserves it  and his labour is also  indispensible for the economic development of a country. A day labourer is a known face to all of us as he is required in our daily life. Naturally he is to be healthily, strong and stout  due to the nature of his job.  He lives with his family in a slum. He gets up early in the morning and goes out in search of work. He works hard from dawn to dusk for his employer and gets his wages at evening. He does different types of jobs such as carrying bricks, wood, stones, mud and digging ponds, constructing of roads, buildings etc. Sometimes he and his family pass a day without food if he cannot manage work. However, he is in great demand in harvesting season. . When he earns much money, he and his family can eat well. It is a happy day for them. If he does not find any work, he and his family have to go without food. So the life of a day labourer is very miserable. Sorrows and sufferings are his constant companions. He does not know what joy and happiness are. He earns his living by working hard. Most of the time he is ill- paid and ill- treated in every sphere of his life. In fact, the services of a day laborer plays an importance role in our national life. So we should think about his rights and show respect to them.
+
+</p>
+</div>
+<button class="accordion">5.Price-hike</button>
+<div class="panel">
+<p>Price rise is a great problem of the day. It is a common phenomenon not only in our country but also in the world. Today the prices of necessary things such as food items, cloths, education materials, medicine and many other necessary things are going up by leaps and bounds. Price rise is caused by several factors like hoarding, population explosion, low productivity, natural calamities, wars, backwardness of communication, evil motives of dishonest businessmen, smuggling, black marketing etc. If the price rise is caused by the short supply of commodities, it is temporary. But it is very difficult to control the price rise caused by inflation. However, the people of low income suffer greatly and pass their days in constant anxiety. They find it, difficult to make their both ends meet. price hike is a function of multifarious factors such as energy costs, declining dollar value, rising demand for bio-fuel, export restrictions on food grains, carrying cost, climate change, etc. Concerns over oil prices, energy security and climate change have prompted governments to encourage production and use of bio-fuel. The price rise has widened the gap between the export and import value in the food grain importing countries which has affected the terms of trade and foreign exchange reserve. The fiscal impact of this price hike leads to the reduction of taxes on food grain import and a rise in subsidies in the production of the same Price rise has terrible effects on man’s character. It leads people to the path of corruption and moral degradation. The situation is complex and there is no single solution to this problem. The government should perform more efficiently and has to take actions so that the market performs properly. Bangladesh imports a lion’s share of its import of rice from India at low cost. In Bangladesh, the main sources of calorie are rice and wheat. In spite of a rise in wheat and rice price, people still consume rice and wheat. Therefore, the food price rise affects the poor extensively. Food crisis is a national as well as an international problem.  To reduce the extent of the effect of the crisis, some short term and long term measures can be taken. The government should begin selling rice from its stock and import food grains right at this moment to keep the local market stable. The dependency on private food importers should be lessened to avoid the artificial volatility of the local markets. Increasing the adoption of hybrid rice, improving crop management practices and access to high quality seed are essential. Deepening fertilizer dealer network to improve timely access to fertilizer and focusing on high quality seed availability are also needed.. Laws should be enforced strictly to bring the prices of the essential commodities within the purchasing capacity of the common people.</p>
+<div>
+<button class="accordion">6.A rainy day</button>
+<div class="panel">
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+</div>
+<button class="accordion">7.Food adulteration</button>
+<div class="panel">
+<p>Food Adulteration refers to the process by which the quality or the nature of a given food is reduced through addition of adulterants or removal of vital substance. Unsafe levels of pesticides are present  in around half of the vegetables and more than a quarter of fruits sold in the capital’s markets, a recent survey has found. The survey report, read that nearly 40% of 82 samples of milk, milk products, fish, fruits and vegetables contained banned pesticides such as DDT, Aldrin, Chlordane and Heptachlor. The amounts of pesticide in these samples were found to be 3 to 20 times greater than the limits set by the European Union. Around 50% vegetables and 35% fruits were found to be contaminated with unsafe level of pesticides. Using a sensitive High-Performance Liquid Chromatography (HPLC) method developed by the Food Safety Lab, 66 samples were analysed for the presence of formaldehyde. Adulteration was thereby detected in samples of coriander, mango and fresh shrimps. The tests indicated that poultry feed in the country had also been contaminated, as samples of chicken and fish contained traces of antibiotics. High microbial populations were found in several samples of pasteurised milk, indicating poor processing procedures by the manufacturers. Samples of cucumber and street foods also showed high microbial populations, suggesting widespread contamination in the water supply. Adulterated food products are reportedly the cause behind thousands of people suffering from fatal diseases like cancer, kidney failure and heart problems. Better monitoring and supervision were mandatory for stopping food adulteration.</p>
+</div>
+<button class="accordion">8.A street hawker</button>
+<div class="panel">
+<p>A street hawker is a very common man in our society. Usually he moves from place to place to sell his goods. In fact, a street hawker is a very simple man. He is very poor and humble. He is a shabby man. He is a small trader. The capital of his business is very small. He lives from hand to mouth. Every morning he goes out to sell his goods carrying them either on his hand or in a cart or van. Throughout the day, he sells his goods shouting at the top of his voice to draw the attention of his customers. A the end of the day, he returns home with  the marginal profit gained from the sold goods. Again he goes out for the next day and returns home almost in the same way. Truly speaking, he leads his life in the vicious cycle of poverty. In fact, there is no liver lining in his life. He finds it very difficult to maintain his family. He can’t afford to meet the basic needs of life. Basically, he adopts a technique to sell his goods. He applies his skill to motivate or convince his customers especially women & children who are his first priority. It is true that the importance of a hawker goes unnoticed in our society. The fact is that he belongs to the marginalized class and his business is so petty that it is not included in the mainstream economy. Still he is part & parcel of our society. So we should have positive mindset for him</p>
+</div>
+<button class="accordion">9.Traffic jam</button>
+<div class="panel">
+<p>Traffic jam means a long line of vehicles that cannot move or that can move very slowly. It is a common affair in the big cities of our country. We’ve all experienced being stuck in a traffic jam, a stream of cars for miles ahead of us and behind us. Lack of co-ordination among government organizations and haphazard public transport system which includes lack of provision for pedestrians and poor maintenance and management of footways are the root cause of traffic jam. Rapid growth of population and the increasing number of vehicles are also the causes of traffic jam. Vehicles are much more than the roads can accommodate. The indiscriminate playing of rickshaw is another cause of it. Haphazard parking, more private vehicles, violation of traffic rules, faulty road construction, haphazard crossing, VIP movement, over population, rail crossing and fuel station are also the causes of traffic jam in the big cities city. Traffic jam causes untold sufferings to people. Sometimes it raises our tension. Transport and urban experts think the government should take pragmatic steps to ensure sufficient mass transport, restore discipline in the transport sector, reduce the use of private and small vehicles, replace the microbuses and minibuses with single-decker, double-decker and articulated buses and expand the capital city to significantly ease the traffic jam without spending huge money. The railways and waterways can also be used effectively to ease traffic pressure on roads and facilitate the commuters hassle-free transportation services. We have built over a half dozens of flyovers, but it is not a solution to the problem. It will not be possible to reduce traffic jam without increasing public transport and ensuring better traffic management. It is also necessary to implement all mass transit-related projects with high priority to improve traffic situation.</p>
+</div>
+<button class="accordion">10.Load-shedding</button>
+<div class="panel">
+<p>The term ‘load shedding’ means the state of being no electricity due to demand supply gap of power for a certain period in a certain area. The energy infrastructure of Bangladesh is quite small, insufficient and poorly managed. Electricity is the major source of power for most of the economic activities of a country. In generating & distributing power, the failure to adequately manage the loads leads to load-shedding which causes severe disruption in the industrial production and other economic activities. Inefficient distribution system is a major hurdle in delivering power. It is estimated that the total transmission and distribution losses in Bangladesh amount to one-third of the total generation. The process of upgrading the grid technology to digital smart metering system is going on throughout the country to reduce system loss. It will reduce power cuts and provide stability to the power sector. Radio technology can be operated remotely to maintain multiple power flow lines with automated control & digital metering. Load shedding causes multiple hazards in our socio-economic life. During load shedding the whole area plunges into darkness. Houses, shops, mills, factories, hospitals & almost all infrastructures are paralyzed for the time being. Students cannot prepare their lessons. Doctors cannot operate upon emergency patients in hospitals. Mills & factories cannot run their machines. Farmers cannot operate their agricultural tools in corn fields. Everything comes to a stand-still due to load-shedding. So, pragmatic steps should be taken to reduce system loss & keep load shedding at a tolerable level. The old power plants should be replaced. Nuclear plant is the best solution to power crisis to  meet the growing demand of the consumers. Rooppur Nuclear Power Plant is an under construction nuclear power plant in our country. It is expected that power crisis is going to be solved in Bangladesh.</p>
+</div>
+<button class="accordion">11.A school library</button>
+<div class="panel">
+<p>aaaaaaaaaaaaaaaaaaaaaa</p>
+</div>
+<button class="accordion">12.A book fair</button>
+<div class="panel">
+<p>A book fair is a book-oriented fair which is held in our country on the occasions of Martyrs’ Day, Victory Day & Independence Day. In fact, a book fair is considered to be an occasion of great festivity to the book-lovers. Bangla Academy is the largest organizer of a book fair in our country. A month-long book fair is held on the premises of Bangla Academy highlighting the significance of Bangla, Bengali culture & literature especially focusing on 21st February. This is why, through-out the month of February, Ekushe Boi Mela is held each year. The leading publishers of the country set up stalls to sell and display their recent publications as well as the old ones. Various kinds of novels, poetry, science fictions etc are available in a book fair. A festive look prevails all around. The renowned artists, poets & intellectuals gather there & take part in the seminars & cultural programs. This year I have got an opportunity to visit the book fair held on the Bangla Academy premises where the book- lovers thronged to browse the latest editions & collections of various books published by different publishers of the country. I was accompanied by my father who bought me two novels, a comic book, a travel book and some other science fictions. I got excited to have all these books. It is a memorable day in my life. The day brought me very close to the authors and poets of the country. Last but not the least, the book fair brought much pleasure for me
+ 
+</p>
+</div>
+<button class="accordion">13.Road accident</button>
+<div class="panel">
+<p>A road accident is the most vulnerable, unexpected incident in human life. It is a regular phenomenon in the highways and cities of our country. Every year it kills hundreds of lives. In Bangladesh, every day we find the news of road accidents in our daily newspapers and on television screen . It really makes us very shocked. Last month I saw a tragic road accident. It occurred in Mirpur Road near the Kolabagan Bus Stand. When I was standing on the road and waiting for the bus, I saw a little boy trying to cross the busy road. While crossing the road, the ill-fated boy was run over by a speedy truck When he was taken to the hospital, the doctor declared him dead. I cannot forget the tragic accident. A number of factors are responsible for road accidents in our country. First of all, the roads and streets of our country are narrow. These streets are not straight as there are frequent turnings at short distances. Reckless driving often causes road accidents. Besides, drivers are careless about the traffic rules and regulations. They recklessly drive their vehicles. Most of the drivers are not well- trained and in addition , they have not any adequate knowledge of the traffic system. Last but not the least, the pedestrians are also responsible for street accidents. They cross roads here and there. To save the pedestrians, drivers sometimes lose control and consequently accidents occur. Moreover, the condition of all vehicles is not up to the mark. So, plying of these defective vehicles is another factor of street accident. However, road accidents cause irreparable loss and injure. The effect of a road accident is too pathetic to describe. People lose their near and dear ones forever. The injured people due to accidents become a burden to the family. To control road accident, the defective vehicles should not be allowed to ply on the roads. Reckless driving should also be severely dealt with. Streets and roads should be expanded. Not only that, proper planning is needed at the time of constructing roads. Modern and scientific traffic system should be introduced in towns and cities. Last of all, the driving license should be issued after proper training and test. If all these steps can be taken properly, it will help to minimize road accidents. Above all, the people should be made aware of the bad consequences of road accident to control it to a great extent.</p>
+</div>
+<button class="accordion">14.National flag</button>
+<div class="panel">
+<p>aaaaaaaaaaaaaaaaaaaaaa</p>
+</div>
+<button class="accordion">15.Drug addiction</button>
+<div class="panel">
+<p>Drug addiction means a strong desire for a drug which the addict cannot resist. Narcotics like Opium, Heroin, Marijuana, Hashish, LSD and Cocaine are used by the addict. When the person takes them, he gets excited and loses control over himself. Drug addiction has become a worldwide problem, especially in teenagers. Many young people become dependent on different types substances and stimulating medicines that comes hand-in-hand with narcotic effect.
+Drug addiction is basically a brain disease that changes the functioning of brain. There is an uncontrollable desire to consume drugs, as a result of which addicted people engage in compulsive behavior to take drugs. The addicts find it impossible to control the intake of drugs, as a result of which they fail to fulfill day-to-day responsibilities in efficient manner. Drug addiction is also referred as drug dependency, as the addict develops dependency for particular substance.
+The most common signs and symptoms of drug addiction are – obsession with a particular substance, loss of control over the usage of drugs, abandoning the activities which you used to enjoy, etc. Drug addiction may have long term impact on life and one may develop severe symptoms such as – fatigue, trembling, depression, anxiety, headache, insomnia, chills and sweating, paranoia, behavior changes, dilated pupils, poor coordination problems, nausea etc.
+Though there is no scientific evidence on how exactly drugs work in brain, it can be successfully treated to help people stop abusing drugs. There are many treatments that help people counteract the disruptive effects of drug addiction and regain complete control over life. Behavioral therapy is the best way to ensure success in most of the drug addicts. The treatment approaches are tailored to meet the drug abuse pattern of patients. It is not uncommon for an individual to relapse and start drug abuse again. In such case, an alternate treatment is required to regain control and recover completely.
+</p>
+</div>
+<button class="accordion">16.Climate change/ Global warming</button>
+<div class="panel">
+<p>In recent years, there have been many alarming reports that the world‘s climate is undergoing a significant change. All these reports provide strong evidence that world temperatures are increasing day by day. This increase in global warming is caused by increased amounts of carbon dioxide  around the earth. Most climatologists believe that the greenhouse effect is the likely cause of this global warming. It is the gradual warming of the air surrounding the earth as a result of heat being trapped by environmental pollution. This is exemplified by the destruction and burning down of tropical rain forests, by traffic that clogs up city streets, by the rapid growth of industry, the use of chlorofluorocarbons (CFCs) in packaging and manufacturing commercial products, the use of detergents such as washing powder and washing-up liquid and so on. The oceans are also said to be affected both because of human waste and because of pollution caused by industrial waste products, oil seeping from damaged supertankers and from other maritime disasters. However, the main culprits for global warming are carbon dioxide gas, produced by the burning of fossil fuels and forests, and pollutants such as methane and chlorofluorocarbons. Climatologists predict that  midway through the next century, temperatures may have risen by as much as 4°C. This could catastrophically reduce mankind‘s ability to grow food, destroy or severely damage wildlife and wilderness, raise sea levels and thereby flood coastal areas and farmland. The alarming news about Bangladesh is that as a result of the rise of the sea level, the lower southern part of the country may one day go under water.</p>
+</div>
+
 17.	Tree plantation</br>
 18.	May Day</br>
 19.	Independence Day</br>
@@ -514,6 +559,196 @@ They gather straw and make fires at different places to warm themselves in the h
 </div>
 
 
+
+
+
+
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+
+
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+</div>
+
+
+<button class="accordion">1.A winter Morning</button>
+<div class="panel">
+ <p> Winter is the coldest season in our country.
+ It is usually foggy. Everything looks hazy Sometimes the fog is so dense that nothing can be seen even at a little distance. Everything looks hazy. Nature looks gloomy.
+ The chirping of the birds is not heard. 
+ The animals cannot come out of their shelters due to dense fog.
+ Dense fog causes disruption to the communication system.
+ Dew drops fall at night. Sometimes cold waves blow.
+ It causes much sufferings to the children, the sick people, the aged people and the poor class.
+<br> People put on different kinds of warm clothes to protect themselves from cold. 
+Little boys & girls wrap their hands & legs in cold spell. 
+The old people and children shiver in cold. 
+They gather straw and make fires at different places to warm themselves in the heat.
+ Most people do not feel like leaving the bed early.
+ Sometimes village people spend the winter morning by gossiping.  In towns, rich people read newspaper in balcony. They drink warm tea while reading newspaper & enjoy sunbath.  The scene of the winter morning vanishes as the day advances.  In winter the days are shorter and the nights are longer. A winter night is more painful than a winter morning. A winter morning brings pains & sufferings to the rootless poor people. In spite of the dark sides of a winter morning we always welcome it because it is rich with varieties of food such as date juice, fresh vegetables and some other things. Villagers make fire with straw to warm themselves. Various kinds of pithas are made in this season. In a winter morning pitha parban is held in towns where the town folk enjoy winter food. A winter morning is not an unmixed blessing. In a winter morning, people go through different experiences according to their economic background. Those who are poor cannot afford warm cloths and so they suffer from the bitter cold. But the rich people enjoy sleep or staying under warm blanket. In cities & towns, different groups of people go picnic in remote areas & enjoy the winter morning in a different way.  So, to the poor the sun-ray becomes more precious than gold. In fact, people of all walks of life enjoy a winter morning despite some natural hazards like cold spell, dense fog etc. Many pitha  festivals are held throughout the country in  winter as the people of our country are fest lovers traditionally. The winter season is always welcome to the people of our country irrespective of class distinction. 
+
+
+ </p>
+</div>
+<button class="accordion">2.Deforestation</button>
+<div class="panel">
+<p>Deforestation means cutting down trees in large numbers.  It is a process where a forest becomes a non-forest.  There is no denying the fact that deforestation has become a global concern in the present world. Forests are a rich resource of our planet earth. Therefore, it is important to protect our environment. Forests have a great floral diversity. There are large trees, creepers & climbers, grasses, shrubs & bushes that grow in forests. Forests are also habitats to many wild species. A large variety of animals, birds, reptiles and insects live in forests. Forests provide sustenance to many living beings including man. There are many  causes of deforestation. Bangladesh is the most densely populated country in the world. Its population is much more in proportion to its area. This huge number of population needs more shelter, agricultural land, fuel, furniture etc. For all these reasons, people cut down trees. Man depends on forests for food & livelihood. As farmers need more land for cultivation, they cut down trees to expand their agricultural land.  People also cut trees for habituation. They cut down trees for timber which is used as fuel, for  construction or to make furniture. Deforestation has very drastic effects on both humans and nature. Decreasing  the number of the trees leads to rising carbon-di-oxide and lack of oxygen in the atmosphere. Deforestation results in severe health hazards like  lung diseases,  bronchitis & other respiratory diseases  in humans and animals. All living beings need water. Loss of forest leads to ecological imbalance. Deforestation is one of the major factors leading to the greenhouse effect and desertification. Moreover, there are some greedy people who cut down trees in our forests to make money. The effects of deforestation are too many to describe. This destruction disturbs our ecological balance. Due to deforestation carbon-dioxide is increasing worldwide. As a result, the world is becoming warmer. The sea level is rising. On the other hand, new areas of the world are turning into deserts as a result of deforestation. The removal of trees causes serious damage to the soil. The temperature will rise and it will cause green house effect. The country will be unsuitable for living.  Ecological balance is also disturbed by deforestation. Many wild animals and birds, as well as beasts, lose their home. Global warming is an alarming consequence of deforestation. If we destroy trees at random, one day the country will turn into a great desert. There will be no rain and  our agricultural will face a great crisis As a result temperature of the atmosphere is increasing and ice of the polar region is melting very fast. For this, we have to face various devastating floods. Drought may occur due to deforestation. Our government should take immediate measures to prevent deforestation.
+</p>
+</div>
+<button class="accordion">3.Environment pollution</button>
+<div class="panel">
+<p>The world is producing millions of tons of domestic rubbish and toxic industrial waste each year, and it is becoming increasingly difficult to find suitable locations to get rid of all the refuse. The disposal of various kinds of waste is seriously polluting the environment. Air is an important element of our environment and our air is polluted by smoke. Man makes fires to cook food, make bricks, melt tar for road construction and to do many other things. Fires create smoke and pollute the air. Railway  engines and powerhouses create smoke by burning coal and oil. Mills and factories also belch a lot of smoke. Buses, trucks and cars use petrol and diesel oil. These too emit smoke. All these kinds of smoke pollute the air. Water, another vital element of the environment, is also polluted in different ways. Man pollutes water by throwing waste into it. Farmers use chemical fertilizers and insecticides in their fields. When rain and floods wash away some of these chemicals, they get mixed with water in rivers, canals and ponds. Mills and factories also throw their poisonous chemicals and waste products into rivers and canals and thus pollute the water. Water vehicles also pollute rivers by dumping oil, food waste and human waste into them. Every year millions of people all over the world die unnecessarily as a result of pollution. These unfortunate and avoidable deaths are brought about  by four specific factors. Firstly, air pollution from factories, burning trash, and vehicle fumes cause pneumonia, bronchitis and other respiratory diseases. Then, water pollution from industrial discharge. the indiscriminate disposal of toxic chemicals, and the dumping of human waste into rivers and canals causes poisoning and water-borne diseases such as cholera and diarrhoea. The next factor is the noise pollution from vehicle horns and microphones that might cause aggression and damage hearing. And finally, odour pollution from dumped or untreated human waste causes serious discomfort to our sense of smell, and attracts disease-bearing creatures such as rats and flies. We should take  determined action to control these problems and clean up the environment to avert these unnecessary diseases.
+ 
+</p>
+</div>
+<button class="accordion">4.A day labourer</button>
+<div class="panel">
+<p>There is no single definition to describe a day labourer. But the word that comes to us about a day labourer is someone who works manually from early morning till  late evening on a daily basis. In short, a day labourer is he who does heavy manual labour in various fields. He belongs to the marginalized class. He belongs to ultra-poor group.  In most cases, he is unskilled or semi-skilled.  He does not enjoy due social status though he deserves it  and his labour is also  indispensible for the economic development of a country. A day labourer is a known face to all of us as he is required in our daily life. Naturally he is to be healthily, strong and stout  due to the nature of his job.  He lives with his family in a slum. He gets up early in the morning and goes out in search of work. He works hard from dawn to dusk for his employer and gets his wages at evening. He does different types of jobs such as carrying bricks, wood, stones, mud and digging ponds, constructing of roads, buildings etc. Sometimes he and his family pass a day without food if he cannot manage work. However, he is in great demand in harvesting season. . When he earns much money, he and his family can eat well. It is a happy day for them. If he does not find any work, he and his family have to go without food. So the life of a day labourer is very miserable. Sorrows and sufferings are his constant companions. He does not know what joy and happiness are. He earns his living by working hard. Most of the time he is ill- paid and ill- treated in every sphere of his life. In fact, the services of a day laborer plays an importance role in our national life. So we should think about his rights and show respect to them.
+
+</p>
+</div>
+<button class="accordion">5.Price-hike</button>
+<div class="panel">
+<p>Price rise is a great problem of the day. It is a common phenomenon not only in our country but also in the world. Today the prices of necessary things such as food items, cloths, education materials, medicine and many other necessary things are going up by leaps and bounds. Price rise is caused by several factors like hoarding, population explosion, low productivity, natural calamities, wars, backwardness of communication, evil motives of dishonest businessmen, smuggling, black marketing etc. If the price rise is caused by the short supply of commodities, it is temporary. But it is very difficult to control the price rise caused by inflation. However, the people of low income suffer greatly and pass their days in constant anxiety. They find it, difficult to make their both ends meet. price hike is a function of multifarious factors such as energy costs, declining dollar value, rising demand for bio-fuel, export restrictions on food grains, carrying cost, climate change, etc. Concerns over oil prices, energy security and climate change have prompted governments to encourage production and use of bio-fuel. The price rise has widened the gap between the export and import value in the food grain importing countries which has affected the terms of trade and foreign exchange reserve. The fiscal impact of this price hike leads to the reduction of taxes on food grain import and a rise in subsidies in the production of the same Price rise has terrible effects on man’s character. It leads people to the path of corruption and moral degradation. The situation is complex and there is no single solution to this problem. The government should perform more efficiently and has to take actions so that the market performs properly. Bangladesh imports a lion’s share of its import of rice from India at low cost. In Bangladesh, the main sources of calorie are rice and wheat. In spite of a rise in wheat and rice price, people still consume rice and wheat. Therefore, the food price rise affects the poor extensively. Food crisis is a national as well as an international problem.  To reduce the extent of the effect of the crisis, some short term and long term measures can be taken. The government should begin selling rice from its stock and import food grains right at this moment to keep the local market stable. The dependency on private food importers should be lessened to avoid the artificial volatility of the local markets. Increasing the adoption of hybrid rice, improving crop management practices and access to high quality seed are essential. Deepening fertilizer dealer network to improve timely access to fertilizer and focusing on high quality seed availability are also needed.. Laws should be enforced strictly to bring the prices of the essential commodities within the purchasing capacity of the common people.</p>
+<div>
+<button class="accordion">6.A rainy day</button>
+<div class="panel">
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+</div>
+<button class="accordion">7.Food adulteration</button>
+<div class="panel">
+<p>Food Adulteration refers to the process by which the quality or the nature of a given food is reduced through addition of adulterants or removal of vital substance. Unsafe levels of pesticides are present  in around half of the vegetables and more than a quarter of fruits sold in the capital’s markets, a recent survey has found. The survey report, read that nearly 40% of 82 samples of milk, milk products, fish, fruits and vegetables contained banned pesticides such as DDT, Aldrin, Chlordane and Heptachlor. The amounts of pesticide in these samples were found to be 3 to 20 times greater than the limits set by the European Union. Around 50% vegetables and 35% fruits were found to be contaminated with unsafe level of pesticides. Using a sensitive High-Performance Liquid Chromatography (HPLC) method developed by the Food Safety Lab, 66 samples were analysed for the presence of formaldehyde. Adulteration was thereby detected in samples of coriander, mango and fresh shrimps. The tests indicated that poultry feed in the country had also been contaminated, as samples of chicken and fish contained traces of antibiotics. High microbial populations were found in several samples of pasteurised milk, indicating poor processing procedures by the manufacturers. Samples of cucumber and street foods also showed high microbial populations, suggesting widespread contamination in the water supply. Adulterated food products are reportedly the cause behind thousands of people suffering from fatal diseases like cancer, kidney failure and heart problems. Better monitoring and supervision were mandatory for stopping food adulteration.</p>
+</div>
+<button class="accordion">8.A street hawker</button>
+<div class="panel">
+<p>A street hawker is a very common man in our society. Usually he moves from place to place to sell his goods. In fact, a street hawker is a very simple man. He is very poor and humble. He is a shabby man. He is a small trader. The capital of his business is very small. He lives from hand to mouth. Every morning he goes out to sell his goods carrying them either on his hand or in a cart or van. Throughout the day, he sells his goods shouting at the top of his voice to draw the attention of his customers. A the end of the day, he returns home with  the marginal profit gained from the sold goods. Again he goes out for the next day and returns home almost in the same way. Truly speaking, he leads his life in the vicious cycle of poverty. In fact, there is no liver lining in his life. He finds it very difficult to maintain his family. He can’t afford to meet the basic needs of life. Basically, he adopts a technique to sell his goods. He applies his skill to motivate or convince his customers especially women & children who are his first priority. It is true that the importance of a hawker goes unnoticed in our society. The fact is that he belongs to the marginalized class and his business is so petty that it is not included in the mainstream economy. Still he is part & parcel of our society. So we should have positive mindset for him</p>
+</div>
+<button class="accordion">9.Traffic jam</button>
+<div class="panel">
+<p>Traffic jam means a long line of vehicles that cannot move or that can move very slowly. It is a common affair in the big cities of our country. We’ve all experienced being stuck in a traffic jam, a stream of cars for miles ahead of us and behind us. Lack of co-ordination among government organizations and haphazard public transport system which includes lack of provision for pedestrians and poor maintenance and management of footways are the root cause of traffic jam. Rapid growth of population and the increasing number of vehicles are also the causes of traffic jam. Vehicles are much more than the roads can accommodate. The indiscriminate playing of rickshaw is another cause of it. Haphazard parking, more private vehicles, violation of traffic rules, faulty road construction, haphazard crossing, VIP movement, over population, rail crossing and fuel station are also the causes of traffic jam in the big cities city. Traffic jam causes untold sufferings to people. Sometimes it raises our tension. Transport and urban experts think the government should take pragmatic steps to ensure sufficient mass transport, restore discipline in the transport sector, reduce the use of private and small vehicles, replace the microbuses and minibuses with single-decker, double-decker and articulated buses and expand the capital city to significantly ease the traffic jam without spending huge money. The railways and waterways can also be used effectively to ease traffic pressure on roads and facilitate the commuters hassle-free transportation services. We have built over a half dozens of flyovers, but it is not a solution to the problem. It will not be possible to reduce traffic jam without increasing public transport and ensuring better traffic management. It is also necessary to implement all mass transit-related projects with high priority to improve traffic situation.</p>
+</div>
+<button class="accordion">10.Load-shedding</button>
+<div class="panel">
+<p>The term ‘load shedding’ means the state of being no electricity due to demand supply gap of power for a certain period in a certain area. The energy infrastructure of Bangladesh is quite small, insufficient and poorly managed. Electricity is the major source of power for most of the economic activities of a country. In generating & distributing power, the failure to adequately manage the loads leads to load-shedding which causes severe disruption in the industrial production and other economic activities. Inefficient distribution system is a major hurdle in delivering power. It is estimated that the total transmission and distribution losses in Bangladesh amount to one-third of the total generation. The process of upgrading the grid technology to digital smart metering system is going on throughout the country to reduce system loss. It will reduce power cuts and provide stability to the power sector. Radio technology can be operated remotely to maintain multiple power flow lines with automated control & digital metering. Load shedding causes multiple hazards in our socio-economic life. During load shedding the whole area plunges into darkness. Houses, shops, mills, factories, hospitals & almost all infrastructures are paralyzed for the time being. Students cannot prepare their lessons. Doctors cannot operate upon emergency patients in hospitals. Mills & factories cannot run their machines. Farmers cannot operate their agricultural tools in corn fields. Everything comes to a stand-still due to load-shedding. So, pragmatic steps should be taken to reduce system loss & keep load shedding at a tolerable level. The old power plants should be replaced. Nuclear plant is the best solution to power crisis to  meet the growing demand of the consumers. Rooppur Nuclear Power Plant is an under construction nuclear power plant in our country. It is expected that power crisis is going to be solved in Bangladesh.</p>
+</div>
+<button class="accordion">11.A school library</button>
+<div class="panel">
+<p>aaaaaaaaaaaaaaaaaaaaaa</p>
+</div>
+<button class="accordion">12.A book fair</button>
+<div class="panel">
+<p>A book fair is a book-oriented fair which is held in our country on the occasions of Martyrs’ Day, Victory Day & Independence Day. In fact, a book fair is considered to be an occasion of great festivity to the book-lovers. Bangla Academy is the largest organizer of a book fair in our country. A month-long book fair is held on the premises of Bangla Academy highlighting the significance of Bangla, Bengali culture & literature especially focusing on 21st February. This is why, through-out the month of February, Ekushe Boi Mela is held each year. The leading publishers of the country set up stalls to sell and display their recent publications as well as the old ones. Various kinds of novels, poetry, science fictions etc are available in a book fair. A festive look prevails all around. The renowned artists, poets & intellectuals gather there & take part in the seminars & cultural programs. This year I have got an opportunity to visit the book fair held on the Bangla Academy premises where the book- lovers thronged to browse the latest editions & collections of various books published by different publishers of the country. I was accompanied by my father who bought me two novels, a comic book, a travel book and some other science fictions. I got excited to have all these books. It is a memorable day in my life. The day brought me very close to the authors and poets of the country. Last but not the least, the book fair brought much pleasure for me
+ 
+</p>
+</div>
+<button class="accordion">13.Road accident</button>
+<div class="panel">
+<p>A road accident is the most vulnerable, unexpected incident in human life. It is a regular phenomenon in the highways and cities of our country. Every year it kills hundreds of lives. In Bangladesh, every day we find the news of road accidents in our daily newspapers and on television screen . It really makes us very shocked. Last month I saw a tragic road accident. It occurred in Mirpur Road near the Kolabagan Bus Stand. When I was standing on the road and waiting for the bus, I saw a little boy trying to cross the busy road. While crossing the road, the ill-fated boy was run over by a speedy truck When he was taken to the hospital, the doctor declared him dead. I cannot forget the tragic accident. A number of factors are responsible for road accidents in our country. First of all, the roads and streets of our country are narrow. These streets are not straight as there are frequent turnings at short distances. Reckless driving often causes road accidents. Besides, drivers are careless about the traffic rules and regulations. They recklessly drive their vehicles. Most of the drivers are not well- trained and in addition , they have not any adequate knowledge of the traffic system. Last but not the least, the pedestrians are also responsible for street accidents. They cross roads here and there. To save the pedestrians, drivers sometimes lose control and consequently accidents occur. Moreover, the condition of all vehicles is not up to the mark. So, plying of these defective vehicles is another factor of street accident. However, road accidents cause irreparable loss and injure. The effect of a road accident is too pathetic to describe. People lose their near and dear ones forever. The injured people due to accidents become a burden to the family. To control road accident, the defective vehicles should not be allowed to ply on the roads. Reckless driving should also be severely dealt with. Streets and roads should be expanded. Not only that, proper planning is needed at the time of constructing roads. Modern and scientific traffic system should be introduced in towns and cities. Last of all, the driving license should be issued after proper training and test. If all these steps can be taken properly, it will help to minimize road accidents. Above all, the people should be made aware of the bad consequences of road accident to control it to a great extent.</p>
+</div>
+<button class="accordion">14.National flag</button>
+<div class="panel">
+<p>aaaaaaaaaaaaaaaaaaaaaa</p>
+</div>
+<button class="accordion">15.Drug addiction</button>
+<div class="panel">
+<p>Drug addiction means a strong desire for a drug which the addict cannot resist. Narcotics like Opium, Heroin, Marijuana, Hashish, LSD and Cocaine are used by the addict. When the person takes them, he gets excited and loses control over himself. Drug addiction has become a worldwide problem, especially in teenagers. Many young people become dependent on different types substances and stimulating medicines that comes hand-in-hand with narcotic effect.
+Drug addiction is basically a brain disease that changes the functioning of brain. There is an uncontrollable desire to consume drugs, as a result of which addicted people engage in compulsive behavior to take drugs. The addicts find it impossible to control the intake of drugs, as a result of which they fail to fulfill day-to-day responsibilities in efficient manner. Drug addiction is also referred as drug dependency, as the addict develops dependency for particular substance.
+The most common signs and symptoms of drug addiction are – obsession with a particular substance, loss of control over the usage of drugs, abandoning the activities which you used to enjoy, etc. Drug addiction may have long term impact on life and one may develop severe symptoms such as – fatigue, trembling, depression, anxiety, headache, insomnia, chills and sweating, paranoia, behavior changes, dilated pupils, poor coordination problems, nausea etc.
+Though there is no scientific evidence on how exactly drugs work in brain, it can be successfully treated to help people stop abusing drugs. There are many treatments that help people counteract the disruptive effects of drug addiction and regain complete control over life. Behavioral therapy is the best way to ensure success in most of the drug addicts. The treatment approaches are tailored to meet the drug abuse pattern of patients. It is not uncommon for an individual to relapse and start drug abuse again. In such case, an alternate treatment is required to regain control and recover completely.
+</p>
+</div>
+<button class="accordion">16.Climate change/ Global warming</button>
+<div class="panel">
+<p>In recent years, there have been many alarming reports that the world‘s climate is undergoing a significant change. All these reports provide strong evidence that world temperatures are increasing day by day. This increase in global warming is caused by increased amounts of carbon dioxide  around the earth. Most climatologists believe that the greenhouse effect is the likely cause of this global warming. It is the gradual warming of the air surrounding the earth as a result of heat being trapped by environmental pollution. This is exemplified by the destruction and burning down of tropical rain forests, by traffic that clogs up city streets, by the rapid growth of industry, the use of chlorofluorocarbons (CFCs) in packaging and manufacturing commercial products, the use of detergents such as washing powder and washing-up liquid and so on. The oceans are also said to be affected both because of human waste and because of pollution caused by industrial waste products, oil seeping from damaged supertankers and from other maritime disasters. However, the main culprits for global warming are carbon dioxide gas, produced by the burning of fossil fuels and forests, and pollutants such as methane and chlorofluorocarbons. Climatologists predict that  midway through the next century, temperatures may have risen by as much as 4°C. This could catastrophically reduce mankind‘s ability to grow food, destroy or severely damage wildlife and wilderness, raise sea levels and thereby flood coastal areas and farmland. The alarming news about Bangladesh is that as a result of the rise of the sea level, the lower southern part of the country may one day go under water.</p>
+</div>
+
+17.	Tree plantation</br>
+18.	May Day</br>
+19.	Independence Day</br>
+20.	International Mother Language Day</br>
+21.	Pahela Boishakh</br>
+22.	A school magazine</br>
+23.	Life of a farmer</br>
+24.	A rainy day</br>
+25.	Early rising</br>
+26.	Uses & abuses of mobile phone</br>
+27.	A street beggar
+</p>
+</div>
+
+<button class="accordion">A winter Morning</button>
+<div class="panel">
+ 
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <button class="collapsible">Application</button>
 <div class="content">
 
@@ -534,8 +769,11 @@ They gather straw and make fires at different places to warm themselves in the h
 </div>
 
 
-<button class="collapsible">Commpleting Story</button>
-<div class="content">
+
+
+
+
+
 
 <button class="accordion">Section 1</button>
 <div class="panel">
@@ -552,6 +790,13 @@ They gather straw and make fires at different places to warm themselves in the h
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
 </div>
+
+
+
+
+
+
+
 
 <button class="collapsible">Letter/Email</button>
 <div class="content">
@@ -570,8 +815,14 @@ They gather straw and make fires at different places to warm themselves in the h
 <div class="panel">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
+
+
+
 </div>
-</div>
+
+
+
+
 
 
 
@@ -605,6 +856,105 @@ for (i = 0; i < acc.length; i++) {
 
 
 
+<div class="mt-2 p-5 bg-primary text-white rounded" class="w3-half" >
+
+<button type="button" class="collapsible" style="font-size:18px">Photo Gallery</button>
+<div class="content" >
+<div class="row">
+  <div class="column">
+    <img src="mumtahenapic/mumta.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="mumtahenapic/mumta1.jpg" style="width: 100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="mumtahenapic/mumta2.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="mumtahenapic/mumta3.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+   <div class="column">
+    <img src="mumtahenapic/mumta4.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+	
+  </div>
+   <div class="column">
+    
+	 <img src="mumtahenapic/mumta5.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="mumtahenapic/pic.jpg" style="width:100%">
+	  <p style="font-size:18px" >aaaaaaaaaaaaaa</p>
+	 
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="mumtahenapic/pic1.jpg" style="width:100%">
+	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="mumtahenapic/pic2.jpg" style="width:100%">
+	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="mumtahenapic/pic3.jpg" style="width:100%">
+	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
+    </div>
+	<div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="mumtahenapic/pic4.jpg" style="width:100%">
+	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="mumtahenapic/mumta.jpg" style="width:100%" onclick="currentSlide(1)" >
+	   
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mumtahenapic/mumta1.jpg" style="width:100%" onclick="currentSlide(2)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mumtahenapic/mumta2.jpg" style="width:100%" onclick="currentSlide(3)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mumtahenapic/mumta3.jpg" style="width:100%" onclick="currentSlide(4)" >
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="mumtahenapic/mumta4.jpg" style="width:100%" onclick="currentSlide(5)" >
+    </div
+	<div class="column">
+      <img class="demo cursor" src="mumtahenapic/mumta5.jpg" style="width:100%" onclick="currentSlide(6)" >
+    </div
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+</div>
 
 
 
@@ -614,7 +964,7 @@ for (i = 0; i < acc.length; i++) {
 
 
 
-<div class="jumbotron">
+
 
 <button type="button" class="collapsible" >*Model Question-01</button>
 <div class="content">
@@ -713,7 +1063,7 @@ He was a mechanical engineer who is best known for originating the concept of co
 
 
 
-<button type="button" class="collapsible" >*Model Question-02 </button>
+<button type="button" class="collapsible" >*Model Question-02</button>
 <div class="content">
 
 <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
@@ -779,103 +1129,6 @@ for (i = 0; i < coll.length; i++) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="jumbotron">
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
-</div>
-
-<div id="main">
-  <button><h2 style=" font-family:cursive;color: blue; font-size:18px">Legend E-Magazine</h2></button><br>
-  <span style="font-size:18px; font-family:cursive;color: blue; cursor:pointer" onclick="openNav()">&#9776; Get Started</span>
-  
-</div>
-
-</div>
-
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-</script>
-   	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-};
-</script>
-
-
-<div w3-include-html="content.html"></div> 
-
-<script>
-includeHTML();
-</script>
 
 
 
