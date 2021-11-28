@@ -40,6 +40,33 @@ border:4px solid blue;
 
 
 
+.accordion {
+  background-color:DodgerBlue;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: white; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color:black;
+  overflow: hidden;
+}
+
+
+
+
 
 div.scrollmenu {
  
@@ -107,11 +134,9 @@ div.scrollmenu a {
 
 
 
-
-
 .collapsible {
   
-  color: black;
+  color: blue;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -130,17 +155,54 @@ div.scrollmenu a {
   padding: 0 18px;
   display: none;
   overflow: hidden;
+  color:white;
+  background-color:50% black;
  
 }
 
 
 
-
-
-
-
 </style>
 <body>
+
+
+<div class="topnav">
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="main">
+  <button><h2 style=" font-family:cursive;color: blue; font-size:18px">Legend E-Magazine</h2></button><br>
+  <span style="font-size:18px; font-family:cursive;color: blue; cursor:pointer" onclick="openNav()">&#9776; Get Started</span>
+  
+</div>
+
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   	
+
+
+
+
+
+
+
 
 
 <div class="header" >
@@ -152,7 +214,7 @@ div.scrollmenu a {
 
   <div class="jumbotron" style="boder:2px solid blue; margin: 2px solid blue; padding: 16px;"  >
  <div class="topbar" style="boder:2px solid blue"> 
-<h2 id="blink" style="text-align:center; color:white"> Legend E-learning </h2>
+<h3 id="blink" style="text-align:center; color:white"> Legend E-learning </h3>
     <script type="text/javascript">
         var blink = document.getElementById('blink');
         setInterval(function() {
@@ -169,84 +231,12 @@ div.scrollmenu a {
 
 
 
-<div class="w3-half" >
-
-<button type="button" class="collapsible" ><h3 class="w3-round" style="font-family:cursive">Check Writing Suggestion</h3></button>
-<div class="content">
-
-<ul><button><h3>Application</h3></button><br>
-<li><a   href="#">1.Application for increasing library facilities in the school.</a></li><br>    
-<li><a>2.Application for setting up a library  in the school.</a></li><br>                                                                              
-<li>.Application for setting up an English Language Club in the school.</li><br>  
-4.	Application for financial help from the poor fund<br> 
-5.	Application  for full free studentship <br>                                                                                          
-6.	Application  for opening a common room<br> 
-7.	Application for relief goods for the flood/cyclone-affected people<br> 
-8.	Application for providing multimedia facilities in the school. <br>   
-9.	Application  for setting up a computer club in our school.<br> 
-10.	Application for leave of absence<br> 
-11.	  Application for leave in advance.<br> 
-12.	Application for setting up a canteen in your school<br> 
-13.	 Application for arranging a study tour<br> 
-14.	 Application for permission to visit a place of historical interest<br> 
-15.	 Application for remission of delay fine<br> 
-16.	 Application for the  construction of a bridge/road.<br> 
-17.	Application to the Headmaster of your school praying for TC. <br>      
-18.	 Application to the Headmaster for Testimonial <br> 
-19.	 Application to the Head teacher praying for a seat in the school hostel.<br> 
-20.	Application for a half -holiday<br> 
-21.	Application for increasing library facilities in the school. <br>                                                                              
-22.	 Application to the Headmaster for changing school hours or for morning school.</ul>
- 
-
-<button><h3>Paragraph</h3></button>
-<ul>1.A winter morning <br>
-2.	Deforestation<br>
-3.	Environment pollution<br>zz
-4.	A day labourer<br>
-5.	Price-hike<br>
-6.	A rainy day<br>
-7.	Food adulteration<br>
-8.	A street hawker<br>
-9.	Traffic jam<br>
-10.	Load-shedding<br>
-11.	A school library<br>
-12.	A book fair<br>
-13.	Road accident<br>
-14.	National flag<br>
-15.	Drug addiction<br>
-16.	Climate change/ Global warming<br>
-17.	Tree plantation<br>
-18.	May Day<br>
-19.	Independence Day
-20.	International Mother Language Day<br>
-21.	Pahela Boishakh<br>
-22.	A school magazine<br>
-23.	Life of a farmer<br>
-24.	A rainy day<br>
-25.	Early rising<br>
-26.	Uses & abuses of mobile phone<br>
-27.	A street beggar</ul>
- 
- 
-  </div>
- 
-</div>
-
-
-
-
-
-
-
-
-
-<div class="w3-twothird">
+<div class="w3-container">
 
 <div class="scrollmenu">
   <a href="https://www.legendbdgroup.com">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
+  <a href="https://docs.google.com/document/d/1YjCTEYHNknnWPbYWCwnlV-IYoyEJ76Xk/edit?usp=sharing&ouid=110355798582485477883&rtpof=true&sd=true">Model Question Open Access</a>
+  <a href="https://drive.google.com/drive/folders/1ocCH2oZ50878vX0yM558iqpxWBRZCi8i">Model Questions</a>
   <a href="#about">About</a>
  
 </div>
@@ -258,14 +248,1013 @@ div.scrollmenu a {
 
 
 
+<div class="w3-half">
 
-
-
-
-<duv class="jumbotron">
-
-<button type="button" class="collapsible" >*Model Question-01</button>
+<button class="collapsible"><h3><ul>Get started Paragraph</ul></h3></button>
 <div class="content">
+<button class="accordion">1.A winter Morning</button>
+<div class="panel">
+ <p> Winter is the coldest season in our country.
+ It is usually foggy. Everything looks hazy Sometimes the fog is so dense that nothing can be seen even at a little distance. Everything looks hazy. Nature looks gloomy.
+ The chirping of the birds is not heard. 
+ The animals cannot come out of their shelters due to dense fog.
+ Dense fog causes disruption to the communication system.
+ Dew drops fall at night. Sometimes cold waves blow.
+ It causes much sufferings to the children, the sick people, the aged people and the poor class.
+<br> People put on different kinds of warm clothes to protect themselves from cold. 
+Little boys & girls wrap their hands & legs in cold spell. 
+The old people and children shiver in cold. 
+They gather straw and make fires at different places to warm themselves in the heat.
+ Most people do not feel like leaving the bed early.
+ Sometimes village people spend the winter morning by gossiping.  In towns, rich people read newspaper in balcony. They drink warm tea while reading newspaper & enjoy sunbath.  The scene of the winter morning vanishes as the day advances.  In winter the days are shorter and the nights are longer. A winter night is more painful than a winter morning. A winter morning brings pains & sufferings to the rootless poor people. In spite of the dark sides of a winter morning we always welcome it because it is rich with varieties of food such as date juice, fresh vegetables and some other things. Villagers make fire with straw to warm themselves. Various kinds of pithas are made in this season. In a winter morning pitha parban is held in towns where the town folk enjoy winter food. A winter morning is not an unmixed blessing. In a winter morning, people go through different experiences according to their economic background. Those who are poor cannot afford warm cloths and so they suffer from the bitter cold. But the rich people enjoy sleep or staying under warm blanket. In cities & towns, different groups of people go picnic in remote areas & enjoy the winter morning in a different way.  So, to the poor the sun-ray becomes more precious than gold. In fact, people of all walks of life enjoy a winter morning despite some natural hazards like cold spell, dense fog etc. Many pitha  festivals are held throughout the country in  winter as the people of our country are fest lovers traditionally. The winter season is always welcome to the people of our country irrespective of class distinction. 
+
+
+ </p>
+</div>
+<button class="accordion">2.Deforestation</button>
+<div class="panel">
+<p>Deforestation means cutting down trees in large numbers.  It is a process where a forest becomes a non-forest.  There is no denying the fact that deforestation has become a global concern in the present world. Forests are a rich resource of our planet earth. Therefore, it is important to protect our environment. Forests have a great floral diversity. There are large trees, creepers & climbers, grasses, shrubs & bushes that grow in forests. Forests are also habitats to many wild species. A large variety of animals, birds, reptiles and insects live in forests. Forests provide sustenance to many living beings including man. There are many  causes of deforestation. Bangladesh is the most densely populated country in the world. Its population is much more in proportion to its area. This huge number of population needs more shelter, agricultural land, fuel, furniture etc. For all these reasons, people cut down trees. Man depends on forests for food & livelihood. As farmers need more land for cultivation, they cut down trees to expand their agricultural land.  People also cut trees for habituation. They cut down trees for timber which is used as fuel, for  construction or to make furniture. Deforestation has very drastic effects on both humans and nature. Decreasing  the number of the trees leads to rising carbon-di-oxide and lack of oxygen in the atmosphere. Deforestation results in severe health hazards like  lung diseases,  bronchitis & other respiratory diseases  in humans and animals. All living beings need water. Loss of forest leads to ecological imbalance. Deforestation is one of the major factors leading to the greenhouse effect and desertification. Moreover, there are some greedy people who cut down trees in our forests to make money. The effects of deforestation are too many to describe. This destruction disturbs our ecological balance. Due to deforestation carbon-dioxide is increasing worldwide. As a result, the world is becoming warmer. The sea level is rising. On the other hand, new areas of the world are turning into deserts as a result of deforestation. The removal of trees causes serious damage to the soil. The temperature will rise and it will cause green house effect. The country will be unsuitable for living.  Ecological balance is also disturbed by deforestation. Many wild animals and birds, as well as beasts, lose their home. Global warming is an alarming consequence of deforestation. If we destroy trees at random, one day the country will turn into a great desert. There will be no rain and  our agricultural will face a great crisis As a result temperature of the atmosphere is increasing and ice of the polar region is melting very fast. For this, we have to face various devastating floods. Drought may occur due to deforestation. Our government should take immediate measures to prevent deforestation.
+</p>
+</div>
+<button class="accordion">3.Environment pollution</button>
+<div class="panel">
+<p>The world is producing millions of tons of domestic rubbish and toxic industrial waste each year, and it is becoming increasingly difficult to find suitable locations to get rid of all the refuse. The disposal of various kinds of waste is seriously polluting the environment. Air is an important element of our environment and our air is polluted by smoke. Man makes fires to cook food, make bricks, melt tar for road construction and to do many other things. Fires create smoke and pollute the air. Railway  engines and powerhouses create smoke by burning coal and oil. Mills and factories also belch a lot of smoke. Buses, trucks and cars use petrol and diesel oil. These too emit smoke. All these kinds of smoke pollute the air. Water, another vital element of the environment, is also polluted in different ways. Man pollutes water by throwing waste into it. Farmers use chemical fertilizers and insecticides in their fields. When rain and floods wash away some of these chemicals, they get mixed with water in rivers, canals and ponds. Mills and factories also throw their poisonous chemicals and waste products into rivers and canals and thus pollute the water. Water vehicles also pollute rivers by dumping oil, food waste and human waste into them. Every year millions of people all over the world die unnecessarily as a result of pollution. These unfortunate and avoidable deaths are brought about  by four specific factors. Firstly, air pollution from factories, burning trash, and vehicle fumes cause pneumonia, bronchitis and other respiratory diseases. Then, water pollution from industrial discharge. the indiscriminate disposal of toxic chemicals, and the dumping of human waste into rivers and canals causes poisoning and water-borne diseases such as cholera and diarrhoea. The next factor is the noise pollution from vehicle horns and microphones that might cause aggression and damage hearing. And finally, odour pollution from dumped or untreated human waste causes serious discomfort to our sense of smell, and attracts disease-bearing creatures such as rats and flies. We should take  determined action to control these problems and clean up the environment to avert these unnecessary diseases.
+ 
+</p>
+</div>
+<button class="accordion">4.A day labourer</button>
+<div class="panel">
+<p>There is no single definition to describe a day labourer. But the word that comes to us about a day labourer is someone who works manually from early morning till  late evening on a daily basis. In short, a day labourer is he who does heavy manual labour in various fields. He belongs to the marginalized class. He belongs to ultra-poor group.  In most cases, he is unskilled or semi-skilled.  He does not enjoy due social status though he deserves it  and his labour is also  indispensible for the economic development of a country. A day labourer is a known face to all of us as he is required in our daily life. Naturally he is to be healthily, strong and stout  due to the nature of his job.  He lives with his family in a slum. He gets up early in the morning and goes out in search of work. He works hard from dawn to dusk for his employer and gets his wages at evening. He does different types of jobs such as carrying bricks, wood, stones, mud and digging ponds, constructing of roads, buildings etc. Sometimes he and his family pass a day without food if he cannot manage work. However, he is in great demand in harvesting season. . When he earns much money, he and his family can eat well. It is a happy day for them. If he does not find any work, he and his family have to go without food. So the life of a day labourer is very miserable. Sorrows and sufferings are his constant companions. He does not know what joy and happiness are. He earns his living by working hard. Most of the time he is ill- paid and ill- treated in every sphere of his life. In fact, the services of a day laborer plays an importance role in our national life. So we should think about his rights and show respect to them.
+
+</p>
+</div>
+<button class="accordion">5.Price-hike</button>
+<div class="panel">
+<p>Price rise is a great problem of the day. It is a common phenomenon not only in our country but also in the world. Today the prices of necessary things such as food items, cloths, education materials, medicine and many other necessary things are going up by leaps and bounds. Price rise is caused by several factors like hoarding, population explosion, low productivity, natural calamities, wars, backwardness of communication, evil motives of dishonest businessmen, smuggling, black marketing etc. If the price rise is caused by the short supply of commodities, it is temporary. But it is very difficult to control the price rise caused by inflation. However, the people of low income suffer greatly and pass their days in constant anxiety. They find it, difficult to make their both ends meet. price hike is a function of multifarious factors such as energy costs, declining dollar value, rising demand for bio-fuel, export restrictions on food grains, carrying cost, climate change, etc. Concerns over oil prices, energy security and climate change have prompted governments to encourage production and use of bio-fuel. The price rise has widened the gap between the export and import value in the food grain importing countries which has affected the terms of trade and foreign exchange reserve. The fiscal impact of this price hike leads to the reduction of taxes on food grain import and a rise in subsidies in the production of the same Price rise has terrible effects on man’s character. It leads people to the path of corruption and moral degradation. The situation is complex and there is no single solution to this problem. The government should perform more efficiently and has to take actions so that the market performs properly. Bangladesh imports a lion’s share of its import of rice from India at low cost. In Bangladesh, the main sources of calorie are rice and wheat. In spite of a rise in wheat and rice price, people still consume rice and wheat. Therefore, the food price rise affects the poor extensively. Food crisis is a national as well as an international problem.  To reduce the extent of the effect of the crisis, some short term and long term measures can be taken. The government should begin selling rice from its stock and import food grains right at this moment to keep the local market stable. The dependency on private food importers should be lessened to avoid the artificial volatility of the local markets. Increasing the adoption of hybrid rice, improving crop management practices and access to high quality seed are essential. Deepening fertilizer dealer network to improve timely access to fertilizer and focusing on high quality seed availability are also needed.. Laws should be enforced strictly to bring the prices of the essential commodities within the purchasing capacity of the common people.</p>
+<div>
+<button class="accordion">6.A rainy day</button>
+<div class="panel">
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+</div>
+<button class="accordion">7.Food adulteration</button>
+<div class="panel">
+<p>Food Adulteration refers to the process by which the quality or the nature of a given food is reduced through addition of adulterants or removal of vital substance. Unsafe levels of pesticides are present  in around half of the vegetables and more than a quarter of fruits sold in the capital’s markets, a recent survey has found. The survey report, read that nearly 40% of 82 samples of milk, milk products, fish, fruits and vegetables contained banned pesticides such as DDT, Aldrin, Chlordane and Heptachlor. The amounts of pesticide in these samples were found to be 3 to 20 times greater than the limits set by the European Union. Around 50% vegetables and 35% fruits were found to be contaminated with unsafe level of pesticides. Using a sensitive High-Performance Liquid Chromatography (HPLC) method developed by the Food Safety Lab, 66 samples were analysed for the presence of formaldehyde. Adulteration was thereby detected in samples of coriander, mango and fresh shrimps. The tests indicated that poultry feed in the country had also been contaminated, as samples of chicken and fish contained traces of antibiotics. High microbial populations were found in several samples of pasteurised milk, indicating poor processing procedures by the manufacturers. Samples of cucumber and street foods also showed high microbial populations, suggesting widespread contamination in the water supply. Adulterated food products are reportedly the cause behind thousands of people suffering from fatal diseases like cancer, kidney failure and heart problems. Better monitoring and supervision were mandatory for stopping food adulteration.</p>
+</div>
+<button class="accordion">8.A street hawker</button>
+<div class="panel">
+<p>A street hawker is a very common man in our society. Usually he moves from place to place to sell his goods. In fact, a street hawker is a very simple man. He is very poor and humble. He is a shabby man. He is a small trader. The capital of his business is very small. He lives from hand to mouth. Every morning he goes out to sell his goods carrying them either on his hand or in a cart or van. Throughout the day, he sells his goods shouting at the top of his voice to draw the attention of his customers. A the end of the day, he returns home with  the marginal profit gained from the sold goods. Again he goes out for the next day and returns home almost in the same way. Truly speaking, he leads his life in the vicious cycle of poverty. In fact, there is no liver lining in his life. He finds it very difficult to maintain his family. He can’t afford to meet the basic needs of life. Basically, he adopts a technique to sell his goods. He applies his skill to motivate or convince his customers especially women & children who are his first priority. It is true that the importance of a hawker goes unnoticed in our society. The fact is that he belongs to the marginalized class and his business is so petty that it is not included in the mainstream economy. Still he is part & parcel of our society. So we should have positive mindset for him</p>
+</div>
+<button class="accordion">9.Traffic jam</button>
+<div class="panel">
+<p>Traffic jam means a long line of vehicles that cannot move or that can move very slowly. It is a common affair in the big cities of our country. We’ve all experienced being stuck in a traffic jam, a stream of cars for miles ahead of us and behind us. Lack of co-ordination among government organizations and haphazard public transport system which includes lack of provision for pedestrians and poor maintenance and management of footways are the root cause of traffic jam. Rapid growth of population and the increasing number of vehicles are also the causes of traffic jam. Vehicles are much more than the roads can accommodate. The indiscriminate playing of rickshaw is another cause of it. Haphazard parking, more private vehicles, violation of traffic rules, faulty road construction, haphazard crossing, VIP movement, over population, rail crossing and fuel station are also the causes of traffic jam in the big cities city. Traffic jam causes untold sufferings to people. Sometimes it raises our tension. Transport and urban experts think the government should take pragmatic steps to ensure sufficient mass transport, restore discipline in the transport sector, reduce the use of private and small vehicles, replace the microbuses and minibuses with single-decker, double-decker and articulated buses and expand the capital city to significantly ease the traffic jam without spending huge money. The railways and waterways can also be used effectively to ease traffic pressure on roads and facilitate the commuters hassle-free transportation services. We have built over a half dozens of flyovers, but it is not a solution to the problem. It will not be possible to reduce traffic jam without increasing public transport and ensuring better traffic management. It is also necessary to implement all mass transit-related projects with high priority to improve traffic situation.</p>
+</div>
+<button class="accordion">10.Load-shedding</button>
+<div class="panel">
+<p>The term ‘load shedding’ means the state of being no electricity due to demand supply gap of power for a certain period in a certain area. The energy infrastructure of Bangladesh is quite small, insufficient and poorly managed. Electricity is the major source of power for most of the economic activities of a country. In generating & distributing power, the failure to adequately manage the loads leads to load-shedding which causes severe disruption in the industrial production and other economic activities. Inefficient distribution system is a major hurdle in delivering power. It is estimated that the total transmission and distribution losses in Bangladesh amount to one-third of the total generation. The process of upgrading the grid technology to digital smart metering system is going on throughout the country to reduce system loss. It will reduce power cuts and provide stability to the power sector. Radio technology can be operated remotely to maintain multiple power flow lines with automated control & digital metering. Load shedding causes multiple hazards in our socio-economic life. During load shedding the whole area plunges into darkness. Houses, shops, mills, factories, hospitals & almost all infrastructures are paralyzed for the time being. Students cannot prepare their lessons. Doctors cannot operate upon emergency patients in hospitals. Mills & factories cannot run their machines. Farmers cannot operate their agricultural tools in corn fields. Everything comes to a stand-still due to load-shedding. So, pragmatic steps should be taken to reduce system loss & keep load shedding at a tolerable level. The old power plants should be replaced. Nuclear plant is the best solution to power crisis to  meet the growing demand of the consumers. Rooppur Nuclear Power Plant is an under construction nuclear power plant in our country. It is expected that power crisis is going to be solved in Bangladesh.</p>
+</div>
+<button class="accordion">11.A school library</button>
+<div class="panel">
+<p>aaaaaaaaaaaaaaaaaaaaaa</p>
+</div>
+<button class="accordion">12.A book fair</button>
+<div class="panel">
+<p>A book fair is a book-oriented fair which is held in our country on the occasions of Martyrs’ Day, Victory Day & Independence Day. In fact, a book fair is considered to be an occasion of great festivity to the book-lovers. Bangla Academy is the largest organizer of a book fair in our country. A month-long book fair is held on the premises of Bangla Academy highlighting the significance of Bangla, Bengali culture & literature especially focusing on 21st February. This is why, through-out the month of February, Ekushe Boi Mela is held each year. The leading publishers of the country set up stalls to sell and display their recent publications as well as the old ones. Various kinds of novels, poetry, science fictions etc are available in a book fair. A festive look prevails all around. The renowned artists, poets & intellectuals gather there & take part in the seminars & cultural programs. This year I have got an opportunity to visit the book fair held on the Bangla Academy premises where the book- lovers thronged to browse the latest editions & collections of various books published by different publishers of the country. I was accompanied by my father who bought me two novels, a comic book, a travel book and some other science fictions. I got excited to have all these books. It is a memorable day in my life. The day brought me very close to the authors and poets of the country. Last but not the least, the book fair brought much pleasure for me
+ 
+</p>
+</div>
+<button class="accordion">13.Road accident</button>
+<div class="panel">
+<p>A road accident is the most vulnerable, unexpected incident in human life. It is a regular phenomenon in the highways and cities of our country. Every year it kills hundreds of lives. In Bangladesh, every day we find the news of road accidents in our daily newspapers and on television screen . It really makes us very shocked. Last month I saw a tragic road accident. It occurred in Mirpur Road near the Kolabagan Bus Stand. When I was standing on the road and waiting for the bus, I saw a little boy trying to cross the busy road. While crossing the road, the ill-fated boy was run over by a speedy truck When he was taken to the hospital, the doctor declared him dead. I cannot forget the tragic accident. A number of factors are responsible for road accidents in our country. First of all, the roads and streets of our country are narrow. These streets are not straight as there are frequent turnings at short distances. Reckless driving often causes road accidents. Besides, drivers are careless about the traffic rules and regulations. They recklessly drive their vehicles. Most of the drivers are not well- trained and in addition , they have not any adequate knowledge of the traffic system. Last but not the least, the pedestrians are also responsible for street accidents. They cross roads here and there. To save the pedestrians, drivers sometimes lose control and consequently accidents occur. Moreover, the condition of all vehicles is not up to the mark. So, plying of these defective vehicles is another factor of street accident. However, road accidents cause irreparable loss and injure. The effect of a road accident is too pathetic to describe. People lose their near and dear ones forever. The injured people due to accidents become a burden to the family. To control road accident, the defective vehicles should not be allowed to ply on the roads. Reckless driving should also be severely dealt with. Streets and roads should be expanded. Not only that, proper planning is needed at the time of constructing roads. Modern and scientific traffic system should be introduced in towns and cities. Last of all, the driving license should be issued after proper training and test. If all these steps can be taken properly, it will help to minimize road accidents. Above all, the people should be made aware of the bad consequences of road accident to control it to a great extent.</p>
+</div>
+<button class="accordion">14.National flag</button>
+<div class="panel">
+<p>aaaaaaaaaaaaaaaaaaaaaa</p>
+</div>
+<button class="accordion">15.Drug addiction</button>
+<div class="panel">
+<p>Drug addiction means a strong desire for a drug which the addict cannot resist. Narcotics like Opium, Heroin, Marijuana, Hashish, LSD and Cocaine are used by the addict. When the person takes them, he gets excited and loses control over himself. Drug addiction has become a worldwide problem, especially in teenagers. Many young people become dependent on different types substances and stimulating medicines that comes hand-in-hand with narcotic effect.
+Drug addiction is basically a brain disease that changes the functioning of brain. There is an uncontrollable desire to consume drugs, as a result of which addicted people engage in compulsive behavior to take drugs. The addicts find it impossible to control the intake of drugs, as a result of which they fail to fulfill day-to-day responsibilities in efficient manner. Drug addiction is also referred as drug dependency, as the addict develops dependency for particular substance.
+The most common signs and symptoms of drug addiction are – obsession with a particular substance, loss of control over the usage of drugs, abandoning the activities which you used to enjoy, etc. Drug addiction may have long term impact on life and one may develop severe symptoms such as – fatigue, trembling, depression, anxiety, headache, insomnia, chills and sweating, paranoia, behavior changes, dilated pupils, poor coordination problems, nausea etc.
+Though there is no scientific evidence on how exactly drugs work in brain, it can be successfully treated to help people stop abusing drugs. There are many treatments that help people counteract the disruptive effects of drug addiction and regain complete control over life. Behavioral therapy is the best way to ensure success in most of the drug addicts. The treatment approaches are tailored to meet the drug abuse pattern of patients. It is not uncommon for an individual to relapse and start drug abuse again. In such case, an alternate treatment is required to regain control and recover completely.
+</p>
+</div>
+<button class="accordion">16.Climate change/ Global warming</button>
+<div class="panel">
+<p>In recent years, there have been many alarming reports that the world‘s climate is undergoing a significant change. All these reports provide strong evidence that world temperatures are increasing day by day. This increase in global warming is caused by increased amounts of carbon dioxide  around the earth. Most climatologists believe that the greenhouse effect is the likely cause of this global warming. It is the gradual warming of the air surrounding the earth as a result of heat being trapped by environmental pollution. This is exemplified by the destruction and burning down of tropical rain forests, by traffic that clogs up city streets, by the rapid growth of industry, the use of chlorofluorocarbons (CFCs) in packaging and manufacturing commercial products, the use of detergents such as washing powder and washing-up liquid and so on. The oceans are also said to be affected both because of human waste and because of pollution caused by industrial waste products, oil seeping from damaged supertankers and from other maritime disasters. However, the main culprits for global warming are carbon dioxide gas, produced by the burning of fossil fuels and forests, and pollutants such as methane and chlorofluorocarbons. Climatologists predict that  midway through the next century, temperatures may have risen by as much as 4°C. This could catastrophically reduce mankind‘s ability to grow food, destroy or severely damage wildlife and wilderness, raise sea levels and thereby flood coastal areas and farmland. The alarming news about Bangladesh is that as a result of the rise of the sea level, the lower southern part of the country may one day go under water.</p>
+</div>
+<button class="accordion">17.Tree plantation</button>
+<div class="panel">
+<p>Tree-planting is the process of transplanting tree seedlings, generally for forestry & land reclamation. It involves planting seedlings over an area of land . Tree planting is carried out in many different parts of the world. Trees are essential elements for our life. Tree planting can be used as a geo-engineering technique to remove CO2 from the air. Trees are beautiful and useful gifts of nature. They are great friends of man. Trees give us flowers, fruits, timber, bamboo, fuels, etc. They are also a great source of materials for paper, rubber, gums, herbs and medicine plants. Forest brings clouds and cause rainfall. Trees prevent soil erosion. They protect us from severe weather. Trees are a part and parcel of earthly life. All life directly or indirectly owes its existence to them. Trees release oxygen which we need for our life. They also absorb the carbon-dioxide. Many living species live in trees. Trees form the natural habitat of many animals, birds and insects. They help make the land fertile. We get good crops out of fertile land. They are the sources of fruits and flowers. They offer us cool shade during summer. During rainy season, we take shelter under the trees.  Trees and plants are  the sources of many supply life-saving drugs. They prevent land erosion and guard us against pollution. Thus, trees keep up the ecological balance. Seeds, nuts and fruits are food sources for humans and animals. Trees protect the biodiversity of the ecosystem. Thus, trees play an important role in our life. But felling of trees is disturbing the eco-system. We should preserve trees and plants with great care</p>
+</div>
+<button class="accordion">18.May Day</button>
+<div class="panel">
+<p>May 1 is internationally observed as May Day. The day is observed to commemorate the historic struggle of working people. The day is observed in most of the countries of the world. The day has a historical background. It originated from the bloody First of May event and subsequent incidents that took place in the streets of Chicago in 1886. On May 1, a labour organisation called an industrial strike, demanding a maximum eight hours of work every day, standard wages, better work environment etc. The strike was suppressed by brutal means. On May 3, the Chicago police fired on striking labourers of the McComick Harvest Machine Company,, killing at least one striker, seriously wounding five or six others and injuring an undetermined number. The International Socialist Congress held on 14 July 1889 designated May 1 as Labour Day, and since then the day has been observed by labouring classes in many countries. May Day has assumed a special significance after the Socialist Revolution in Russia and subsequent revolutions in some other countries. The rights of labourers were recognised by the International Labour Organisation (ILO). Most socialist countries observe May Day with all seriousness and determination. But observing the day as a public holiday is not confined to socialist countries. A few non-socialist countries also observe May Day as a public holiday. May Day is celebrated to pay tribute to the contributions workers have made to make the world strong and prosper. This day is dedicated to the workers for their economic and social achievements. On this day, workers arrange rallies and processions not to demonstrate their grievances, but to celebrate the victories that they had been able to achieve in the past.</p>
+</div>
+<button class="accordion">19.Independence Day</button>
+<div class="panel">
+<p>After the nine-month War of Liberation with the supreme sacrifices of three million martyrs and the honour of two lakh women, Bangladesh achieved its cherished independence on December 16, 1971. 26 March is our Independence Day. It is the biggest state festival. The day is celebrated every year in the country with great enthusiasm and fervour. It is a national holiday. All offices, educational institutions, shops and factories remain closed on this day. The day begins with 31 gunshots. Early in the morning the President and the Prime Minister on behalf of the nation place floral wreaths at the National Musolium at Savar. Then diplomats, political parties, social and cultural organisations, and freedom fighters pay homage to the martyrs. People from all walks of life also come there with rallies and processions. There are several cultural programmes throughout the day highlighting the heroic struggle and sacrifice in 1971. The country also witness a smartly dressed parade of defence forces, border guards, police, ansars and the VDP (Village Defense Party) at the National Parade Ground near the National Parliament. In Bangabandhu Stadium, school children, scouts and girl guides take part in various displays to entertain thousands of spectators. The educational institutions also organise their individual programmes. Sports meets and tournaments are also organised on the day including the exciting boat race in the river Buriganga. The national flag is being hoisted atop government and private buildings while the government and semi-government buildings and other public places will be illuminated. National dailies bring out special supplements while Bangladesh Betar, Bangladesh Television, private radio stations and television channels air special programmes highlighting the significance of the day.Special prayers are offered at all mosques, temples, churches and other places of worship across the country seeking divine blessings for the eternal peace of the departed souls of Father of the Nation, four national leaders, martyrs of Liberation War and all other patriotic sons of the soil. Improved diets will be served to the inmates of jails, hospitals, old homes and other public institutions to mark the day.Different political parties draw elaborate programmes to observe the day in a befitting manner. In the evening, all major public buildings are illuminated with colourful lights. Bangla Academy, Bangladesh Shilpakala Academy and other socio-cultural organisations hold cultural functions. Similar functions are also arranged in other places in the country.</p>
+</div>
+<button class="accordion">20.International Mother Language Day</button>
+<div class="panel">
+<p>21 February is a memorable day in our national history. We observe the day every year as International Mother Language Day. The day is a national holiday. On this day, we pay tribute to the martyrs who laid down their lives to establish Bangla as a state language in undivided Pakistan in 1952. This is known as the Language Movement. The seed of the Language Movement was Sown on 21 March 1948 when Mohammad Ali Zinnah, the then Governor General of Pakistan, at a public meeting in Dhaka declared that Urdu would be the only official language of Pakistan. The declaration raised a storm of protest in the eastern part of the country. The protest continued non-stop, gathering momentum day by day. It turned into a movement and reached its climax in 1952. The government outlawed all sorts of public meetings and rallies to prevent it. The students of Dhaka University defied the law and they brought out a peaceful protest procession on 21 February 1952. When the procession reached near Dhaka Medical College, the police opened fire on the students, killing Salam, Rafiq, Barkat and Jabbar. This enkindled the sparks of independent movement of Bangladesh. 21 February has been observed as Shaheed Dibosh every year throughout the country in remembrance of the martyrs of language movement of 1952. The occasion begins at the early hours of the day with mourning songs that recall the supreme sacrifices of our language martyrs. People wear black badges and go to the Shaheed Minar barefoot in procession, singing mourning songs. They place wreaths at the Minar. Many of them visit the graves of the martyrs at Azimpur graveyard and pray for them. They also attend various programmes organised in remembrance of the language martyrs. The UNESCO (United Nations Educational, Scientific and Cultural Organisation) on 17 November in 1999 proclaimed February 21 as the International Mother Language Day in recognition of the sacrifices of the martyrs for the rightful place of Bangla. The day is now annually observed worldwide to promote awareness of linguistic and cultural diversity and multilingualism.</p>
+</div>
+<button class="accordion">21.Pahela Boishakh</button>
+<div class="panel">
+<p>‘Pahela Boishakh’ is the first day of Bangla new year. The day is a public holiday. This day has a special significance for us as it forms a part of Bangalee culture and tradition. People from all walks of life, irrespective of their ethnic identity or religious beliefs, celebrate the day with traditional festivities. On this day, the whole of Bangladesh is in a festive mood. The day inspires people to start life with renewed hopes and inspirations. Every year the day is celebrated traditionally. People wake up early in the morning,have a bath and wear their traditional clothes. Women wear white saris with red borders and adorn themselves with colourful churis and flowers, while men dress themselves with pajamas and punjabis. It is a day when people love eating traditional food. This day the most colourful event is held in Dhaka. Early in the morning, people in hundreds and thousands pour in from all directions to attend the cultural function at Ramna Batamul organised by Chhyanata. The cultural programme begins just with sunrise and the renowned artists of the country take part in the program that starts with the famous Tagore-song Esho-he-Boishakh, Esho Esho ........ . Artists also sing traditional folk songs, and display classical dances with the rhythm of musical instruments. People also come to join the colourful processions, the biggest carnival of the country, organised by the Fine Arts students of Dhaka University. The procession usually displays the traditional practices of Bangalee culture. The masks and wreaths worn by the people are so fascinating! Often they symbolise contemporary worries or happiness in the national life. It attracts increasing number of foreign tourists every year. The day is also observed all over the country. Different social and cultural organisations and educational institutions celebrate the day with their own cultural programmes. On this day, newspapers bring out special supplements. There are also special programmes on the radio and television channels. The celebration of Pahela Boishakh marks a day of cultural unity for the whole nation irrespective of caste and creed</p>
+</div>
+<button class="accordion">22.A school magazine</button>
+<div class="panel">
+<p>A school magazine is a periodical publication of a school. It is mostly written & contributed by the students of a particular school. It is a platform for the students &the teachers of a school to develop their potential creativity & latent talent. A school magazine gives a vivid picture of a school & school affairs. In fact, a school magazine is the stepping stone for the future writers. Juvenile learners can get the opportunity to express the green ideas of their minds through a school magazine. It helps them develop their  power  of  thinking  &  writing.  Almost every financially solvent school publishes a magazine each year. Generally  a school magazine contains poems, stories, jokes. one-act play, riddles etc. It aims at encouraging the literary & cultural activities of students. A group of students work together with much encouragement with a view to publishing a magazine. To publish a school magazine, a magazine committee is generally formed with the Headteacher in the chair. In our school, first of all, a general meeting is held with the Headteacher in the chair. The meeting is supposed to be held to form a magazine committee to run the function of the magazine smoothly. The Headteacher is the chief patron of the magazine committee consisting of nine members. Six students are selected & three teachers are nominated. All members of the committee are assigned duties & responsibilities & accordingly they perform their roles. The Headteacher selects the editor from among the senior teachers. The editor invites writings from the students & the teachers of the school. After proper scrutiny & correction of the writings, the best ones are selected & sent to the press for printing. The expenditure of the publication of the magazine comes from the magazine fund to a great extent. There is also an option for raising fund for the publication of the magazine by selling out space in the magazine for advertisements from reputed organizations. Our school magazine enriches our knowledge & wisdom. It opens the horizon of creative faculty of a potential writer . We are proud of our school magazine.</p>
+</div>
+<button class="accordion">23.Life of a farmer</button>
+<div class="panel">
+<p>Bangladesh is a land of villages. Her economy is agro-based. Agriculture contributes to our GDP substantially.  So a farmer plays a vital role in the economy of our country. Basically   he is the main force of our economy. A man who works in his fields or other people’s fields for leading his life and family is called a farmer. Generally he lives in a small hut in the village. He is the most common figure in our country. He grows crops and keeps animals. He works very hard. He gets up early in the morning and continues to work till sun sets in the field. He takes his plough and a pair of oxen with him. He does not bother hard labour. But he lives from hand to mouth. Usually he wears old and dirty cloths. He cannot afford to buy  food & clothes for him and his family members. In fact, his life is full of sorrows and sufferings. When he finds no work, he and his family go unfed. He lives below poverty line. He has no silver lining in his life. When he is unable to feed his family members properly, his wife is bound to work in other’s house as a house maid. He and his family lead a sorrowful and miserable life. He has no ambition and hope in life. Due to poverty, they suffer a lot  from malnutrition. He is even unable to educate his children due to acute poverty. A farmer leads a very simple life. His life depends on his land and animals. But all the farmers are not poor. Some of them have big lands and farms. When a farmer grows a good harvest, he enjoys a happy life with his family. His face beams with joy. But when he cannot grow a good harvest, he enjoys a miserable life. Bangladesh has recently attained the status of a developing country. To boost up her economy, priority should be given on the socio- economic condition of the peasantry as a whole.</p>
+</div>
+<button class="accordion">24.A rainy day</button>
+<div class="panel">
+<p>A rainy day is a day when it rains all day long. On a rainy day the sky remains cloudy. Sometimes, the sun is not seen at all. The day looks dull and gloomy. Sometimes it rains heavily and sometimes it drizzles. Often thunder rumbles in the sky. One cannot go out without an umbrella. Water stands here & there on the roads and streets which become muddy and slippery. Passers-by are often seen walking with umbrellas over their heads, shoes in their hands and clothes folded up to their knees. Birds are hardly seen flying. They keep standing on the branches of trees. Cattle keep standing in their sheds. The rich class of people without any compulsion to go outside enjoy the day having rich and delicious food  at home. The normal day is paralyzed on a rainy day. The rivers and canals become full to the brim. The existing drains in the towns and cities cannot hold the heavy pressure of rainwater and there-by over-flood the low-lying houses and buildings. The poor class of people, especially the day labourers suffer most on a rainy day as they cannot go out for their work. The students and office-goers also suffer on a rainy day because they too have  to go out on a rainy day if there is no alternative. To conclude, a rainy day is full of excitement except some sufferings and troubles.</p>
+</div>
+<button class="accordion">25.Early rising</button>
+<div class="panel">
+<p>Early rising is a good habit. It saves time. It does much good to us. Early rising means to get up from bed very early in the morning. It is essential for health. There goes a proverb that “early to bed and early to rise” makes a man healthy, wealthy and wise. A man, who gets up early in the morning, gets much time to perform his daily work. He has nothing to worry. He is never in a haste, An early riser can enjoy the beauty of nature. He can also enjoy fresh morning air. He can take a walk beside riverbank or any lake or in the open field. He can enjoy the sweet songs of early birds. He can enjoy the beautiful sights of sun rise. He can enjoy the scenery of blooming flowers in the garden. Morning air refreshes his mind and he is never in haste. His life becomes happier and he can also be healthy, wealthy and wise. Early rising gives a man a long lease of life. It gives us wealth. It gives us joy. On the other hand, a man who does not get up early in the morning faces many problems. He may be late for office, may miss plan or even fail to perform his daily works regularly. He always lags behind. He cannot prosper in life. He always feels unwell. He suffers from various diseases. The nature in the morning is completely calm and quiet. So, the early riser can enjoy all these and he can be benefitted. So we should practise early rising from early period of our life.</p>
+</div>
+<button class="accordion">26.Uses & abuses of mobile phone</button>
+<div class="panel">
+<p>Mobile phone is a wireless and small piece of electronic device enabling us to connect any person from anywhere in the world. The mobile phone is a wonderful gift of modern science. Mobile phone has revolutionized our communication and speeded up our life unbelievably. In 2007, the iPhone came out and revolutionised the smart phones. Now the idea of fixed phone is quite simply  obsolete. No more people are satisfied with the limited scope of communication. The mobile phone has enabled us to communicate with anyone anytime anywhere at our will. Mobile phone has virtually become a microcosm of the whole world. The latest technology has made the vast world technology a micro world. A mobile phone now accommodates all that a computer can afford. Though a smart phone cannot yet match the full power and potential of a full fledge computer, it is getting closer everyday. Mobile phone has made the global world more cemented and bonded. Despite these positive aspects, mobile phone has also some real disadvantages. Using mobile phone has become an addiction for the young generations. The students can neglect their studies by spending more time on the mobile phone. Especially the social media applications in modern smart phones are provoking students to spend less time in study and concentrate more on their FAKE social life. Moreover, the teenagers are taking objectionable photograph and porno films, which is bad for them and can mislead them. This misuse should be banned anyhow. Moreover, excessive  use of mobile phone cause radio active exposure” which can cause cancer and damage our hearing. So phones should not be permanently banned from teenagers , but should be highly monitored by their parents . Despite all these demerit’s mobile phone is the inevitability for our day to day life and we cannot help using the mobile phone. After all, we should be just a bit careful using mobile  phone.</p>
+</div>
+<button class="accordion">27.A street beggar</button>
+<div class="panel">
+<p>A street beggar is a very poor person who has to beg for his livelihood. He goes door to door for begging A street beggar is found sitting or standing by the road-side and begging for a small coin. He is seen almost everywhere in towns and cities. He wears torn and patched up clothes. Sometimes he is alone and sometimes he is in company. A mother with a child or two is also sometimes seen. A beggar may be a man or a woman or a child. He/she may be an old, disabled person, or he/she may be an able-bodied person. Whenever he/she sees a passerby, he/she stretches out his/her hand for help. A few among the passers-by stop, give him/her a coin or two and go on their way. Again, some become disgusted with his loud shouts and avoid him. A beggar sometimes follows a passer-by to some distance begging for help. Beggars are after all, poor, miserable fellows. He can't get enough food for his feeding. He has to eat a very little food. Many of them suffer from infectious diseases. They help spread diseases in town and cities. Thus a street beggar us a social problem. It encourages idleness and immorality. The children of the beggars also turn beggars. They grow us as professional beggars. Begging is a social evil. It needs to be banned. It is a cause of concern for our society. A legislation should be enacted to check begging. People should be made aware not to give charity to those who are able-bodied. However, those who deserve to be helped should be properly assisted. They should be provided some sort of employment to become self-reliant.</p>
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+<div class="w3-half">
+
+<button class="collapsible"> <h3><ul>Get started Application</ul></h3></button>
+<div class="content">
+
+
+<button class="accordion">1.Application for increasing library facilities in the school.    </button>
+<div class="panel">
+  <p>Date:<br> 
+The Headmaster<br>
+Ideal School <br>
+Matijheel, Dhaka<br>
+Subject: Prayer for increasing library facilities in the school.<br>
+Sir,<br>
+With due respect , we, the students of your school, have the honour to lay before you the fact that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are satisfactory. There is no frigate like a book. Books are the best companion in a man’s life. We have a library in our school.  But it is a matter of sorrow that there are not sufficient facilities in our library for lack of which we have been suffering terribly for a pretty long time.  We are badly in need of reference books, English dailies, English story books, renowned magazines & periodicals, ten desks & two fans in our library to ease our reading environment. 
+In the circumstances stated above, we fervently pray & hope that your honour would be so kind as to increase the facilities of the library in the school. & oblige there-by.<br>
+We remain<br>
+Sir<br>
+Your most obedient pupils<br>
+Class-IX<br>
+ Ideal School 
+
+
+</p>
+</div>
+
+<button class="accordion">2.Application for setting up a library  in the school.</button>
+<div class="panel">
+  <p>Date: <br>
+The Headmaster<br>
+Ideal School<br> 	
+Matijheel, Dhaka<br>
+Subject: Prayer for setting up a library  in the school.<br>
+Sir,<br>
+With due respect , we, the students of your school, have the honour to lay before you the fact that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are satisfactory. There is no frigate like a book. Books are the best companion in a man’s life.  But it is a matter of sorrow that there is no library in our school for lack of which we have been suffering terribly for a pretty long time.  We are badly in need of a library in our school to enrich our domain of knowledge. 
+In the circumstances stated above, we fervently pray & hope that your honour would be so kind as to sanction a library in the school at your earliest convenience & oblige there-by.<br>
+We remain<br>
+Sir<br>
+Your most obedient pupils<br>
+Class-IX<br>
+ Ideal School 
+</p>
+</div>
+
+<button class="accordion">3.Application for setting up an English Language Club in the school.  </button>
+<div class="panel">
+  <p>Date: <br>
+The Headmaster<br>
+Ideal School <br>	
+Matijheel, Dhaka<br>
+Subject: Prayer for setting up an English language club  in the school.<br>
+Sir,<br>
+With due respect , we, the students of your school, have the honour to lay before you the fact that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are satisfactory. As you know, English is an international language. It is a lingua franca.  We cannot do a single day in this competitive world without knowing it .   But it is a matter of sorrow that there is no English language club  in our school for lack of which we have been lagging behind.  We are badly in need of  in our school to enrich our domain of knowledge. 
+In the circumstances stated above, we fervently pray & hope that your honour would be so kind as to sanction an English language club in the school at your earliest convenience & oblige there-by.<br>
+We remain<br>
+Sir<br>
+Your most obedient pupils<br>
+Class-IX<br>
+ Ideal School 
+</p>
+</div>
+</div>
+
+
+
+<button class="accordion">5.Application  for full free studentship</button>
+<div class="panel">
+  <p>Date:<br> 
+The Headmaster <br> 
+Ideal School & <br>
+Matijheel, Dhaka <br>
+Subject: Prayer for full free studentship<br>
+Sir,<br>
+With due respect & humble submission, I beg to state that my father is a petty non-government employee. He is the only earning member of our family which consists of six members. I have also a school going sister. It is very difficult for my father to bear my educational expenses with his small income. In fact, he can hardly afford to meet the necessary expenses of our day to day life. If I am not granted financial help in the form of full free studentship, I shall have no other alternative than to discontinue my studies. 
+In the circumstances stated above, I fervently pray & hope that your honour would be so good as to grant me full free studentship to continue my studies & oblige there-by.<br>
+I remain<br>
+Sir,<br>
+Your most obedient <br>
+Radin Ahmed<br>
+Class: ---, Section: ---<br>
+Roll: -----
+
+
+</p>
+</div>
+
+<button class="accordion">6.Application  for opening a common room</button>
+<div class="panel">
+  <p>Date:<br>
+The Headmaster<br>
+Ideal School & College<br>
+Matijheel, <br>
+Subject: Prayer for opening a common room<br>
+Sir,<br>
+With due respect & humble submission, we, the students of your school, beg to state that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are outstanding. But it is a matter of sorrow that there is no common room in our school.   As a result, the students of our school loiter here & there during leisure period & spend their leisure time in idle gossiping. We need to utilize our time effectively to become worthy citizens of the country.  So, we are badly in need of a common room in our school.
+In the circumstances stated above, we fervently pray & hope that your honour would be so good as to sanction us a common room in our school  & oblige there-by.<br>
+We remain<br>
+Sir,<br>
+Your most obedient pupils<br>
+ Ideal School & college
+
+</p>
+</div>
+
+<button class="accordion">7.Write an application for relief goods for the flood/cyclone-affected people.</button>
+<div class="panel">
+  <p>30 August 2018<br>
+The Deputy Commissioner<br>
+Munshiganj<br>
+Subject: Request for relief for the flood/cyclone affected people.<br>
+Sir,<br>
+On behalf of the people of Birtara Union, we beg most respectfully to invite your kind attention to the distress of the people of our area caused by the recent flood/cyclone which  has broken all the records of the past. Never before did water level rise so high nor was the duration so long. Normal activities have been stopped for a pretty long time. Thousands of people have become homeless, foodless and clothless. The miseries of the affected people know no bounds. Crops have been greatly damaged.  Herds of cattle have been washed away. The total estimated loss stands at TK. 50 crore. Thousands of people have taken their shelter on rooftops, boats and embankments. They are now living under the open sky .
+Moreover, cholera and other water-borne diseases have broken out in an epidemic form for want of pure drinking water. It has already taken away some valuable lives. So if immediate relief materials and a medical team are not sent for the flood stricken people of this area, the situation may go from bad to worse at any time.
+In the circumstances stated above, I, therefore fervently pray and hope that you would be kind enough to send adequate relief materials and a medical team to our flood/cyclone affected area to save the lives of the ill-fated people. For any timely measure, we will remain ever grateful to you.<br>
+Thanking you,<br>
+Sincerely yours<br>
+ The people of Birtara
+</p>
+</div>
+</div>
+
+
+<button class="accordion">8.Application for providing multimedia facilities in the school.</button>
+<div class="panel">
+  <p>Date:<br> 	
+The Headmaster<br>
+Ideal School <br>
+Matijheel, Dhaka<br>
+Subject: Prayer for providing multimedia facilities in the school.<br>
+Sir,<br>
+With due respect & humble submission, we, the students of your school, have the honour to lay before you the fact that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are outstanding. Today’s age is an age of science & technology. ICT has become a buzzword in this virtual world. We have a computer lab in our school.  But it is a matter of sorrow that there are not sufficient multimedia facilities  in our computer lab as well as in our classrooms for lack of which we have been suffering terribly for a pretty long time.  We are badly in need of ten desktop computers, five lap top computers, three projectors, ten micro-phones & twenty digital sound boxes to provide multimedia facilities in the  class rooms as well as in the computer lab  of our school.
+In the circumstances stated above, we fervently pray & hope that your honour would be so good as to provide multimedia facilities in the  class rooms as well as in the computer lab  of our school  & oblige there-by.<br>
+We remain <br>
+Sir <br>
+Your most obedient pupils <br>
+Class-IX <br>
+ Ideal School 
+</p>
+</div>
+
+<button class="accordion">9.Application  for setting up a computer club in our school.</button>
+<div class="panel">
+  <p>Date:<br> 
+The Headmaster<br>
+Ideal School <br>
+Matijheel, Dhaka<br>
+Subject: Prayer for setting up a computer club in our school.<br>
+Sir,<br>
+With due respect & humble submission, we, the students of your school, have the honour to lay before you the fact that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are outstanding. Today’s age is an age of science & technology. ICT has become a buzzword in this virtual world.  But it is a matter of sorrow that there is no computer club in our school. We can increase our knowledge of Information & communication technology through this computer club.
+In the circumstances stated above, we fervently pray & hope that your honour would be so good as to set up a computer club in our school at your earliest convenience & oblige there-by.<br>
+We remain<br>
+Sir <br>
+Your most obedient pupils <br>
+Class-IX <br>
+ Ideal School 
+</p>
+</div>
+
+<button class="accordion">10.Application for leave of absence</button>
+<div class="panel">
+<p>Date: 24-03-2018<br>
+The Headmaster<br>
+Ideal School<br>
+Matijheel, Dhaka<br>	
+Subject: Prayer for three days’ leave of absence.<br>
+Sir,<br>
+With due respect & humble submission, I beg to state that I could not attend school for three days from 20-03-2018 to 22-03-2018 owing to my illness. I was attacked with fever accompanied with a bad headache. It is to be noted that I have been regular in my classes since I was admitted into your school. 
+In the circumstances stated above, I fervently pray & hope that your honour would be so good as to grant me  leave of absence for those days & oblige there-by.<br>
+I remain <br>
+Sir,<br>
+Your most obedient pupil<br>
+Radin Ahmed <br>
+Class: ---, Section: ---<br>
+Roll: -----
+</p>
+</div>
+
+
+
+<button class="accordion">11.Application for leave in advance.</button>
+<div class="panel">
+ <p> 
+Date: 24-03-2021 <br>	
+The Headmaster <br>	
+Ideal School <br> 
+Matijheel, Dhaka <br>
+Subject: Prayer for three days’ leave in advance.<br>
+Sir,<br>
+With due respect & humble submission, I beg to state that I shall not be able to attend school for three days from 20-03-2018 to 22-03-2018 because my sister’s marriage ceremony is going to be held on 20-03-2018. I am the only son of my parents & they want me to give my best support & cooperation to make the marriage ceremony a success.   It is to be noted that I have been regular in my classes since I was admitted into your school. 
+In the circumstances stated above, I fervently pray & hope that your honour would be so good as to grant me leave in advance for those days & oblige there-by.<br>
+I remain <br>
+Sir <br>
+Your most obedient pupil<br>
+Radin Ahmed <br>
+Class: ---, Section: ---
+
+ </p>
+</div>
+<button class="accordion">12.Application for setting up a canteen in your school</button>
+<div class="panel">
+<p>Date:<br> 	
+The Headmaster<br>
+Ideal School<br> 
+Matijheel, Dhaka<br>
+Subject: Prayer for setting up a canteen in our school.<br>
+Sir,<br>
+With due respect & humble submission, we, the students of your school, have the honour to lay before you the fact that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are outstanding. But it is a matter of sorrow that there is no canteen in our school for lack of which we have been suffering terribly for a pretty long time. Most of the students cannot bring their midday meals with them. As a result, they have to have the dirty, unhealthy food from the near-by hotels & restaurants.  Most often, the dirty, unhealthy food causes serious health hazards to the students of our school. So, we are badly in need of a canteen to ensure good health.  
+In the circumstances stated above, we fervently pray & hope that your honour would be so good as to set up a canteen & oblige there-by.<br>
+We remain<br>
+Sir<br>
+Your most obedient pupils<br>
+Class-IX
+</P>
+</div>
+<button class="accordion">13.Application for arranging a study tour</button>
+<div class="panel">
+<p>Date: <br>
+The Headmaster<br>
+Ideal School<br> 
+Matijheel, Dhaka<br>
+Subject: Prayer for arranging a study tour <br>
+Sir,<br>
+With due respect & humble submission, we, the students of your school, beg to state that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are outstanding. We are desirous of going on a study tour at the Sunderbans.  It is the largest mangrove forest in the world. A study tour is not only interesting but also educative. We can learn a lot from this study tour. It will enrich our knowledge & give us a practical idea of  bio-diversity & wild life in our country. 
+In the circumstances stated above, we fervently pray & hope that your honour would be so good as to arrange a study tour for us & oblige there-by.<br>
+We remain <br>
+Sir<br>
+Your most obedient pupils<br>
+ Ideal School 
+
+</p>
+</div>
+<button class="accordion">14.Application for permission to visit a place of historical interest</button>
+<div class="panel">
+<p>Date: <br>
+The Headmaster<br>
+Ideal School<br> 
+Matijheel, Dhaka<br>
+Subject: Prayer for permission to visit a place of historical interest.<br>
+Sir,<br>
+With due respect & humble submission, we, the students of your school, beg to state that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are outstanding. This year we are desirous of going on a study tour at Sonargaon.  It is a place of historical interest. Once it was called the golden place of Bengal. A study tour is not only interesting but also educative. We can learn a lot from this study tour. It will enrich our knowledge & give us a practical idea of the history & cultural heritage of our country. 
+In the circumstances stated above, we fervently pray & hope that your honour would be so good as to give us permission to visit the place & oblige there-by.<br>
+We remain<br>
+Sir<br>
+Your most obedient pupils<br>
+ Ideal School 
+</P>
+</div>
+<button class="accordion">15.Write an application for remission of delay fine.</button>
+<div class="panel">
+<p>Date: 2-05-2020
+The Headmaster<br>	
+Ideal School<br> 
+Matijheel, Dhaka<br>
+Subject: Prayer for remission of delay fine<br>
+Sir,<br>
+With due respect & humble submission, I have the honour to lay before you the fact that I could not afford to pay my tuition fees for the last three months-February, March & April 2018 as my father had been away from home for the last three months. I have been fined for the dues of my  fees. My name has also been struck off the rolls for this reason.  My father has returned home from abroad.  Now I shall be able to pay my dues of the last  three months. It is to be noted that I have always been regular in payment of my tuition fees in your school.
+In the circumstances stated above, I fervently pray & hope that your honour would be so good as to remit me from  delay fine & pass on order to receive only the usual fees & oblige there-by.<br>
+I remain<br>
+Sir<br>
+Your most obedient pupil<br>
+Radin Ahmed <br>
+Class: ---, Section: ---<br>
+Roll No.--
+</p>
+</div>
+<button class="accordion">16.Write an application for the  construction of a bridge/road.</button>
+<div class="panel">
+<p>30 May, 2018<br>
+The Deputy <br>
+Subject: Request for the  construction of a bridge/road<br>
+Sir,<br>
+On behalf of the people of Birtara Union, we have the honour  to invite your kind attention to the distress of the people of our area due to the lack of a bridge/ road.  About thirty thousand people live in our village. They have to go up & down the near-by town every day for their daily necessaries. They have to use the by-pass/ the canal for their daily communication. The canal/road  runs through the heart of the village. So we are badly in need of a bridge over the canal/ a road for easier  & safer communication with the district town.    
+In the circumstances stated above, we fervently pray and hope that you would be kind enough to make necessary steps to construct a bridge over the canal/ a road for easier  & safer communication.<br>
+Thanking you,<br>
+Yours faithfully,<br>
+ The people of Birtara
+
+</p>
+</div>
+<button class="accordion">17.Write an application to the Headmaster of your school praying for TC.      </button>
+<div class="panel">
+<p>Date: <br>
+The Headmaster<br>
+Ideal School & College<br>
+Matijheel, Dhaka<br>
+Subject: Prayer for issuing TC.<br>
+Sir,<br>
+With due respect, I have the honour to lay before you the fact that my father is a government employee. Recently he has been transferred to Chandpur. Our family has already shifted there. I have to get admitted into a school there. For this purpose, I need a TC from you referring to my academic feat, performance, extracurricular activities & character during the period I had been in your school. It is to be noted that I have cleared off my tuition fees & other charges. 
+In the circumstances stated above, I fervently pray & hope that your honour would be so kind as to issue me TC & oblige there-by.<br>
+I remain<br>
+Sir,<br>
+Your most obedient pupil<br>
+Radin Ahmed<br>
+Class: ---, Section: ---<br>
+Roll: -----
+
+</p>
+</div>
+<button class="accordion">18.Write an application to the Headmaster for Testimonial </button>
+<div class="panel">
+<p>25 July, 2019<br>
+The Headmaster.<br>
+ Govt. Laboratory School.<br>
+Dhaka<br>
+Subject: Prayer for a testimonial.<br>
+Sir.<br>
+I have the honour to state that I had been a student of your school for the session 2017-18. I was a student of Arts group. I passed the S.S.C Examination in 2019 and obtained GPA 5. It may be noted that I had been  although a regular student. I participated in all cultural activities of the school. I also wrote articles in the school magazine. I was good at sports and won many prizes in different competitions. Now I desire to get myself admitted into college. So I need a testimonial, from you referring to my academic career character and co-curricular activities.
+In the circumstances stated above. I pray and hope that your honour would be kind enough to issue me a testimonial and oblige thereby.<br>
+Yours obediently<br>
+Sudipto Rahat<br>
+Roll: 25<br>
+Session: 2017-18
+</p>
+</div>
+<button class="accordion">19.Write an application to the Head teacher praying for a seat in the school hostel.</button>
+<div class="panel">
+<p>Date:<br>
+The Head teacher<br>	
+Ideal School<br>
+Matijheel, Dhaka<br>
+Subject: Prayer for a seat in the school hostel.<br>
+Sir,<br>
+With due respect & humble submission, I have the honour to lay before you the fact that my father who is a government employee has been transferred from Dhaka to Chittagong. Our family has already shifted there. I have put up in a mess near-by our school.  Our family is anxious of my safety. Besides, I am facing some other problems too due to my staying in the mess. So I am badly in need of a seat in the school hostel to continue my studies. Moreover, I have no other alternative than to seek your favour of granting me a seat in the school hostel. If I am not granted a seat in the school hostel,  I shall be compelled to discontinue my studies.
+In the circumstances stated above, I fervently pray & hope that your honour would be so good as to grant me a seat in the school hostel to continue my studies & oblige there-by.<br>
+I remain<br>
+Sir<br>
+Your most obedient pupil<br>
+Rakib Hasan<br>
+Class: Ten<br>
+Roll No- 02 Section-
+</p>
+</div>
+<button class="accordion">20.Application for a half -holiday</button>
+<div class="panel">
+<p>20 July,  2020<br>
+The Headmaster,<br>
+Ideal School<br>
+Dhaka <br>
+Subject: Prayer for a half holiday.<br>
+Sir,<br>
+we, the students of your school, have the honor to state that the final game of the inter-school football tournament is going to be played between our school and Rajarbag  High School today at 4 p.m. in our school play ground. We are much interested in watching the match and  would like to encourage our players. So we need a half- holiday after the 4th period.
+We, therefore, pray and hope that you would be kind enough to grant us a half-holiday after the fourth period and enable us to witness the game.<br>
+We remain<br>
+Sir<br>
+Yours obediently<br>	
+The Students of Ideal School	
+</p>
+</div>
+<button class="accordion">21.Application for increasing library facilities in the school.                                                                              </button>
+<div class="panel">
+<p>Date:<br>
+The Headmaster<br>
+Ideal School<br>
+Matijheel, Dhaka<br>
+Subject: Prayer for increasing library facilities in the school.<br>
+Sir,<br>
+With due respect , we, the students of your school, have the honour to lay before you the fact that ours is a reputed school in the district. There are about 2000 students in our school. The results of our school in the public examinations are satisfactory. There is no frigate like a book. Books are the best companion in a man’s life. We have a library in our school.  But it is a matter of sorrow that there are not sufficient facilities in our library for lack of which we have been suffering terribly for a pretty long time.  We are badly in need of reference books, English dailies, English story books, renowned magazines & periodicals, ten desks & two fans in our library to ease our reading environment. 
+In the circumstances stated above, we fervently pray & hope that your honour would be so kind as to increase the facilities of the library in the school. & oblige there-by.<br>
+We remain<br>
+Sir<br>
+Your most obedient pupils<br>
+Class-IX<br>
+Ideal School 
+</p>
+</div>
+<button class="accordion">22.Write an application to the Headmaster for changing school hours or for morning school.</button>
+<div class="panel">
+<p>Date: <br>
+The Headmaster <br>                     
+Ideal School <br>
+Matijheel, Dhaka <br>
+Subject: Prayer for holding morning school.<br> 
+ 
+Sir,<br> 
+ 
+We, the students of your school, beg most respectfully to state that the summer season has already set in and there is no rain for a long time. Due to excessive heat of the sun, it has become very difficult for us to continue our works in the class room at noon. Moreover, the students coming from a long distance face a lot of troubles in the glaring sun. So, it will surely be convenient to all of us if the classes are held in the morning. 
+ 
+We would therefore, feel much obliged if you are gracious enough to hold classes in the morning from tomorrow until there is an appreciable change in weather.<br> 
+ 
+We remain <br>
+Sir <br>
+Your most obedient pupils <br>
+Class-IX <br>
+ Ideal School 
+
+</p>
+</div>
+<button class="accordion">Application for re-admission.</button>
+<div class="panel">
+<p>Date: <br> 
+The Headmaster <br>
+Ideal School <br> 
+Matijheel, Dhaka <br>
+Subject: application for re-admission.<br>
+Sir,<br>
+I have the honour to state that I am a student of class 7 of your school. I could not pay my tuition fees for three months from March to May in time because my father was away from Chittagong on official duties. So my name has been struck off the rolls for non-payment of my dues. Now, my father has come back home and I am in a position to pay my dues. It may be mentioned that I paid my dues regularly in all previous months.
+I, therefore, earnestly request you to re-admit me on receipt of the usual dues and oblige thereby.<br>
+I remain,<br>
+Sir,<br>
+Yours most obedient pupil,<br>
+Nazmul <br>
+Class-7 <br>
+Roll-5.
+</p>
+</div>
+<button class="accordion">COVER  LETTER</button>
+<div class="panel">
+<p>Date:<br>
+The Managing Director/The Headmaster/The Principal/The Human Resource Manager <br>
+Name of the institute/Name of School/College <br> 
+Address <br>
+Subject: An application for the post of ……………..<br>
+ Dear Sir,<br>
+In response to your advertisement published in The Daily Star dated ……………., 2018.  I have come to know that you are going to appoint. …………….at your kind disposal.  I would like to offer myself as a candidate for the same. My CV is attached here-with for your kind consideration.
+I shall be highly pleased if you would kindly call me for the interview & appoint me to the desired post and oblige there –by.<br>
+Thanking you,<br>
+Sincerely yours<br> 
+(Signature )<br>
+Name of the candidate
+</p>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w3-half">
+
+<button class="collapsible"><h3><ul>Get started Completing Story</ul></h3></button>
+<div class="content">
+
+
+<button class="accordion">A winter Morning</button>
+<div class="panel">
+ 
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+
+
+
+
+
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+
+
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+</div>
+
+
+<button class="accordion">1.A winter Morning</button>
+<div class="panel">
+ <p> Winter is the coldest season in our country.
+ It is usually foggy. Everything looks hazy Sometimes the fog is so dense that nothing can be seen even at a little distance. Everything looks hazy. Nature looks gloomy.
+ The chirping of the birds is not heard. 
+ The animals cannot come out of their shelters due to dense fog.
+ Dense fog causes disruption to the communication system.
+ Dew drops fall at night. Sometimes cold waves blow.
+ It causes much sufferings to the children, the sick people, the aged people and the poor class.
+<br> People put on different kinds of warm clothes to protect themselves from cold. 
+Little boys & girls wrap their hands & legs in cold spell. 
+The old people and children shiver in cold. 
+They gather straw and make fires at different places to warm themselves in the heat.
+ Most people do not feel like leaving the bed early.
+ Sometimes village people spend the winter morning by gossiping.  In towns, rich people read newspaper in balcony. They drink warm tea while reading newspaper & enjoy sunbath.  The scene of the winter morning vanishes as the day advances.  In winter the days are shorter and the nights are longer. A winter night is more painful than a winter morning. A winter morning brings pains & sufferings to the rootless poor people. In spite of the dark sides of a winter morning we always welcome it because it is rich with varieties of food such as date juice, fresh vegetables and some other things. Villagers make fire with straw to warm themselves. Various kinds of pithas are made in this season. In a winter morning pitha parban is held in towns where the town folk enjoy winter food. A winter morning is not an unmixed blessing. In a winter morning, people go through different experiences according to their economic background. Those who are poor cannot afford warm cloths and so they suffer from the bitter cold. But the rich people enjoy sleep or staying under warm blanket. In cities & towns, different groups of people go picnic in remote areas & enjoy the winter morning in a different way.  So, to the poor the sun-ray becomes more precious than gold. In fact, people of all walks of life enjoy a winter morning despite some natural hazards like cold spell, dense fog etc. Many pitha  festivals are held throughout the country in  winter as the people of our country are fest lovers traditionally. The winter season is always welcome to the people of our country irrespective of class distinction. 
+
+
+ </p>
+</div>
+<button class="accordion">2.Deforestation</button>
+<div class="panel">
+<p>Deforestation means cutting down trees in large numbers.  It is a process where a forest becomes a non-forest.  There is no denying the fact that deforestation has become a global concern in the present world. Forests are a rich resource of our planet earth. Therefore, it is important to protect our environment. Forests have a great floral diversity. There are large trees, creepers & climbers, grasses, shrubs & bushes that grow in forests. Forests are also habitats to many wild species. A large variety of animals, birds, reptiles and insects live in forests. Forests provide sustenance to many living beings including man. There are many  causes of deforestation. Bangladesh is the most densely populated country in the world. Its population is much more in proportion to its area. This huge number of population needs more shelter, agricultural land, fuel, furniture etc. For all these reasons, people cut down trees. Man depends on forests for food & livelihood. As farmers need more land for cultivation, they cut down trees to expand their agricultural land.  People also cut trees for habituation. They cut down trees for timber which is used as fuel, for  construction or to make furniture. Deforestation has very drastic effects on both humans and nature. Decreasing  the number of the trees leads to rising carbon-di-oxide and lack of oxygen in the atmosphere. Deforestation results in severe health hazards like  lung diseases,  bronchitis & other respiratory diseases  in humans and animals. All living beings need water. Loss of forest leads to ecological imbalance. Deforestation is one of the major factors leading to the greenhouse effect and desertification. Moreover, there are some greedy people who cut down trees in our forests to make money. The effects of deforestation are too many to describe. This destruction disturbs our ecological balance. Due to deforestation carbon-dioxide is increasing worldwide. As a result, the world is becoming warmer. The sea level is rising. On the other hand, new areas of the world are turning into deserts as a result of deforestation. The removal of trees causes serious damage to the soil. The temperature will rise and it will cause green house effect. The country will be unsuitable for living.  Ecological balance is also disturbed by deforestation. Many wild animals and birds, as well as beasts, lose their home. Global warming is an alarming consequence of deforestation. If we destroy trees at random, one day the country will turn into a great desert. There will be no rain and  our agricultural will face a great crisis As a result temperature of the atmosphere is increasing and ice of the polar region is melting very fast. For this, we have to face various devastating floods. Drought may occur due to deforestation. Our government should take immediate measures to prevent deforestation.
+</p>
+</div>
+<button class="accordion">3.Environment pollution</button>
+<div class="panel">
+<p>The world is producing millions of tons of domestic rubbish and toxic industrial waste each year, and it is becoming increasingly difficult to find suitable locations to get rid of all the refuse. The disposal of various kinds of waste is seriously polluting the environment. Air is an important element of our environment and our air is polluted by smoke. Man makes fires to cook food, make bricks, melt tar for road construction and to do many other things. Fires create smoke and pollute the air. Railway  engines and powerhouses create smoke by burning coal and oil. Mills and factories also belch a lot of smoke. Buses, trucks and cars use petrol and diesel oil. These too emit smoke. All these kinds of smoke pollute the air. Water, another vital element of the environment, is also polluted in different ways. Man pollutes water by throwing waste into it. Farmers use chemical fertilizers and insecticides in their fields. When rain and floods wash away some of these chemicals, they get mixed with water in rivers, canals and ponds. Mills and factories also throw their poisonous chemicals and waste products into rivers and canals and thus pollute the water. Water vehicles also pollute rivers by dumping oil, food waste and human waste into them. Every year millions of people all over the world die unnecessarily as a result of pollution. These unfortunate and avoidable deaths are brought about  by four specific factors. Firstly, air pollution from factories, burning trash, and vehicle fumes cause pneumonia, bronchitis and other respiratory diseases. Then, water pollution from industrial discharge. the indiscriminate disposal of toxic chemicals, and the dumping of human waste into rivers and canals causes poisoning and water-borne diseases such as cholera and diarrhoea. The next factor is the noise pollution from vehicle horns and microphones that might cause aggression and damage hearing. And finally, odour pollution from dumped or untreated human waste causes serious discomfort to our sense of smell, and attracts disease-bearing creatures such as rats and flies. We should take  determined action to control these problems and clean up the environment to avert these unnecessary diseases.
+ 
+</p>
+</div>
+<button class="accordion">4.A day labourer</button>
+<div class="panel">
+<p>There is no single definition to describe a day labourer. But the word that comes to us about a day labourer is someone who works manually from early morning till  late evening on a daily basis. In short, a day labourer is he who does heavy manual labour in various fields. He belongs to the marginalized class. He belongs to ultra-poor group.  In most cases, he is unskilled or semi-skilled.  He does not enjoy due social status though he deserves it  and his labour is also  indispensible for the economic development of a country. A day labourer is a known face to all of us as he is required in our daily life. Naturally he is to be healthily, strong and stout  due to the nature of his job.  He lives with his family in a slum. He gets up early in the morning and goes out in search of work. He works hard from dawn to dusk for his employer and gets his wages at evening. He does different types of jobs such as carrying bricks, wood, stones, mud and digging ponds, constructing of roads, buildings etc. Sometimes he and his family pass a day without food if he cannot manage work. However, he is in great demand in harvesting season. . When he earns much money, he and his family can eat well. It is a happy day for them. If he does not find any work, he and his family have to go without food. So the life of a day labourer is very miserable. Sorrows and sufferings are his constant companions. He does not know what joy and happiness are. He earns his living by working hard. Most of the time he is ill- paid and ill- treated in every sphere of his life. In fact, the services of a day laborer plays an importance role in our national life. So we should think about his rights and show respect to them.
+
+</p>
+</div>
+<button class="accordion">5.Price-hike</button>
+<div class="panel">
+<p>Price rise is a great problem of the day. It is a common phenomenon not only in our country but also in the world. Today the prices of necessary things such as food items, cloths, education materials, medicine and many other necessary things are going up by leaps and bounds. Price rise is caused by several factors like hoarding, population explosion, low productivity, natural calamities, wars, backwardness of communication, evil motives of dishonest businessmen, smuggling, black marketing etc. If the price rise is caused by the short supply of commodities, it is temporary. But it is very difficult to control the price rise caused by inflation. However, the people of low income suffer greatly and pass their days in constant anxiety. They find it, difficult to make their both ends meet. price hike is a function of multifarious factors such as energy costs, declining dollar value, rising demand for bio-fuel, export restrictions on food grains, carrying cost, climate change, etc. Concerns over oil prices, energy security and climate change have prompted governments to encourage production and use of bio-fuel. The price rise has widened the gap between the export and import value in the food grain importing countries which has affected the terms of trade and foreign exchange reserve. The fiscal impact of this price hike leads to the reduction of taxes on food grain import and a rise in subsidies in the production of the same Price rise has terrible effects on man’s character. It leads people to the path of corruption and moral degradation. The situation is complex and there is no single solution to this problem. The government should perform more efficiently and has to take actions so that the market performs properly. Bangladesh imports a lion’s share of its import of rice from India at low cost. In Bangladesh, the main sources of calorie are rice and wheat. In spite of a rise in wheat and rice price, people still consume rice and wheat. Therefore, the food price rise affects the poor extensively. Food crisis is a national as well as an international problem.  To reduce the extent of the effect of the crisis, some short term and long term measures can be taken. The government should begin selling rice from its stock and import food grains right at this moment to keep the local market stable. The dependency on private food importers should be lessened to avoid the artificial volatility of the local markets. Increasing the adoption of hybrid rice, improving crop management practices and access to high quality seed are essential. Deepening fertilizer dealer network to improve timely access to fertilizer and focusing on high quality seed availability are also needed.. Laws should be enforced strictly to bring the prices of the essential commodities within the purchasing capacity of the common people.</p>
+<div>
+<button class="accordion">6.A rainy day</button>
+<div class="panel">
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+</div>
+<button class="accordion">7.Food adulteration</button>
+<div class="panel">
+<p>Food Adulteration refers to the process by which the quality or the nature of a given food is reduced through addition of adulterants or removal of vital substance. Unsafe levels of pesticides are present  in around half of the vegetables and more than a quarter of fruits sold in the capital’s markets, a recent survey has found. The survey report, read that nearly 40% of 82 samples of milk, milk products, fish, fruits and vegetables contained banned pesticides such as DDT, Aldrin, Chlordane and Heptachlor. The amounts of pesticide in these samples were found to be 3 to 20 times greater than the limits set by the European Union. Around 50% vegetables and 35% fruits were found to be contaminated with unsafe level of pesticides. Using a sensitive High-Performance Liquid Chromatography (HPLC) method developed by the Food Safety Lab, 66 samples were analysed for the presence of formaldehyde. Adulteration was thereby detected in samples of coriander, mango and fresh shrimps. The tests indicated that poultry feed in the country had also been contaminated, as samples of chicken and fish contained traces of antibiotics. High microbial populations were found in several samples of pasteurised milk, indicating poor processing procedures by the manufacturers. Samples of cucumber and street foods also showed high microbial populations, suggesting widespread contamination in the water supply. Adulterated food products are reportedly the cause behind thousands of people suffering from fatal diseases like cancer, kidney failure and heart problems. Better monitoring and supervision were mandatory for stopping food adulteration.</p>
+</div>
+<button class="accordion">8.A street hawker</button>
+<div class="panel">
+<p>A street hawker is a very common man in our society. Usually he moves from place to place to sell his goods. In fact, a street hawker is a very simple man. He is very poor and humble. He is a shabby man. He is a small trader. The capital of his business is very small. He lives from hand to mouth. Every morning he goes out to sell his goods carrying them either on his hand or in a cart or van. Throughout the day, he sells his goods shouting at the top of his voice to draw the attention of his customers. A the end of the day, he returns home with  the marginal profit gained from the sold goods. Again he goes out for the next day and returns home almost in the same way. Truly speaking, he leads his life in the vicious cycle of poverty. In fact, there is no liver lining in his life. He finds it very difficult to maintain his family. He can’t afford to meet the basic needs of life. Basically, he adopts a technique to sell his goods. He applies his skill to motivate or convince his customers especially women & children who are his first priority. It is true that the importance of a hawker goes unnoticed in our society. The fact is that he belongs to the marginalized class and his business is so petty that it is not included in the mainstream economy. Still he is part & parcel of our society. So we should have positive mindset for him</p>
+</div>
+<button class="accordion">9.Traffic jam</button>
+<div class="panel">
+<p>Traffic jam means a long line of vehicles that cannot move or that can move very slowly. It is a common affair in the big cities of our country. We’ve all experienced being stuck in a traffic jam, a stream of cars for miles ahead of us and behind us. Lack of co-ordination among government organizations and haphazard public transport system which includes lack of provision for pedestrians and poor maintenance and management of footways are the root cause of traffic jam. Rapid growth of population and the increasing number of vehicles are also the causes of traffic jam. Vehicles are much more than the roads can accommodate. The indiscriminate playing of rickshaw is another cause of it. Haphazard parking, more private vehicles, violation of traffic rules, faulty road construction, haphazard crossing, VIP movement, over population, rail crossing and fuel station are also the causes of traffic jam in the big cities city. Traffic jam causes untold sufferings to people. Sometimes it raises our tension. Transport and urban experts think the government should take pragmatic steps to ensure sufficient mass transport, restore discipline in the transport sector, reduce the use of private and small vehicles, replace the microbuses and minibuses with single-decker, double-decker and articulated buses and expand the capital city to significantly ease the traffic jam without spending huge money. The railways and waterways can also be used effectively to ease traffic pressure on roads and facilitate the commuters hassle-free transportation services. We have built over a half dozens of flyovers, but it is not a solution to the problem. It will not be possible to reduce traffic jam without increasing public transport and ensuring better traffic management. It is also necessary to implement all mass transit-related projects with high priority to improve traffic situation.</p>
+</div>
+<button class="accordion">10.Load-shedding</button>
+<div class="panel">
+<p>The term ‘load shedding’ means the state of being no electricity due to demand supply gap of power for a certain period in a certain area. The energy infrastructure of Bangladesh is quite small, insufficient and poorly managed. Electricity is the major source of power for most of the economic activities of a country. In generating & distributing power, the failure to adequately manage the loads leads to load-shedding which causes severe disruption in the industrial production and other economic activities. Inefficient distribution system is a major hurdle in delivering power. It is estimated that the total transmission and distribution losses in Bangladesh amount to one-third of the total generation. The process of upgrading the grid technology to digital smart metering system is going on throughout the country to reduce system loss. It will reduce power cuts and provide stability to the power sector. Radio technology can be operated remotely to maintain multiple power flow lines with automated control & digital metering. Load shedding causes multiple hazards in our socio-economic life. During load shedding the whole area plunges into darkness. Houses, shops, mills, factories, hospitals & almost all infrastructures are paralyzed for the time being. Students cannot prepare their lessons. Doctors cannot operate upon emergency patients in hospitals. Mills & factories cannot run their machines. Farmers cannot operate their agricultural tools in corn fields. Everything comes to a stand-still due to load-shedding. So, pragmatic steps should be taken to reduce system loss & keep load shedding at a tolerable level. The old power plants should be replaced. Nuclear plant is the best solution to power crisis to  meet the growing demand of the consumers. Rooppur Nuclear Power Plant is an under construction nuclear power plant in our country. It is expected that power crisis is going to be solved in Bangladesh.</p>
+</div>
+<button class="accordion">11.A school library</button>
+<div class="panel">
+<p>aaaaaaaaaaaaaaaaaaaaaa</p>
+</div>
+<button class="accordion">12.A book fair</button>
+<div class="panel">
+<p>A book fair is a book-oriented fair which is held in our country on the occasions of Martyrs’ Day, Victory Day & Independence Day. In fact, a book fair is considered to be an occasion of great festivity to the book-lovers. Bangla Academy is the largest organizer of a book fair in our country. A month-long book fair is held on the premises of Bangla Academy highlighting the significance of Bangla, Bengali culture & literature especially focusing on 21st February. This is why, through-out the month of February, Ekushe Boi Mela is held each year. The leading publishers of the country set up stalls to sell and display their recent publications as well as the old ones. Various kinds of novels, poetry, science fictions etc are available in a book fair. A festive look prevails all around. The renowned artists, poets & intellectuals gather there & take part in the seminars & cultural programs. This year I have got an opportunity to visit the book fair held on the Bangla Academy premises where the book- lovers thronged to browse the latest editions & collections of various books published by different publishers of the country. I was accompanied by my father who bought me two novels, a comic book, a travel book and some other science fictions. I got excited to have all these books. It is a memorable day in my life. The day brought me very close to the authors and poets of the country. Last but not the least, the book fair brought much pleasure for me
+ 
+</p>
+</div>
+<button class="accordion">13.Road accident</button>
+<div class="panel">
+<p>A road accident is the most vulnerable, unexpected incident in human life. It is a regular phenomenon in the highways and cities of our country. Every year it kills hundreds of lives. In Bangladesh, every day we find the news of road accidents in our daily newspapers and on television screen . It really makes us very shocked. Last month I saw a tragic road accident. It occurred in Mirpur Road near the Kolabagan Bus Stand. When I was standing on the road and waiting for the bus, I saw a little boy trying to cross the busy road. While crossing the road, the ill-fated boy was run over by a speedy truck When he was taken to the hospital, the doctor declared him dead. I cannot forget the tragic accident. A number of factors are responsible for road accidents in our country. First of all, the roads and streets of our country are narrow. These streets are not straight as there are frequent turnings at short distances. Reckless driving often causes road accidents. Besides, drivers are careless about the traffic rules and regulations. They recklessly drive their vehicles. Most of the drivers are not well- trained and in addition , they have not any adequate knowledge of the traffic system. Last but not the least, the pedestrians are also responsible for street accidents. They cross roads here and there. To save the pedestrians, drivers sometimes lose control and consequently accidents occur. Moreover, the condition of all vehicles is not up to the mark. So, plying of these defective vehicles is another factor of street accident. However, road accidents cause irreparable loss and injure. The effect of a road accident is too pathetic to describe. People lose their near and dear ones forever. The injured people due to accidents become a burden to the family. To control road accident, the defective vehicles should not be allowed to ply on the roads. Reckless driving should also be severely dealt with. Streets and roads should be expanded. Not only that, proper planning is needed at the time of constructing roads. Modern and scientific traffic system should be introduced in towns and cities. Last of all, the driving license should be issued after proper training and test. If all these steps can be taken properly, it will help to minimize road accidents. Above all, the people should be made aware of the bad consequences of road accident to control it to a great extent.</p>
+</div>
+<button class="accordion">14.National flag</button>
+<div class="panel">
+<p>aaaaaaaaaaaaaaaaaaaaaa</p>
+</div>
+<button class="accordion">15.Drug addiction</button>
+<div class="panel">
+<p>Drug addiction means a strong desire for a drug which the addict cannot resist. Narcotics like Opium, Heroin, Marijuana, Hashish, LSD and Cocaine are used by the addict. When the person takes them, he gets excited and loses control over himself. Drug addiction has become a worldwide problem, especially in teenagers. Many young people become dependent on different types substances and stimulating medicines that comes hand-in-hand with narcotic effect.
+Drug addiction is basically a brain disease that changes the functioning of brain. There is an uncontrollable desire to consume drugs, as a result of which addicted people engage in compulsive behavior to take drugs. The addicts find it impossible to control the intake of drugs, as a result of which they fail to fulfill day-to-day responsibilities in efficient manner. Drug addiction is also referred as drug dependency, as the addict develops dependency for particular substance.
+The most common signs and symptoms of drug addiction are – obsession with a particular substance, loss of control over the usage of drugs, abandoning the activities which you used to enjoy, etc. Drug addiction may have long term impact on life and one may develop severe symptoms such as – fatigue, trembling, depression, anxiety, headache, insomnia, chills and sweating, paranoia, behavior changes, dilated pupils, poor coordination problems, nausea etc.
+Though there is no scientific evidence on how exactly drugs work in brain, it can be successfully treated to help people stop abusing drugs. There are many treatments that help people counteract the disruptive effects of drug addiction and regain complete control over life. Behavioral therapy is the best way to ensure success in most of the drug addicts. The treatment approaches are tailored to meet the drug abuse pattern of patients. It is not uncommon for an individual to relapse and start drug abuse again. In such case, an alternate treatment is required to regain control and recover completely.
+</p>
+</div>
+<button class="accordion">16.Climate change/ Global warming</button>
+<div class="panel">
+<p>In recent years, there have been many alarming reports that the world‘s climate is undergoing a significant change. All these reports provide strong evidence that world temperatures are increasing day by day. This increase in global warming is caused by increased amounts of carbon dioxide  around the earth. Most climatologists believe that the greenhouse effect is the likely cause of this global warming. It is the gradual warming of the air surrounding the earth as a result of heat being trapped by environmental pollution. This is exemplified by the destruction and burning down of tropical rain forests, by traffic that clogs up city streets, by the rapid growth of industry, the use of chlorofluorocarbons (CFCs) in packaging and manufacturing commercial products, the use of detergents such as washing powder and washing-up liquid and so on. The oceans are also said to be affected both because of human waste and because of pollution caused by industrial waste products, oil seeping from damaged supertankers and from other maritime disasters. However, the main culprits for global warming are carbon dioxide gas, produced by the burning of fossil fuels and forests, and pollutants such as methane and chlorofluorocarbons. Climatologists predict that  midway through the next century, temperatures may have risen by as much as 4°C. This could catastrophically reduce mankind‘s ability to grow food, destroy or severely damage wildlife and wilderness, raise sea levels and thereby flood coastal areas and farmland. The alarming news about Bangladesh is that as a result of the rise of the sea level, the lower southern part of the country may one day go under water.</p>
+</div>
+
+17.	Tree plantation</br>
+18.	May Day</br>
+19.	Independence Day</br>
+20.	International Mother Language Day</br>
+21.	Pahela Boishakh</br>
+22.	A school magazine</br>
+23.	Life of a farmer</br>
+24.	A rainy day</br>
+25.	Early rising</br>
+26.	Uses & abuses of mobile phone</br>
+27.	A street beggar
+</p>
+</div>
+
+<button class="accordion">A winter Morning</button>
+<div class="panel">
+ 
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button class="collapsible">Application</button>
+<div class="content">
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+</div>
+
+
+
+
+<div class="w3-half">
+
+<button class="collapsible"><h3><ul>Letter/Email</ul></h3></button>
+<div class="content">
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mt-2 p-5 bg-primary text-white rounded" class="w3-half" >
+
+<button type="button" class="collapsible" style="font-size:18px">Photo Gallery</button>
+<div class="content" >
+<div class="row">
+  <div class="column">
+    <img src="mumtahenapic/mumta.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="mumtahenapic/mumta1.jpg" style="width: 100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="mumtahenapic/mumta2.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="mumtahenapic/mumta3.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+   <div class="column">
+    <img src="mumtahenapic/mumta4.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+	
+  </div>
+   <div class="column">
+    
+	 <img src="mumtahenapic/mumta5.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="mumtahenapic/mumta.jpg" style="width:100%">
+	  <p style="font-size:18px" >aaaaaaaaaaaaaa</p>
+	 
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="mumtahenapic/mumta1.jpg" style="width:100%">
+	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="mumtahenapic/mumta2.jpg" style="width:100%">
+	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="mumtahenapic/mumta3.jpg" style="width:100%">
+	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
+    </div>
+	<div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="mumtahenapic/mumta4.jpg" style="width:100%">
+	   <p style="font-size:18px">aaaaaaaaaaaaaa</p>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="mumtahenapic/mumta.jpg" style="width:100%" onclick="currentSlide(1)" >
+	   
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mumtahenapic/mumta1.jpg" style="width:100%" onclick="currentSlide(2)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mumtahenapic/mumta2.jpg" style="width:100%" onclick="currentSlide(3)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="mumtahenapic/mumta3.jpg" style="width:100%" onclick="currentSlide(4)" >
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="mumtahenapic/mumta4.jpg" style="width:100%" onclick="currentSlide(5)" >
+    </div
+	<div class="column">
+      <img class="demo cursor" src="mumtahenapic/mumta5.jpg" style="width:100%" onclick="currentSlide(6)" >
+    </div
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<button type="button" class="collapsible"s >*Model Question-01</button>
+<div class="content" style="background-color:black; color:white">
 <p>Model Exam -01<br>
 English 1st paper<br>
 Class-Nine/Ten<br>
@@ -276,7 +1265,7 @@ Read the passage & answer the following questions.<br>
   May Day or International Workers Day is observed on May 1 all over the world today to commemorate the historical struggle and sacrifices of the working people to establish an eight-hour workday. It is a public holiday in almost all the countries of the world. Since the Industrial Revolution(1) in the 18th and 19th centuries in Europe and the US, the workers in mills and factories had been working a long shift, fourteen or even more hours a day. On May 1st in 1886, inspired by the trade unions(2), half of the workers at the  Mc Cormic Harvester Company in Chicago went on strike demanding an eight-hour workday. Two days later, a workers’ rally was held near the Mc Cormic Harvester Company and about 6000 workers had joined it. The rally was addressed by the labour leaders. They urged the workers to stand together, to go on with their struggle and not to give in to their bosses. Just at this moment some strikebreakers started leaving the meeting place. The strikers went down the street to bring them back. Suddenly about 200 policemen attacked them with clubs and revolvers. One striker was killed instantly, five or six others were seriously wounded and many of them were badly injured. The events of May 1, 1886 is a reminder that workers will continue to be exploited until they stand up and speak out to gain better working conditions, better pay and better lives
 
 </p>
-<form class="w3-half w3-card-4">
+<form class="w3-container">
   <h2>choose the correct passive voice.</h2>
   <h3>1. We eat rice</h3>
   <p>
@@ -361,12 +1350,12 @@ He was a mechanical engineer who is best known for originating the concept of co
 
 
 
-<button type="button" class="collapsible" >*Model Question-02 </button>
-<div class="content">
+<button type="button" class="collapsible" >*Model Question-02</button>
+<div class="content" style="background-color:black; color:white">
 
 <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
 
-<form class="w3-half w3-card-4">
+<form class="w3-container">
 
   <h2>choose the correct passive voice.</h2>
   <h3>1. We eat rice</h3>
@@ -427,67 +1416,6 @@ for (i = 0; i < coll.length; i++) {
 
 
 
-<div class="container mt-3">
-  <h2>Flex</h2>
-  <p>To create a flexbox container and transform direct children into flex items, use the d-flex class:</p>
-  <div class="d-flex p-3 bg-secondary text-white">  
-    <div class="p-2 bg-info"><img src="mumtahenapic/amit.jpg" height="450px"></div>
-	 <div class="p-2 bg-info">He was a mechanical engineer who is best known for originating the concept of computer.
- He was born on 26 December 1791 in London. He entered Trinity College in October 1810. 
- He was transferred to Peterhouse, Cambridge. He was the top mathematician there.
- He received an honours degree without an examination in 1814.He was elected fellow of Royal Society in 1816.
- From 1828 to 1839 Babbage was Lucasian Professor  of Mathematics at Cambridge University.
- Babbage is famous for inventing the first mechanical computer in 1822 that eventually led to today’s coputer. 
- He died at his home in London on 18 October 1871</div>
-    
-    
-  </div>
-</div>
-
-
-
-
-
-<div class="jumbotron">
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
-</div>
-
-<div id="main">
-  <button><h2 style=" font-family:cursive;color: blue; font-size:18px">Legend E-Magazine</h2></button><br>
-  <span style="font-size:18px; font-family:cursive;color: blue; cursor:pointer" onclick="openNav()">&#9776; Get Started</span>
-  
-</div>
-
-</div>
-
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-</script>
-   	
-
-
-
-
-
-
-
-
-
-
-
 
 <div class="footer">
 
@@ -506,53 +1434,8 @@ function closeNav() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
 
 
 
